@@ -2,12 +2,12 @@
   <div id="app">
     <Header />
 
-    <div id="content">
+    <perfect-scrollbar id="content">
       <About />
       <Projects />
       <Skills />
       <Contact />
-    </div>
+    </perfect-scrollbar>
 
     <Footer />
   </div>
