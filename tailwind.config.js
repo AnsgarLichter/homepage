@@ -15,8 +15,12 @@ module.exports = {
         '1/20': '5%'
       },
       colors: {
-        bg:{
-          grey: '#343a40'
+        bg: {
+          grey: '#343a40',
+          blue: '#003049',
+          red: '#d62828',
+          orange: '#f77f00',
+          yellow: '#fcbf49',
         }
       }
     },

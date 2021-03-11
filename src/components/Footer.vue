@@ -69,9 +69,9 @@
 
       <div class="flex flex-col justify-center w-1/3">
         <div class="flex flex-row justify-end mr-12 text-white">
-          <div>Impressum</div>
-          &nbsp;|&nbsp;
-          <div>Datenschutz</div>
+          <div>{{$t("footer.imprint")}}</div>
+          <div>{{$t("footer.delimiter")}}</div>
+          <div>{{$t("footer.privacyPolicy")}}</div>
         </div>
       </div>
     </div>

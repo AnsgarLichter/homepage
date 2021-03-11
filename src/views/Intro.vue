@@ -1,12 +1,12 @@
 <template>
-  <div id="about">
+  <div id="intro">
     <div class="background">
       <div class="flex flex-row justify-center">
         <div class="flex flex-col w-1/2 self-center text-center text-white">
-          <h1 class="text-5xl">Ansgar Lichter</h1>
-          <h2 class="text-2xl text-white mt-3">SAP EWM Entwickler</h2>
+          <h1 class="text-5xl">{{ $t("general.name") }}</h1>
+          <h2 class="text-2xl text-white mt-3">{{ $t("intro.jobTitle") }}</h2>
           <h3 class="text-2xl text-white mt-3">
-            Wirtschaftsinformatik (B. Sc.)
+            {{ $t("intro.studies") }}
           </h3>
           <div class="flex flex-row justify-center mt-4">
             <div class="flex flex-col">
@@ -91,48 +91,37 @@
         </div>
       </div>
     </div>
-    <div class="col align-self-center text-center mt-8">
-        <h1>About me</h1>
-        <p class="text-justify">
-          I am born 1998 in Karsrluhe. In this city I have finished my bachelor
-          of science in business informatics at the Corpoarte State University.
-          Currently I am working on interesting projects regarding SAP EWM at
-          SEW-EURODRIVE GmbH &amp; Co KG. Feel free to take a look at my latest
-          projects and skills below. Remotly available at
-          <a href="mailto:mail@ansgarlichter.de">mail@ansgarlichter.de</a>
-        </p>
-      </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "About",
+  name: "Intro",
 };
 </script>
 
 <style scoped>
-#about .background{
+.background {
   background-image: url("~@/assets/images/code.png");
 }
 
-#about .background > div {
+.background > div {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#about .social-icon:hover {
+.social-icon:hover {
   background-color: black;
 }
 
-#about .social-icon:hover .fa-github {
+.social-icon:hover .fa-github {
   color: hsla(0, 0%, 100%, 0.7);
 }
 
-#about .social-icon:hover .fa-twitter {
+.social-icon:hover .fa-twitter {
   color: #1da1f2;
 }
 
-#about .social-icon:hover .fa-instagram {
+.social-icon:hover .fa-instagram {
   background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
@@ -151,11 +140,11 @@ export default {
   );
 }
 
-#about .social-icon:hover .fa-xing {
+.social-icon:hover .fa-xing {
   color: #126576;
 }
 
-#about .social-icon:hover .fa-linkedin {
+.social-icon:hover .fa-linkedin {
   color: #2867b2;
 }
 </style>

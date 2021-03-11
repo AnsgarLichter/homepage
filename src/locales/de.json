@@ -1,3 +1,21 @@
 {
-    "test": "test"
+    "general": {
+        "name": "Ansgar Lichter"
+    },
+    "navigation": {
+        "intro": "Intro",
+        "about": "Über mich",
+        "skills": "Qualifikationen",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "intro": {
+        "jobTitle": "SAP EWM Entwickler",
+        "studies": "B. Sc. Wirtschaftsinformatik"
+    },
+    "footer": {
+        "imprint": "Impressum",
+        "delimiter": "\u00A0|\u00A0",
+        "privacyPolicy": "Datenschutz"
+    }
 }

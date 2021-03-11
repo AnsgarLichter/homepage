@@ -3,6 +3,7 @@
     <Header />
 
     <perfect-scrollbar id="content">
+      <Intro />
       <About />
       <Projects />
       <Skills />
@@ -16,10 +17,11 @@
 <script>
 import Header from "./components/Header.vue";
 
-import About from "./components/About.vue";
-import Projects from "./components/Projects.vue";
-import Skills from "./components/Skills.vue";
-import Contact from "./components/Contact.vue";
+import Intro from "./views/Intro.vue";
+import About from "./views/About.vue";
+import Projects from "./views/Projects.vue";
+import Skills from "./views/Skills.vue";
+import Contact from "./views/Contact.vue";
 
 import Footer from "./components/Footer.vue";
 
@@ -27,6 +29,7 @@ export default {
   name: "App",
   components: {
     Header,
+    Intro,
     About,
     Projects,
     Skills,
