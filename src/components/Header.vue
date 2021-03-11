@@ -22,7 +22,7 @@
         <b-navbar-nav class="ml-auto" v-b-scrollspy:content>
           <b-nav-item href="#intro">{{ $t("navigation.intro") }}</b-nav-item>
           <b-nav-item href="#about">{{ $t("navigation.about") }}</b-nav-item>
-          <b-nav-item href="#skills">{{ $t("navigation.skills") }}</b-nav-item>
+          <b-nav-item href="#experiences">{{ $t("navigation.experiences") }}</b-nav-item>
           <b-nav-item href="#projects">{{
             $t("navigation.projects")
           }}</b-nav-item>

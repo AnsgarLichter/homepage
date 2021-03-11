@@ -5,8 +5,8 @@
     <perfect-scrollbar id="content">
       <Intro />
       <About />
+      <Expieriences />
       <Projects />
-      <Skills />
       <Contact />
     </perfect-scrollbar>
 
@@ -20,7 +20,7 @@ import Header from "./components/Header.vue";
 import Intro from "./views/Intro.vue";
 import About from "./views/About.vue";
 import Projects from "./views/Projects.vue";
-import Skills from "./views/Skills.vue";
+import Expieriences from "./views/Experiences.vue";
 import Contact from "./views/Contact.vue";
 
 import Footer from "./components/Footer.vue";
@@ -32,7 +32,7 @@ export default {
     Intro,
     About,
     Projects,
-    Skills,
+    Expieriences,
     Contact,
     Footer,
   },
