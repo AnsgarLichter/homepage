@@ -370,7 +370,7 @@ ul {
  */
 
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -11810,7 +11810,7 @@ video {
 }
 
 .font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
 }
 
 .font-serif {
@@ -28941,6 +28941,46 @@ video {
   width: max-content;
 }
 
+.w-1\/10 {
+  width: 10%;
+}
+
+.w-2\/10 {
+  width: 20%;
+}
+
+.w-3\/10 {
+  width: 30%;
+}
+
+.w-4\/10 {
+  width: 40%;
+}
+
+.w-5\/10 {
+  width: 50%;
+}
+
+.w-6\/10 {
+  width: 60%;
+}
+
+.w-7\/10 {
+  width: 70%;
+}
+
+.w-8\/10 {
+  width: 80%;
+}
+
+.w-9\/10 {
+  width: 90%;
+}
+
+.w-10\/10 {
+  width: 100%;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -44584,7 +44624,7 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
   }
 
   .sm\:font-serif {
@@ -61702,6 +61742,46 @@ video {
     width: max-content;
   }
 
+  .sm\:w-1\/10 {
+    width: 10%;
+  }
+
+  .sm\:w-2\/10 {
+    width: 20%;
+  }
+
+  .sm\:w-3\/10 {
+    width: 30%;
+  }
+
+  .sm\:w-4\/10 {
+    width: 40%;
+  }
+
+  .sm\:w-5\/10 {
+    width: 50%;
+  }
+
+  .sm\:w-6\/10 {
+    width: 60%;
+  }
+
+  .sm\:w-7\/10 {
+    width: 70%;
+  }
+
+  .sm\:w-8\/10 {
+    width: 80%;
+  }
+
+  .sm\:w-9\/10 {
+    width: 90%;
+  }
+
+  .sm\:w-10\/10 {
+    width: 100%;
+  }
+
   .sm\:z-0 {
     z-index: 0;
   }
@@ -77280,7 +77360,7 @@ video {
   }
 
   .md\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
   }
 
   .md\:font-serif {
@@ -94398,6 +94478,46 @@ video {
     width: max-content;
   }
 
+  .md\:w-1\/10 {
+    width: 10%;
+  }
+
+  .md\:w-2\/10 {
+    width: 20%;
+  }
+
+  .md\:w-3\/10 {
+    width: 30%;
+  }
+
+  .md\:w-4\/10 {
+    width: 40%;
+  }
+
+  .md\:w-5\/10 {
+    width: 50%;
+  }
+
+  .md\:w-6\/10 {
+    width: 60%;
+  }
+
+  .md\:w-7\/10 {
+    width: 70%;
+  }
+
+  .md\:w-8\/10 {
+    width: 80%;
+  }
+
+  .md\:w-9\/10 {
+    width: 90%;
+  }
+
+  .md\:w-10\/10 {
+    width: 100%;
+  }
+
   .md\:z-0 {
     z-index: 0;
   }
@@ -109976,7 +110096,7 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
   }
 
   .lg\:font-serif {
@@ -127094,6 +127214,46 @@ video {
     width: max-content;
   }
 
+  .lg\:w-1\/10 {
+    width: 10%;
+  }
+
+  .lg\:w-2\/10 {
+    width: 20%;
+  }
+
+  .lg\:w-3\/10 {
+    width: 30%;
+  }
+
+  .lg\:w-4\/10 {
+    width: 40%;
+  }
+
+  .lg\:w-5\/10 {
+    width: 50%;
+  }
+
+  .lg\:w-6\/10 {
+    width: 60%;
+  }
+
+  .lg\:w-7\/10 {
+    width: 70%;
+  }
+
+  .lg\:w-8\/10 {
+    width: 80%;
+  }
+
+  .lg\:w-9\/10 {
+    width: 90%;
+  }
+
+  .lg\:w-10\/10 {
+    width: 100%;
+  }
+
   .lg\:z-0 {
     z-index: 0;
   }
@@ -142672,7 +142832,7 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
   }
 
   .xl\:font-serif {
@@ -159790,6 +159950,46 @@ video {
     width: max-content;
   }
 
+  .xl\:w-1\/10 {
+    width: 10%;
+  }
+
+  .xl\:w-2\/10 {
+    width: 20%;
+  }
+
+  .xl\:w-3\/10 {
+    width: 30%;
+  }
+
+  .xl\:w-4\/10 {
+    width: 40%;
+  }
+
+  .xl\:w-5\/10 {
+    width: 50%;
+  }
+
+  .xl\:w-6\/10 {
+    width: 60%;
+  }
+
+  .xl\:w-7\/10 {
+    width: 70%;
+  }
+
+  .xl\:w-8\/10 {
+    width: 80%;
+  }
+
+  .xl\:w-9\/10 {
+    width: 90%;
+  }
+
+  .xl\:w-10\/10 {
+    width: 100%;
+  }
+
   .xl\:z-0 {
     z-index: 0;
   }
@@ -175368,7 +175568,7 @@ video {
   }
 
   .\32xl\:font-sans {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
   }
 
   .\32xl\:font-serif {
@@ -192484,6 +192684,46 @@ video {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .\32xl\:w-1\/10 {
+    width: 10%;
+  }
+
+  .\32xl\:w-2\/10 {
+    width: 20%;
+  }
+
+  .\32xl\:w-3\/10 {
+    width: 30%;
+  }
+
+  .\32xl\:w-4\/10 {
+    width: 40%;
+  }
+
+  .\32xl\:w-5\/10 {
+    width: 50%;
+  }
+
+  .\32xl\:w-6\/10 {
+    width: 60%;
+  }
+
+  .\32xl\:w-7\/10 {
+    width: 70%;
+  }
+
+  .\32xl\:w-8\/10 {
+    width: 80%;
+  }
+
+  .\32xl\:w-9\/10 {
+    width: 90%;
+  }
+
+  .\32xl\:w-10\/10 {
+    width: 100%;
   }
 
   .\32xl\:z-0 {

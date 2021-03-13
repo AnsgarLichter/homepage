@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="font-sans" id="app">
     <Header />
 
     <perfect-scrollbar id="content">
@@ -47,7 +47,7 @@ body,
   height: 100%;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

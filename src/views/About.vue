@@ -6,30 +6,14 @@
       </div>
     </div>
     <div class="flex flex-col w-1/2 mt-16 pr-64">
-      <h1 class="text-5xl">{{ $t("about.title") }}</h1>
+      <h1 class="text-5xl font-sans">{{ $t("about.title") }}</h1>
       <div class="text-left font-sans text-base mt-6">
-        {{ $t("about.description-1") }}<br /><br />
+        {{ $t("about.description-1") }}<br />
         {{ $t("about.description-2") }}
         {{ $t("about.description-3") }}<br /><br />
-        {{ $t("about.description-4") }}<br />
+        {{ $t("about.description-4") }}
       </div>
       <div class="mt-10">
-        <div class="relative pt-1">
-          <div class="flex mb-2 items-center justify-between">
-            <span
-              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
-            >
-              SAPUI5
-            </span>
-          </div>
-          <div
-            class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200"
-          >
-            <div
-              class="w-3/4 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-blue"
-            ></div>
-          </div>
-        </div>
         <div class="relative pt-1">
           <div class="flex mb-2 items-center justify-between">
             <span
@@ -42,7 +26,23 @@
             class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200"
           >
             <div
-              class="w-4/6 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-red"
+              class="w-6/10 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-red"
+            ></div>
+          </div>
+        </div>
+        <div class="relative pt-1">
+          <div class="flex mb-2 items-center justify-between">
+            <span
+              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
+            >
+              SAPUI5
+            </span>
+          </div>
+          <div
+            class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200"
+          >
+            <div
+              class="w-8/10 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-blue"
             ></div>
           </div>
         </div>
@@ -59,7 +59,7 @@
             class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200"
           >
             <div
-              class="w-9/12 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-orange"
+              class="w-8/10 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-orange"
             ></div>
           </div>
         </div>
@@ -76,7 +76,7 @@
             class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200"
           >
             <div
-              class="w-8/12 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-yellow"
+              class="w-7/10 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bg-yellow"
             ></div>
           </div>
         </div>
