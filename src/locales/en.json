@@ -21,6 +21,11 @@
         "description-3": "I joned SEW-EURODRIVE GmbH & Co KG where I work on a wide variety of interesting and meaningful projcets on a daily basis.",
         "description-4": "Here are a few technologies I've been working with recently:"
     },
+    "experiences": {
+        "title": "Some work experiences",
+        "education": "Some education information",
+        "work": "A few work experiences"
+    },
     "footer": {
         "imprint": "Imprint",
         "delimiter": "\u00A0|\u00A0",

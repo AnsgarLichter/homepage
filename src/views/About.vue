@@ -6,8 +6,8 @@
       </div>
     </div>
     <div class="flex flex-col w-1/2 mt-16 pr-64">
-      <h1 class="text-5xl font-sans">{{ $t("about.title") }}</h1>
-      <div class="text-left font-sans text-base mt-6">
+      <h1 class="text-5xl font-bold">{{ $t("about.title") }}</h1>
+      <div class="text-left text-base mt-6">
         {{ $t("about.description-1") }}<br />
         {{ $t("about.description-2") }}
         {{ $t("about.description-3") }}<br /><br />
