@@ -10,10 +10,10 @@
               {{ $t("intro.hello") }}
             </div>
           </div>
-          <div id="name" class="text-5xl mt-6 typewriter">
-            <p>{{ $t("general.name") }}</p>
+          <div id="name" class="text-5xl mt-6  typewriter">
+            <p class="pb-3">{{ $t("general.name") }}</p>
           </div>
-          <div id="job" class="text-2xl text-white mt-3 typewriter">
+          <div id="job" class="text-2xl text-white typewriter">
             <p>{{ $t("intro.jobTitle") }}</p>
           </div>
           <div id="studies" class="text-2xl text-white mt-3 typewriter">
