@@ -94,7 +94,7 @@
         </div>
         <div class="flex flex-col w-1/2 py-16">
           <img
-            class="rounded-full h-96 w-96 lg:h-174 md:w-174 object-cover animate__animated animate__rollIn animate__delay-3s"
+            class="rounded-full h-96 w-96 lg:h-174 md:w-174 object-cover"
             src="@/assets/images/me.jpg"
             alt="Ansgar Lichter"
             data-holder-rendered="true"
@@ -122,41 +122,6 @@ export default {
 
 .social-icon:hover {
   background-color: black;
-}
-
-.social-icon:hover .fa-github {
-  color: hsla(0, 0%, 100%, 0.7);
-}
-
-.social-icon:hover .fa-twitter {
-  color: #1da1f2;
-}
-
-.social-icon:hover .fa-instagram {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  background: -webkit-radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-}
-
-.social-icon:hover .fa-xing {
-  color: #126576;
-}
-
-.social-icon:hover .fa-linkedin {
-  color: #2867b2;
 }
 
 .typewriter > p {

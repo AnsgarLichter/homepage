@@ -10,6 +10,7 @@
       <div class="flex flex-col justify-center w-1/3">
         <div class="flex flex-row justify-center space-x-3">
           <a
+            class="social-icon"
             href="https://github.com/AnsgarLichter"
             target="_blank"
             rel="noopener noreferrer"
@@ -21,6 +22,7 @@
             />
           </a>
           <a
+            class="social-icon"
             href="https://twitter.com/ansgarlichter"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,6 +34,7 @@
             />
           </a>
           <a
+            class="social-icon"
             href="https://www.instagram.com/_ansgar_l/"
             target="_blank"
             rel="noopener noreferrer"
@@ -43,6 +46,7 @@
             />
           </a>
           <a
+            class="social-icon"
             href="https://www.xing.com/profile/Ansgar_Lichter"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,6 +58,7 @@
             />
           </a>
           <a
+            class="social-icon"
             href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
             target="_blank"
             rel="noopener noreferrer"

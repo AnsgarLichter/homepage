@@ -92,50 +92,5 @@ export default {
 </script>
 
 <style scoped>
-.background {
-  background-image: url("~@/assets/images/code.png");
-}
 
-.background > div {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.social-icon:hover {
-  background-color: black;
-}
-
-.social-icon:hover .fa-github {
-  color: hsla(0, 0%, 100%, 0.7);
-}
-
-.social-icon:hover .fa-twitter {
-  color: #1da1f2;
-}
-
-.social-icon:hover .fa-instagram {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  background: -webkit-radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-}
-
-.social-icon:hover .fa-xing {
-  color: #126576;
-}
-
-.social-icon:hover .fa-linkedin {
-  color: #2867b2;
-}
 </style>
