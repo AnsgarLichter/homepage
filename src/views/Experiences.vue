@@ -1,64 +1,75 @@
 <template>
   <div class="mt-24 mr-44 ml-44" id="experiences">
     <div class="flex flex-row justify-center">
-      <div class="text-5xl font-bold">{{ $t("experiences.title") }}</div>
+      <div class="text-5xl font-bold"> {{ $t("experiences.title") }}</div>
     </div>
     <div class="flex flex-row mt-10">
       <div class="flex flex-col w-1/2 self-center text-center">
-        <div class="text-3xl font-bold">{{ $t("experiences.education") }}</div>
+        <div class="text-3xl font-bold">{{ $t("experiences.education.title") }}</div>
         <div class="flex flex-row justify-center">
-          <div class="mt-10 lg:flex w-128 shadow">
-            <div
-              class="flex flex-col justify-center p-4 border-b border-l border-t flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-            >
-              <img
-                class="w-44 mt-15 object-fill"
-                src="@/assets/images/dhbw.svg"
-                alt="Ansgar Lichter"
-                data-holder-rendered="true"
-              />
-            </div>
-            <div
-              class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
-            >
-              <div class="mb-8 text-left">
-                <div class="text-black font-bold text-xl mb-2">
-                  Business Informatics
-                </div>
-                <p class="text-base text-grey-dark">
-                  <font-awesome-icon
-                    class="mr-1"
-                    size="md"
-                    :icon="['fas', 'calendar']"
-                  />
-                  2017 - 2020
-                </p>
-                <p class="text-grey-darker text-base">
-                  <font-awesome-icon
-                    class="mr-1"
-                    size="md"
-                    :icon="['fas', 'university']"
-                  />
-                  DHBW Karlsruhe
-                </p>
-                <p class="mt-3 text-grey-darker text-base">
-                  Studienrichtung: Software Engineering
-                </p>
-              </div>
-            </div>
-          </div>
+          <Card
+            :images="[{ src: 'dhbw.svg', alt: $t('experiences.images.dhbw') }]"
+            :title="$t('experiences.education.studies.title')"
+            :yearStart="$t('experiences.education.studies.yearStart')"
+            :yearEnd="$t('experiences.education.studies.yearEnd')"
+            :organisation="$t('experiences.education.studies.organisation')"
+            :location="$t('experiences.education.studies.location')"
+            :description="$t('experiences.education.studies.description')"
+          />
+        </div>
+
+        <div class="flex flex-row justify-center">
+          <Card
+            :images="[
+              { src: 'dhbw.svg', alt: $t('experiences.images.dhbw') },
+              { src: 'sew.svg', alt: $t('experiences.images.sew') },
+            ]"
+            :title="$t('experiences.education.abroad.title')"
+            :yearStart="$t('experiences.education.abroad.yearStart')"
+            :yearEnd="$t('experiences.education.abroad.yearEnd')"
+            :organisation="$t('experiences.education.abroad.organisation')"
+            :location="$t('experiences.education.abroad.location')"
+            :description="$t('experiences.education.abroad.description')"
+          />
         </div>
       </div>
       <div class="flex flex-col w-1/2 self-center text-center">
-        <div class="text-3xl font-bold">{{ $t("experiences.work") }}</div>
+        <div class="text-3xl font-bold">{{ $t("experiences.work.title") }}</div>
+
+        <div class="flex flex-row justify-center">
+          <Card
+            :images="[{ src: 'sew.svg', alt: $t('experiences.images.sew') }]"
+            :title="$t('experiences.work.studies.title')"
+            :yearStart="$t('experiences.work.studies.yearStart')"
+            :yearEnd="$t('experiences.work.studies.yearEnd')"
+            :organisation="$t('experiences.work.studies.organisation')"
+            :location="$t('experiences.work.studies.location')"
+            :description="$t('experiences.work.studies.description')"
+          />
+        </div>
+
+        <div class="flex flex-row justify-center">
+          <Card
+            :images="[{ src: 'sew.svg', alt: $t('experiences.images.sew') }]"
+            :title="$t('experiences.work.itpa.title')"
+            :yearStart="$t('experiences.work.itpa.yearStart')"
+            :yearEnd="$t('experiences.work.itpa.yearEnd')"
+            :organisation="$t('experiences.work.itpa.organisation')"
+            :location="$t('experiences.work.itpa.location')"
+            :description="$t('experiences.work.itpa.description')"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Card from "../components/Card";
+
 export default {
   name: "Expieriences",
+  components: { Card },
 };
 </script>
 
