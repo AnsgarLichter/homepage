@@ -19,7 +19,7 @@
             <span
               class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
             >
-              SAP EWM
+              {{ $t(about.technologies.ewm)}}
             </span>
           </div>
           <div
@@ -35,7 +35,7 @@
             <span
               class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
             >
-              SAPUI5
+              {{ $t(about.technologies.ui5)}}
             </span>
           </div>
           <div
@@ -52,7 +52,7 @@
             <span
               class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
             >
-              ABAP
+              {{ $t(about.technologies.abap)}}
             </span>
           </div>
           <div
@@ -69,7 +69,7 @@
             <span
               class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
             >
-              Java Script
+              {{ $t(about.technologies.js)}}
             </span>
           </div>
           <div
