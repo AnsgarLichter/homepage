@@ -1,11 +1,13 @@
 <template>
-  <div class="mt-24 mr-44 ml-44" id="experiences">
+  <div class="mt-10 sm:mt-24 mx-8 sm:mx-22 lg:mx-4" id="experiences">
     <div class="flex flex-row justify-center">
-      <div class="text-5xl font-bold"> {{ $t("experiences.title") }}</div>
+      <div class="text-5xl font-bold">{{ $t("experiences.title") }}</div>
     </div>
-    <div class="flex flex-row mt-10">
-      <div class="flex flex-col w-1/2 self-center text-center">
-        <div class="text-3xl font-bold">{{ $t("experiences.education.title") }}</div>
+    <div class="flex flex-col xl:flex-row">
+      <div class="flex flex-col flex-wrap xl:w-1/2 self-center text-center mt-10">
+        <div class="text-3xl font-bold">
+          {{ $t("experiences.education.title") }}
+        </div>
         <div class="flex flex-row justify-center">
           <Card
             :images="[{ src: 'dhbw.svg', alt: $t('experiences.images.dhbw') }]"
@@ -33,7 +35,7 @@
           />
         </div>
       </div>
-      <div class="flex flex-col w-1/2 self-center text-center">
+      <div class="flex flex-col xl:w-1/2 self-center text-center mt-10">
         <div class="text-3xl font-bold">{{ $t("experiences.work.title") }}</div>
 
         <div class="flex flex-row justify-center">

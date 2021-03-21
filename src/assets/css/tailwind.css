@@ -2,7 +2,7 @@
 
 /*! @import */
 
-/* ! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v2.0.4 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -14938,6 +14938,10 @@ video {
 
 .min-w-0 {
   min-width: 0px;
+}
+
+.min-w-200 {
+  min-width: 200px;
 }
 
 .min-w-full {
@@ -47754,6 +47758,10 @@ video {
     min-width: 0px;
   }
 
+  .sm\:min-w-200 {
+    min-width: 200px;
+  }
+
   .sm\:min-w-full {
     min-width: 100%;
   }
@@ -80488,6 +80496,10 @@ video {
 
   .md\:min-w-0 {
     min-width: 0px;
+  }
+
+  .md\:min-w-200 {
+    min-width: 200px;
   }
 
   .md\:min-w-full {
@@ -113226,6 +113238,10 @@ video {
     min-width: 0px;
   }
 
+  .lg\:min-w-200 {
+    min-width: 200px;
+  }
+
   .lg\:min-w-full {
     min-width: 100%;
   }
@@ -145962,6 +145978,10 @@ video {
     min-width: 0px;
   }
 
+  .xl\:min-w-200 {
+    min-width: 200px;
+  }
+
   .xl\:min-w-full {
     min-width: 100%;
   }
@@ -178696,6 +178716,10 @@ video {
 
   .\32xl\:min-w-0 {
     min-width: 0px;
+  }
+
+  .\32xl\:min-w-200 {
+    min-width: 200px;
   }
 
   .\32xl\:min-w-full {

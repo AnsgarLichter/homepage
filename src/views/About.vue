@@ -1,19 +1,19 @@
 <template>
-  <div id="about" class="flex flex-col items-center sm:flex-row mt-2 sm:mt-24 mx-8 sm:mx-44">
-    <div class="flex sm:flex-col sm:w-1/2 justify-center">
+  <div id="about" class="flex flex-col items-center mt-8 mx-8 lg:flex-row lg:mt-24 lg:mx-44">
+    <div class="flex lg:flex-col lg:w-1/2 justify-center">
       <div class="justify-center">
-        <img class="h-44 w-44 sm:h-96 sm:w-96" src="@/assets/images/aboutme.png" />
+        <img class="h-44 w-44 lg:h-72 lg:w-72 xl:h-96 xl:w-96" src="@/assets/images/aboutme.png" />
       </div>
     </div>
-    <div class="flex flex-col sm:w-1/2 mt-3 sm:mt-16">
-      <h1 class="text-3xl sm:text-5xl font-bold">{{ $t("about.title") }}</h1>
-      <div class="text-left text-base mt-3 sm:mt-6">
-        {{ $t("about.description-1") }}<br class="hidden sm:block"/>
+    <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-16">
+      <h1 class="text-3xl lg:text-5xl font-bold">{{ $t("about.title") }}</h1>
+      <div class="text-left text-base mt-3 lg:mt-6">
+        {{ $t("about.description-1") }}<br class="hidden lg:block"/>
         {{ $t("about.description-2") }}
         {{ $t("about.description-3") }}<br />
         {{ $t("about.description-4") }}
       </div>
-      <div class="mt-2 sm:mt-10">
+      <div class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
         <div class="relative pt-1">
           <div class="flex mb-2 items-center justify-between">
             <span

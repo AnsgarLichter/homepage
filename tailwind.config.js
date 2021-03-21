@@ -31,6 +31,9 @@ module.exports = {
         '9/10': '90%',
         '10/10': '100%'
       },
+      minWidth: {
+        '200': '200px'
+      },
       colors: {
         bg: {
           grey: '#343a40',
