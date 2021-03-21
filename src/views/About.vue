@@ -1,19 +1,19 @@
 <template>
-  <div id="about" class="flex flex-row mt-24 mr-44 ml-44">
-    <div class="flex flex-col w-1/2 justify-center">
-      <div class="flex flex-row justify-center">
-        <img class="h-96 w-96" src="@/assets/images/aboutme.png" />
+  <div id="about" class="flex flex-col items-center sm:flex-row mt-2 sm:mt-24 mx-8 sm:mx-44">
+    <div class="flex sm:flex-col sm:w-1/2 justify-center">
+      <div class="justify-center">
+        <img class="h-44 w-44 sm:h-96 sm:w-96" src="@/assets/images/aboutme.png" />
       </div>
     </div>
-    <div class="flex flex-col w-1/2 mt-16 pr-64">
-      <h1 class="text-5xl font-bold">{{ $t("about.title") }}</h1>
-      <div class="text-left text-base mt-6">
-        {{ $t("about.description-1") }}<br />
+    <div class="flex flex-col sm:w-1/2 mt-3 sm:mt-16">
+      <h1 class="text-3xl sm:text-5xl font-bold">{{ $t("about.title") }}</h1>
+      <div class="text-left text-base mt-3 sm:mt-6">
+        {{ $t("about.description-1") }}<br class="hidden sm:block"/>
         {{ $t("about.description-2") }}
-        {{ $t("about.description-3") }}<br /><br />
+        {{ $t("about.description-3") }}<br />
         {{ $t("about.description-4") }}
       </div>
-      <div class="mt-10">
+      <div class="mt-2 sm:mt-10">
         <div class="relative pt-1">
           <div class="flex mb-2 items-center justify-between">
             <span
