@@ -1,22 +1,22 @@
 <template>
-  <div id="intro">
-    <div class="background">
-      <div class="flex flex-row justify-center">
-        <div class="flex flex-col w-1/2 self-center text-center text-white">
+  <div id="intro" class="w-full h-full">
+    <div class="background w-full h-full">
+      <div class="w-full h-full flex flex-col md:flex-row items-center md:justify-center">
+        <div class="flex flex-col mt-4 sm:mt-20 md:mt-0 sm:w-1/2 sm:self-center text-center text-white">
           <div class="flex flex-row justify-center">
             <div
-              class="bg-blue-700 rounded-t-full rounded-br-full px-4 py-2 text-2xl text-white"
+              class="bg-blue-700 rounded-t-full rounded-br-full px-4 py-2 text-sm sm:text-2xl text-white"
             >
               {{ $t("intro.hello") }}
             </div>
           </div>
-          <div id="name" class="text-5xl mt-6  typewriter">
-            <p class="pb-3">{{ $t("general.name") }}</p>
+          <div id="name" class="text-2xl sm:text-5xl mt-2 sm:mt-6 typewriter">
+            <p class="pb-1 sm:pb-3" >{{ $t("general.name") }}</p>
           </div>
-          <div id="job" class="text-2xl text-white typewriter">
+          <div id="job" class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter">
             <p>{{ $t("intro.jobTitle") }}</p>
           </div>
-          <div id="studies" class="text-2xl text-white mt-3 typewriter">
+          <div id="studies" class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter">
             <p>{{ $t("intro.studies") }}</p>
           </div>
           <div class="flex flex-row justify-center mt-4">
@@ -28,7 +28,7 @@
                 rel="noopener noreferrer"
               >
                 <font-awesome-icon
-                  class="fa-lg"
+                  class="sm:fa-lg"
                   :icon="['fab', 'github']"
                   color="white"
                 />
@@ -42,7 +42,7 @@
                 rel="noopener noreferrer"
               >
                 <font-awesome-icon
-                  class="fa-lg"
+                  class="sm:fa-lg"
                   :icon="['fab', 'twitter']"
                   color="white"
                 />
@@ -56,21 +56,21 @@
                 rel="noopener noreferrer"
               >
                 <font-awesome-icon
-                  class="fa-lg"
+                  class="sm:fa-lg"
                   :icon="['fab', 'instagram']"
                   color="white"
                 />
               </a>
             </div>
             <div class="flex flex-col">
-              <a 
+              <a
                 class="rounded social-icon p-3 animate__animated animate__bounceInDown animate__delay-3s"
                 href="https://www.xing.com/profile/Ansgar_Lichter"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <font-awesome-icon
-                  class="fa-lg"
+                  class="sm:fa-lg"
                   :icon="['fab', 'xing']"
                   color="white"
                 />
@@ -84,7 +84,7 @@
                 rel="noopener noreferrer"
               >
                 <font-awesome-icon
-                  class="fa-lg"
+                  class="sm:fa-lg"
                   :icon="['fab', 'linkedin']"
                   color="white"
                 />
@@ -92,9 +92,9 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col w-1/2 py-16">
+        <div class="flex flex-col sm:w-1/2 py-10 sm:py-16">
           <img
-            class="rounded-full h-96 w-96 lg:h-174 md:w-174 object-cover"
+            class="rounded-full h-44 w-44 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
             src="@/assets/images/me.jpg"
             alt="Ansgar Lichter"
             data-holder-rendered="true"
@@ -114,6 +114,8 @@ export default {
 <style scoped>
 .background {
   background-image: url("~@/assets/images/code.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background > div {
