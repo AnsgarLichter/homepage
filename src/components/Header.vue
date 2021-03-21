@@ -10,8 +10,8 @@
       <b-navbar-brand href="#" class="flex flex-row">
         <img
           src="@/assets/images/tabicon.png"
-          class="h-12 w-12 mr-6 ml-8"
-          alt="Ansagr Lichter"
+          class=" h-12 w-12 sm:mr-6 sm:ml-8"
+          alt="Ansgar Lichter"
         />
         <div class="flex flex-col justify-center text-white text-lg">
           {{$t("general.name")}}
