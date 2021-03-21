@@ -1,13 +1,13 @@
 <template>
   <div class="bg-bg-grey h-12 fixed inset-x-0 bottom-0">
     <div class="flex flex-row h-full">
-      <div class="flex flex-col w-1/3 justify-center text-white">
-        <p class="ml-12" bg="dark" variant="dark">
+      <div class="flex flex-col w-3/4 sm:w-1/3 justify-center text-white items-start sm:items-center">
+        <p class="ml-4 sm:ml-12" bg="dark" variant="dark">
           &copy; Ansgar Lichter {{ new Date().getFullYear() }}
         </p>
       </div>
 
-      <div class="flex flex-col justify-center w-1/3">
+      <div class="hidden sm:flex flex-col justify-center w-1/3">
         <div class="flex flex-row justify-center space-x-3">
           <a
             class="social-icon"
@@ -72,11 +72,9 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-center w-1/3">
-        <div class="flex flex-row justify-end mr-12 text-white">
+      <div class="flex flex-col justify-center items-end sm:items-center w-1/4 sm:w-1/3">
+        <div class="flex flex-row mr-4 sm:mr-12 text-white">
           <div>{{$t("footer.imprint")}}</div>
-          <div>{{$t("footer.delimiter")}}</div>
-          <div>{{$t("footer.privacyPolicy")}}</div>
         </div>
       </div>
     </div>
