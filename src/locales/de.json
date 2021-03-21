@@ -10,8 +10,67 @@
         "contact": "Kontakt"
     },
     "intro": {
+        "hello": "Hallo, ich bin",
         "jobTitle": "SAP EWM Entwickler",
         "studies": "B. Sc. Wirtschaftsinformatik"
+    },
+    "about": {
+        "title": "Über mich",
+        "description-1": "Ich bin ein Software Engineer aus Karlsruhe.",
+        "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
+        "description-3": "habe ich begonnen bei SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten zu arbeiten.",
+        "description-4": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
+        "technologies": {
+            "ewm": "SAP EWM",
+            "ui5": "SAPUI5",
+            "abap": "ABAP",
+            "js": "JAVA SCRIPT"
+        }
+    },
+    "experiences": {
+        "title": "Meine Erfahrungen",
+        "education": {
+            "title": "Bildung",
+            "studies": {
+                "title": "B. Sc. Business Informatics",
+                "yearStart": "2017",
+                "yearEnd": "2020",
+                "organisation": "Duale Hochschule",
+                "location": "Karlsruhe, Deutschland",
+                "description": "Studienrichtung: Software Engineering"
+            },
+            "abroad": {
+                "title": "Projekt im Ausland: Einführung von SAP MES",
+                "yearStart": "2020",
+                "yearEnd": "2020",
+                "organisation": "Suzhou Motors Ltd.",
+                "location": "Suzhou, China",
+                "description": "Meine Aufgaben waren der Support vor Ort und die Prozesse für die nächsten Rolloutschritte zu analysieren."
+            }
+        },
+        "work": {
+            "title": "Meine Berufserfahrungen",
+            "studies": {
+                "title": "Berufserfahruing im dualen Studium B. Sc. Wirtschaftsinformatik",
+                "yearStart": "2017",
+                "yearEnd": "2020",
+                "organisation": "SEW Eurodrive",
+                "location": "Bruchsal, Deutschland",
+                "description": "Während dem dualen Studium konnte ich auch wertvolle Praxiserfahrungen sammeln."
+            },
+            "itpa": {
+                "title": "IT System Developer SAP EWM",
+                "yearStart": "2020",
+                "yearEnd": "Today",
+                "organisation": "SEW Eurodrive",
+                "location": "Graben-Neudorf, Germany",
+                "description": "Entwickeln für verschiedene Projekte im Kontext von SAP EWM und SAPUI5."
+            }
+        },
+        "images": {
+            "dhbw": "Duale Hochschule Baden-Württemberg",
+            "sew": "SEW Eurodrive"
+        }
     },
     "footer": {
         "imprint": "Impressum",
