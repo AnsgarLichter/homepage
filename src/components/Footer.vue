@@ -69,6 +69,18 @@
               color="white"
             />
           </a>
+          <a
+            class="social-icon"
+            href="mailto:lichteransgar@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <font-awesome-icon
+              class="fa-lg"
+              :icon="['fas', 'envelope']"
+              color="white"
+            />
+          </a>
         </div>
       </div>
 

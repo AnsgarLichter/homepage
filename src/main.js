@@ -9,7 +9,7 @@ import PerfectScrollbar from 'vue2-perfect-scrollbar';
 import i18n from './i18n'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTwitter, faGithub, faInstagram, faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt  } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css';
@@ -21,7 +21,7 @@ import 'animate.css/animate.min.css';
 
 import './assets/css/tailwind.css';
 
-library.add(faXing, faGithub, faTwitter, faInstagram, faLinkedin, faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt);
+library.add(faXing, faGithub, faTwitter, faInstagram, faLinkedin, faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope);
 
 Vue.config.productionTip = false
 

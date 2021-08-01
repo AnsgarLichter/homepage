@@ -90,6 +90,20 @@
                 />
               </a>
             </div>
+            <div class="flex flex-col">
+              <a
+                class="rounded social-icon p-3 animate__animated animate__bounceInDown animate__delay-3s"
+                href="mailto:lichteransgar@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <font-awesome-icon
+                  class="fa-lg"
+                  :icon="['fas', 'envelope']"
+                  color="white"
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div class="flex flex-col md:w-1/2 py-8 sm:py-16">
