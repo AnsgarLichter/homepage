@@ -106,7 +106,7 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col md:w-1/2 py-8 sm:py-16">
+        <div class="flex flex-col py-8 sm:py-16">
           <img
             class="rounded-full h-36 w-36 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
             src="@/assets/images/me.jpg"
