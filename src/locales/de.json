@@ -75,6 +75,14 @@
     "footer": {
         "imprint": "Impressum",
         "delimiter": "\u00A0|\u00A0",
-        "privacyPolicy": "Datenschutz"
+        "privacyPolicy": "Datenschutzerklärung"
+    },
+    "imprint": {
+        "close": "Schließen",
+        "title": "Impressum"
+    },
+    "privacyPolicy": {
+        "close": "Schließen",
+        "title": "Datenschutzerklärung"
     }
 }

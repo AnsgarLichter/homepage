@@ -1,7 +1,17 @@
 <template>
   <div class="bg-bg-grey h-12 fixed inset-x-0 bottom-0">
     <div class="flex flex-row h-full">
-      <div class="flex flex-col w-3/4 sm:w-1/3 justify-center text-white items-start sm:items-center">
+      <div
+        class="
+          flex flex-col
+          w-3/4
+          sm:w-1/3
+          justify-center
+          text-white
+          items-start
+          sm:items-center
+        "
+      >
         <p class="ml-4 sm:ml-12" bg="dark" variant="dark">
           &copy; Ansgar Lichter {{ new Date().getFullYear() }}
         </p>
@@ -72,9 +82,28 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-center items-end sm:items-center w-1/4 sm:w-1/3">
+      <div
+        class="
+          flex flex-col
+          justify-center
+          items-end
+          sm:items-center
+          w-1/4
+          sm:w-1/3
+        "
+      >
         <div class="flex flex-row mr-4 sm:mr-12 text-white">
-          <div>{{$t("footer.imprint")}}</div>
+          <div class="text-center">
+            <button @click="showImprint">
+              {{ $t("footer.imprint") }}
+            </button>
+            <Imprint v-model="openImprint" />
+             | 
+            <button @click="showPrivacyPolicy">
+              {{ $t("footer.privacyPolicy") }}
+            </button>
+            <PrivacyPolicy v-model="openPrivacyPolicy" />
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +111,31 @@
 </template>
 
 <script>
+import Imprint from "./Imprint.vue";
+import PrivacyPolicy from "./PrivacyPolicy.vue";
+
 export default {
   name: "Footer",
+
+  data() {
+    return {
+      openImprint: false,
+      openPrivacyPolicy: false,
+    };
+  },
+
+  methods: {
+    showImprint: function () {
+      this.openImprint = true;
+    },
+    showPrivacyPolicy: function () {
+      this.openPrivacyPolicy = true;
+    }
+  },
+
+  components: {
+    Imprint,
+    PrivacyPolicy
+  },
 };
 </script>

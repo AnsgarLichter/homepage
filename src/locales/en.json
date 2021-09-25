@@ -76,5 +76,13 @@
         "imprint": "Imprint",
         "delimiter": "\u00A0|\u00A0",
         "privacyPolicy": "Privacy Policy"
+    },
+    "imprint": {
+        "close": "Close",
+        "title": "Imprint"
+    },
+    "privacyPolicy": {
+        "close": "Close",
+        "title": "Privacy Policy"
     }
 }

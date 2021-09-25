@@ -27,7 +27,7 @@ Vue.config.productionTip = false
 
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-Vue.use(PerfectScrollbar)
+Vue.use(PerfectScrollbar);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
