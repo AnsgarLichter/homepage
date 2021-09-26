@@ -30,7 +30,7 @@
             $t("navigation.contact")
           }}</b-nav-item>
           <b-nav-item v-if="this.$i18n.locale === 'en'" @click="switchLocale">
-            <img class="h-6 w-12" src="@/assets/images/GB.png" />
+            <img class="h-6 w-12" src="@/assets/images/gb.png" />
           </b-nav-item>
           <b-nav-item v-if="this.$i18n.locale === 'de'" @click="switchLocale">
             <img class="h-6 w-12" src="@/assets/images/de.png" />
