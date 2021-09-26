@@ -11,7 +11,7 @@
     },
     "intro": {
         "hello": "Hallo, ich bin",
-        "jobTitle": "SAP EWM Entwickler",
+        "jobTitle": "Softwareentwickler SAP EWM",
         "studies": "B. Sc. Wirtschaftsinformatik"
     },
     "about": {
@@ -30,9 +30,9 @@
     "experiences": {
         "title": "Meine Erfahrungen",
         "education": {
-            "title": "Bildung",
+            "title": "Meine Bildung",
             "studies": {
-                "title": "B. Sc. Business Informatics",
+                "title": "B. Sc. Wirtschaftsinformatik",
                 "yearStart": "2017",
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
@@ -40,31 +40,31 @@
                 "description": "Studienrichtung: Software Engineering"
             },
             "abroad": {
-                "title": "Projekt im Ausland: Einführung von SAP MES",
+                "title": "Auslandsaufenthalt: Einführung von SAP MES",
                 "yearStart": "2020",
                 "yearEnd": "2020",
                 "organisation": "Suzhou Motors Ltd.",
                 "location": "Suzhou, China",
-                "description": "Meine Aufgaben waren der Support vor Ort und die Prozesse für die nächsten Rolloutschritte zu analysieren."
+                "description": "Support der lokalen Mitarbeiter vor Ort und Analyse der Prozesse für die nächsten Rolloutschritte."
             }
         },
         "work": {
             "title": "Meine Berufserfahrungen",
             "studies": {
-                "title": "Berufserfahruing im dualen Studium B. Sc. Wirtschaftsinformatik",
+                "title": "Berufserfahrung während des dualen Studiums",
                 "yearStart": "2017",
                 "yearEnd": "2020",
                 "organisation": "SEW Eurodrive",
                 "location": "Bruchsal, Deutschland",
-                "description": "Während dem dualen Studium konnte ich auch wertvolle Praxiserfahrungen sammeln."
+                "description": "Erfahrungen im Entwicklen mit ABAP, SAPUI5 in verschiedenen SAP-Bereichen."
             },
             "itpa": {
-                "title": "IT System Developer SAP EWM",
+                "title": "Softwareentwickler SAP EWM",
                 "yearStart": "2020",
                 "yearEnd": "Today",
                 "organisation": "SEW Eurodrive",
-                "location": "Graben-Neudorf, Germany",
-                "description": "Entwickeln für verschiedene Projekte im Kontext von SAP EWM und SAPUI5."
+                "location": "Graben-Neudorf, Deutschland    ",
+                "description": "Entwicklungen für diverse Projekte im Kontext von SAP EWM in Kombination mit SAPUI5."
             }
         },
         "images": {

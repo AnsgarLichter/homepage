@@ -90,9 +90,23 @@
                 />
               </a>
             </div>
+            <div class="flex flex-col">
+              <a
+                class="rounded social-icon p-3 animate__animated animate__bounceInDown animate__delay-3s"
+                href="mailto:lichteransgar@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <font-awesome-icon
+                  class="fa-lg"
+                  :icon="['fas', 'envelope']"
+                  color="white"
+                />
+              </a>
+            </div>
           </div>
         </div>
-        <div class="flex flex-col md:w-1/2 py-8 sm:py-16">
+        <div class="flex flex-col py-8 sm:py-16">
           <img
             class="rounded-full h-36 w-36 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
             src="@/assets/images/me.jpg"

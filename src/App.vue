@@ -95,4 +95,8 @@ body,
 .social-icon:hover .fa-linkedin {
   color: #2867b2;
 }
+
+.social-icon:hover .fa-envelope {
+  color: #495057;
+}
 </style>
