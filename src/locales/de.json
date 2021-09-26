@@ -72,6 +72,24 @@
             "sew": "SEW Eurodrive"
         }
     },
+    "projects": {
+        "title": "Meine Projekte",
+        "funnyFart": {
+            "title": "Funny Fart"
+        },
+        "catchTheTrain": {
+            "title": "Catch The Train"
+        },
+        "dhbwApp": {
+            "title": "DHBW App"
+        },
+        "justDoIt": {
+            "title": "Just Do It"
+        },
+        "projectInitializationAutomation": {
+            "title": "Project Initialization Automation"
+        }
+    },
     "footer": {
         "imprint": "Impressum",
         "delimiter": "\u00A0|\u00A0",
