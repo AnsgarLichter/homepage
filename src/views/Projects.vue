@@ -7,39 +7,7 @@
     <div class="flex flex-wrap justify-center mx-44 my-10">
       <b-card class="w-full my-3" no-body>
         <b-tabs pills card>
-          <b-tab :title="$t('projects.funnyFart.title')" active>
-            <b-card-text>
-              <div class="flex flex-row justify-center">
-                <div class="flex flex-col w-1/2 items-center">
-                  <b-carousel
-                    class="h-auto 64"
-                    :interval="10000"
-                    controls
-                    fade
-                    indicators
-                  >
-                    <b-carousel-slide
-                      :img-src="
-                        require('@/assets/projects/funnyFart/formula.jpg')
-                      "
-                    />
-                    <b-carousel-slide
-                      :img-src="
-                        require('@/assets/projects/funnyFart/calculate.jpg')
-                      "
-                    />
-                    <b-carousel-slide
-                      :img-src="
-                        require('@/assets/projects/funnyFart/overview.jpg')
-                      "
-                    />
-                  </b-carousel>
-                </div>
-                <div class="flex flex-col w-1/2 items-center">Funny Fart</div>
-              </div>
-            </b-card-text>
-          </b-tab>
-          <b-tab :title="$t('projects.catchTheTrain.title')">
+          <b-tab :title="$t('projects.catchTheTrain.title')" active>
             <b-card-text>
               <div class="flex flex-row justify-center">
                 <div class="flex flex-col w-1/2 items-center">
@@ -102,10 +70,7 @@
               </div></b-card-text
             >
           </b-tab>
-          <b-tab
-            :title="$t('projects.projectInitializationAutomation.title')"
-            active
-          >
+          <b-tab :title="$t('projects.funnyFart.title')">
             <b-card-text>
               <div class="flex flex-row justify-center">
                 <div class="flex flex-col w-1/2 items-center">
@@ -118,19 +83,27 @@
                   >
                     <b-carousel-slide
                       :img-src="
-                        require('@/assets/projects/projectInitializationAutomation/params.jpg')
+                        require('@/assets/projects/funnyFart/formula.png')
                       "
                     />
                     <b-carousel-slide
                       :img-src="
-                        require('@/assets/projects/projectInitializationAutomation/execution.jpg')
+                        require('@/assets/projects/funnyFart/calculate.png')
+                      "
+                    />
+                    <b-carousel-slide
+                      :img-src="
+                        require('@/assets/projects/funnyFart/result.png')
+                      "
+                    />
+                    <b-carousel-slide
+                      :img-src="
+                        require('@/assets/projects/funnyFart/overview.png')
                       "
                     />
                   </b-carousel>
                 </div>
-                <div class="flex flex-col w-1/2">
-                  Project Initialization Automation
-                </div>
+                <div class="flex flex-col w-1/2 items-center">Funny Fart</div>
               </div>
             </b-card-text>
           </b-tab>
