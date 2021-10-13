@@ -37,15 +37,15 @@
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
                 "location": "Karlsruhe, Deutschland",
-                "description": "Studienrichtung: Software Engineering"
+                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering mitn Erfahrungen im Entwicklen mit ABAP, SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
             },
             "abroad": {
                 "title": "Auslandsaufenthalt: Einführung von SAP MES",
-                "yearStart": "2020",
-                "yearEnd": "2020",
+                "yearStart": "2019",
+                "yearEnd": "2019",
                 "organisation": "Suzhou Motors Ltd.",
                 "location": "Suzhou, China",
-                "description": "Support der lokalen Mitarbeiter vor Ort und Analyse der Prozesse für die nächsten Rolloutschritte."
+                "description": "Produktivnahme von ausgewählten Pilotmaschinen mit SAP MES und anschließendem Support der Mitarbeiter vor Ort. Der nächste Schritt war Analyse der weiteren Fertigungsprozesse, um die Grundlage für die darauffolgenden Rollout-Schritte vorzubereiten."
             }
         },
         "work": {
@@ -63,8 +63,8 @@
                 "yearStart": "2020",
                 "yearEnd": "Today",
                 "organisation": "SEW Eurodrive",
-                "location": "Graben-Neudorf, Deutschland    ",
-                "description": "Entwicklungen für diverse Projekte im Kontext von SAP EWM in Kombination mit SAPUI5."
+                "location": "Graben-Neudorf, Deutschland",
+                "description": "Diverse Projekte im Kontext von SAP EWM, besonders ein Template für manuelle Lager in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
             }
         },
         "images": {
