@@ -54,10 +54,10 @@ body,
   overflow: hidden;
 }
 #content {
-  top: 74px;
+  top: 102px;
   position: relative;
   width: 100%;
-  height: calc(100% - 74px - 48px);
+  height: calc(100% - 102px - 48px);
   overflow-y: scroll;
 }
 

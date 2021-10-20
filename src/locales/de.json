@@ -16,7 +16,7 @@
     },
     "about": {
         "title": "Über mich",
-        "description-1": "Ich bin ein Software Engineer aus Karlsruhe.",
+        "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
         "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
         "description-3": "habe ich begonnen bei SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten zu arbeiten.",
         "description-4": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
@@ -37,7 +37,7 @@
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
                 "location": "Karlsruhe, Deutschland",
-                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering mitn Erfahrungen im Entwicklen mit ABAP, SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
+                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering mit Erfahrungen im Entwicklen mit ABAP, SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
             },
             "abroad": {
                 "title": "Auslandsaufenthalt: Einführung von SAP MES",

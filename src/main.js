@@ -3,14 +3,17 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-import { BootstrapVue, IconsPlugin} from 'bootstrap-vue';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import PerfectScrollbar from 'vue2-perfect-scrollbar';
 
 import i18n from './i18n'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTwitter, faGithub, faInstagram, faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope, faUserGraduate, faIndustry } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+import './assets/css/tailwindBase.css';
+import './assets/css/tailwind.css';
 
 import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css';
 
@@ -19,9 +22,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 import 'animate.css/animate.min.css';
 
-import './assets/css/tailwind.css';
-
-library.add(faXing, faGithub, faTwitter, faInstagram, faLinkedin, faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope);
+library.add(
+  faXing,
+  faGithub,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+  faGraduationCap,
+  faCalendar,
+  faUniversity,
+  faMapMarkerAlt,
+  faEnvelope,
+  faUserGraduate,
+  faIndustry
+);
 
 Vue.config.productionTip = false
 

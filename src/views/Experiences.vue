@@ -13,8 +13,8 @@
             class="
               sperator
               marker
-              w-8
-              h-8
+              w-10
+              h-10
               flex
               items-center
               justify-center
@@ -24,7 +24,7 @@
           >
             <font-awesome-icon
               class="fa-lg"
-              :icon="['fab', 'github']"
+              :icon="['fa', 'user-graduate']"
               color="black"
             />
           </div>
@@ -33,7 +33,10 @@
 
         <div class="content p-1 flex flex-col items-center flex-1">
           <Card
-            :images="[{ src: 'dhbw.svg', alt: $t('experiences.images.dhbw') }]"
+            :images="[
+              { src: 'dhbw.svg', alt: $t('experiences.images.dhbw') },
+              { src: 'sew.svg', alt: $t('experiences.images.sew') },
+            ]"
             :title="$t('experiences.education.studies.title')"
             :yearStart="$t('experiences.education.studies.yearStart')"
             :yearEnd="$t('experiences.education.studies.yearEnd')"
@@ -44,7 +47,7 @@
 
           <Card
             :images="[
-              { src: 'dhbw.svg', alt: $t('experiences.images.dhbw') },
+              { src: 'china.png', alt: $t('experiences.images.china') },
               { src: 'sew.svg', alt: $t('experiences.images.sew') },
             ]"
             :title="$t('experiences.education.abroad.title')"
@@ -65,8 +68,8 @@
             class="
               sperator
               marker
-              w-8
-              h-8
+              w-10
+              h-10
               flex
               items-center
               justify-center
@@ -76,7 +79,7 @@
           >
             <font-awesome-icon
               class="fa-lg"
-              :icon="['fab', 'github']"
+              :icon="['fa', 'industry']"
               color="black"
             />
           </div>
@@ -181,6 +184,12 @@ export default {
 }
 
 .timeline > div:nth-child(even) {
-  flex-direction: row-reverse;
+  flex-direction: row;
+}
+
+@screen xl {
+  .timeline > div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
 </style>
