@@ -178,8 +178,10 @@
       <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
         {{ $t("privacyPolicy.dataAquistion.title") }}
       </h1>
-      <h2 class="text-2xl lg:text-2xl font-bold">{{ $t("privacyPolicy.dataAquistion.logs.title") }}</h2>
-      {{ $t("privacyPolicy.dataAquistion.logs.description") }}      
+      <h2 class="text-2xl lg:text-2xl font-bold">
+        {{ $t("privacyPolicy.dataAquistion.logs.title") }}
+      </h2>
+      {{ $t("privacyPolicy.dataAquistion.logs.description") }}
       <ul class="list-disc pl-4">
         <li>{{ $t("privacyPolicy.dataAquistion.logs.list1") }}</li>
         <li>{{ $t("privacyPolicy.dataAquistion.logs.list2") }}</li>
@@ -199,9 +201,9 @@
       <h2 class="text-2xl lg:text-2xl font-bold">
         {{ $t("privacyPolicy.plugins.fontAwesome.title") }}
       </h2>
-        {{ $t("privacyPolicy.plugins.fontAwesome.description") }}
+      {{ $t("privacyPolicy.plugins.fontAwesome.description") }}
       <a href="https://fontawesome.com/privacy" target="_blank">
-      {{ $t("privacyPolicy.plugins.fontAwesome.description2") }}
+        {{ $t("privacyPolicy.plugins.fontAwesome.description2") }}
       </a>
       {{ $t("privacyPolicy.plugins.fontAwesome.description3") }}
       <br />

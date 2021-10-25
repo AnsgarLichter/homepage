@@ -34,7 +34,6 @@
         </template>
       </Timeline>
     </div>
-    
   </div>
 </template>
 

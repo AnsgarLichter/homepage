@@ -17,8 +17,7 @@
             mt-4
             sm:mt-20
             md:mt-0
-            sm:w-1/2
-            sm:self-center
+            sm:w-1/2 sm:self-center
             text-center text-white
           "
         >
@@ -176,12 +175,9 @@
               h-36
               w-36
               object-cover
-              md:h-72
-              md:w-72
-              lg:h-96
-              lg:w-96
-              xl:h-128
-              xl:w-128
+              md:h-72 md:w-72
+              lg:h-96 lg:w-96
+              xl:h-128 xl:w-128
             "
             src="@/assets/images/me.jpg"
             alt="Ansgar Lichter"
