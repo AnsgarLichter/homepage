@@ -12,15 +12,16 @@ import { faTwitter, faGithub, faInstagram, faXing, faLinkedin } from '@fortaweso
 import { faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope, faUserGraduate, faIndustry } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+
 import './assets/css/tailwindBase.css';
 import './assets/css/tailwind.css';
 
 import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css';
 
+import 'animate.css/animate.min.css';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-
-import 'animate.css/animate.min.css';
 
 library.add(
   faXing,
@@ -36,8 +37,6 @@ library.add(
   faUserGraduate,
   faIndustry
 );
-
-Vue.config.productionTip = false
 
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
