@@ -3,18 +3,18 @@
     <div class="flex flex-row h-full">
       <div
         class="
-          flex flex-col
-          w-3/4
-          sm:w-1/3
+          flex 
+          flex-col
           justify-center
+          items-center
+          w-1/2
+          sm:w-1/3
           text-white
-          items-start
-          sm:items-center
         "
       >
-        <p class="ml-4 sm:ml-12" bg="dark" variant="dark">
+        <div class="ml-4 sm:ml-12" bg="dark" variant="dark">
           &copy; Ansgar Lichter {{ new Date().getFullYear() }}
-        </p>
+        </div>
       </div>
 
       <div class="hidden sm:flex flex-col justify-center w-1/3">
@@ -96,24 +96,23 @@
 
       <div
         class="
-          flex flex-col
+          flex 
+          flex-col
           justify-center
-          items-end
+          items-center
           sm:items-center
-          w-1/4
+          w-1/2
           sm:w-1/3
         "
       >
-        <div class="flex flex-row mr-4 sm:mr-12 text-white">
-          <div class="text-center">
-            <button @click="showImprint">
-              {{ $t("footer.imprint") }}
-            </button>
+        <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
+          <div @click="showImprint">
+            {{ $t("footer.imprint") }}
             <Imprint v-model="openImprint" />
-             | 
-            <button @click="showPrivacyPolicy">
-              {{ $t("footer.privacyPolicy") }}
-            </button>
+          </div>
+          |
+          <div @click="showPrivacyPolicy">
+            {{ $t("footer.privacyPolicy") }}
             <PrivacyPolicy v-model="openPrivacyPolicy" />
           </div>
         </div>
@@ -142,12 +141,12 @@ export default {
     },
     showPrivacyPolicy: function () {
       this.openPrivacyPolicy = true;
-    }
+    },
   },
 
   components: {
     Imprint,
-    PrivacyPolicy
+    PrivacyPolicy,
   },
 };
 </script>
