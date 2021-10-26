@@ -52,120 +52,48 @@
             <p>{{ $t("intro.studies") }}</p>
           </div>
           <div class="flex flex-row justify-center mt-4">
-            <div class="flex flex-col">
-              <a
-                class="
-                  rounded
-                  social-icon
-                  p-3
-                  animate__animated animate__bounceInDown animate__delay-3s
-                "
-                href="https://github.com/AnsgarLichter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <font-awesome-icon
-                  class="fa-lg"
-                  :icon="['fab', 'github']"
-                  color="white"
-                />
-              </a>
-            </div>
-            <div class="flex flex-col">
-              <a
-                class="
-                  rounded
-                  social-icon
-                  p-3
-                  animate__animated animate__bounceInDown animate__delay-3s
-                "
-                href="https://twitter.com/ansgarlichter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <font-awesome-icon
-                  class="fa-lg"
-                  :icon="['fab', 'twitter']"
-                  color="white"
-                />
-              </a>
-            </div>
-            <div class="flex flex-col">
-              <a
-                class="
-                  rounded
-                  social-icon
-                  p-3
-                  animate__animated animate__bounceInDown animate__delay-3s
-                "
-                href="https://www.instagram.com/_ansgar_l/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <font-awesome-icon
-                  class="fa-lg"
-                  :icon="['fab', 'instagram']"
-                  color="white"
-                />
-              </a>
-            </div>
-            <div class="flex flex-col">
-              <a
-                class="
-                  rounded
-                  social-icon
-                  p-3
-                  animate__animated animate__bounceInDown animate__delay-3s
-                "
-                href="https://www.xing.com/profile/Ansgar_Lichter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <font-awesome-icon
-                  class="fa-lg"
-                  :icon="['fab', 'xing']"
-                  color="white"
-                />
-              </a>
-            </div>
-            <div class="flex flex-col">
-              <a
-                class="
-                  rounded
-                  social-icon
-                  p-3
-                  animate__animated animate__bounceInDown animate__delay-3s
-                "
-                href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <font-awesome-icon
-                  class="fa-lg"
-                  :icon="['fab', 'linkedin']"
-                  color="white"
-                />
-              </a>
-            </div>
-            <div class="flex flex-col">
-              <a
-                class="
-                  rounded
-                  social-icon
-                  p-3
-                  animate__animated animate__bounceInDown animate__delay-3s
-                "
-                href="mailto:lichteransgar@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <font-awesome-icon
-                  class="fa-lg"
-                  :icon="['fas', 'envelope']"
-                  color="white"
-                />
-              </a>
-            </div>
+            <SocialIcon
+              href="https://github.com/AnsgarLichter"
+              :icon="{ prefix: 'fab', name: 'github' }"
+              :customClasses="[
+                'animate__animated animate__bounceInDown animate__delay-3s',
+              ]"
+            />
+            <SocialIcon
+              href="https://twitter.com/ansgarlichter"
+              :icon="{ prefix: 'fab', name: 'twitter' }"
+              :customClasses="[
+                'animate__animated animate__bounceInDown animate__delay-3s',
+              ]"
+            />
+            <SocialIcon
+              href="https://www.instagram.com/_ansgar_l/"
+              :icon="{ prefix: 'fab', name: 'instagram' }"
+              :customClasses="[
+                'animate__animated animate__bounceInDown animate__delay-3s',
+              ]"
+            />
+            <SocialIcon
+              href="https://www.xing.com/profile/Ansgar_Lichter"
+              :icon="{ prefix: 'fab', name: 'xing' }"
+              :customClasses="[
+                'animate__animated animate__bounceInDown animate__delay-3s',
+              ]"
+            />
+            <SocialIcon
+              href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
+              :icon="{ prefix: 'fab', name: 'linkedin' }"
+              :customClasses="[
+                'animate__animated animate__bounceInDown animate__delay-3s',
+              ]"
+            />
+            <SocialIcon
+              href="mailto:lichteransgar@gmail.com"
+              :icon="{ prefix: 'fas', name: 'envelope' }"
+              :customClasses="[
+                'animate__animated animate__bounceInDown animate__delay-3s',
+              ]"
+            />
           </div>
         </div>
         <div class="flex flex-col py-8 sm:py-16">
@@ -190,8 +118,13 @@
 </template>
 
 <script>
+import SocialIcon from "../components/SocialIcon";
+
 export default {
   name: "Intro",
+  components: {
+    SocialIcon,
+  },
 };
 </script>
 
@@ -204,10 +137,6 @@ export default {
 
 .background > div {
   background-color: rgba(255, 255, 255, 0.5);
-}
-
-.social-icon:hover {
-  background-color: black;
 }
 
 .typewriter > p {

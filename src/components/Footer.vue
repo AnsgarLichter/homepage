@@ -3,8 +3,7 @@
     <div class="flex flex-row h-full">
       <div
         class="
-          flex 
-          flex-col
+          flex flex-col
           justify-center
           items-center
           w-1/2
@@ -13,91 +12,42 @@
         "
       >
         <div class="ml-4 sm:ml-12" bg="dark" variant="dark">
-          &copy; Ansgar Lichter {{ new Date().getFullYear() }}
+          &copy; Ansgar Lichter {{ this.currentYear }}
         </div>
       </div>
 
       <div class="hidden sm:flex flex-col justify-center w-1/3">
         <div class="flex flex-row justify-center space-x-3">
-          <a
-            class="social-icon"
+          <SocialIcon
             href="https://github.com/AnsgarLichter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fab', 'github']"
-              color="white"
-            />
-          </a>
-          <a
-            class="social-icon"
+            :icon="{ prefix: 'fab', name: 'github' }"
+          />
+          <SocialIcon
             href="https://twitter.com/ansgarlichter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fab', 'twitter']"
-              color="white"
-            />
-          </a>
-          <a
-            class="social-icon"
+            :icon="{ prefix: 'fab', name: 'twitter' }"
+          />
+          <SocialIcon
             href="https://www.instagram.com/_ansgar_l/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fab', 'instagram']"
-              color="white"
-            />
-          </a>
-          <a
-            class="social-icon"
+            :icon="{ prefix: 'fab', name: 'instagram' }"
+          />
+          <SocialIcon
             href="https://www.xing.com/profile/Ansgar_Lichter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fab', 'xing']"
-              color="white"
-            />
-          </a>
-          <a
-            class="social-icon"
+            :icon="{ prefix: 'fab', name: 'xing' }"
+          />
+          <SocialIcon
             href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fab', 'linkedin']"
-              color="white"
-            />
-          </a>
-          <a
-            class="social-icon"
+            :icon="{ prefix: 'fab', name: 'linkedin' }"
+          />
+          <SocialIcon
             href="mailto:lichteransgar@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fas', 'envelope']"
-              color="white"
-            />
-          </a>
+            :icon="{ prefix: 'fas', name: 'envelope' }"
+          />
         </div>
       </div>
 
       <div
         class="
-          flex 
-          flex-col
+          flex flex-col
           justify-center
           items-center
           sm:items-center
@@ -105,13 +55,21 @@
           sm:w-1/3
         "
       >
-        <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
-          <div @click="showImprint">
+        <div
+          class="
+            flex flex-row
+            mr-4
+            sm:mr-12
+            text-white text-center
+            whitespace-pre
+          "
+        >
+          <div class="cursor-pointer" @click="showImprint">
             {{ $t("footer.imprint") }}
             <Imprint v-model="openImprint" />
           </div>
           |
-          <div @click="showPrivacyPolicy">
+          <div class="cursor-pointer" @click="showPrivacyPolicy">
             {{ $t("footer.privacyPolicy") }}
             <PrivacyPolicy v-model="openPrivacyPolicy" />
           </div>
@@ -122,16 +80,24 @@
 </template>
 
 <script>
-import Imprint from "./Imprint.vue";
-import PrivacyPolicy from "./PrivacyPolicy.vue";
+import Imprint from "./Imprint";
+import PrivacyPolicy from "./PrivacyPolicy";
+import SocialIcon from "./SocialIcon";
 
 export default {
   name: "Footer",
+
+  components: {
+    Imprint,
+    PrivacyPolicy,
+    SocialIcon,
+  },
 
   data() {
     return {
       openImprint: false,
       openPrivacyPolicy: false,
+      currentYear: new Date().getFullYear(),
     };
   },
 
@@ -142,11 +108,6 @@ export default {
     showPrivacyPolicy: function () {
       this.openPrivacyPolicy = true;
     },
-  },
-
-  components: {
-    Imprint,
-    PrivacyPolicy,
   },
 };
 </script>
