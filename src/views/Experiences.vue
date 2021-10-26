@@ -18,6 +18,7 @@
         </template>
         <template #content="contentSlotProps">
           <div
+            class="w-full"
             v-for="(item, index) in contentSlotProps.item.experiences"
             :key="index"
           >
