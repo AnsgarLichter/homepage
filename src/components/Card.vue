@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="mt-4 sm:mt-10 min-w-200 w-64 sm:w-96 md:w-128 lg:flex lg:h-80 xl:h-72 shadow"> -->
-  <div class="mt-4 sm:mt-10 lg:flex shadow w-full max-w-max">
+  <div class="mt-4 sm:mt-10 lg:flex shadow w-full">
     <div
       class="
         flex flex-col
