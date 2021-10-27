@@ -56,10 +56,8 @@ export default {
                 { src: "sew.svg", alt: this.$t("experiences.images.sew") },
               ],
               title: this.$t("experiences.education.studies.title"),
-              yearStart: Number(
-                this.$t("experiences.education.studies.yearStart")
-              ),
-              yearEnd: Number(this.$t("experiences.education.studies.yearEnd")),
+              yearStart: this.$t("experiences.education.studies.yearStart"),
+              yearEnd: this.$t("experiences.education.studies.yearEnd"),
               organisation: this.$t(
                 "experiences.education.studies.organisation"
               ),
@@ -72,10 +70,8 @@ export default {
                 { src: "sew.svg", alt: this.$t("experiences.images.sew") },
               ],
               title: this.$t("experiences.education.abroad.title"),
-              yearStart: Number(
-                this.$t("experiences.education.abroad.yearStart")
-              ),
-              yearEnd: Number(this.$t("experiences.education.abroad.yearEnd")),
+              yearStart: this.$t("experiences.education.abroad.yearStart"),
+              yearEnd: this.$t("experiences.education.abroad.yearEnd"),
               organisation: this.$t(
                 "experiences.education.abroad.organisation"
               ),
@@ -96,8 +92,8 @@ export default {
                 { src: "sew.svg", alt: this.$t("experiences.images.sew") },
               ],
               title: this.$t("experiences.work.itpa.title"),
-              yearStart: Number(this.$t("experiences.work.itpa.yearStart")),
-              yearEnd: Number(this.$t("experiences.work.itpa.yearEnd")),
+              yearStart: this.$t("experiences.work.itpa.yearStart"),
+              yearEnd: this.$t("experiences.work.itpa.yearEnd"),
               organisation: this.$t("experiences.work.itpa.organisation"),
               location: this.$t("experiences.work.itpa.location"),
               description: this.$t("experiences.work.itpa.description"),

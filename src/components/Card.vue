@@ -88,12 +88,12 @@ export default {
       default: "",
     },
     yearStart: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: "",
     },
     yearEnd: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: "",
     },
     organisation: {
       type: String,
