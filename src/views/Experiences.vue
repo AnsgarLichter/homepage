@@ -3,80 +3,126 @@
     <div class="flex flex-row justify-center">
       <div class="text-5xl font-bold">{{ $t("experiences.title") }}</div>
     </div>
-    <div class="flex flex-col xl:flex-row">
-      <div class="flex flex-col flex-wrap xl:w-1/2 self-center text-center mt-10">
-        <div class="text-3xl font-bold">
-          {{ $t("experiences.education.title") }}
-        </div>
-        <div class="flex flex-row justify-center">
-          <Card
-            :images="[{ src: 'dhbw.svg', alt: $t('experiences.images.dhbw') }]"
-            :title="$t('experiences.education.studies.title')"
-            :yearStart="$t('experiences.education.studies.yearStart')"
-            :yearEnd="$t('experiences.education.studies.yearEnd')"
-            :organisation="$t('experiences.education.studies.organisation')"
-            :location="$t('experiences.education.studies.location')"
-            :description="$t('experiences.education.studies.description')"
-          />
-        </div>
 
-        <div class="flex flex-row justify-center">
-          <Card
-            :images="[
-              { src: 'dhbw.svg', alt: $t('experiences.images.dhbw') },
-              { src: 'sew.svg', alt: $t('experiences.images.sew') },
+    <div class="mt-10">
+      <Timeline :events="events">
+        <template #marker="markerSlotProps">
+          <font-awesome-icon
+            class="fa-lg"
+            :icon="[
+              markerSlotProps.item.icon.prefix,
+              markerSlotProps.item.icon.name,
             ]"
-            :title="$t('experiences.education.abroad.title')"
-            :yearStart="$t('experiences.education.abroad.yearStart')"
-            :yearEnd="$t('experiences.education.abroad.yearEnd')"
-            :organisation="$t('experiences.education.abroad.organisation')"
-            :location="$t('experiences.education.abroad.location')"
-            :description="$t('experiences.education.abroad.description')"
+            :color="markerSlotProps.item.icon.color"
           />
-        </div>
-      </div>
-      <div class="flex flex-col xl:w-1/2 self-center text-center mt-10">
-        <div class="text-3xl font-bold">{{ $t("experiences.work.title") }}</div>
-
-        <div class="flex flex-row justify-center">
-          <Card
-            :images="[{ src: 'sew.svg', alt: $t('experiences.images.sew') }]"
-            :title="$t('experiences.work.studies.title')"
-            :yearStart="$t('experiences.work.studies.yearStart')"
-            :yearEnd="$t('experiences.work.studies.yearEnd')"
-            :organisation="$t('experiences.work.studies.organisation')"
-            :location="$t('experiences.work.studies.location')"
-            :description="$t('experiences.work.studies.description')"
-          />
-        </div>
-
-        <div class="flex flex-row justify-center">
-          <Card
-            :images="[{ src: 'sew.svg', alt: $t('experiences.images.sew') }]"
-            :title="$t('experiences.work.itpa.title')"
-            :yearStart="$t('experiences.work.itpa.yearStart')"
-            :yearEnd="$t('experiences.work.itpa.yearEnd')"
-            :organisation="$t('experiences.work.itpa.organisation')"
-            :location="$t('experiences.work.itpa.location')"
-            :description="$t('experiences.work.itpa.description')"
-          />
-        </div>
-      </div>
+        </template>
+        <template #content="contentSlotProps">
+          <div
+            class="w-full"
+            v-for="(item, index) in contentSlotProps.item.experiences"
+            :key="index"
+          >
+            <Card
+              :images="item.images"
+              :title="item.title"
+              :yearStart="item.yearStart"
+              :yearEnd="item.yearEnd"
+              :organisation="item.organisation"
+              :location="item.location"
+              :description="item.description"
+            />
+          </div>
+        </template>
+      </Timeline>
     </div>
   </div>
 </template>
 
 <script>
 import Card from "../components/Card";
+import Timeline from "../components/Timeline";
 
 export default {
   name: "Expieriences",
-  components: { Card },
+  components: { Card, Timeline },
+  data() {
+    return {
+      events: [
+        {
+          experiences: [
+            {
+              images: [
+                { src: "dhbw.svg", alt: this.$t("experiences.images.dhbw") },
+                { src: "sew.svg", alt: this.$t("experiences.images.sew") },
+              ],
+              title: this.$t("experiences.education.studies.title"),
+              yearStart: this.$t("experiences.education.studies.yearStart"),
+              yearEnd: this.$t("experiences.education.studies.yearEnd"),
+              organisation: this.$t(
+                "experiences.education.studies.organisation"
+              ),
+              location: this.$t("experiences.education.studies.location"),
+              description: this.$t("experiences.education.studies.description"),
+            },
+            {
+              images: [
+                { src: "china.png", alt: this.$t("experiences.images.china") },
+                { src: "sew.svg", alt: this.$t("experiences.images.sew") },
+              ],
+              title: this.$t("experiences.education.abroad.title"),
+              yearStart: this.$t("experiences.education.abroad.yearStart"),
+              yearEnd: this.$t("experiences.education.abroad.yearEnd"),
+              organisation: this.$t(
+                "experiences.education.abroad.organisation"
+              ),
+              location: this.$t("experiences.education.abroad.location"),
+              description: this.$t("experiences.education.abroad.description"),
+            },
+          ],
+          icon: {
+            prefix: "fa",
+            name: "user-graduate",
+            color: "black",
+          },
+        },
+        {
+          experiences: [
+            {
+              images: [
+                { src: "sew.svg", alt: this.$t("experiences.images.sew") },
+              ],
+              title: this.$t("experiences.work.itpa.title"),
+              yearStart: this.$t("experiences.work.itpa.yearStart"),
+              yearEnd: this.$t("experiences.work.itpa.yearEnd"),
+              organisation: this.$t("experiences.work.itpa.organisation"),
+              location: this.$t("experiences.work.itpa.location"),
+              description: this.$t("experiences.work.itpa.description"),
+            },
+          ],
+          icon: {
+            prefix: "fa",
+            name: "industry",
+            color: "black",
+          },
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style scoped>
 .dhbw {
   background-image: url("~@/assets/images/dhbw.jpg");
+}
+
+.timeline > div:nth-child(even) {
+  flex-direction: row;
+}
+
+@screen xl {
+  .timeline > div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
 </style>
