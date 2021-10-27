@@ -5,14 +5,16 @@
         <img class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96" src="@/assets/images/aboutme.png" />
       </div>
     </div>
+    
     <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-16">
       <h1 class="text-3xl lg:text-5xl font-bold">{{ $t("about.title") }}</h1>
-      <div class="text-left text-base mx-28 lg:mx-0 mt-3 lg:mt-6 ">
+      <div class="text-left text-base mx-10 lg:mx-0 mt-3 lg:mt-6 ">
         {{ $t("about.description-1") }}<br class="hidden lg:block"/>
         {{ $t("about.description-2") }}
         {{ $t("about.description-3") }}<br />
         {{ $t("about.description-4") }}
       </div>
+
       <div class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
         <div class="relative pt-1">
           <div class="flex mb-2 items-center justify-between">

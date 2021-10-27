@@ -6,7 +6,14 @@
       class="timeline-container flex relative"
     >
       <div
-        class="timeline-event-opposite p-1 flex flex-col items-center flex-0 xl:flex-1"
+        class="
+          timeline-event-opposite
+          p-1
+          flex flex-col
+          items-center
+          flex-0
+          xl:flex-1
+        "
       >
         <slot name="opposite" :item="item" :index="index"> </slot>
       </div>
@@ -50,7 +57,10 @@
 export default {
   name: "Timeline",
   props: {
-    events: null,
+    events: {
+      type: Array,
+      default: () => [],
+    },
   },
 };
 </script>

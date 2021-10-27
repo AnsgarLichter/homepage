@@ -231,7 +231,10 @@ export default {
   },
 
   props: {
-    value: Boolean,
+    value: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {

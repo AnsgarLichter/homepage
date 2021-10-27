@@ -29,19 +29,12 @@ export default {
       type: String,
     },
     icon: {
-      default() {
-        return {
-          prefix: "",
-          name: "",
-        };
-      },
       type: Object,
+      default: () => {},
     },
     customClasses: {
       type: Array,
-      default() {
-        return [];
-      },
+      default: () => [],
     },
   },
 

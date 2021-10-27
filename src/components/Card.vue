@@ -78,15 +78,36 @@
 <script>
 export default {
   name: "Card",
-  props: [
-    "images",
-    "title",
-    "yearStart",
-    "yearEnd",
-    "organisation",
-    "location",
-    "description",
-  ],
+  props: {
+    images: {
+      type: Array,
+      default: () => [],
+    },
+    title: {
+      type: String,
+      default: "",
+    },
+    yearStart: {
+      type: Number,
+      default: 0,
+    },
+    yearEnd: {
+      type: Number,
+      default: 0,
+    },
+    organisation: {
+      type: String,
+      default: "",
+    },
+    location: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+  },
   methods: {
     getImagePath(imageSrc) {
       return require(`../assets/images/${imageSrc}`);
