@@ -1,4 +1,14 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
 
-createApp(App).mount('#app')
+import App from './App.vue';
+
+import i18n from './i18n';
+
+import './index.css';
+
+
+const app = createApp(App);
+
+app.use(i18n);
+
+app.mount('#app');
