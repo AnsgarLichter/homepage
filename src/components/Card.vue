@@ -37,6 +37,7 @@
         flex flex-col
         justify-between
         leading-normal
+        w-full
       "
     >
       <div class="mb-8 text-left">
