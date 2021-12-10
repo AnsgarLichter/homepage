@@ -4,6 +4,7 @@ import App from './App.vue';
 
 import i18n from './i18n';
 import FontAwesomeIcon from './fontAwesomeIcons';
+import router from './router/router';
 
 import './index.css';
 
@@ -12,6 +13,7 @@ const app = createApp(App);
 
 app.component("font-awesome-icon", FontAwesomeIcon);
 
+app.use(router);
 app.use(i18n);
 
-app.mount('#app');
+app.mount("#app");
