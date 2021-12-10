@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { computed } from "@vue/reactivity";
+
 export default {
   name: "SocialIcon",
 
@@ -38,10 +40,14 @@ export default {
     },
   },
 
-  computed: {
-    socialIconClass() {
-      return ["rounded", "p-3"].concat(this.customClasses);
-    },
+  setup(properties) {
+    const socialIconClass = computed(() =>
+      ["rounded", "p-3"].concat(properties.customClasses)
+    );
+
+    return {
+      socialIconClass,
+    };
   },
 };
 </script>

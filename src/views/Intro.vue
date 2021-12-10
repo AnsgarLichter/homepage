@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import SocialIcon from "../components/SocialIcon";
+import SocialIcon from "@/components/SocialIcon";
 
 export default {
   name: "Intro",
