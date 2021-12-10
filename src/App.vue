@@ -1,30 +1,40 @@
 <template>
   <div>
+    <div id="header">
+      <Header />
+    </div>
+
     <div id="content">
       <Intro />
       <About />
       <Expieriences />
       <Projects />
-      <Contact />
+    </div>
+
+    <div id="footer">
+      <Footer />
     </div>
   </div>
 </template>
 
 <script>
-import Intro from "./views/Intro.vue";
-import About from "./views/About.vue";
-import Projects from "./views/Projects.vue";
-import Expieriences from "./views/Experiences.vue";
-import Contact from "./views/Contact.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
+import Intro from "@/views/Intro.vue";
+import About from "@/views/About.vue";
+import Projects from "@/views/Projects.vue";
+import Expieriences from "@/views/Experiences.vue";
 
 export default {
   name: "App",
   components: {
+    Header,
+    Footer,
     Intro,
     About,
     Projects,
     Expieriences,
-    Contact,
   },
 };
 </script>
