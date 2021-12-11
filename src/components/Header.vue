@@ -65,10 +65,10 @@ export default {
         label: t("navigation.projects"),
         href: "#projects",
       },
-      /* {
+      {
         label: t("navigation.language"),
         href: "#language",
-      }, */
+      },
     ]);
 
     return { navigationItems };
