@@ -39,7 +39,6 @@
           bCollapse ? 'navbar-collapse' : '',
           'flex flex-col list-none px-0 space-x-0 space-y-2 lg:flex-row lg:space-x-5 lg:space-y-0 lg:my-auto ml-auto lg:justify-end',
         ]"
-        v-scroll-spy-link
         v-scroll-spy-active
       >
         <li class="navbar-item" v-for="(item, index) of items" :key="index">
