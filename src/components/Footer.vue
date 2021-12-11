@@ -65,13 +65,12 @@
           "
         >
           <div class="cursor-pointer" @click="showImprint">
-            <!-- {{ $t("footer.imprint") }} -->
-            Imprint
+            {{ $t("footer.imprint") }}
             <!-- <Imprint v-model="openImprint" /> -->
           </div>
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
-            <!-- {{ $t("footer.privacyPolicy") }} -->
+            {{ $t("footer.privacyPolicy") }}
             PrivacyPolicy
             <!-- <PrivacyPolicy v-model="openPrivacyPolicy" /> -->
           </div>

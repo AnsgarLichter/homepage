@@ -77,7 +77,6 @@ export default {
     },
 
     nav() {
-      console.log("nav");
       this.bCollapse = true;
     },
   },

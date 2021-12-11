@@ -1,4 +1,4 @@
-# scroll-spy-test
+# Homepage
 
 ## Project setup
 ```
