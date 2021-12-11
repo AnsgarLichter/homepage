@@ -42,12 +42,9 @@
       >
         <li class="navbar-item" v-for="(item, index) of items" :key="index">
           <slot name="item" :item="item" :index="index"
-            ><a
-              @click="nav"
-              :href="item.href"
-              class="hover:no-underline navbar-item"
-              >{{ item.label }}</a
-            >
+            ><a @click="nav" :href="item.href" class="hover:no-underline">{{
+              item.label
+            }}</a>
           </slot>
         </li>
       </ul>
@@ -100,6 +97,11 @@ export default {
 .navbar-collapse {
   visibility: collapse;
   display: none;
+}
+
+.active,
+.active:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 @screen lg {

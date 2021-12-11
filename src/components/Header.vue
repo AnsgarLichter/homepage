@@ -112,9 +112,4 @@ export default {
 .flex-basis-100 {
   flex-basis: 100%;
 }
-
-.active,
-.active:hover {
-  color: rgba(255, 255, 255, 1);
-}
 </style>
