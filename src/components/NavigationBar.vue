@@ -39,12 +39,14 @@
           bCollapse ? 'navbar-collapse' : '',
           'flex flex-col list-none px-0 space-x-0 space-y-2 lg:flex-row lg:space-x-5 lg:space-y-0 lg:my-auto ml-auto lg:justify-end',
         ]"
+        v-scroll-spy-link
+        v-scroll-spy-active
       >
         <li class="navbar-item" v-for="(item, index) of items" :key="index">
-          <slot name="item" :item="item" :index="index"
-            ><a @click="nav" :href="item.href" class="hover:no-underline">{{
-              item.label
-            }}</a>
+          <slot name="item" :item="item" :index="index">
+            <a @click="nav" :href="item.href" class="hover:no-underline">
+              {{ item.label }}
+            </a>
           </slot>
         </li>
       </ul>
@@ -74,11 +76,8 @@ export default {
       this.bCollapse = !this.bCollapse;
     },
 
-    nav(oEvent) {
-      const oTarget = oEvent.target;
-      const aTargetClasses = oTarget.classList;
-
-      aTargetClasses.add("active");
+    nav() {
+      console.log("nav");
       this.bCollapse = true;
     },
   },

@@ -1,7 +1,6 @@
 <template>
   <div
-    id="about"
-    class="flex flex-col items-center mt-8 mx-8 lg:flex-row lg:mt-24 lg:mx-44"
+    class="flex flex-col items-center pt-8 px-8 lg:flex-row lg:pt-24 lg:px-44"
   >
     <div class="flex lg:flex-col lg:w-1/2 justify-center">
       <div class="justify-center">

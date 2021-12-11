@@ -1,5 +1,5 @@
 <template>
-  <div id="intro" class="w-full h-full">
+  <div class="w-full h-full">
     <div class="background w-full h-full">
       <div
         class="

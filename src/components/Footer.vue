@@ -65,13 +65,15 @@
           "
         >
           <div class="cursor-pointer" @click="showImprint">
-            {{ $t("footer.imprint") }}
-            <Imprint v-model="openImprint" />
+            <!-- {{ $t("footer.imprint") }} -->
+            Imprint
+            <!-- <Imprint v-model="openImprint" /> -->
           </div>
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
-            {{ $t("footer.privacyPolicy") }}
-            <PrivacyPolicy v-model="openPrivacyPolicy" />
+            <!-- {{ $t("footer.privacyPolicy") }} -->
+            PrivacyPolicy
+            <!-- <PrivacyPolicy v-model="openPrivacyPolicy" /> -->
           </div>
         </div>
       </div>
@@ -84,7 +86,7 @@ import { ref } from "@vue/reactivity";
 
 //import Imprint from "./Imprint";
 //import PrivacyPolicy from "./PrivacyPolicy";
-import SocialIcon from "./SocialIcon";
+import SocialIcon from "@/components/SocialIcon";
 
 export default {
   name: "Footer",
