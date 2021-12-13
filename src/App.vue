@@ -2,7 +2,7 @@
   <div>
     <Header />
 
-    <div class="content" v-scroll-spy>
+    <div class="content">
       <div id="intro">
         <Intro />
       </div>

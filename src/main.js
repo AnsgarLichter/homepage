@@ -6,7 +6,7 @@ import i18n from '@/i18n';
 import FontAwesomeIcon from '@/fontAwesomeIcons';
 import router from "@/router/router";
 
-import { registerScrollSpy } from "vue3-scroll-spy";
+import { initializeScrollSpy } from "./scrollspy/CreateScrollSpy";
 
 import '@/index.css';
 
@@ -17,6 +17,6 @@ app.component("font-awesome-icon", FontAwesomeIcon);
 app.use(router);
 app.use(i18n);
 
-registerScrollSpy(app);
+initializeScrollSpy(app)
 
 app.mount("#app");
