@@ -71,7 +71,6 @@
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
             {{ $t("footer.privacyPolicy") }}
-            PrivacyPolicy
             <!-- <PrivacyPolicy v-model="openPrivacyPolicy" /> -->
           </div>
         </div>
