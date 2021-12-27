@@ -27,13 +27,11 @@ export class ScrollContainer {
         this.loadEventListener = null;
     }
 
-    getSection() {
-        const href = this.navigationLink.getAttribute("href");
-
-        document.querySelector(href);
-    }
-
     getScrollPosition() {
         return this.scrollContainer.scrollTop;
+    }
+
+    hasReachedEnd() {
+        return this.scrollContainer.scrollHeight - this.getScrollPosition() === this.scrollContainer.clientHeight;
     }
 }

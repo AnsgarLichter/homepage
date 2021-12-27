@@ -11,25 +11,23 @@ const defaultOptions = {
 };
 
 const spyDirective = {
+    //eslint-disable-next-line no-undef
     created(element, binding) {
-        console.log(element); //TODO: What to do with element?
-
         const instance = binding.instance;
         const providedOptions = binding.value;
 
         instance.options = mergeOptions(providedOptions, defaultOptions);
     },
 
+    //eslint-disable-next-line no-undef
     mounted(element, binding) {
-        console.log(element); //TODO: What to do with element?
-
         const instance = binding.instance;
         const methods = binding.dir.methods;
 
         instance.scrollContainer = new ScrollContainer(instance.options.scrollContainerSelector);
-        instance.scrollContainer.addScrollListener(methods.onContainerScrolled.bind(instance));
-
         instance.navigationLinkCollection = new NavigationLinkCollection(instance.options.navigationLinkSelector);
+
+        instance.scrollContainer.addScrollListener(methods.onContainerScrolled.bind(instance));
         instance.navigationLinkCollection.addClickListener(methods.onNavigationLinkClicked.bind(instance));
 
         instance.$nextTick(methods.onContainerScrolled.bind(instance).call());
@@ -38,25 +36,23 @@ const spyDirective = {
     methods: {
         onContainerScrolled() {
             const scrollPosition = this.scrollContainer.getScrollPosition();
+            const activeClass = this.options.activeClass;
 
-            const selectorForActiveClass = "." + this.options.activeClass;
-            const sections = this.navigationLinkCollection.getSections();
-
-            sections.forEach(section => {
-                if (section.offsetTop <= scrollPosition) {
-                    const id = section.id;
-
-                    const activeNavigationLink = document.querySelector(selectorForActiveClass);
-                    if (activeNavigationLink)
-                        activeNavigationLink.classList.remove(this.options.activeClass);
-
-                    document.querySelector(`a[href*=${id}]`).parentNode.classList.add(this.options.activeClass);
-                }
+            const navigationLinks = this.navigationLinkCollection.getNavigationLinks();
+            navigationLinks.forEach(navigationLink => {
+                if (navigationLink.hasClass(activeClass))
+                    navigationLink.removeClass(activeClass)
             });
+
+            let selectedNavigationLink = this.navigationLinkCollection.getNavigationLinkAtPosition(scrollPosition);
+            if (this.scrollContainer.hasReachedEnd())
+                selectedNavigationLink = this.navigationLinkCollection.getLastNavigationLink();
+
+            selectedNavigationLink?.addClass(activeClass);
         },
 
         onNavigationLinkClicked(event) {
-            const navigationLink = this.navigationLinkCollection.get(event.srcElement); //TODO: Get instance for link
+            const navigationLink = this.navigationLinkCollection.get(event.srcElement);
             const targetSection = navigationLink.getSection();
 
             targetSection.scrollIntoView({

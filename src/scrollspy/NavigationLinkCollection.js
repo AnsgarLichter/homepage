@@ -19,12 +19,28 @@ const NavigationLinkCollection = class NavigationLinkCollection {
             navigationLink => navigationLink.addClickListener(clickEventListener));
     }
 
-    getSections() {
-        const sections = [];
+    getLastNavigationLink() {
+        let lastSection = this.navigationLinks[0];
 
-        this.navigationLinks.forEach(navigationLink => sections.push(navigationLink.getSection()));
+        this.navigationLinks.forEach(navigationLink => {
+            const section = navigationLink.getSection();
+            if (section.offsetTop > lastSection?.getSection().offsetTop)
+                lastSection = navigationLink
+        });
 
-        return sections;
+        return lastSection;
+    }
+
+    getNavigationLinkAtPosition(position) {
+        let sectionAtPosition = null;
+
+        this.navigationLinks.forEach(section => {
+            if (section.getSection().offsetTop <= position) {
+                sectionAtPosition = section;
+            }
+        });
+
+        return sectionAtPosition;
     }
 
     get(htmlNavigationLink) {

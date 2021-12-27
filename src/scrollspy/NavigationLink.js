@@ -18,6 +18,28 @@ const NavigationLink = class NavigationLink {
 
         return document.querySelector(href);
     }
+
+    getClassList() {
+        return this.navigationLink.classList;
+    }
+
+    addClass(className) {
+        const classList = this.getClassList();
+
+        classList.add(className);
+    }
+
+    removeClass(className) {
+        const classList = this.getClassList();
+
+        classList.remove(className);
+    }
+
+    hasClass(className) {
+        const classList = this.getClassList();
+
+        return classList.contains(className);
+    }
 }
 
 export { NavigationLink }
