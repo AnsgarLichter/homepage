@@ -1,45 +1,45 @@
 const NavigationLink = class NavigationLink {
-    constructor(navigationLink) {
-        this.navigationLink = navigationLink;
-    }
+  constructor(navigationLink) {
+    this.navigationLink = navigationLink;
+  }
 
-    addClickListener(clickEventListener) {
-        this.clickEventListener = clickEventListener;
-        this.navigationLink.addEventListener('click', clickEventListener);
-    }
+  addClickListener(clickEventListener) {
+    this.clickEventListener = clickEventListener;
+    this.navigationLink.addEventListener("click", clickEventListener);
+  }
 
-    removeClickListener() {
-        this.navigationLink.removeEventListener('click', this.clickEventListener);
-        this.clickEventListener = null;
-    }
+  removeClickListener() {
+    this.navigationLink.removeEventListener("click", this.clickEventListener);
+    this.clickEventListener = null;
+  }
 
-    getSection() {
-        const href = this.navigationLink.getAttribute("href");
+  getSection() {
+    const href = this.navigationLink.getAttribute("href");
 
-        return document.querySelector(href);
-    }
+    return document.querySelector(href);
+  }
 
-    getClassList() {
-        return this.navigationLink.classList;
-    }
+  getClassList() {
+    return this.navigationLink.classList;
+  }
 
-    addClass(className) {
-        const classList = this.getClassList();
+  addClass(className) {
+    const classList = this.getClassList();
 
-        classList.add(className);
-    }
+    classList.add(className);
+  }
 
-    removeClass(className) {
-        const classList = this.getClassList();
+  removeClass(className) {
+    const classList = this.getClassList();
 
-        classList.remove(className);
-    }
+    classList.remove(className);
+  }
 
-    hasClass(className) {
-        const classList = this.getClassList();
+  hasClass(className) {
+    const classList = this.getClassList();
 
-        return classList.contains(className);
-    }
-}
+    return classList.contains(className);
+  }
+};
 
-export { NavigationLink }
+export { NavigationLink };

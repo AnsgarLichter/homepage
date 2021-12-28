@@ -2,36 +2,14 @@
   <div class="w-full h-full">
     <div class="background w-full h-full">
       <div
-        class="
-          w-full
-          h-full
-          flex flex-col
-          md:flex-row
-          items-center
-          md:justify-center
-        "
+        class="w-full h-full flex flex-col md:flex-row items-center md:justify-center"
       >
         <div
-          class="
-            flex flex-col
-            mt-4
-            sm:mt-20
-            md:mt-0
-            sm:w-1/2 sm:self-center
-            text-center text-white
-          "
+          class="flex flex-col mt-4 sm:mt-20 md:mt-0 sm:w-1/2 sm:self-center text-center text-white"
         >
           <div class="flex flex-row justify-center">
             <div
-              class="
-                bg-blue-700
-                rounded-t-full rounded-br-full
-                px-4
-                py-2
-                text-sm
-                sm:text-2xl
-                text-white
-              "
+              class="bg-blue-700 rounded-t-full rounded-br-full px-4 py-2 text-sm sm:text-2xl text-white"
             >
               {{ $t("intro.hello") }}
             </div>
@@ -98,15 +76,7 @@
         </div>
         <div class="flex flex-col py-8 sm:py-16">
           <img
-            class="
-              rounded-full
-              h-36
-              w-36
-              object-cover
-              md:h-72 md:w-72
-              lg:h-96 lg:w-96
-              xl:h-128 xl:w-128
-            "
+            class="rounded-full h-36 w-36 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
             src="@/assets/images/me.jpg"
             alt="Ansgar Lichter"
             data-holder-rendered="true"

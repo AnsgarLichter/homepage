@@ -9,14 +9,7 @@
       class="ml-auto lg:hidden flex items-center"
     >
       <div
-        class="
-          py-2
-          px-3
-          bg-bg-grey
-          cursor-pointer
-          rounded-lg
-          navbar-menu-border
-        "
+        class="py-2 px-3 bg-bg-grey cursor-pointer rounded-lg navbar-menu-border"
       >
         <font-awesome-icon
           class="fa-lg"
@@ -28,11 +21,7 @@
 
     <div
       id="navbar-collapse"
-      class="
-        flex-basis-100 flex-shrink flex-grow
-        items-center
-        lg:flex lg:flex-auto
-      "
+      class="flex-basis-100 flex-shrink flex-grow items-center lg:flex lg:flex-auto"
     >
       <ul
         :class="[

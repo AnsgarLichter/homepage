@@ -1,10 +1,24 @@
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
-import { faTwitter, faGithub, faInstagram, faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+  faTwitter,
+  faGithub,
+  faInstagram,
+  faXing,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
-import { faGraduationCap, faCalendar, faUniversity, faMapMarkerAlt, faEnvelope, faUserGraduate, faIndustry, faBars } from '@fortawesome/free-solid-svg-icons'
-
+import {
+  faGraduationCap,
+  faCalendar,
+  faUniversity,
+  faMapMarkerAlt,
+  faEnvelope,
+  faUserGraduate,
+  faIndustry,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 
 library.add(faXing);
 library.add(faGithub);
