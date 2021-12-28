@@ -6,7 +6,7 @@ import {
   faGithub,
   faInstagram,
   faXing,
-  faLinkedin,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -17,7 +17,7 @@ import {
   faEnvelope,
   faUserGraduate,
   faIndustry,
-  faBars,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faXing);

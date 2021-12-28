@@ -37,7 +37,7 @@ export default {
   name: "About",
 
   components: {
-    BarChart,
+    BarChart
   },
 
   setup() {
@@ -47,27 +47,27 @@ export default {
       {
         label: t("about.technologies.ewm"),
         color: "#d62828",
-        width: "60%",
+        width: "60%"
       },
       {
         label: t("about.technologies.ui5"),
         color: "#003049",
-        width: "80%",
+        width: "80%"
       },
       {
         label: t("about.technologies.abap"),
         color: "#f77f00",
-        width: "80%",
+        width: "80%"
       },
       {
         label: t("about.technologies.js"),
         color: "#fcbf49",
-        width: "70%",
-      },
+        width: "70%"
+      }
     ]);
 
     return { skills };
-  },
+  }
 };
 </script>
 

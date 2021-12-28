@@ -27,8 +27,7 @@ const NavigationLinkCollection = class NavigationLinkCollection {
 
     this.navigationLinks.forEach((navigationLink) => {
       const section = navigationLink.getSection();
-      if (section.offsetTop > lastSection?.getSection().offsetTop)
-        lastSection = navigationLink;
+      if (section.offsetTop > lastSection?.getSection().offsetTop) {lastSection = navigationLink;}
     });
 
     return lastSection;

@@ -29,13 +29,13 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => [],
+      "default": () => []
     },
     backgroundColor: {
       type: String,
-      default: "rgba(229, 231, 235, 1)",
-    },
-  },
+      "default": "rgba(229, 231, 235, 1)"
+    }
+  }
 };
 </script>
 

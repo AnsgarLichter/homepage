@@ -23,21 +23,21 @@ export default {
 
   props: {
     href: {
-      default: "",
-      type: String,
+      "default": "",
+      type: String
     },
     target: {
-      default: "_blank",
-      type: String,
+      "default": "_blank",
+      type: String
     },
     icon: {
       type: Object,
-      default: () => {},
+      "default": () => {}
     },
     customClasses: {
       type: Array,
-      default: () => [],
-    },
+      "default": () => []
+    }
   },
 
   setup(properties) {
@@ -46,9 +46,9 @@ export default {
     );
 
     return {
-      socialIconClass,
+      socialIconClass
     };
-  },
+  }
 };
 </script>
 

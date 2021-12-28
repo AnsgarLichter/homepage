@@ -58,37 +58,37 @@ export default {
   props: {
     images: {
       type: Array,
-      default: () => [],
+      "default": () => []
     },
     title: {
       type: String,
-      default: "",
+      "default": ""
     },
     yearStart: {
       type: String,
-      default: "",
+      "default": ""
     },
     yearEnd: {
       type: String,
-      default: "",
+      "default": ""
     },
     organisation: {
       type: String,
-      default: "",
+      "default": ""
     },
     location: {
       type: String,
-      default: "",
+      "default": ""
     },
     description: {
       type: String,
-      default: "",
-    },
+      "default": ""
+    }
   },
   methods: {
     getImagePath(imageSrc) {
       return require(`../assets/images/${imageSrc}`);
-    },
-  },
+    }
+  }
 };
 </script>

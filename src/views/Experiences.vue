@@ -50,7 +50,7 @@ export default {
 
   components: {
     Card,
-    Timeline,
+    Timeline
   },
 
   setup() {
@@ -62,33 +62,33 @@ export default {
           {
             images: [
               { src: "dhbw.svg", alt: t("experiences.images.dhbw") },
-              { src: "sew.svg", alt: t("experiences.images.sew") },
+              { src: "sew.svg", alt: t("experiences.images.sew") }
             ],
             title: t("experiences.education.studies.title"),
             yearStart: t("experiences.education.studies.yearStart"),
             yearEnd: t("experiences.education.studies.yearEnd"),
             organisation: t("experiences.education.studies.organisation"),
             location: t("experiences.education.studies.location"),
-            description: t("experiences.education.studies.description"),
+            description: t("experiences.education.studies.description")
           },
           {
             images: [
               { src: "china.png", alt: t("experiences.images.china") },
-              { src: "sew.svg", alt: t("experiences.images.sew") },
+              { src: "sew.svg", alt: t("experiences.images.sew") }
             ],
             title: t("experiences.education.abroad.title"),
             yearStart: t("experiences.education.abroad.yearStart"),
             yearEnd: t("experiences.education.abroad.yearEnd"),
             organisation: t("experiences.education.abroad.organisation"),
             location: t("experiences.education.abroad.location"),
-            description: t("experiences.education.abroad.description"),
-          },
+            description: t("experiences.education.abroad.description")
+          }
         ],
         icon: {
           prefix: "fa",
           name: "user-graduate",
-          color: "black",
-        },
+          color: "black"
+        }
       },
       {
         experiences: [
@@ -99,19 +99,19 @@ export default {
             yearEnd: t("experiences.work.itpa.yearEnd"),
             organisation: t("experiences.work.itpa.organisation"),
             location: t("experiences.work.itpa.location"),
-            description: t("experiences.work.itpa.description"),
-          },
+            description: t("experiences.work.itpa.description")
+          }
         ],
         icon: {
           prefix: "fa",
           name: "industry",
-          color: "black",
-        },
-      },
+          color: "black"
+        }
+      }
     ]);
 
     return { events };
-  },
+  }
 };
 </script>
 

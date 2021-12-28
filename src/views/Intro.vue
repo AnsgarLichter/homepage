@@ -93,8 +93,8 @@ import SocialIcon from "@/components/SocialIcon";
 export default {
   name: "Intro",
   components: {
-    SocialIcon,
-  },
+    SocialIcon
+  }
 };
 </script>
 

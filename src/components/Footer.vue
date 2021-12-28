@@ -72,7 +72,7 @@ export default {
   components: {
     //Imprint,
     //PrivacyPolicy,
-    SocialIcon,
+    SocialIcon
   },
 
   setup() {
@@ -89,7 +89,7 @@ export default {
     },
     showPrivacyPolicy: function () {
       this.openPrivacyPolicy = true;
-    },
-  },
+    }
+  }
 };
 </script>

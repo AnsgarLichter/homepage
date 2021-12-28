@@ -6,6 +6,13 @@ const mergeOptions = (defaultOptions, options) => {
       options?.scrollContainerSelector ||
       defaultOptions.scrollContainerSelector,
     activeClass: options?.activeClass || defaultOptions.activeClass,
+    defaultActive:
+      options?.defaultActive || defaultOptions.defaultActive,
+    clickNavigationLinkToScrollIntoSection:
+      options?.clickNavigationLinkToScrollIntoSection ||
+      defaultOptions.clickNavigationLinkToScrollIntoSection,
+    scrollOnStart:
+      options?.scrollOnStart || defaultOptions.scrollOnStart
   };
 };
 

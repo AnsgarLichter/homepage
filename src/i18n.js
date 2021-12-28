@@ -24,7 +24,7 @@ const i18n = createI18n({
   locale: "de" || "en",
   fallbackLocale: "en",
   globalInjection: true,
-  messages: loadLocaleMessages(),
+  messages: loadLocaleMessages()
 });
 
 export default i18n;

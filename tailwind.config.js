@@ -6,7 +6,7 @@ fontFamily["sans"] = [
   "SF Pro Text",
   "-apple-system",
   "system-ui",
-  "sans-serif",
+  "sans-serif"
 ];
 
 module.exports = {
@@ -20,10 +20,10 @@ module.exports = {
         144: "36rem",
         156: "40rem",
         172: "44rem",
-        174: "46rem",
+        174: "46rem"
       },
       height: {
-        "1/20": "5%",
+        "1/20": "5%"
       },
       width: {
         "1/10": "10%",
@@ -35,10 +35,10 @@ module.exports = {
         "7/10": "70%",
         "8/10": "80%",
         "9/10": "90%",
-        "10/10": "100%",
+        "10/10": "100%"
       },
       minWidth: {
-        200: "200px",
+        200: "200px"
       },
       colors: {
         bg: {
@@ -46,13 +46,13 @@ module.exports = {
           blue: "#003049",
           red: "#d62828",
           orange: "#f77f00",
-          yellow: "#fcbf49",
-        },
-      },
-    },
+          yellow: "#fcbf49"
+        }
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 };

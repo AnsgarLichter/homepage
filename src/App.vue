@@ -39,8 +39,8 @@ export default defineComponent({
     Intro,
     About,
     Projects,
-    Expieriences,
-  },
+    Expieriences
+  }
 });
 </script>
 

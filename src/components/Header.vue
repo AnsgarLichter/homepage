@@ -42,7 +42,7 @@ export default {
   name: "Header",
 
   components: {
-    NavigationBar,
+    NavigationBar
   },
 
   setup() {
@@ -51,24 +51,24 @@ export default {
     const navigationItems = computed(() => [
       {
         label: t("navigation.intro"),
-        href: "#intro",
+        href: "#intro"
       },
       {
         label: t("navigation.about"),
-        href: "#about",
+        href: "#about"
       },
       {
         label: t("navigation.experiences"),
-        href: "#experiences",
+        href: "#experiences"
       },
       {
         label: t("navigation.projects"),
-        href: "#projects",
+        href: "#projects"
       },
       {
         label: t("navigation.language"),
-        href: "#language",
-      },
+        href: "#language"
+      }
     ]);
 
     return { navigationItems };
@@ -81,11 +81,15 @@ export default {
 
   methods: {
     switchLocale() {
-      this.$i18n.locale === "de"
-        ? (this.$i18n.locale = "en")
-        : (this.$i18n.locale = "de");
-    },
-  },
+      const i18n = this.$i18n;
+
+      if (i18n.locale === "de") {
+        i18n.locale = "en";
+      } else {
+        i18n.locale = "en";
+      }
+    }
+  }
 };
 </script>
 

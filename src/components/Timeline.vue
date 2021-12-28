@@ -38,9 +38,9 @@ export default {
   props: {
     events: {
       type: Array,
-      default: () => [],
-    },
-  },
+      "default": () => []
+    }
+  }
 };
 </script>
 
