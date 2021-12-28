@@ -8,9 +8,7 @@
       @click="changeNavigationItemsVisibility"
       class="ml-auto lg:hidden flex items-center"
     >
-      <div
-        class="py-2 px-3 bg-bg-grey cursor-pointer rounded-lg navbar-menu-border"
-      >
+      <div class="py-2 px-3 bg-bg-grey cursor-pointer rounded-lg navbar-menu-border">
         <font-awesome-icon
           class="fa-lg"
           :icon="['fa', 'bars']"
@@ -49,7 +47,7 @@ export default {
   props: {
     items: {
       type: Array,
-      "default": () => {}
+      'default': () => {}
     }
   },
 
