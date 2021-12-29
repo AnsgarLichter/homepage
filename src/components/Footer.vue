@@ -47,7 +47,7 @@
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
             {{ $t("footer.privacyPolicy") }}
-            <!-- <PrivacyPolicy v-model="openPrivacyPolicy" /> -->
+            <PrivacyPolicy ref="privacyPolicy" />
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ import { defineComponent } from "vue";
 import { ref } from "@vue/reactivity";
 
 import Imprint from "@/components/Imprint";
-//import PrivacyPolicy from "./PrivacyPolicy";
+import PrivacyPolicy from "@/components/PrivacyPolicy";
 import SocialIcon from "@/components/SocialIcon";
 
 export default defineComponent({
@@ -69,15 +69,16 @@ export default defineComponent({
 
   components: {
     Imprint,
-    //PrivacyPolicy,
+    PrivacyPolicy,
     SocialIcon,
   },
 
   setup() {
     const currentYear = ref(new Date().getFullYear());
     const imprint = ref();
+    const privacyPolicy = ref();
 
-    return { currentYear, imprint };
+    return { currentYear, imprint, privacyPolicy };
   },
 
   methods: {
@@ -85,7 +86,6 @@ export default defineComponent({
       this.imprint.open();
     },
     showPrivacyPolicy: function () {
-      //TODO: Define ref
       this.privacyPolicy.open();
     },
   },
