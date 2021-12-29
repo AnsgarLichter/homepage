@@ -1,9 +1,7 @@
 <template>
   <div class="bg-bg-grey h-12 fixed inset-x-0 bottom-0">
     <div class="flex flex-row h-full">
-      <div
-        class="flex flex-col justify-center items-center w-1/2 sm:w-1/3 text-white"
-      >
+      <div class="flex flex-col justify-center items-center w-1/2 sm:w-1/3 text-white">
         <div class="ml-4 sm:ml-12" bg="dark" variant="dark">
           &copy; Ansgar Lichter {{ this.currentYear }}
         </div>
@@ -41,12 +39,10 @@
       <div
         class="flex flex-col justify-center items-center sm:items-center w-1/2 sm:w-1/3"
       >
-        <div
-          class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre"
-        >
+        <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
           <div class="cursor-pointer" @click="showImprint">
             {{ $t("footer.imprint") }}
-            <!-- <Imprint v-model="openImprint" /> -->
+            <Imprint v-model="openImprint" ref="imprint" />
           </div>
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
@@ -60,17 +56,18 @@
 </template>
 
 <script>
+import { defineComponent } from "@vue/composition-api";
 import { ref } from "@vue/reactivity";
 
-//import Imprint from "./Imprint";
+import Imprint from "@/components/Imprint";
 //import PrivacyPolicy from "./PrivacyPolicy";
 import SocialIcon from "@/components/SocialIcon";
 
-export default {
+export default defineComponent({
   name: "Footer",
 
   components: {
-    //Imprint,
+    Imprint,
     //PrivacyPolicy,
     SocialIcon
   },
@@ -80,16 +77,18 @@ export default {
     const openPrivacyPolicy = ref(false);
     const currentYear = ref(new Date().getFullYear());
 
-    return { openImprint, openPrivacyPolicy, currentYear };
+    const imprint = ref();
+
+    return { openImprint, openPrivacyPolicy, currentYear, imprint };
   },
 
   methods: {
     showImprint: function () {
-      this.openImprint = true;
+      this.imprint.open();
     },
     showPrivacyPolicy: function () {
       this.openPrivacyPolicy = true;
     }
   }
-};
+});
 </script>
