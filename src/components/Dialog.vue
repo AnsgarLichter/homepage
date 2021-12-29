@@ -43,52 +43,45 @@
     </div>
   </Teleport>
 </template>
-<script>
-import { defineComponent } from "vue";
+
+<script setup>
 import { ref } from "@vue/reactivity";
 
-export default defineComponent({
-  setup() {
-    const maximizeIconName = ref("expand-arrows-alt");
-    const isOpened = ref(false);
+const maximizeIconName = ref("expand-arrows-alt");
+const isOpened = ref(false);
 
-    const dialog = ref();
+const dialog = ref();
 
-    const changeVisibility = () => {
-      isOpened.value = !isOpened.value;
-    };
+const changeVisibility = () => {
+  isOpened.value = !isOpened.value;
+};
 
-    const open = () => {
-      changeVisibility();
-    };
+const open = () => {
+  changeVisibility();
+};
 
-    const close = () => {
-      changeVisibility();
-    };
+const close = () => {
+  changeVisibility();
+};
 
-    const maximize = () => {
-      const classList = dialog.value.classList;
+const maximize = () => {
+  const classList = dialog.value.classList;
 
-      if (maximizeIconName.value === "expand-arrows-alt") {
-        maximizeIconName.value = "compress-arrows-alt";
+  if (maximizeIconName.value === "expand-arrows-alt") {
+    maximizeIconName.value = "compress-arrows-alt";
 
-        classList.add("maximized");
-      } else {
-        maximizeIconName.value = "expand-arrows-alt";
+    classList.add("maximized");
+  } else {
+    maximizeIconName.value = "expand-arrows-alt";
 
-        classList.remove("maximized");
-      }
-    };
+    classList.remove("maximized");
+  }
+};
 
-    return {
-      dialog,
-      open,
-      close,
-      maximizeIconName,
-      maximize,
-      isOpened,
-    };
-  },
+// eslint-disable-next-line no-undef
+defineExpose({
+  open,
+  close,
 });
 </script>
 
