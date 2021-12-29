@@ -129,7 +129,6 @@ module.exports = {
     // Stylistic Issues
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "camelcase": "warn",
-    "comma-dangle": ["error", "never"],
     "consistent-this": ["warn", "that"],
     "func-call-spacing": ["error", "never"],
     "keyword-spacing": ["error", { "after": true }],
@@ -143,7 +142,7 @@ module.exports = {
     "no-nested-ternary": "error",
     "no-new-object": "error",
     "no-trailing-spaces": "error",
-    "quote-props": ["error", "as-needed", { "keywords": true, "unnecessary": false }],
+    "quote-props": ["error", "as-needed", { "keywords": false, "unnecessary": false }],
     "semi-spacing": ["warn", { "before": false, "after": true }],
     "semi-style": ["error", "last"],
     "semi": "error",
