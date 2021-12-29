@@ -45,6 +45,8 @@
 </template>
 
 <script setup>
+import { defineExpose } from "vue";
+
 import { ref } from "@vue/reactivity";
 
 const maximizeIconName = ref("expand-arrows-alt");
@@ -78,7 +80,6 @@ const maximize = () => {
   }
 };
 
-// eslint-disable-next-line no-undef
 defineExpose({
   open,
   close,
