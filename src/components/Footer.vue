@@ -42,7 +42,7 @@
         <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
           <div class="cursor-pointer" @click="showImprint">
             {{ $t("footer.imprint") }}
-            <Imprint v-model="openImprint" ref="imprint" />
+            <Imprint ref="imprint" />
           </div>
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
@@ -70,17 +70,14 @@ export default defineComponent({
   components: {
     Imprint,
     //PrivacyPolicy,
-    SocialIcon
+    SocialIcon,
   },
 
   setup() {
-    const openImprint = ref(false);
-    const openPrivacyPolicy = ref(false);
     const currentYear = ref(new Date().getFullYear());
-
     const imprint = ref();
 
-    return { openImprint, openPrivacyPolicy, currentYear, imprint };
+    return { currentYear, imprint };
   },
 
   methods: {
@@ -88,8 +85,9 @@ export default defineComponent({
       this.imprint.open();
     },
     showPrivacyPolicy: function () {
-      this.openPrivacyPolicy = true;
-    }
-  }
+      //TODO: Define ref
+      this.privacyPolicy.open();
+    },
+  },
 });
 </script>

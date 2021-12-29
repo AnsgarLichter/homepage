@@ -1,6 +1,5 @@
 <template>
   <Dialog :title="$t('imprint.title')" ref="dialog">
-    <!--v-bind:ok-title="$t('imprint.close')"-->
     <div class="p-8">
       <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">Domaininhaber</h1>
       <div class="text-center">
@@ -65,28 +64,28 @@ import Dialog from "@/components/Dialog";
 
 export default defineComponent({
   components: {
-    Dialog
+    Dialog,
   },
 
   props: {
     value: {
       type: Boolean,
-      "default": false
-    }
+      default: false,
+    },
   },
 
   setup() {
     const dialog = ref();
 
     return {
-      dialog
+      dialog,
     };
   },
 
   methods: {
     open() {
       this.dialog.open();
-    }
-  }
+    },
+  },
 });
 </script>
