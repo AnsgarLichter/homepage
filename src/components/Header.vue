@@ -13,7 +13,7 @@
       </template>
 
       <template #item="itemSlotProps">
-        <div v-if="itemSlotProps.index === 4">
+        <div class="flex justify-center" v-if="itemSlotProps.index === 4">
           <img
             v-if="$i18n.locale === 'en'"
             @click="switchLocale"
@@ -42,7 +42,7 @@ export default {
   name: "Header",
 
   components: {
-    NavigationBar
+    NavigationBar,
   },
 
   setup() {
@@ -51,24 +51,24 @@ export default {
     const navigationItems = computed(() => [
       {
         label: t("navigation.intro"),
-        href: "#intro"
+        href: "#intro",
       },
       {
         label: t("navigation.about"),
-        href: "#about"
+        href: "#about",
       },
       {
         label: t("navigation.experiences"),
-        href: "#experiences"
+        href: "#experiences",
       },
       {
         label: t("navigation.projects"),
-        href: "#projects"
+        href: "#projects",
       },
       {
         label: t("navigation.language"),
-        href: "#language"
-      }
+        href: "#language",
+      },
     ]);
 
     return { navigationItems };
@@ -86,10 +86,10 @@ export default {
       if (i18n.locale === "de") {
         i18n.locale = "en";
       } else {
-        i18n.locale = "en";
+        i18n.locale = "de";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

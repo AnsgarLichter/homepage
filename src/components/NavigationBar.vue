@@ -47,13 +47,13 @@ export default {
   props: {
     items: {
       type: Array,
-      'default': () => {}
-    }
+      default: () => {},
+    },
   },
 
   data() {
     return {
-      bCollapse: true
+      bCollapse: true,
     };
   },
 
@@ -64,8 +64,8 @@ export default {
 
     nav() {
       this.bCollapse = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
