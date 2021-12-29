@@ -10,8 +10,10 @@ fontFamily["sans"] = [
 ];
 
 module.exports = {
-  purge: [],
-  darkMode: false,
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
   theme: {
     fontFamily: fontFamily,
     extend: {
@@ -50,9 +52,6 @@ module.exports = {
         }
       }
     }
-  },
-  variants: {
-    extend: {}
   },
   plugins: []
 };
