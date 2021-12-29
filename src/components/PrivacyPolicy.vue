@@ -207,31 +207,27 @@
   </Dialog>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { defineProps, defineExpose } from "vue";
 
 import { ref } from "@vue/reactivity";
 
 import Dialog from "@/components/Dialog";
 
-export default defineComponent({
-  components: {
-    Dialog,
+defineProps({
+  value: {
+    type: Boolean,
+    default: false,
   },
+});
 
-  setup() {
-    const dialog = ref();
+const dialog = ref();
+const open = () => {
+  dialog.value.open();
+};
 
-    return {
-      dialog,
-    };
-  },
-
-  methods: {
-    open() {
-      this.dialog.open();
-    },
-  },
+defineExpose({
+  open,
 });
 </script>
 
