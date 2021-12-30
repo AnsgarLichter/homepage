@@ -66,10 +66,10 @@ const navigationItems = computed(() => [
 ]);
 
 const switchLocale = () => {
-  if (locale.value === "de") {
-    locale.value = "en";
+  if (locale.value === "de-DE") {
+    locale.value = "en-EN";
   } else {
-    locale.value = "de";
+    locale.value = "de-DE";
   }
 };
 
