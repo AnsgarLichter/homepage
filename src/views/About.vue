@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col items-center pt-8 px-8 lg:flex-row lg:pt-24 lg:px-44"
-  >
+  <div class="flex flex-col items-center pt-8 px-8 lg:flex-row lg:pt-24 lg:px-44">
     <div class="flex lg:flex-col lg:w-1/2 justify-center">
       <div class="justify-center">
         <img
@@ -27,48 +25,36 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { reactive } from "vue";
 import { useI18n } from "vue-i18n";
 
 import BarChart from "@/components/BarChart";
 
-export default {
-  name: "About",
+const { t } = useI18n();
 
-  components: {
-    BarChart
+const skills = reactive([
+  {
+    label: t("about.technologies.ewm"),
+    color: "#d62828",
+    width: "60%",
   },
-
-  setup() {
-    const { t } = useI18n();
-
-    const skills = reactive([
-      {
-        label: t("about.technologies.ewm"),
-        color: "#d62828",
-        width: "60%"
-      },
-      {
-        label: t("about.technologies.ui5"),
-        color: "#003049",
-        width: "80%"
-      },
-      {
-        label: t("about.technologies.abap"),
-        color: "#f77f00",
-        width: "80%"
-      },
-      {
-        label: t("about.technologies.js"),
-        color: "#fcbf49",
-        width: "70%"
-      }
-    ]);
-
-    return { skills };
-  }
-};
+  {
+    label: t("about.technologies.ui5"),
+    color: "#003049",
+    width: "80%",
+  },
+  {
+    label: t("about.technologies.abap"),
+    color: "#f77f00",
+    width: "80%",
+  },
+  {
+    label: t("about.technologies.js"),
+    color: "#fcbf49",
+    width: "70%",
+  },
+]);
 </script>
 
 <style scoped></style>

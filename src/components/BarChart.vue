@@ -23,20 +23,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "BarChart",
-  props: {
-    data: {
-      type: Array,
-      "default": () => []
-    },
-    backgroundColor: {
-      type: String,
-      "default": "rgba(229, 231, 235, 1)"
-    }
-  }
-};
+<script setup>
+import { defineProps } from "vue";
+
+defineProps({
+  data: {
+    type: Array,
+    default: () => [],
+  },
+  backgroundColor: {
+    type: String,
+    default: "rgba(229, 231, 235, 1)",
+  },
+});
 </script>
 
 <style scoped></style>

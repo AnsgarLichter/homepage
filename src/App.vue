@@ -21,9 +21,7 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-
+<script setup>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -31,17 +29,6 @@ import Intro from "@/views/Intro.vue";
 import About from "@/views/About.vue";
 import Projects from "@/views/Projects.vue";
 import Expieriences from "@/views/Experiences.vue";
-
-export default defineComponent({
-  components: {
-    Header,
-    Footer,
-    Intro,
-    About,
-    Projects,
-    Expieriences
-  }
-});
 </script>
 
 <style>

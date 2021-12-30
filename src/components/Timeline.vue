@@ -32,16 +32,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Timeline",
-  props: {
-    events: {
-      type: Array,
-      "default": () => []
-    }
-  }
-};
+<script setup>
+import { defineProps } from "vue";
+
+defineProps({
+  events: {
+    type: Array,
+    default: () => [],
+  },
+});
 </script>
 
 <style scoped>

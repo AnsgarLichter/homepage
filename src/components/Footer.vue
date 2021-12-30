@@ -3,7 +3,7 @@
     <div class="flex flex-row h-full">
       <div class="flex flex-col justify-center items-center w-1/2 sm:w-1/3 text-white">
         <div class="ml-4 sm:ml-12" bg="dark" variant="dark">
-          &copy; Ansgar Lichter {{ this.currentYear }}
+          &copy; Ansgar Lichter {{ currentYear }}
         </div>
       </div>
 
@@ -55,39 +55,22 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-
+<script setup>
 import { ref } from "@vue/reactivity";
 
 import Imprint from "@/components/Imprint";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import SocialIcon from "@/components/SocialIcon";
 
-export default defineComponent({
-  name: "Footer",
+const currentYear = ref(new Date().getFullYear());
+const imprint = ref();
+const privacyPolicy = ref();
 
-  components: {
-    Imprint,
-    PrivacyPolicy,
-    SocialIcon,
-  },
+const showImprint = () => {
+  imprint.value.open();
+};
 
-  setup() {
-    const currentYear = ref(new Date().getFullYear());
-    const imprint = ref();
-    const privacyPolicy = ref();
-
-    return { currentYear, imprint, privacyPolicy };
-  },
-
-  methods: {
-    showImprint: function () {
-      this.imprint.open();
-    },
-    showPrivacyPolicy: function () {
-      this.privacyPolicy.open();
-    },
-  },
-});
+const showPrivacyPolicy = () => {
+  privacyPolicy.value.open();
+};
 </script>

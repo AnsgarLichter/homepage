@@ -32,65 +32,56 @@
   </div>
 </template>
 
-<script>
+<script setup="properties, context">
 import { computed } from "@vue/reactivity";
+import { onMounted } from "@vue/runtime-core";
+
 import { useI18n } from "vue-i18n";
 
 import NavigationBar from "@/components/NavigationBar.vue";
 
-export default {
-  name: "Header",
+const { t, locale, availableLocales, fallbackLocale } = useI18n();
 
-  components: {
-    NavigationBar,
+const navigationItems = computed(() => [
+  {
+    label: t("navigation.intro"),
+    href: "#intro",
   },
-
-  setup() {
-    const { t } = useI18n();
-
-    const navigationItems = computed(() => [
-      {
-        label: t("navigation.intro"),
-        href: "#intro",
-      },
-      {
-        label: t("navigation.about"),
-        href: "#about",
-      },
-      {
-        label: t("navigation.experiences"),
-        href: "#experiences",
-      },
-      {
-        label: t("navigation.projects"),
-        href: "#projects",
-      },
-      {
-        label: t("navigation.language"),
-        href: "#language",
-      },
-    ]);
-
-    return { navigationItems };
+  {
+    label: t("navigation.about"),
+    href: "#about",
   },
-
-  onMounted() {
-    setInterval(this.updateScroll, 1);
-    this.$i18n.locale = "de";
+  {
+    label: t("navigation.experiences"),
+    href: "#experiences",
   },
-
-  methods: {
-    switchLocale() {
-      const i18n = this.$i18n;
-
-      if (i18n.locale === "de") {
-        i18n.locale = "en";
-      } else {
-        i18n.locale = "de";
-      }
-    },
+  {
+    label: t("navigation.projects"),
+    href: "#projects",
   },
+  {
+    label: t("navigation.language"),
+    href: "#language",
+  },
+]);
+
+const switchLocale = () => {
+  if (locale.value === "de") {
+    locale.value = "en";
+  } else {
+    locale.value = "de";
+  }
 };
+
+onMounted(() => {
+  const browserLanguage = navigator.language;
+  debugger;
+  if (availableLocales.includes(browserLanguage)) {
+    locale.value = browserLanguage;
+  } else {
+    locale.value = fallbackLocale.value;
+  }
+});
 </script>
 
 <style>

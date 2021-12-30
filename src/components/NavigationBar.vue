@@ -40,32 +40,26 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "NavigationBar",
+<script setup>
+import { defineProps } from "vue";
 
-  props: {
-    items: {
-      type: Array,
-      default: () => {},
-    },
+import { ref } from "@vue/reactivity";
+
+defineProps({
+  items: {
+    type: Array,
+    default: () => {},
   },
+});
 
-  data() {
-    return {
-      bCollapse: true,
-    };
-  },
+const bCollapse = ref(true);
 
-  methods: {
-    changeNavigationItemsVisibility() {
-      this.bCollapse = !this.bCollapse;
-    },
+const changeNavigationItemsVisibility = () => {
+  bCollapse.value = !bCollapse.value;
+};
 
-    nav() {
-      this.bCollapse = true;
-    },
-  },
+const nav = () => {
+  bCollapse.value = true;
 };
 </script>
 

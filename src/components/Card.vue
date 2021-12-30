@@ -52,43 +52,82 @@
   </div>
 </template>
 
+<script setup>
+import { defineProps } from "vue";
+
+defineProps({
+  images: {
+    type: Array,
+    default: () => [],
+  },
+  title: {
+    type: String,
+    default: "",
+  },
+  yearStart: {
+    type: String,
+    default: "",
+  },
+  yearEnd: {
+    type: String,
+    default: "",
+  },
+  organisation: {
+    type: String,
+    default: "",
+  },
+  location: {
+    type: String,
+    default: "",
+  },
+  description: {
+    type: String,
+    default: "",
+  },
+});
+
+const getImagePath = (imageSrc) => {
+  return require(`../assets/images/${imageSrc}`);
+};
+</script>
+
 <script>
 export default {
   name: "Card",
   props: {
     images: {
       type: Array,
-      "default": () => []
+      default: () => [],
     },
     title: {
       type: String,
-      "default": ""
+      default: "",
     },
     yearStart: {
       type: String,
-      "default": ""
+      default: "",
     },
     yearEnd: {
       type: String,
-      "default": ""
+      default: "",
     },
     organisation: {
       type: String,
-      "default": ""
+      default: "",
     },
     location: {
       type: String,
-      "default": ""
+      default: "",
     },
     description: {
       type: String,
-      "default": ""
-    }
+      default: "",
+    },
   },
   methods: {
     getImagePath(imageSrc) {
       return require(`../assets/images/${imageSrc}`);
-    }
-  }
+    },
+  },
 };
 </script>

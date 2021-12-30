@@ -1,9 +1,7 @@
 <template>
   <div class="w-full h-full">
     <div class="background w-full h-full">
-      <div
-        class="w-full h-full flex flex-col md:flex-row items-center md:justify-center"
-      >
+      <div class="w-full h-full flex flex-col md:flex-row items-center md:justify-center">
         <div
           class="flex flex-col mt-4 sm:mt-20 md:mt-0 sm:w-1/2 sm:self-center text-center text-white"
         >
@@ -17,10 +15,7 @@
           <div id="name" class="text-2xl sm:text-5xl mt-2 sm:mt-6 typewriter">
             <p class="pb-1 sm:pb-3">{{ $t("general.name") }}</p>
           </div>
-          <div
-            id="job"
-            class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter"
-          >
+          <div id="job" class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter">
             <p>{{ $t("intro.jobTitle") }}</p>
           </div>
           <div
@@ -87,15 +82,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import SocialIcon from "@/components/SocialIcon";
-
-export default {
-  name: "Intro",
-  components: {
-    SocialIcon
-  }
-};
 </script>
 
 <style scoped>
