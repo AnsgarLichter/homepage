@@ -75,7 +75,6 @@ const switchLocale = () => {
 
 onMounted(() => {
   const browserLanguage = navigator.language;
-  debugger;
   if (availableLocales.includes(browserLanguage)) {
     locale.value = browserLanguage;
   } else {
