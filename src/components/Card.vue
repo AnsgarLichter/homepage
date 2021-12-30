@@ -2,20 +2,7 @@
   <!-- <div class="mt-4 sm:mt-10 min-w-200 w-64 sm:w-96 md:w-128 lg:flex lg:h-80 xl:h-72 shadow"> -->
   <div class="mt-4 sm:mt-10 lg:flex shadow w-full">
     <div
-      class="
-        flex flex-col
-        justify-center
-        items-center
-        space-y-10
-        p-4
-        border-b border-l border-t
-        flex-none
-        bg-cover
-        rounded-t
-        lg:rounded-t-none lg:rounded-l
-        text-center
-        overflow-hidden
-      "
+      class="flex flex-col justify-center items-center space-y-10 p-4 border-b border-l border-t flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
     >
       <img
         class="w-44 object-fill"
@@ -27,17 +14,7 @@
       />
     </div>
     <div
-      class="
-        border-r border-b border-l border-grey-light
-        lg:border-l-0 lg:border-t lg:border-grey-light
-        bg-white
-        rounded-b
-        lg:rounded-b-none lg:rounded-r
-        p-4
-        flex flex-col
-        justify-between
-        leading-normal
-      "
+      class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full"
     >
       <div class="mb-8 text-left">
         <div class="text-black font-bold text-xl mb-2">
@@ -74,6 +51,45 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { defineProps } from "vue";
+
+defineProps({
+  images: {
+    type: Array,
+    default: () => [],
+  },
+  title: {
+    type: String,
+    default: "",
+  },
+  yearStart: {
+    type: String,
+    default: "",
+  },
+  yearEnd: {
+    type: String,
+    default: "",
+  },
+  organisation: {
+    type: String,
+    default: "",
+  },
+  location: {
+    type: String,
+    default: "",
+  },
+  description: {
+    type: String,
+    default: "",
+  },
+});
+
+const getImagePath = (imageSrc) => {
+  return require(`../assets/images/${imageSrc}`);
+};
+</script>
 
 <script>
 export default {

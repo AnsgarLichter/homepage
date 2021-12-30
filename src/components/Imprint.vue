@@ -1,17 +1,7 @@
 <template>
-  <b-modal
-    v-model="show"
-    v-bind:title="$t('imprint.title')"
-    v-bind:ok-title="$t('imprint.close')"
-    size="xl"
-    ok-only
-    scrollable
-    centered
-  >
+  <Dialog :title="$t('imprint.title')" ref="dialog">
     <div class="p-8">
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
-        Domaininhaber
-      </h1>
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">Domaininhaber</h1>
       <div class="text-center">
         {{ $t("imprint.domain.name") }}<br />
         {{ $t("imprint.domain.academicTitle") }}<br />
@@ -62,33 +52,29 @@
         }}</a>
       </div>
     </div>
-  </b-modal>
+  </Dialog>
 </template>
 
-<script>
-export default {
-  name: "Imprint",
+<script setup>
+import { defineProps, defineExpose } from "vue";
 
-  data() {
-    return {};
-  },
+import { ref } from "@vue/reactivity";
 
-  props: {
-    value: {
-      type: Boolean,
-      default: false,
-    },
-  },
+import Dialog from "@/components/Dialog";
 
-  computed: {
-    show: {
-      get() {
-        return this.value;
-      },
-      set(value) {
-        this.$emit("input", value);
-      },
-    },
+defineProps({
+  value: {
+    type: Boolean,
+    default: false,
   },
+});
+
+const dialog = ref();
+const open = () => {
+  dialog.value.open();
 };
+
+defineExpose({
+  open,
+});
 </script>

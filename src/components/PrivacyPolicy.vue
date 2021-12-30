@@ -1,13 +1,5 @@
 <template>
-  <b-modal
-    v-model="show"
-    v-bind:title="$t('privacyPolicy.title')"
-    v-bind:ok-title="$t('privacyPolicy.close')"
-    size="xl"
-    ok-only
-    scrollable
-    centered
-  >
+  <Dialog :title="$t('imprint.title')" ref="dialog">
     <div class="p-8">
       <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
         {{ $t("privacyPolicy.overview.title") }}
@@ -26,9 +18,7 @@
         {{ $t("privacyPolicy.overview.dataCollection.responsiblity.title") }}
       </h3>
       <div>
-        {{
-          $t("privacyPolicy.overview.dataCollection.responsiblity.description")
-        }}
+        {{ $t("privacyPolicy.overview.dataCollection.responsiblity.description") }}
       </div>
       <br />
       <h3 class="text-lg lg:text-lg font-bold">
@@ -160,16 +150,11 @@
         {{ $t("privacyPolicy.general.restrictionOfProcessing.title") }}
       </h2>
       <div>
-        {{ $t("privacyPolicy.general.restrictionOfProcessing.description1")
-        }}<br /><br />
-        {{ $t("privacyPolicy.general.restrictionOfProcessing.description2")
-        }}<br /><br />
-        {{ $t("privacyPolicy.general.restrictionOfProcessing.description3")
-        }}<br /><br />
-        {{ $t("privacyPolicy.general.restrictionOfProcessing.description4")
-        }}<br /><br />
-        {{ $t("privacyPolicy.general.restrictionOfProcessing.description5")
-        }}<br /><br />
+        {{ $t("privacyPolicy.general.restrictionOfProcessing.description1") }}<br /><br />
+        {{ $t("privacyPolicy.general.restrictionOfProcessing.description2") }}<br /><br />
+        {{ $t("privacyPolicy.general.restrictionOfProcessing.description3") }}<br /><br />
+        {{ $t("privacyPolicy.general.restrictionOfProcessing.description4") }}<br /><br />
+        {{ $t("privacyPolicy.general.restrictionOfProcessing.description5") }}<br /><br />
         {{ $t("privacyPolicy.general.restrictionOfProcessing.description6") }}
       </div>
       <br />
@@ -219,33 +204,31 @@
         }}</a>
       </div>
     </div>
-  </b-modal>
+  </Dialog>
 </template>
 
-<script>
-export default {
-  name: "PrivacyPolicy",
+<script setup>
+import { defineProps, defineExpose } from "vue";
 
-  data() {
-    return {};
-  },
+import { ref } from "@vue/reactivity";
 
-  props: {
-    value: {
-      type: Boolean,
-      default: false,
-    },
-  },
+import Dialog from "@/components/Dialog";
 
-  computed: {
-    show: {
-      get() {
-        return this.value;
-      },
-      set(value) {
-        this.$emit("input", value);
-      },
-    },
+defineProps({
+  value: {
+    type: Boolean,
+    default: false,
   },
+});
+
+const dialog = ref();
+const open = () => {
+  dialog.value.open();
 };
+
+defineExpose({
+  open,
+});
 </script>
+
+<style scoped></style>

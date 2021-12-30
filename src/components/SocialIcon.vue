@@ -1,49 +1,38 @@
 <template>
   <div class="social-icon flex flex-col">
-    <a
-      :class="socialIconClass"
-      :href="href"
-      :target="target"
-      rel="noopener noreferrer"
-    >
-      <font-awesome-icon
-        class="fa-lg"
-        :icon="[icon.prefix, icon.name]"
-        color="white"
-      />
+    <a :class="socialIconClass" :href="href" :target="target" rel="noopener noreferrer">
+      <font-awesome-icon class="fa-lg" :icon="[icon.prefix, icon.name]" color="white" />
     </a>
   </div>
 </template>
 
-<script>
-export default {
-  name: "SocialIcon",
+<script setup>
+import { computed } from "@vue/reactivity";
 
-  props: {
-    href: {
-      default: "",
-      type: String,
-    },
-    target: {
-      default: "_blank",
-      type: String,
-    },
-    icon: {
-      type: Object,
-      default: () => {},
-    },
-    customClasses: {
-      type: Array,
-      default: () => [],
-    },
-  },
+import { defineProps } from "vue";
 
-  computed: {
-    socialIconClass() {
-      return ["rounded", "p-3"].concat(this.customClasses);
-    },
+const properties = defineProps({
+  href: {
+    default: "",
+    type: String,
   },
-};
+  target: {
+    default: "_blank",
+    type: String,
+  },
+  icon: {
+    type: Object,
+    default: () => {},
+  },
+  customClasses: {
+    type: Array,
+    default: () => [],
+  },
+});
+
+const socialIconClass = computed(() =>
+  ["rounded", "p-3"].concat(properties.customClasses)
+);
 </script>
 
 <style scoped>
