@@ -7,7 +7,7 @@
     >
       <div
         ref="dialog"
-        class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-9/10 flex flex-col overflow-hidden bg-white"
+        class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex flex-col overflow-hidden bg-white"
         @click.stop=""
       >
         <div
