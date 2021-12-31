@@ -8,14 +8,14 @@
           alt="Ansgar Lichter"
         />
         <div class="pl-4 md:pl-1 flex items-center text-white text-lg">
-          {{ $t("general.name") }}
+          {{ t("general.name") }}
         </div>
       </template>
 
       <template #item="itemSlotProps">
         <div class="flex justify-center" v-if="itemSlotProps.index === 4">
           <img
-            v-if="$i18n.locale === 'en'"
+            v-if="locale === 'en-EN'"
             @click="switchLocale"
             class="h-6 w-12"
             src="@/assets/images/gb.png"
@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script setup="properties, context">
+<script setup>
 import { computed } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 

@@ -9,20 +9,20 @@
             <div
               class="bg-blue-700 rounded-t-full rounded-br-full px-4 py-2 text-sm sm:text-2xl text-white"
             >
-              {{ $t("intro.hello") }}
+              {{ t("intro.hello") }}
             </div>
           </div>
           <div id="name" class="text-2xl sm:text-5xl mt-2 sm:mt-6 typewriter">
-            <p class="pb-1 sm:pb-3">{{ $t("general.name") }}</p>
+            <p class="pb-1 sm:pb-3">{{ t("general.name") }}</p>
           </div>
           <div id="job" class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter">
-            <p>{{ $t("intro.jobTitle") }}</p>
+            <p>{{ t("intro.jobTitle") }}</p>
           </div>
           <div
             id="studies"
             class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter"
           >
-            <p>{{ $t("intro.studies") }}</p>
+            <p>{{ t("intro.studies") }}</p>
           </div>
           <div class="flex flex-row justify-center mt-4">
             <SocialIcon
@@ -69,7 +69,11 @@
 </template>
 
 <script setup>
+import { useI18n } from "vue-i18n";
+
 import SocialIcon from "@/components/SocialIcon";
+
+const { t } = useI18n();
 </script>
 
 <style scoped>

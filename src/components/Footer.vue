@@ -33,12 +33,12 @@
       >
         <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
           <div class="cursor-pointer" @click="showImprint">
-            {{ $t("footer.imprint") }}
+            {{ t("footer.imprint") }}
             <Imprint ref="imprint" />
           </div>
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
-            {{ $t("footer.privacyPolicy") }}
+            {{ t("footer.privacyPolicy") }}
             <PrivacyPolicy ref="privacyPolicy" />
           </div>
         </div>
@@ -50,9 +50,13 @@
 <script setup>
 import { ref } from "@vue/reactivity";
 
+import { useI18n } from "vue-i18n";
+
 import Imprint from "@/components/Imprint";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import SocialIcon from "@/components/SocialIcon";
+
+const { t } = useI18n();
 
 const currentYear = ref(new Date().getFullYear());
 const imprint = ref();
