@@ -3,7 +3,7 @@
     <Header />
 
     <div class="content">
-      <div id="intro">
+      <div id="intro" class="w-full h-full">
         <Intro />
       </div>
       <div id="about">

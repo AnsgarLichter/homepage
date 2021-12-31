@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full">
     <div class="background w-full h-full">
-      <div class="w-full h-full flex flex-col md:flex-row items-center md:justify-center">
+      <div class="w-full h-full flex flex-col items-center justify-center md:flex-row">
         <div
           class="flex flex-col mt-4 sm:mt-20 md:mt-0 sm:w-1/2 sm:self-center text-center text-white"
         >
