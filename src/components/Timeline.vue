@@ -44,12 +44,12 @@ defineProps({
 </script>
 
 <style scoped>
-.timeline > div:nth-child(even) {
-  flex-direction: row;
-}
-
 @screen xl {
   .timeline > div:nth-child(even) {
+    flex-direction: row;
+  }
+
+  .timeline > div:nth-child(odd) {
     flex-direction: row-reverse;
   }
 }
