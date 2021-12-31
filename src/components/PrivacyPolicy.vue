@@ -1,5 +1,5 @@
 <template>
-  <Dialog :title="$t('imprint.title')" ref="dialog">
+  <Dialog :title="$t('privacyPolicy.title')" ref="dialog">
     <div class="p-8">
       <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
         {{ $t("privacyPolicy.overview.title") }}

@@ -45,10 +45,16 @@
 </template>
 
 <script setup>
-import { defineExpose } from "vue";
+import { defineProps, defineExpose } from "vue";
 
 import { ref } from "@vue/reactivity";
 
+defineProps({
+  title: {
+    type: String,
+    default: "",
+  },
+});
 const maximizeIconName = ref("expand-arrows-alt");
 const isOpened = ref(false);
 
