@@ -101,7 +101,7 @@
         "domain": {
             "name": "Ansgar Lichter",
             "academicTitle": "Wirtschaftsinformatik (B. Sc.)",
-            "mail": "E-Mail: lichteransgar@gmail.com"
+            "mail": "E-Mail: lichteransgar{'@'}gmail.com"
         },
         "disputeSettlement": {
             "title": "EU-Streitschlichtung",
@@ -183,7 +183,7 @@
                 "description1": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
                 "name": "Ansgar Lichter",
                 "mailLabel": "E-Mail: ",
-                "mail": "lichteransgar@gmail.com",
+                "mail": "lichteransgar{'@'}gmail.com",
                 "description2": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet."
             },
             "storagePeriod": {
