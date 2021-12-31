@@ -100,10 +100,6 @@ const events = computed(() => [
 </script>
 
 <style scoped>
-.dhbw {
-  background-image: url("~@/assets/images/dhbw.jpg");
-}
-
 .timeline > div:nth-child(even) {
   flex-direction: row;
 }

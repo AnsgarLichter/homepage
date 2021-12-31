@@ -87,6 +87,6 @@ defineProps({
 });
 
 const getImagePath = (imageSrc) => {
-  return require(`../assets/images/${imageSrc}`);
+  return require(`@/assets/images/${imageSrc}`);
 };
 </script>

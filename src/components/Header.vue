@@ -14,18 +14,7 @@
 
       <template #item="itemSlotProps">
         <div class="flex justify-center" v-if="itemSlotProps.index === 4">
-          <img
-            v-if="locale === 'en-EN'"
-            @click="switchLocale"
-            class="h-6 w-12"
-            src="@/assets/images/gb.png"
-          />
-          <img
-            v-else
-            @click="switchLocale"
-            class="h-6 w-12"
-            src="@/assets/images/de.png"
-          />
+          <img :src="imagePath" @click="switchLocale" class="h-6 w-12" />
         </div>
       </template>
     </NavigationBar>
@@ -33,7 +22,7 @@
 </template>
 
 <script setup>
-import { computed } from "@vue/reactivity";
+import { computed, ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 
 import { useI18n } from "vue-i18n";
@@ -65,12 +54,23 @@ const navigationItems = computed(() => [
   },
 ]);
 
+const imagePath = ref();
+const updateImagePath = (locale) => {
+  if (locale.value === "de-DE") {
+    return require(`@/assets/images/de.png`);
+  }
+
+  return require(`@/assets/images/gb.png`);
+};
+
 const switchLocale = () => {
   if (locale.value === "de-DE") {
     locale.value = "en-EN";
   } else {
     locale.value = "de-DE";
   }
+
+  imagePath.value = updateImagePath(locale);
 };
 
 onMounted(() => {
@@ -80,6 +80,8 @@ onMounted(() => {
   } else {
     locale.value = fallbackLocale.value;
   }
+
+  imagePath.value = updateImagePath(locale);
 });
 </script>
 
