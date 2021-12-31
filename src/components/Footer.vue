@@ -14,14 +14,6 @@
             :icon="{ prefix: 'fab', name: 'github' }"
           />
           <SocialIcon
-            href="https://twitter.com/ansgarlichter"
-            :icon="{ prefix: 'fab', name: 'twitter' }"
-          />
-          <SocialIcon
-            href="https://www.instagram.com/_ansgar_l/"
-            :icon="{ prefix: 'fab', name: 'instagram' }"
-          />
-          <SocialIcon
             href="https://www.xing.com/profile/Ansgar_Lichter"
             :icon="{ prefix: 'fab', name: 'xing' }"
           />

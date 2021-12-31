@@ -33,20 +33,6 @@
               ]"
             />
             <SocialIcon
-              href="https://twitter.com/ansgarlichter"
-              :icon="{ prefix: 'fab', name: 'twitter' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
-              href="https://www.instagram.com/_ansgar_l/"
-              :icon="{ prefix: 'fab', name: 'instagram' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
               href="https://www.xing.com/profile/Ansgar_Lichter"
               :icon="{ prefix: 'fab', name: 'xing' }"
               :customClasses="[
