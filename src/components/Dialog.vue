@@ -33,9 +33,9 @@
             />
           </div>
         </div>
-        <div class="a-content overflow-auto">
+        <perfect-scrollbar class="a-content">
           <slot></slot>
-        </div>
+        </perfect-scrollbar>
         <div class="a-footer">
           <slot name="footer"></slot>
         </div>

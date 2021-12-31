@@ -2,7 +2,7 @@
   <div>
     <Header />
 
-    <div class="content">
+    <perfect-scrollbar class="content">
       <div id="intro" class="w-full h-full">
         <Intro />
       </div>
@@ -15,7 +15,7 @@
       <div id="projects">
         <Projects />
       </div>
-    </div>
+    </perfect-scrollbar>
 
     <Footer />
   </div>
