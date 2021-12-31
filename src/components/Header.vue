@@ -3,7 +3,7 @@
     <NavigationBar :items="navigationItems">
       <template #start>
         <img
-          src="@/assets/images/tabicon.png"
+          src="@/assets/images/brand.png"
           class="h-12 w-12 sm:mr-6 sm:ml-8"
           alt="Ansgar Lichter"
         />
