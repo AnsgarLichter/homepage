@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="a-content overflow-auto">
+        <div class="a-content overflow-auto a-scroll-container">
           <slot></slot>
         </div>
 

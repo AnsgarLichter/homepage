@@ -1,0 +1,21 @@
+/* Scrollbar styling */
+html {
+  --scrollbarBackground: #f1f1f1;
+  --thumbBackground: #aaa;
+}
+
+.a-scroll-container::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--scrollbarBackground);
+}
+
+/* Firefox */
+.a-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBackground) var(--scrollbarBackground);
+}
+
+.a-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBackground);
+  border-radius: 0.25rem;
+}
