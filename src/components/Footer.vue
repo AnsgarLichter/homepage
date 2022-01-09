@@ -18,7 +18,7 @@
             :icon="{ prefix: 'fab', name: 'xing' }"
           />
           <SocialIcon
-            href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
+            href="https://www.linkedin.com/in/ansgar-lichter-8532661b1"
             :icon="{ prefix: 'fab', name: 'linkedin' }"
           />
           <SocialIcon

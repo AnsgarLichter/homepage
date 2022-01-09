@@ -18,7 +18,8 @@ import {
   faBars,
   faTimes,
   faExpandArrowsAlt,
-  faCompressArrowsAlt
+  faCompressArrowsAlt,
+  faDownload
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faXing);
@@ -35,5 +36,6 @@ library.add(faUserGraduate);
 library.add(faTimes);
 library.add(faExpandArrowsAlt);
 library.add(faCompressArrowsAlt);
+library.add(faDownload);
 
 export default FontAwesomeIcon;

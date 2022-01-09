@@ -21,18 +21,29 @@
       <div class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
         <BarChart :data="skills" />
       </div>
+
+      <div class="mt-4 flex justify-center">
+        <button @click="openCV" class="bg-bg-grey p-4 rounded-full flex flex-row">
+          <font-awesome-icon class="fa-lg" :icon="['fas', 'download']" color="white" />
+          <div class="ml-2 text-white">Download CV</div>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { computed, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 
 import BarChart from "@/components/BarChart";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
+const pathToCV = computed(() => "/" + locale.value + "/CurriculumVitaeAnsgarLichter.pdf");
+const openCV = () => {
+  window.open(pathToCV.value, "_blank");
+};
 const skills = reactive([
   {
     label: t("about.technologies.ewm"),

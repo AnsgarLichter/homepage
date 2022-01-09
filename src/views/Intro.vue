@@ -40,7 +40,7 @@
               ]"
             />
             <SocialIcon
-              href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
+              href="https://www.linkedin.com/in/ansgar-lichter-8532661b1"
               :icon="{ prefix: 'fab', name: 'linkedin' }"
               :customClasses="[
                 'animate__animated animate__bounceInDown animate__delay-3s',
