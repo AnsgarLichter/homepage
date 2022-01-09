@@ -27,13 +27,18 @@
           <div class="flex flex-row justify-center mt-4">
             <SocialIcon
               href="https://github.com/AnsgarLichter"
-              :icon="{ prefix: 'fab', name: 'github' }"
+              :linkDescription="t('socialIcon.github.linkDescription')"
+              :icon="{
+                prefix: 'fab',
+                name: 'github',
+              }"
               :customClasses="[
                 'animate__animated animate__bounceInDown animate__delay-3s',
               ]"
             />
             <SocialIcon
               href="https://www.xing.com/profile/Ansgar_Lichter"
+              :linkDescription="t('socialIcon.xing.linkDescription')"
               :icon="{ prefix: 'fab', name: 'xing' }"
               :customClasses="[
                 'animate__animated animate__bounceInDown animate__delay-3s',
@@ -41,6 +46,7 @@
             />
             <SocialIcon
               href="https://www.linkedin.com/in/ansgar-lichter-8532661b1"
+              :linkDescription="t('socialIcon.linkedin.linkDescription')"
               :icon="{ prefix: 'fab', name: 'linkedin' }"
               :customClasses="[
                 'animate__animated animate__bounceInDown animate__delay-3s',
@@ -48,6 +54,7 @@
             />
             <SocialIcon
               href="mailto:lichteransgar@gmail.com"
+              :linkDescription="t('socialIcon.mailTo.linkDescription')"
               :icon="{ prefix: 'fas', name: 'envelope' }"
               :customClasses="[
                 'animate__animated animate__bounceInDown animate__delay-3s',

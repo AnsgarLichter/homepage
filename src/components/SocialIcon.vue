@@ -1,6 +1,12 @@
 <template>
   <div class="social-icon flex flex-col">
-    <a :class="socialIconClass" :href="href" :target="target" rel="noopener noreferrer">
+    <a
+      :class="socialIconClass"
+      :href="href"
+      :target="target"
+      rel="noopener noreferrer"
+      :aria-label="linkDescription"
+    >
       <font-awesome-icon class="fa-lg" :icon="[icon.prefix, icon.name]" color="white" />
     </a>
   </div>
@@ -13,6 +19,10 @@ import { defineProps } from "vue";
 
 const properties = defineProps({
   href: {
+    default: "",
+    type: String,
+  },
+  linkDescription: {
     default: "",
     type: String,
   },

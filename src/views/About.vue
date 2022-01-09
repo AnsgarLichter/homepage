@@ -5,6 +5,7 @@
         <img
           class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
           src="@/assets/images/aboutme.png"
+          :alt="t('about.alt')"
         />
       </div>
     </div>
@@ -42,7 +43,7 @@ const { t, locale } = useI18n();
 
 const pathToCV = computed(() => "/" + locale.value + "/CurriculumVitaeAnsgarLichter.pdf");
 const openCV = () => {
-  window.open(pathToCV.value, "_blank");
+  window.open(pathToCV.value, "_blank", "noopener");
 };
 const skills = reactive([
   {

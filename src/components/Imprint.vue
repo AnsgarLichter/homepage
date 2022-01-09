@@ -47,9 +47,13 @@
         {{ t("imprint.source.title") }}
       </h1>
       <div class="text-center">
-        <a href="https://www.e-recht24.de/" target="_blank">{{
-          t("imprint.source.description")
-        }}</a>
+        <a
+          href="https://www.e-recht24.de/"
+          target="_blank"
+          rel="noopener"
+          :aria-label="t('imprint.source.linkDescription')"
+          >{{ t("imprint.source.description") }}</a
+        >
       </div>
     </div>
   </Dialog>

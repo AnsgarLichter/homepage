@@ -88,9 +88,11 @@
           <li>{{ t("privacyPolicy.general.responsibility.name") }}</li>
           <li>
             {{ t("privacyPolicy.general.responsibility.mailLabel") }}
-            <a href="mailto:lichteransgar@gmai.com">{{
-              t("privacyPolicy.general.responsibility.mail")
-            }}</a>
+            <a
+              href="mailto:lichteransgar@gmai.com"
+              :aria-label="t('privacyPolicy.responsibility.linkDescription')"
+              >{{ t("privacyPolicy.general.responsibility.mail") }}</a
+            >
           </li>
         </ul>
         <br />
@@ -187,7 +189,12 @@
         {{ t("privacyPolicy.plugins.fontAwesome.title") }}
       </h2>
       {{ t("privacyPolicy.plugins.fontAwesome.description") }}
-      <a href="https://fontawesome.com/privacy" target="_blank">
+      <a
+        href="https://fontawesome.com/privacy"
+        target="_blank"
+        rel="noopener"
+        :aria-label="t('privacyPolicy.plugins.fontAwesome.linkDescription')"
+      >
         {{ t("privacyPolicy.plugins.fontAwesome.description2") }}
       </a>
       {{ t("privacyPolicy.plugins.fontAwesome.description3") }}
@@ -199,9 +206,13 @@
         {{ t("privacyPolicy.source.title") }}
       </h1>
       <div class="text-center">
-        <a href="https://www.e-recht24.de/" target="_blank">{{
-          t("privacyPolicy.source.description")
-        }}</a>
+        <a
+          href="https://www.e-recht24.de/"
+          target="_blank"
+          rel="noopener"
+          :aria-label="t('privacyPolicy.source.linkDescription')"
+          >{{ t("privacyPolicy.source.description") }}</a
+        >
       </div>
     </div>
   </Dialog>

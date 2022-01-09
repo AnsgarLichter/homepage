@@ -30,7 +30,12 @@
       >
         <li class="navbar-item" v-for="(item, index) of items" :key="index">
           <slot name="item" :item="item" :index="index">
-            <a @click="nav" :href="item.href" class="hover:no-underline">
+            <a
+              @click="nav"
+              :href="item.href"
+              class="hover:no-underline"
+              :aria-label="item.label"
+            >
               {{ item.label }}
             </a>
           </slot>

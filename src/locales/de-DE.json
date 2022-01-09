@@ -7,7 +7,22 @@
         "about": "Über mich",
         "experiences": "Erfahrungen",
         "projects": "Projekte",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "language": "Ändern der Sprache"
+    },
+    "socialIcon": {
+        "github": {
+            "linkDescription": "Link zum Github-Profil"
+        },
+        "xing": {
+            "linkDescription": "Link zum Xing-Profil"
+        },
+        "linkedin": {
+            "linkDescription": "Link zum Linkedin-Profil"
+        },
+        "mailTo": {
+            "linkDescription": "Link, um den Autor per Mail zu kontakieren"
+        }
     },
     "intro": {
         "hello": "Hallo, ich bin",
@@ -16,6 +31,7 @@
     },
     "about": {
         "title": "Über mich",
+        "akt": "Herzlich Wilkommen auf meiner Webseite!",
         "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
         "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
         "description-3": "habe ich begonnen bei SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten zu arbeiten.",
@@ -121,7 +137,8 @@
         },
         "source": {
             "title": "Quelle",
-            "description": "eRecht24"
+            "description": "eRecht24",
+            "linkDescription": "Link zur Quelle: eRecht24"
         }
     },
     "privacyPolicy": {
@@ -184,7 +201,8 @@
                 "name": "Ansgar Lichter",
                 "mailLabel": "E-Mail: ",
                 "mail": "lichteransgar{'@'}gmail.com",
-                "description2": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet."
+                "description2": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.",
+                "linkDescription": "Mail an den Verantwortlichen für die Datenschutzerklärung"
             },
             "storagePeriod": {
                 "title": "Speicherdauer",
@@ -244,12 +262,14 @@
                 "title": "Font Awesome (lokales Hosting)",
                 "description": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu Servern von Fonticons, Inc. findet dabei nicht statt. Weitere Informationen zu Font Awesome finden Sie und in der",
                 "description2": "Datenschutzerklärung",
-                "description3": "für Font Awesome."
+                "description3": "für Font Awesome.",
+                "linkDescription": "Link zu FontAwesome"
             }
         },
         "source": {
             "title": "Quelle",
-            "description": "eRecht24"
+            "description": "eRecht24",
+            "linkDescription": "Link zur Quelle: eRecht24"
         }
     }
 }

@@ -7,7 +7,8 @@
         "about": "About me",
         "experiences": "Experiences",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "language": "Change language"
     },
     "intro": {
         "hello": "Hello I'm",

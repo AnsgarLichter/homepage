@@ -14,7 +14,12 @@
 
       <template #item="itemSlotProps">
         <div class="flex justify-center" v-if="itemSlotProps.index === 4">
-          <img :src="imagePath" @click="switchLocale" class="h-6 w-12" />
+          <img
+            :src="imagePath"
+            @click="switchLocale"
+            class="h-6 w-12"
+            :alt="t('navigation.language')"
+          />
         </div>
       </template>
     </NavigationBar>
