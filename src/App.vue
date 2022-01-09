@@ -2,7 +2,7 @@
   <div>
     <Header />
 
-    <div class="content">
+    <div class="content a-scroll-container">
       <div id="intro" class="w-full h-full">
         <Intro />
       </div>
