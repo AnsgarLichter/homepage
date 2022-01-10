@@ -6,6 +6,7 @@
           src="@/assets/images/brand.webp"
           class="h-12 w-12 sm:mr-6 sm:ml-8"
           alt="Ansgar Lichter"
+          loading="lazy"
         />
         <div class="pl-4 md:pl-1 flex items-center text-white text-lg">
           {{ t("general.name") }}
@@ -19,6 +20,7 @@
             @click="switchLocale"
             class="h-6 w-12"
             :alt="t('navigation.language')"
+            loading="lazy"
           />
         </div>
       </template>

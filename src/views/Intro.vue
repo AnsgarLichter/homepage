@@ -64,6 +64,7 @@
             src="@/assets/images/me.webp"
             alt="Ansgar Lichter"
             data-holder-rendered="true"
+            loading="lazy"
           />
         </div>
       </div>

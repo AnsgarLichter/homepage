@@ -11,6 +11,7 @@
         :src="getImagePath(image.src)"
         :alt="image.alt"
         data-holder-rendered="true"
+        loading="lazy"
       />
     </div>
     <div
