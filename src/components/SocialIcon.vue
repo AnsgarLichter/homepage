@@ -1,7 +1,7 @@
 <template>
   <div class="social-icon flex flex-col">
     <a
-      :class="socialIconClass"
+      class="rounded p-3"
       :href="href"
       :target="target"
       rel="noopener noreferrer"
@@ -13,11 +13,9 @@
 </template>
 
 <script setup>
-import { computed } from "@vue/reactivity";
-
 import { defineProps } from "vue";
 
-const properties = defineProps({
+defineProps({
   href: {
     default: "",
     type: String,
@@ -34,15 +32,7 @@ const properties = defineProps({
     type: Object,
     default: () => {},
   },
-  customClasses: {
-    type: Array,
-    default: () => [],
-  },
 });
-
-const socialIconClass = computed(() =>
-  ["rounded", "p-3"].concat(properties.customClasses)
-);
 </script>
 
 <style scoped>
