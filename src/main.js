@@ -10,9 +10,9 @@ import { initializeScrollSpy } from "./scrollspy/CreateScrollSpy";
 
 import "@/index.css";
 
-import 'animate.css';
-
 import "@/scrollbar.css";
+
+import 'animate.css';
 
 const app = createApp(App);
 
