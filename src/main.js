@@ -9,6 +9,9 @@ import router from "@/router/router";
 import { initializeScrollSpy } from "./scrollspy/CreateScrollSpy";
 
 import "@/index.css";
+
+import 'animate.css';
+
 import "@/scrollbar.css";
 
 const app = createApp(App);
