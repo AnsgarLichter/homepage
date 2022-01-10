@@ -61,7 +61,7 @@ const events = computed(() => [
       },
       {
         images: [
-          { src: "china.png", alt: t("experiences.images.china") },
+          { src: "china.webp", alt: t("experiences.images.china") },
           { src: "sew.svg", alt: t("experiences.images.sew") },
         ],
         title: t("experiences.education.abroad.title"),

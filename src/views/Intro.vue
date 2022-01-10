@@ -61,7 +61,7 @@
         <div class="flex flex-col py-8 sm:py-16">
           <img
             class="rounded-full h-36 w-36 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
-            src="@/assets/images/me.jpg"
+            src="@/assets/images/me.webp"
             alt="Ansgar Lichter"
             data-holder-rendered="true"
           />
@@ -83,7 +83,7 @@ const { t } = useI18n();
 
 <style scoped>
 .background {
-  background-image: url("~@/assets/images/code.png");
+  background-image: url("~@/assets/images/code.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }

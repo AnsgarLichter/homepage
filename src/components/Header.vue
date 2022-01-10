@@ -3,7 +3,7 @@
     <NavigationBar :items="navigationItems">
       <template #start>
         <img
-          src="@/assets/images/brand.png"
+          src="@/assets/images/brand.webp"
           class="h-12 w-12 sm:mr-6 sm:ml-8"
           alt="Ansgar Lichter"
         />
@@ -62,10 +62,10 @@ const navigationItems = computed(() => [
 const imagePath = ref();
 const updateImagePath = (locale) => {
   if (locale.value === "de-DE") {
-    return require(`@/assets/images/de.png`);
+    return require(`@/assets/images/de.webp`);
   }
 
-  return require(`@/assets/images/gb.png`);
+  return require(`@/assets/images/gb.webp`);
 };
 
 const switchLocale = () => {

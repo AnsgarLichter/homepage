@@ -4,7 +4,7 @@
       <div class="justify-center">
         <img
           class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
-          src="@/assets/images/aboutme.png"
+          src="@/assets/images/aboutme.webp"
           :alt="t('about.alt')"
         />
       </div>
