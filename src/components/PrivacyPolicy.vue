@@ -190,6 +190,7 @@
       </h2>
       {{ t("privacyPolicy.plugins.fontAwesome.description") }}
       <a
+        class="text-blue-500 underline"
         href="https://fontawesome.com/privacy"
         target="_blank"
         rel="noopener"
@@ -207,6 +208,7 @@
       </h1>
       <div class="text-center">
         <a
+          class="text-blue-500 underline"
           href="https://www.e-recht24.de/"
           target="_blank"
           rel="noopener"

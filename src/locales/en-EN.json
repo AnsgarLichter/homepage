@@ -10,6 +10,20 @@
         "contact": "Contact",
         "language": "Change language"
     },
+    "socialIcon": {
+        "github": {
+            "linkDescription": "Link to my Github profile"
+        },
+        "xing": {
+            "linkDescription": "Link to my Xing profile"
+        },
+        "linkedin": {
+            "linkDescription": "Link to my Linkedin profile"
+        },
+        "mailTo": {
+            "linkDescription": "Link to contact me by mail"
+        }
+    },
     "intro": {
         "hello": "Hello I'm",
         "jobTitle": "SAP EWM Developer",
@@ -69,8 +83,26 @@
             }
         },
         "images": {
-            "dhbw": "Corporate State University",
-            "sew": "SEW Eurodrive"
+            "dhbw": "Corporate State University Baden-Württemberg",
+            "sew": "SEW EURODRIVE"
+        }
+    },
+    "projects": {
+        "title": "My private projects",
+        "funnyFart": {
+            "title": "Funny Fart"
+        },
+        "catchTheTrain": {
+            "title": "Catch The Train"
+        },
+        "dhbwApp": {
+            "title": "DHBW App"
+        },
+        "justDoIt": {
+            "title": "Just Do It"
+        },
+        "projectInitializationAutomation": {
+            "title": "Project Initialization Automation"
         }
     },
     "footer": {
@@ -80,10 +112,163 @@
     },
     "imprint": {
         "close": "Close",
-        "title": "Imprint"
+        "title": "Imprint",
+        "domain": {
+            "name": "Ansgar Lichter",
+            "academicTitle": "B. Sc. Business Informatics",
+            "mail": "Email: lichteransgar{'@'}gmail.com"
+        },
+        "disputeSettlement": {
+            "title": "EU Dispute Resolution",
+            "description": "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr. You can find our e-mail address at the top of the imprint. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+        },
+        "liabilityContent": {
+            "title": "Liability for contents",
+            "description": "As a service provider, we are responsible for our own content on these pages in accordance with general legislation pursuant to Section 7 (1) of the German Telemedia Act (TMG). According to §§ 8 to 10 TMG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under the general laws remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. If we become aware of such infringements, we will remove this content immediately."
+        },
+        "liabilityLinks": {
+            "title": "Liability for links",
+            "description": "Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law. If we become aware of any infringements, we will remove such links immediately."
+        },
+        "copyright": {
+            "title": "Copyright",
+            "description": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any infringements, we will remove such content immediately."
+        },
+        "source": {
+            "title": "Source",
+            "description": "eRecht24",
+            "linkDescription": "Link to the source: eRecht24"
+        }
     },
     "privacyPolicy": {
         "close": "Close",
-        "title": "Privacy Policy"
+        "title": "Privacy Policy",
+        "overview": {
+            "title": "1. Data protection at a glance",
+            "generalInformation": {
+                "title": "General information",
+                "description": "The following notes provide a simple overview of what happens to your personal data when you visit our website. Personal data is any data with which you can be personally identified. For detailed information on the subject of data protection, please refer to our privacy policy listed below this text."
+            },
+            "dataCollection": {
+                "title": "Data collection on this website",
+                "responsiblity": {
+                    "title": "Who is responsible for the data collection on this website?",
+                    "description": "The data processing on this website is carried out by the website operator. You can find the contact details of the website operator in the section \u0022Information about the responsible party\u0022 in this data protection declaration."
+                },
+                "how": {
+                    "title": "How do we collect your data?",
+                    "description": "On the one hand, your data is collected by you providing it to us. This can be, for example, data that you enter in a contact form. Other data is collected automatically or after your consent when you visit the website by our IT systems. This is mainly technical data (e.g. Internet browser, operating system or time of page view). The collection of this data takes place automatically as soon as you enter this website."
+                },
+                "use": {
+                    "title": "What do we use your data for?",
+                    "description": "Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior."
+                },
+                "rights": {
+                    "title": "What rights do you have regarding your data?",
+                    "description": "You have the right at any time to receive information free of charge about the origin, recipient and purpose of your stored personal data. You also have a right to request the correction or deletion of this data. If you have given your consent to data processing, you can revoke this consent at any time for the future. You also have the right to request the restriction of the processing of your personal data under certain circumstances. Furthermore, you have the right to lodge a complaint with the competent supervisory authority. For this and other questions on the subject of data protection, you can contact us at any time."
+                }
+            }
+        },
+        "cdn": {
+            "title": "2. Hosting und Content Delivery Networks (CDN)",
+            "hosting": {
+                "title": "External hosting",
+                "description1": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. <br /> Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).",
+                "description2": "Our hoster will only process your data to the extent necessary to fulfill its service obligations and follow our instructions regarding this data. We use the following hoster:",
+                "partner": {
+                    "name": "STRATO AG",
+                    "street": "Pascalstraße 10",
+                    "city": "10587 Berlin"
+                }
+            },
+            "contract": {
+                "title": "Conclusion of a contract for order processing",
+                "description": "To ensure data protection-compliant processing, we have concluded an order processing contract with our hoster."
+            }
+        },
+        "general": {
+            "title": "3. general notes and mandatory information",
+            "protection": {
+                "title": "Privacy",
+                "description1": "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.4",
+                "description2": "When you use this website, various personal data are collected. Personal data is data with which you can be personally identified. This privacy policy explains what data we collect and what we use it for. It also explains how and for what purpose this is done.",
+                "description3": "We would like to point out that data transmission on the Internet (e.g. when communicating by e-mail) can have security gaps. A complete protection of the data against access by third parties is not possible."
+            },
+            "responsibility": {
+                "title": "Note on the responsible body",
+                "description1": "The responsible party for data processing on this website is:",
+                "name": "Ansgar Lichter",
+                "mailLabel": "Email: ",
+                "mail": "lichteransgar{'@'}gmail.com",
+                "description2": "The controller is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g. names, e-mail addresses, etc.).",
+                "linkDescription": "Mail to the person responsible for the privacy policy"
+            },
+            "storagePeriod": {
+                "title": "Storage duration",
+                "description": "Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g. retention periods under tax or commercial law); in the latter case, the data will be deleted once these reasons no longer apply."
+            },
+            "revocation": {
+                "title": "Revocation of your consent to data processing",
+                "description": "Many data processing operations are only possible with your express consent. You can revoke consent you have already given at any time. The legality of the data processing carried out until the revocation remains unaffected by the revocation."
+            },
+            "rightToObject": {
+                "title": "Right to object to data collection in special cases and to direct marketing (Article 21 DSGVO)",
+                "description": "IF THE DATA PROCESSING IS CARRIED OUT ON THE BASIS OF ART. 6 ABS. 1 LIT. E OR F DSGVO, YOU HAVE THE RIGHT TO OBJECT TO THE PROCESSING OF YOUR PERSONAL DATA AT ANY TIME FOR REASONS ARISING FROM YOUR PARTICULAR SITUATION; THIS ALSO APPLIES TO PROFILING BASED ON THESE PROVISIONS. THE RESPECTIVE LEGAL BASIS ON WHICH PROCESSING IS BASED CAN BE FOUND IN THIS PRIVACY POLICY. IF YOU OBJECT, WE WILL NO LONGER PROCESS YOUR PERSONAL DATA CONCERNED UNLESS WE CAN DEMONSTRATE COMPELLING LEGITIMATE GROUNDS FOR THE PROCESSING WHICH OVERRIDE YOUR INTERESTS, RIGHTS AND FREEDOMS, OR THE PROCESSING IS FOR THE PURPOSE OF ASSERTING, EXERCISING OR DEFENDING LEGAL CLAIMS (OBJECTION UNDER ARTICLE 21(1) DSGVO). IF YOUR PERSONAL DATA ARE PROCESSED FOR THE PURPOSE OF DIRECT MARKETING, YOU HAVE THE RIGHT TO OBJECT AT ANY TIME TO THE PROCESSING OF PERSONAL DATA CONCERNING YOU FOR THE PURPOSE OF SUCH MARKETING; THIS ALSO APPLIES TO PROFILING INSOFAR AS IT IS RELATED TO SUCH DIRECT MARKETING. IF YOU OBJECT, YOUR PERSONAL DATA WILL SUBSEQUENTLY NO LONGER BE USED FOR THE PURPOSE OF DIRECT MARKETING (OBJECTION PURSUANT TO ARTICLE 21 (2) DSGVO)."
+            },
+            "rightToComplain": {
+                "title": "Right of appeal to the competent supervisory authority",
+                "description": "In the event of breaches of the GDPR, data subjects shall have a right of appeal to a supervisory authority, in particular in the Member State of their habitual residence, their place of work or the place of the alleged breach. The right of appeal exists without prejudice to other administrative or judicial remedies."
+            },
+            "dataPortability": {
+                "title": "Right to data portability",
+                "description": "You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party in a common, machine-readable format. If you request the direct transfer of the data to another controller, this will only be done insofar as it is technically feasible."
+            },
+            "encryption": {
+                "title": "SSL or TLS encryption",
+                "description": "This site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content, such as orders or requests that you send to us as the site operator. You can recognize an encrypted connection by the fact that the address line of the browser changes from \u0022http://\u0022 to \u0022https://\u0022 and by the lock symbol in your browser line. If SSL or TLS encryption is activated, the data you transmit to us cannot be read by third parties."
+            },
+            "protectionRights": {
+                "title": "Auskunft, Löschung und Berichtigung",
+                "description": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden."
+            },
+            "restrictionOfProcessing": {
+                "title": "Right to restriction of processing",
+                "description1": "You have the right to request the restriction of the processing of your personal data. For this purpose, you can contact us at any time. The right to restriction of processing exists in the following cases:",
+                "description2": "If you dispute the accuracy of your personal data stored by us, we usually need time to verify this. For the duration of the review, you have the right to request the restriction of the processing of your personal data. ",
+                "description3": "If the processing of your personal data happened/is happening unlawfully, you may request the restriction of data processing instead of erasure.",
+                "description4": "If we no longer need your personal data, but you need it to exercise, defend or enforce legal claims, you have the right to request restriction of the processing of your personal data instead of deletion.",
+                "description5": "If you have lodged an objection pursuant to Art. 21 (1) DSGVO, a balancing of your and our interests must be carried out. As long as it has not yet been determined whose interests prevail, you have the right to request the restriction of the processing of your personal data.",
+                "description6": "If you have restricted the processing of your personal data, this data may - apart from being stored - only be processed with your consent or for the assertion, exercise or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of an important public interest of the European Union or a Member State."
+            }
+        },
+        "dataAquistion": {
+            "title": "4. data collection on this website",
+            "logs": {
+                "title": "Server log files",
+                "description": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:",
+                "list1": "Browser type and version",
+                "list2": "Operating system used",
+                "list3": "Referrer URL",
+                "list4": "Host name of the accessing computer",
+                "list5": "Time of the server request",
+                "list6": "IP address",
+                "description2": "This data is not merged with other data sources. The collection of this data is based on Art. 6 para. 1 lit. f DSGVO. The website operator has a legitimate interest in the technically error-free presentation and optimization of its website - for this purpose, the server log files must be collected."
+            }
+        },
+        "plugins": {
+            "title": "5. plugins and tools",
+            "fontAwesome": {
+                "title": "Font Awesome (local hosting)",
+                "description": "This site uses Font Awesome for consistent font rendering. Font Awesome is installed locally. A connection to servers of Fonticons, Inc. does not take place. You can find more information about Font Awesome in the",
+                "description2": "Privacy policy",
+                "description3": "for Font Awesome.",
+                "linkDescription": "Link to FontAwesome"
+            }
+        },
+        "source": {
+            "title": "Source",
+            "description": "eRecht24",
+            "linkDescription": "Link to the source: eRecht24"
+        }
     }
 }

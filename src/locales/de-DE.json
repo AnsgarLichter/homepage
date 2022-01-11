@@ -12,16 +12,16 @@
     },
     "socialIcon": {
         "github": {
-            "linkDescription": "Link zum Github-Profil"
+            "linkDescription": "Link zu meinem Github-Profil"
         },
         "xing": {
-            "linkDescription": "Link zum Xing-Profil"
+            "linkDescription": "Link zu meinem Xing-Profil"
         },
         "linkedin": {
-            "linkDescription": "Link zum Linkedin-Profil"
+            "linkDescription": "Link zu meinem Linkedin-Profil"
         },
         "mailTo": {
-            "linkDescription": "Link, um den Autor per Mail zu kontakieren"
+            "linkDescription": "Link, um mich per Mail zu kontakieren"
         }
     },
     "intro": {
@@ -85,11 +85,11 @@
         },
         "images": {
             "dhbw": "Duale Hochschule Baden-Württemberg",
-            "sew": "SEW Eurodrive"
+            "sew": "SEW EURODRIVE"
         }
     },
     "projects": {
-        "title": "Meine Projekte",
+        "title": "Meine privaten Projekte",
         "funnyFart": {
             "title": "Funny Fart"
         },
@@ -175,7 +175,7 @@
             "hosting": {
                 "title": "Externes Hosting",
                 "description1": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. <br /> Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).",
-                "description2": "Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen. Wir setzen folgenden Hoster ein",
+                "description2": "Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen. Wir setzen folgenden Hoster ein:",
                 "partner": {
                     "name": "STRATO AG",
                     "street": "Pascalstraße 10",
@@ -260,7 +260,7 @@
             "title": "5. Plugins und Tools",
             "fontAwesome": {
                 "title": "Font Awesome (lokales Hosting)",
-                "description": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu Servern von Fonticons, Inc. findet dabei nicht statt. Weitere Informationen zu Font Awesome finden Sie und in der",
+                "description": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu Servern von Fonticons, Inc. findet dabei nicht statt. Weitere Informationen zu Font Awesome finden Sie in der",
                 "description2": "Datenschutzerklärung",
                 "description3": "für Font Awesome.",
                 "linkDescription": "Link zu FontAwesome"
