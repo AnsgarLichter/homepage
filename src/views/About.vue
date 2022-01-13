@@ -1,14 +1,20 @@
 <template>
   <div class="flex flex-col items-center pt-8 px-8 lg:flex-row lg:pt-24 lg:px-44">
-    <div class="flex lg:flex-col lg:w-1/2 justify-center">
-      <div class="justify-center">
-        <img
-          class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
-          src="@/assets/images/aboutme.webp"
-          :alt="t('about.alt')"
-          loading="lazy"
-        />
-      </div>
+    <div id="test" ref="target" class="flex lg:flex-col lg:w-1/2 justify-center">
+      <transition
+        name="bounce-in-down-with-3s-delay"
+        enter-active-class="animate__animated animate__fadeInUp"
+        appear
+      >
+        <div class="justify-center" v-if="isVisible">
+          <img
+            class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
+            src="@/assets/images/aboutme.webp"
+            :alt="t('about.alt')"
+            loading="lazy"
+          />
+        </div>
+      </transition>
     </div>
 
     <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-16">
@@ -35,10 +41,12 @@
 </template>
 
 <script setup>
-import { computed, reactive } from "vue";
+import { computed, onMounted, reactive, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 import BarChart from "@/components/BarChart";
+
+import { useElementIsVisible } from "@/composables/useElementIsVisible";
 
 const { t, locale } = useI18n();
 
@@ -68,6 +76,15 @@ const skills = reactive([
     width: "70%",
   },
 ]);
+
+const target = ref(null);
+const scrollContainer = ref(null);
+
+onMounted(() => {
+  scrollContainer.value = document.querySelector(".content");
+});
+
+const isVisible = useElementIsVisible(target, true, scrollContainer);
 </script>
 
 <style scoped></style>
