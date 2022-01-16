@@ -17,10 +17,10 @@ const useElementIsVisible = (element, abortIfVisible, scrollContainer) => {
     const rect = element.value.getBoundingClientRect();
 
     isVisible.value =
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= scrollContainer.value.clientHeight &&
-      rect.right <= scrollContainer.value.clientWidth;
+      rect.top <= scrollContainer.value.clientHeight &&
+      rect.left <= scrollContainer.value.clientWidth &&
+      rect.bottom >= 0 &&
+      rect.right >= 0;
 
     if (abortIfVisible && isVisible.value) {
       scrollContainer.value.removeEventListener("scroll", onContainerScrolled);

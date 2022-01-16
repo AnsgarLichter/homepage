@@ -1,7 +1,15 @@
 <template>
   <div class="pt-10 sm:pt-24 px-8 sm:px-22 lg:px-4">
-    <div class="flex flex-row justify-center">
-      <div class="text-5xl font-bold">{{ t("experiences.title") }}</div>
+    <div ref="title" class="flex flex-row justify-center">
+      <UseElementIsVisible v-slot="{ isVisible }">
+        <div v-if="isVisible">
+          <FadeInUp>
+            <div v-if="isTitleVisible" class="text-5xl font-bold">
+              {{ t("experiences.title") }}
+            </div>
+          </FadeInUp>
+        </div>
+      </UseElementIsVisible>
     </div>
 
     <div class="mt-10">
@@ -19,15 +27,21 @@
             v-for="(item, index) in contentSlotProps.item.experiences"
             :key="index"
           >
-            <Card
-              :images="item.images"
-              :title="item.title"
-              :yearStart="item.yearStart"
-              :yearEnd="item.yearEnd"
-              :organisation="item.organisation"
-              :location="item.location"
-              :description="item.description"
-            />
+            <UseElementIsVisible v-slot="{ isVisible }">
+              <div v-if="isVisible">
+                <FadeInUp>
+                  <Card
+                    :images="item.images"
+                    :title="item.title"
+                    :yearStart="item.yearStart"
+                    :yearEnd="item.yearEnd"
+                    :organisation="item.organisation"
+                    :location="item.location"
+                    :description="item.description"
+                  />
+                </FadeInUp>
+              </div>
+            </UseElementIsVisible>
           </div>
         </template>
       </Timeline>
@@ -36,11 +50,15 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 import Card from "@/components/Card";
 import Timeline from "@/components/Timeline";
+
+import FadeInUp from "@/transitions/FadeInUp";
+
+import { UseElementIsVisible } from "@/composables";
 
 const { t } = useI18n();
 
@@ -97,6 +115,11 @@ const events = computed(() => [
     },
   },
 ]);
+
+const scrollContainer = ref(null);
+onMounted(() => {
+  scrollContainer.value = document.querySelector(".content");
+});
 </script>
 
 <style scoped>
