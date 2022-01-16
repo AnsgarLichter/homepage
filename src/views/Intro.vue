@@ -77,7 +77,7 @@ import { useI18n } from "vue-i18n";
 
 import SocialIcon from "@/components/SocialIcon";
 
-import BounceInDown from "@/transitions/BounceInDownWith3sDelayTransition";
+import BounceInDown from "@/transitions/BounceInDownWith3sDelay";
 
 const { t } = useI18n();
 </script>
