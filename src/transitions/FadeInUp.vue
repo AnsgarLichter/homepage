@@ -1,7 +1,7 @@
 <template>
   <transition
     name="fade-in-up"
-    enter-active-class="animate__animated animate__fadeInUp "
+    enter-active-class="animate__animated animate__fadeInUp"
     appear
   >
     <slot></slot>
