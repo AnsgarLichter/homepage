@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center pt-8 px-8 lg:flex-row lg:pt-24 lg:px-44">
     <div ref="aboutMe" class="flex lg:flex-col lg:w-1/2 justify-center">
-      <FadeInUpWith1sDelay>
+      <FadeInUp>
         <div class="justify-center" v-if="isAboutMeVisible">
           <img
             class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
@@ -10,12 +10,12 @@
             loading="lazy"
           />
         </div>
-      </FadeInUpWith1sDelay>
+      </FadeInUp>
     </div>
 
     <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-16">
       <div ref="description">
-        <FadeInUp>
+        <FadeInUpWith1sDelay>
           <div v-if="isDescriptionVisible">
             <h1 class="text-3xl lg:text-5xl font-bold">{{ t("about.title") }}</h1>
             <div class="text-left text-base mx-10 lg:mx-0 mt-3 lg:mt-6">
@@ -25,17 +25,17 @@
               {{ t("about.description-4") }}
             </div>
           </div>
-        </FadeInUp>
+        </FadeInUpWith1sDelay>
       </div>
 
       <div ref="barChart" class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
-        <FadeInUp>
+        <FadeInUpWith1sDelay>
           <BarChart v-if="isBarChartVisible" :data="skills" />
-        </FadeInUp>
+        </FadeInUpWith1sDelay>
       </div>
 
       <div ref="downloadCV" class="mt-4 flex justify-center">
-        <FadeInUp>
+        <FadeInUpWith1sDelay>
           <button
             v-if="isDownloadCvVisible"
             @click="openCV"
@@ -44,7 +44,7 @@
             <font-awesome-icon class="fa-lg" :icon="['fas', 'download']" color="white" />
             <div class="ml-2 text-white">Download CV</div>
           </button>
-        </FadeInUp>
+        </FadeInUpWith1sDelay>
       </div>
     </div>
   </div>
