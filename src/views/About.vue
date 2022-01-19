@@ -15,7 +15,7 @@
 
     <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-16">
       <div ref="description">
-        <FadeInUpWith1sDelay>
+        <FadeInUp>
           <div v-visible="isDescriptionVisible">
             <h1 class="text-3xl lg:text-5xl font-bold">{{ t("about.title") }}</h1>
             <div class="text-left text-base mx-10 lg:mx-0 mt-3 lg:mt-6">
@@ -25,17 +25,17 @@
               {{ t("about.description-4") }}
             </div>
           </div>
-        </FadeInUpWith1sDelay>
+        </FadeInUp>
       </div>
 
       <div ref="barChart" class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
-        <FadeInUpWith1sDelay>
+        <FadeInUp>
           <BarChart v-visible="isBarChartVisible" :data="skills" />
-        </FadeInUpWith1sDelay>
+        </FadeInUp>
       </div>
 
       <div ref="downloadCV" class="mt-4 flex justify-center">
-        <FadeInUpWith1sDelay>
+        <FadeInUp>
           <button
             v-visible="isDownloadCvVisible"
             @click="openCV"
@@ -44,7 +44,7 @@
             <font-awesome-icon class="fa-lg" :icon="['fas', 'download']" color="white" />
             <div class="ml-2 text-white">Download CV</div>
           </button>
-        </FadeInUpWith1sDelay>
+        </FadeInUp>
       </div>
     </div>
   </div>
@@ -57,7 +57,6 @@ import { useI18n } from "vue-i18n";
 import BarChart from "@/components/BarChart";
 
 import FadeInUp from "@/transitions/FadeInUp";
-import FadeInUpWith1sDelay from "@/transitions/FadeInUpWith1sDelay";
 
 import { useElementIsVisible } from "@/composables";
 
