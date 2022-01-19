@@ -5,9 +5,9 @@ import { useOnMounted } from "@/composables/useOnMounted";
 const useElementIsVisible = (element, abortIfVisible, scrollContainer) => {
   const isVisible = ref(false);
 
-  const onContainerScrolled = () => {
+  const onScrolled = () => {
     if (!scrollContainer?.value) {
-        return;
+      return;
     }
 
     if (!element?.value) {
@@ -17,19 +17,20 @@ const useElementIsVisible = (element, abortIfVisible, scrollContainer) => {
     const rect = element.value.getBoundingClientRect();
 
     isVisible.value =
-      rect.top <= scrollContainer.value.clientHeight &&
-      rect.left <= scrollContainer.value.clientWidth &&
-      rect.bottom >= 0 &&
-      rect.right >= 0;
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= scrollContainer.value.clientHeight &&
+      rect.right <= scrollContainer.value.clientWidth;
 
+    console.log("Top: " + rect.top + " left: " + rect.left + " bottom: " + rect.bottom + " right: " + rect.right + "is in view: " + isVisible.value);
     if (abortIfVisible && isVisible.value) {
-      scrollContainer.value.removeEventListener("scroll", onContainerScrolled);
+      scrollContainer.value.removeEventListener("scroll", onScrolled);
     }
   };
 
   if (getCurrentInstance()) {
     useOnMounted(() => {
-      scrollContainer.value.addEventListener("scroll", onContainerScrolled, { passive: true });
+      scrollContainer.value.addEventListener("scroll", onScrolled, { passive: true });
     });
   }
 
