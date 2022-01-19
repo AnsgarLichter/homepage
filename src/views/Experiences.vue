@@ -81,6 +81,15 @@ const events = computed(() => [
         location: t("experiences.education.studies.location"),
         description: t("experiences.education.studies.description"),
       },
+    ],
+    icon: {
+      prefix: "fa",
+      name: "user-graduate",
+      color: "black",
+    },
+  },
+  {
+    experiences: [
       {
         images: [
           { src: "china.webp", alt: t("experiences.images.china") },
@@ -94,11 +103,6 @@ const events = computed(() => [
         description: t("experiences.education.abroad.description"),
       },
     ],
-    icon: {
-      prefix: "fa",
-      name: "user-graduate",
-      color: "black",
-    },
   },
   {
     experiences: [

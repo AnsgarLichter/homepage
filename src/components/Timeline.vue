@@ -15,14 +15,24 @@
         class="timeline-event-separator flex flex-col items-center flex-grow-0 flex-shrink"
       >
         <div
+          v-if="item.icon"
           class="timeline-event-marker w-10 h-10 flex items-center justify-center bg-purple-600 rounded-3xl"
         >
-          <slot name="marker" :item="item" :index="index"></slot>
+          <slot name="marker" :item="item" :index="index"> </slot>
         </div>
 
-        <div class="timeline-event-connector w-1 bg-black flex-grow">
-          <slot name="connector" v-if="index !== events.length - 1"></slot>
+        <div
+          v-else
+          class="timeline-event-marker w-10 h-10 flex items-center justify-center"
+        >
+          <slot name="connector" v-if="index !== events.length - 1">
+            <div class="timeline-event-connector w-1 h-10 bg-black" />
+          </slot>
         </div>
+
+        <slot name="connector" v-if="index !== events.length - 1">
+          <div class="timeline-event-connector w-1 bg-black flex-grow" />
+        </slot>
       </div>
 
       <div class="timeline-event-content p-1 flex flex-col items-center flex-1">
