@@ -7,6 +7,7 @@ import FontAwesomeIcon from "@/fontAwesomeIcons";
 import router from "@/router/router";
 
 import { initializeScrollSpy } from "./scrollspy/CreateScrollSpy";
+import { useVisible } from "./directives/visible";
 
 import "@/index.css";
 
@@ -22,5 +23,7 @@ app.use(router);
 app.use(i18n);
 
 initializeScrollSpy(app);
+
+useVisible(app);
 
 app.mount("#app");

@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center pt-8 px-8 lg:flex-row lg:pt-24 lg:px-44">
     <div ref="aboutMe" class="flex lg:flex-col lg:w-1/2 justify-center">
       <FadeInUp>
-        <div class="justify-center" v-if="isAboutMeVisible">
+        <div class="justify-center" v-visible="isAboutMeVisible">
           <img
             class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
             src="@/assets/images/aboutme.webp"
@@ -16,7 +16,7 @@
     <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-16">
       <div ref="description">
         <FadeInUpWith1sDelay>
-          <div v-if="isDescriptionVisible">
+          <div v-visible="isDescriptionVisible">
             <h1 class="text-3xl lg:text-5xl font-bold">{{ t("about.title") }}</h1>
             <div class="text-left text-base mx-10 lg:mx-0 mt-3 lg:mt-6">
               {{ t("about.description-1") }}<br class="hidden lg:block" />
@@ -30,14 +30,14 @@
 
       <div ref="barChart" class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
         <FadeInUpWith1sDelay>
-          <BarChart v-if="isBarChartVisible" :data="skills" />
+          <BarChart v-visible="isBarChartVisible" :data="skills" />
         </FadeInUpWith1sDelay>
       </div>
 
       <div ref="downloadCV" class="mt-4 flex justify-center">
         <FadeInUpWith1sDelay>
           <button
-            v-if="isDownloadCvVisible"
+            v-visible="isDownloadCvVisible"
             @click="openCV"
             class="bg-bg-grey p-4 rounded-full flex flex-row"
           >

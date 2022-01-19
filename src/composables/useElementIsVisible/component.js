@@ -13,12 +13,13 @@ const UseElementIsVisible = defineComponent({
   setup(props, { slots }) {
     const scrollContainer = ref(null);
     onMounted(() => {
+      //TODO: How to set scroll container globally?
       scrollContainer.value = document.querySelector(".content");
     });
 
     const target = ref(null);
     const data = reactive({
-      isVisible: useElementIsVisible(target, true, scrollContainer)
+      isVisible: useElementIsVisible(target, false, scrollContainer)
     });
 
     return () => {

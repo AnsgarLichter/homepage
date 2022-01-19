@@ -1,4 +1,4 @@
-import { ref, getCurrentInstance } from "vue";
+import { ref } from "vue";
 
 import { useOnMounted } from "@/composables/useOnMounted";
 
@@ -12,27 +12,25 @@ const useElementIsVisible = (element, abortIfVisible, scrollContainer) => {
 
     if (!element?.value) {
       isVisible.value = false;
+      return;
     }
 
     const rect = element.value.getBoundingClientRect();
 
     isVisible.value =
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= scrollContainer.value.clientHeight &&
-      rect.right <= scrollContainer.value.clientWidth;
+      rect.top + (rect.height / 2) >= 0 &&
+      rect.left + (rect.width / 2) >= 0 &&
+      rect.bottom - (rect.height / 2) <= scrollContainer.value.clientHeight &&
+      rect.right - (rect.width / 2) <= scrollContainer.value.clientWidth;
 
-    console.log("Top: " + rect.top + " left: " + rect.left + " bottom: " + rect.bottom + " right: " + rect.right + "is in view: " + isVisible.value);
     if (abortIfVisible && isVisible.value) {
       scrollContainer.value.removeEventListener("scroll", onScrolled);
     }
   };
 
-  if (getCurrentInstance()) {
-    useOnMounted(() => {
-      scrollContainer.value.addEventListener("scroll", onScrolled, { passive: true });
-    });
-  }
+  useOnMounted(() => {
+    scrollContainer.value.addEventListener("scroll", onScrolled, { passive: true });
+  });
 
   return isVisible;
 };

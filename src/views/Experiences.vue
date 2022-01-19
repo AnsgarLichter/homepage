@@ -2,13 +2,11 @@
   <div class="pt-10 sm:pt-24 px-8 sm:px-22 lg:px-4">
     <div ref="title" class="flex flex-row justify-center">
       <UseElementIsVisible v-slot="{ isVisible }">
-        <div v-if="isVisible">
-          <FadeInUp>
-            <div v-if="isTitleVisible" class="text-5xl font-bold">
-              {{ t("experiences.title") }}
-            </div>
-          </FadeInUp>
-        </div>
+        <FadeInUp>
+          <div v-visible="isVisible" class="text-5xl font-bold">
+            {{ t("experiences.title") }}
+          </div>
+        </FadeInUp>
       </UseElementIsVisible>
     </div>
 
@@ -24,12 +22,17 @@
         <template #content="contentSlotProps">
           <div
             class="w-full"
-            v-for="(item, index) in contentSlotProps.item.experiences"
-            :key="index"
+            v-for="item in contentSlotProps.item.experiences"
+            :key="item.title"
           >
             <UseElementIsVisible v-slot="{ isVisible }">
-              <div v-if="isVisible">
-                <FadeInUp>
+              <transition
+                name="fade-in-left-out-right"
+                enter-active-class="animate__animated animate__fadeInLeft"
+                leave-active-class="animate__animated animate__fadeOutRight"
+                appear
+              >
+                <div v-visible="isVisible">
                   <Card
                     :images="item.images"
                     :title="item.title"
@@ -38,9 +41,10 @@
                     :organisation="item.organisation"
                     :location="item.location"
                     :description="item.description"
-                  />
-                </FadeInUp>
-              </div>
+                  >
+                  </Card>
+                </div>
+              </transition>
             </UseElementIsVisible>
           </div>
         </template>
