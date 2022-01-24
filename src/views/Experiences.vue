@@ -1,7 +1,7 @@
 <template>
   <div class="pt-10 sm:pt-24 px-8 sm:px-22 lg:px-4">
     <div ref="title" class="flex flex-row justify-center">
-      <UseElementIsVisible v-slot="{ isVisible }">
+      <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
         <FadeInUp>
           <div v-visible="isVisible" class="text-5xl font-bold">
             {{ t("experiences.title") }}
@@ -22,9 +22,15 @@
         <template #content="contentSlotProps">
           <UseElementIsVisible v-slot="{ isVisible }">
             <transition
-              name="fade-in-left-out-right"
-              enter-active-class="animate__animated animate__fadeInLeft"
-              leave-active-class="animate__animated animate__fadeOutRight"
+              :name="'fade-in-left-out-right' + contentSlotProps.index"
+              :enter-active-class="
+                'animate__animated timeline-fadeIn' +
+                (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
+              "
+              :leave-active-class="
+                'animate__animated timeline-fadeOut' +
+                (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
+              "
               appear
             >
               <div v-visible="isVisible">
@@ -118,13 +124,30 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.timeline > div:nth-child(even) {
-  flex-direction: row;
+.timeline-fadeIn {
+  --webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.timeline-fadeOut {
+  --webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
 }
 
 @screen xl {
-  .timeline > div:nth-child(even) {
-    flex-direction: row-reverse;
+  .timeline-fadeOut {
+    --webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+  }
+
+  .timeline-fadeIn.timeline-odd {
+    --webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+
+  .timeline-fadeOut.timeline-odd {
+    --webkit-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
   }
 }
 </style>
