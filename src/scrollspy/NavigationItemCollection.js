@@ -68,6 +68,8 @@ const NavigationItemCollection = class NavigationItemCollection {
   getNavigationItemAtPosition(position) {
     let navigationItemAtPosition = null;
 
+    //TODO: Use getBoundingClientRect
+
     //TODO: Only works if navigation items are sorted ascending - improve
     this.navigationItems.forEach((navigationItem) => {
       if (navigationItem.getSection().offsetTop <= position) {

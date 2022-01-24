@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full">
     <div class="background w-full h-full">
-      <div class="w-full h-full flex flex-col md:flex-row items-center md:justify-center">
+      <div class="w-full h-full flex flex-col items-center justify-center md:flex-row">
         <div
           class="flex flex-col mt-4 sm:mt-20 md:mt-0 sm:w-1/2 sm:self-center text-center text-white"
         >
@@ -9,72 +9,62 @@
             <div
               class="bg-blue-700 rounded-t-full rounded-br-full px-4 py-2 text-sm sm:text-2xl text-white"
             >
-              {{ $t("intro.hello") }}
+              {{ t("intro.hello") }}
             </div>
           </div>
           <div id="name" class="text-2xl sm:text-5xl mt-2 sm:mt-6 typewriter">
-            <p class="pb-1 sm:pb-3">{{ $t("general.name") }}</p>
+            <p class="pb-1 sm:pb-3">{{ t("general.name") }}</p>
           </div>
           <div id="job" class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter">
-            <p>{{ $t("intro.jobTitle") }}</p>
+            <p>{{ t("intro.jobTitle") }}</p>
           </div>
           <div
             id="studies"
             class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter"
           >
-            <p>{{ $t("intro.studies") }}</p>
+            <p>{{ t("intro.studies") }}</p>
           </div>
           <div class="flex flex-row justify-center mt-4">
-            <SocialIcon
-              href="https://github.com/AnsgarLichter"
-              :icon="{ prefix: 'fab', name: 'github' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
-              href="https://twitter.com/ansgarlichter"
-              :icon="{ prefix: 'fab', name: 'twitter' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
-              href="https://www.instagram.com/_ansgar_l/"
-              :icon="{ prefix: 'fab', name: 'instagram' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
-              href="https://www.xing.com/profile/Ansgar_Lichter"
-              :icon="{ prefix: 'fab', name: 'xing' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
-              href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
-              :icon="{ prefix: 'fab', name: 'linkedin' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
-            <SocialIcon
-              href="mailto:lichteransgar@gmail.com"
-              :icon="{ prefix: 'fas', name: 'envelope' }"
-              :customClasses="[
-                'animate__animated animate__bounceInDown animate__delay-3s',
-              ]"
-            />
+            <BounceInDown>
+              <SocialIcon
+                href="https://github.com/AnsgarLichter"
+                :linkDescription="t('socialIcon.github.linkDescription')"
+                :icon="{
+                  prefix: 'fab',
+                  name: 'github',
+                }"
+              />
+            </BounceInDown>
+            <BounceInDown>
+              <SocialIcon
+                href="https://www.xing.com/profile/Ansgar_Lichter"
+                :linkDescription="t('socialIcon.xing.linkDescription')"
+                :icon="{ prefix: 'fab', name: 'xing' }"
+              />
+            </BounceInDown>
+            <BounceInDown>
+              <SocialIcon
+                href="https://www.linkedin.com/in/ansgar-lichter-8532661b1"
+                :linkDescription="t('socialIcon.linkedin.linkDescription')"
+                :icon="{ prefix: 'fab', name: 'linkedin' }"
+              />
+            </BounceInDown>
+            <BounceInDown>
+              <SocialIcon
+                href="mailto:lichteransgar@gmail.com"
+                :linkDescription="t('socialIcon.mailTo.linkDescription')"
+                :icon="{ prefix: 'fas', name: 'envelope' }"
+              />
+            </BounceInDown>
           </div>
         </div>
         <div class="flex flex-col py-8 sm:py-16">
           <img
             class="rounded-full h-36 w-36 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
-            src="@/assets/images/me.jpg"
+            src="@/assets/images/me.webp"
             alt="Ansgar Lichter"
             data-holder-rendered="true"
+            loading="lazy"
           />
         </div>
       </div>
@@ -83,12 +73,18 @@
 </template>
 
 <script setup>
+import { useI18n } from "vue-i18n";
+
 import SocialIcon from "@/components/SocialIcon";
+
+import BounceInDown from "@/transitions/BounceInDownWith3sDelay";
+
+const { t } = useI18n();
 </script>
 
 <style scoped>
 .background {
-  background-image: url("~@/assets/images/code.png");
+  background-image: url("~@/assets/images/code.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }

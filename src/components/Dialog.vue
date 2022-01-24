@@ -7,7 +7,7 @@
     >
       <div
         ref="dialog"
-        class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-9/10 flex flex-col overflow-hidden bg-white"
+        class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex flex-col overflow-hidden bg-white"
         @click.stop=""
       >
         <div
@@ -33,9 +33,11 @@
             />
           </div>
         </div>
-        <div class="a-content overflow-auto">
+
+        <div class="a-content overflow-auto a-scroll-container">
           <slot></slot>
         </div>
+
         <div class="a-footer">
           <slot name="footer"></slot>
         </div>
@@ -45,10 +47,16 @@
 </template>
 
 <script setup>
-import { defineExpose } from "vue";
+import { defineProps, defineExpose } from "vue";
 
 import { ref } from "@vue/reactivity";
 
+defineProps({
+  title: {
+    type: String,
+    default: "",
+  },
+});
 const maximizeIconName = ref("expand-arrows-alt");
 const isOpened = ref(false);
 

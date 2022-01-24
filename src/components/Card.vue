@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="mt-4 sm:mt-10 min-w-200 w-64 sm:w-96 md:w-128 lg:flex lg:h-80 xl:h-72 shadow"> -->
   <div class="mt-4 sm:mt-10 lg:flex shadow w-full">
     <div
       class="flex flex-col justify-center items-center space-y-10 p-4 border-b border-l border-t flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
@@ -11,6 +10,7 @@
         :src="getImagePath(image.src)"
         :alt="image.alt"
         data-holder-rendered="true"
+        loading="lazy"
       />
     </div>
     <div
@@ -87,47 +87,6 @@ defineProps({
 });
 
 const getImagePath = (imageSrc) => {
-  return require(`../assets/images/${imageSrc}`);
-};
-</script>
-
-<script>
-export default {
-  name: "Card",
-  props: {
-    images: {
-      type: Array,
-      default: () => [],
-    },
-    title: {
-      type: String,
-      default: "",
-    },
-    yearStart: {
-      type: String,
-      default: "",
-    },
-    yearEnd: {
-      type: String,
-      default: "",
-    },
-    organisation: {
-      type: String,
-      default: "",
-    },
-    location: {
-      type: String,
-      default: "",
-    },
-    description: {
-      type: String,
-      default: "",
-    },
-  },
-  methods: {
-    getImagePath(imageSrc) {
-      return require(`../assets/images/${imageSrc}`);
-    },
-  },
+  return require(`@/assets/images/${imageSrc}`);
 };
 </script>

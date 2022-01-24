@@ -11,26 +11,22 @@
         <div class="flex flex-row justify-center space-x-3">
           <SocialIcon
             href="https://github.com/AnsgarLichter"
+            :linkDescription="t('socialIcon.github.linkDescription')"
             :icon="{ prefix: 'fab', name: 'github' }"
           />
           <SocialIcon
-            href="https://twitter.com/ansgarlichter"
-            :icon="{ prefix: 'fab', name: 'twitter' }"
-          />
-          <SocialIcon
-            href="https://www.instagram.com/_ansgar_l/"
-            :icon="{ prefix: 'fab', name: 'instagram' }"
-          />
-          <SocialIcon
             href="https://www.xing.com/profile/Ansgar_Lichter"
+            :linkDescription="t('socialIcon.xing.linkDescription')"
             :icon="{ prefix: 'fab', name: 'xing' }"
           />
           <SocialIcon
-            href="https://www.linkedin.com/in/ansgar-lichter-8532661b1/"
+            href="https://www.linkedin.com/in/ansgar-lichter-8532661b1"
+            :linkDescription="t('socialIcon.linkedin.linkDescription')"
             :icon="{ prefix: 'fab', name: 'linkedin' }"
           />
           <SocialIcon
             href="mailto:lichteransgar@gmail.com"
+            :linkDescription="t('socialIcon.mailTo.linkDescription')"
             :icon="{ prefix: 'fas', name: 'envelope' }"
           />
         </div>
@@ -41,12 +37,12 @@
       >
         <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
           <div class="cursor-pointer" @click="showImprint">
-            {{ $t("footer.imprint") }}
+            {{ t("footer.imprint") }}
             <Imprint ref="imprint" />
           </div>
           |
           <div class="cursor-pointer" @click="showPrivacyPolicy">
-            {{ $t("footer.privacyPolicy") }}
+            {{ t("footer.privacyPolicy") }}
             <PrivacyPolicy ref="privacyPolicy" />
           </div>
         </div>
@@ -58,9 +54,13 @@
 <script setup>
 import { ref } from "@vue/reactivity";
 
+import { useI18n } from "vue-i18n";
+
 import Imprint from "@/components/Imprint";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import SocialIcon from "@/components/SocialIcon";
+
+const { t } = useI18n();
 
 const currentYear = ref(new Date().getFullYear());
 const imprint = ref();
