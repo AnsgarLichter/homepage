@@ -1,7 +1,7 @@
 <template>
   <div class="pt-10 sm:pt-24 px-8 sm:px-22 lg:px-4">
     <div ref="title" class="flex flex-row justify-center">
-      <UseElementIsVisible v-slot="{ isVisible }">
+      <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
         <FadeInUp>
           <div v-visible="isVisible" class="text-5xl font-bold">
             {{ t("experiences.title") }}
@@ -21,18 +21,6 @@
         </template>
         <template #content="contentSlotProps">
           <UseElementIsVisible v-slot="{ isVisible }">
-            <!-- <transition
-              :name="'fade-in-left-out-right' + contentSlotProps.index"
-              :enter-active-class="
-                'animate__animated animate__fadeInLeft' +
-                (!!(contentSlotProps.index % 2) ? '' : ' xl:animate__fadeInRight')
-              "
-              :leave-active-class="
-                'animate__animated animate__fadeOutRight' +
-                (!!(contentSlotProps.index % 2) ? ' xl:animate__fadeOutLeft' : '')
-              "
-              appear
-            > -->
             <transition
               :name="'fade-in-left-out-right' + contentSlotProps.index"
               :enter-active-class="
