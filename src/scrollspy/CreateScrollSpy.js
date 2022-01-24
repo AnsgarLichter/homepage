@@ -1,7 +1,7 @@
 import { NavigationItemCollection } from "./NavigationItemCollection";
 import { ScrollContainer } from "./ScrollContainer";
 
-import { mergeOptions } from "./util/MergeOptions";
+import { useMergeJsonObjects } from "@/composables";
 
 /**
  * The default options which are used if no other options are provided in the binding.
@@ -67,9 +67,9 @@ const spyDirective = {
      */
     created(element, binding) {
         const instance = binding.instance;
-        const providedOptions = binding.value;
+        const boundOptions = binding.value;
 
-        instance.options = mergeOptions(defaultOptions, providedOptions);
+        instance.options = useMergeJsonObjects(defaultOptions, boundOptions);
     },
 
     /**
