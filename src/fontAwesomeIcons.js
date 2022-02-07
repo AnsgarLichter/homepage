@@ -4,7 +4,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithub,
   faXing,
-  faLinkedin
+  faLinkedin,
+  faGooglePlay,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -19,12 +20,18 @@ import {
   faTimes,
   faExpandArrowsAlt,
   faCompressArrowsAlt,
-  faDownload
+  faDownload,
+  faExternalLinkAlt
 } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faFolder
+} from "@fortawesome/free-regular-svg-icons";
 
 library.add(faXing);
 library.add(faGithub);
 library.add(faLinkedin);
+library.add(faGooglePlay);
 library.add(faGraduationCap);
 library.add(faCalendar);
 library.add(faUniversity);
@@ -37,5 +44,7 @@ library.add(faTimes);
 library.add(faExpandArrowsAlt);
 library.add(faCompressArrowsAlt);
 library.add(faDownload);
+library.add(faExternalLinkAlt);
+library.add(faFolder);
 
 export default FontAwesomeIcon;

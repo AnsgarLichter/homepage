@@ -91,19 +91,52 @@
     "projects": {
         "title": "Meine privaten Projekte",
         "funnyFart": {
-            "title": "Funny Fart"
+            "title": "Funny Fart",
+            "description": "Funny Fart ist eine native Android App, dessen Funktionalität das Bewerten und Speichern von eigenen Fürzen ist. Dafür nutzt die App eine Formel von Beano Studies. Die Funktionalitäten der App umfassen das Berechnen von Scores von Fürzen, das Speichern von berechneten Scores, die Aufnahme von Audios der Fürze und das Speichern dieser in einer lokalen Datenbank.",
+            "android": "Android",
+            "java": "Java",
+            "mobile": "Native App",
+            "formulaAlt": "Diese Seite erklärt die Formel von britischen Wissenschaftern, um zu bestimmen, wie witzig ein Furz ist.",
+            "calculateAlt": "Auf dieser Seite ist es möglich zu berechnen, wie witzig Ihr eigener Furz ist.",
+            "resultAlt": "Diese Seite visualisiert das Ergebnis!"
         },
         "catchTheTrain": {
-            "title": "Catch The Train"
+            "title": "Catch The Train",
+            "favoritesAlt": "Favorisierte Haltestellen",
+            "stopAlt": "Live-Abfahrtszeiten einer Haltestelle",
+            "filterAlt": "Filtern der Linien",
+            "description": "Eine mobile App mit dem Ziel die täglichen Reisen mit der Bahn angenehmer zugestalten. In Kombination mit der API der Karlsruher Verkehrsvertriebe visualisiert die App die Live-Abfahrtszeiten an den Haltestellen in und um Karlsruhe. Zusätzlich kann man einzelne Haltstelle favorisieren, um auf diese schnell zugreifen zu können.",
+            "flutter": "Flutter",
+            "api": "KVV API",
+            "dart": "Dart"
         },
         "dhbwApp": {
-            "title": "DHBW App"
+            "title": "DHBW App",
+            "description": "Die APp der DHBW Karlsruhe wird stetig von Studierenden der Wirtschaftsinformatik weiterentwickelt. Hierbei habe ich in einer 2er-Team generell die verwendeten Frameworks gewartet, sowie die Anzeige des Vorlesungsplans, die Anzeige der Live-Abfahrtszeiten, den Speiseplan und die Übersichtsseite nach Aktualisierungen der dahinter liegenden APIs wieder funktionsfähig gestaltet und den Quellcode gewartet.",
+            "mensaAlt": "Diese Seite zeigt den aktuellen Speiseplan der Mensa der Hochschule.",
+            "raplaAlt": "Diese Seite visualisiert den Vorlesungsplan für den Kurs, den man in den Einstellungen hinterlegt hat.",
+            "overviewAlt": "Diese Seite bietet eine Überischt über die wichtigsten Aktivitäten: den heutigen Speiseplan, die heutigen Vorlesungen und die nächsten Abfahrten der S-Bahnen an der nächsten Haltestelle.",
+            "angular": "Angular",
+            "ionic": "Ionic",
+            "typeScript": "TypeScript",
+            "openMensa": "Open Mensa API",
+            "kvvApi": "KVV API",
+            "rapla": "Rapla API"
+
         },
         "justDoIt": {
-            "title": "Just Do It"
+            "title": "Just Do It",
+            "description": "Eine serverseitige MVC-Webanwendung zum Management von To-DOs in Java, entwickelt während einer Vorlesung in meinem Studium. Die Anwendung setzt dabei ganz auf der Jakarta Enterprise Edition auf.",
+            "java": "Java",
+            "jee": "JEE", 
+            "tomEE": "TomEE",
+            "derby": "Derby"
         },
         "projectInitializationAutomation": {
-            "title": "Project Initialization Automation"
+            "title": "Project Initialization Automation",
+            "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed.",
+            "python": "Pyhton",
+            "githubAPI": "Github API"
         }
     },
     "footer": {
