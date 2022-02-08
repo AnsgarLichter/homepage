@@ -3,7 +3,7 @@
     <div ref="title" class="flex flex-row justify-center">
       <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
         <FadeInUp>
-          <div v-visible="isVisible" class="text-5xl font-bold">
+          <div v-visible="isVisible" class="text-5xl text-secondaryLight font-bold">
             {{ t("experiences.title") }}
           </div>
         </FadeInUp>

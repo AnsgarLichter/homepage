@@ -7,7 +7,7 @@
         >
           <div class="flex flex-row justify-center">
             <div
-              class="bg-blue-700 rounded-t-full rounded-br-full px-4 py-2 text-sm sm:text-2xl text-white"
+              class="bg-primaryLight rounded-t-full rounded-br-full px-4 py-2 text-sm sm:text-2xl text-secondary"
             >
               {{ t("intro.hello") }}
             </div>
@@ -15,13 +15,10 @@
           <div id="name" class="text-2xl sm:text-5xl mt-2 sm:mt-6 typewriter">
             <p class="pb-1 sm:pb-3">{{ t("general.name") }}</p>
           </div>
-          <div id="job" class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter">
+          <div id="job" class="text-lg sm:text-2xl text-text mt-2 sm:mt-3 typewriter">
             <p>{{ t("intro.jobTitle") }}</p>
           </div>
-          <div
-            id="studies"
-            class="text-lg sm:text-2xl text-white mt-2 sm:mt-3 typewriter"
-          >
+          <div id="studies" class="text-lg sm:text-2xl text-text mt-2 sm:mt-3 typewriter">
             <p>{{ t("intro.studies") }}</p>
           </div>
           <div class="flex flex-row justify-center mt-4">

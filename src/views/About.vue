@@ -19,8 +19,10 @@
       <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
         <FadeInUp>
           <div v-visible="isVisible">
-            <h1 class="text-3xl lg:text-5xl font-bold">{{ t("about.title") }}</h1>
-            <div class="text-left text-base mx-10 lg:mx-0 mt-3 lg:mt-6">
+            <h1 class="text-3xl text-secondaryLight lg:text-5xl font-bold">
+              {{ t("about.title") }}
+            </h1>
+            <div class="text-left text-base text-secondary mx-10 lg:mx-0 mt-3 lg:mt-6">
               {{ t("about.description-1") }}<br class="hidden lg:block" />
               {{ t("about.description-2") }}
               {{ t("about.description-3") }}<br />
@@ -38,20 +40,20 @@
         </UseElementIsVisible>
       </div>
 
-      <div ref="downloadCV" class="mt-4 flex justify-center">
+      <div class="mt-4 flex justify-center">
         <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
           <FadeInUp>
             <button
               v-visible="isVisible"
               @click="openCV"
-              class="bg-bg-grey p-4 rounded-full flex flex-row"
+              class="bg-primary border-2 border-accent p-4 rounded-full flex flex-row"
             >
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fas', 'download']"
-                color="white"
+                color="#88ffff"
               />
-              <div class="ml-2 text-white">Download CV</div>
+              <div class="ml-2 text-accent">Download CV</div>
             </button>
           </FadeInUp>
         </UseElementIsVisible>

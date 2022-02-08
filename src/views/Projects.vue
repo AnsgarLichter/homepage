@@ -1,7 +1,7 @@
 <template>
   <div class="py-10 px-8 sm:pt-24 sm:px-22 lg:px-4">
     <div class="flex flex-row justify-center">
-      <div class="text-5xl font-bold">{{ t("projects.title") }}</div>
+      <div class="text-5xl text-secondaryLight font-bold">{{ t("projects.title") }}</div>
     </div>
 
     <div class="flex flex-col mt-8 xl:mx-44">
@@ -13,7 +13,7 @@
         <div class="flex flex-row basis-3/5 space-x-8 mt-8 xl:mt-0">
           <div v-for="(image, index) of project.images" :key="index">
             <img
-              class="w-56 shadow-lg shadow-black"
+              class="w-56 shadow-lg shadow-primaryDark"
               :src="getImagePath(image.source)"
               :alt="image.alt"
               data-holder-rendered="true"
@@ -23,19 +23,19 @@
         </div>
         <div class="flex flex-col basis-2/5 mt-8 xl:mt-0 xl:justify-center">
           <div class="flex flex-col items-end">
-            <div class="text-sm text-gray-500">Featured Project</div>
+            <div class="text-sm text-accent">Featured Project</div>
             <h2
-              class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
+              class="text-2xl font-bold leading-7 text-secondaryLight sm:text-3xl sm:truncate"
             >
               {{ project.title }}
             </h2>
           </div>
-          <div class="mt-4 shadow-xl rounded-md p-5 bg-blue-300">
+          <div class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary">
             {{ project.description }}
           </div>
           <div class="flex flex-row justify-end mt-2">
             <div
-              class="mx-8"
+              class="mx-8 text-accent"
               v-for="(technology, index) of project.technologies"
               :key="index"
             >
@@ -54,7 +54,7 @@
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fab', 'google-play']"
-                color="black"
+                color="#88ffff"
               />
             </a>
             <a
@@ -65,7 +65,11 @@
               rel="noopener noreferrer"
               aria-label="Link zum Github-Repository"
             >
-              <font-awesome-icon class="fa-lg" :icon="['fab', 'github']" color="black" />
+              <font-awesome-icon
+                class="fa-lg"
+                :icon="['fab', 'github']"
+                color="#88ffff"
+              />
             </a>
             <a
               v-if="project.links.external"
@@ -78,7 +82,7 @@
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fas', 'external-link-alt']"
-                color="black"
+                color="#88ffff"
               />
             </a>
           </div>
@@ -86,17 +90,19 @@
       </div>
     </div>
     <div>
-      <div class="text-5xl font-bold mb-8">Andere nennenswerte Projekte</div>
+      <div class="text-5xl text-secondaryLight font-bold mb-8">
+        Andere nennenswerte Projekte
+      </div>
       <div
         v-for="(project, index) of otherProjects"
         :key="index"
-        class="shadow-xl rounded-md p-5 bg-blue-300 mb-8"
+        class="shadow-xl rounded-md p-5 bg-primaryLight mb-8"
       >
         <div class="flex flex-row items-center space-x-4">
           <font-awesome-icon
             class="text-5xl mr-auto"
             :icon="['far', 'folder']"
-            color="black"
+            color="#88ffff"
           />
           <a
             v-if="project.links.googlePlay"
@@ -109,7 +115,7 @@
             <font-awesome-icon
               class="fa-lg"
               :icon="['fab', 'google-play']"
-              color="black"
+              color="#88ffff"
             />
           </a>
           <a
@@ -120,7 +126,7 @@
             rel="noopener noreferrer"
             aria-label="Link zum Github-Repository"
           >
-            <font-awesome-icon class="fa-lg" :icon="['fab', 'github']" color="black" />
+            <font-awesome-icon class="fa-lg" :icon="['fab', 'github']" color="#88ffff" />
           </a>
           <a
             v-if="project.links.external"
@@ -137,11 +143,11 @@
             />
           </a>
         </div>
-        <div class="text-4xl">{{ project.title }}</div>
-        <div class="mt-4">{{ project.description }}</div>
+        <div class="text-4xl text-secondaryLight">{{ project.title }}</div>
+        <div class="mt-4 text-secondary">{{ project.description }}</div>
         <div class="flex flex-row space-x-4 mt-4 justify-center">
           <div
-            class="flex flex-row"
+            class="flex flex-row text-accent"
             v-for="(technology, index) of project.technologies"
             :key="index"
           >

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-primary">
     <Header />
 
     <div class="content a-scroll-container">
@@ -32,6 +32,20 @@ import Expieriences from "@/views/Experiences.vue";
 </script>
 
 <style>
+:root {
+  --primary-color: #0a192f;
+  --primary-color-light: #112240;
+  --primary-color-dark: #020c1b;
+  --secondary-color: #8892b0;
+  --secondary-color-light: #a8b2d1;
+  --secondary-color-dark: #495670;
+  --accent-color: #88ffff;
+
+  /* --text-and-icons: #ffffff;
+  --primary-text: #ccd6f6;
+  --secondary-text: #a8b2d1;
+  --divider-color: #bdbdbd; */
+}
 html {
   overflow: hidden;
 }
@@ -56,6 +70,7 @@ body,
   bottom: 48px;
   height: calc(100% - 74px - 48px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .social-icon:hover .fa-github {
@@ -94,6 +109,6 @@ body,
 }
 
 .social-icon:hover .fa-envelope {
-  color: #495057;
+  color: hsla(0, 0%, 100%, 0.7);
 }
 </style>
