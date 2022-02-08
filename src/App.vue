@@ -33,12 +33,12 @@ import Expieriences from "@/views/Experiences.vue";
 
 <style>
 :root {
-  --primary-color: #0a192f;
-  --primary-color-light: #112240;
-  --primary-color-dark: #020c1b;
-  --secondary-color: #8892b0;
-  --secondary-color-light: #a8b2d1;
-  --secondary-color-dark: #495670;
+  --primary-color: #00094d;
+  --primary-color-light: #011f4c;
+  --primary-color-dark: #000026;
+  --secondary-color: #90a4ae;
+  --secondary-color-light: #c1d5e0;
+  --secondary-color-dark: #62757f;
   --accent-color: #88ffff;
 
   /* --text-and-icons: #ffffff;

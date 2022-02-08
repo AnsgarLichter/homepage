@@ -85,12 +85,7 @@ module.exports = {
         secondary: "var(--secondary-color)",
         secondaryLight: "var(--secondary-color-light)",
         secondaryDark: "var(--secondary-color-dark)",
-        accent: "var(--accent-color)",
-        text: "var(--text-and-icons)",
-        icons: "var(--text-and-icons)",
-        primaryText: "var(--primary-text)",
-        secondaryText: "var(--secondary-text)",
-        divider: "var(--divider-color)",
+        accent: "var(--accent-color)"
       }
     }
   },
