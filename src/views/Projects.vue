@@ -1,16 +1,17 @@
 <template>
-  <div class="py-10 px-8 sm:pt-24 sm:px-22 lg:px-4">
-    <div class="flex flex-row justify-center">
-      <div class="text-5xl text-secondaryLight font-bold">{{ t("projects.title") }}</div>
+  <div class="py-10 px-8 sm:pt-24 sm:px-24 lg:px-4">
+    <div class="flex flex-row justify-center mb-8">
+      <div class="text-2xl text-secondaryLight font-bold sm:text-4xl lg:text-5xl">
+        {{ t("projects.title") }}
+      </div>
     </div>
-
-    <div class="flex flex-col mt-8 xl:mx-44">
+    <div class="flex flex-col xl:mx-44">
       <div
-        class="flex flex-col-reverse xl:flex-row my-8"
+        class="flex flex-col-reverse xl:flex-row mb-8"
         v-for="(project, index) of featuredProjects"
         :key="index"
       >
-        <div class="flex flex-row basis-3/5 space-x-8 mt-8 xl:mt-0">
+        <div class="flex flex-row basis-3/5 space-x-8">
           <div v-for="(image, index) of project.images" :key="index">
             <img
               class="w-56 shadow-lg shadow-primaryDark"
@@ -21,7 +22,7 @@
             />
           </div>
         </div>
-        <div class="flex flex-col basis-2/5 mt-8 xl:mt-0 xl:justify-center">
+        <div class="flex flex-col basis-2/5 xl:justify-center">
           <div class="flex flex-col items-end">
             <div class="text-sm text-accent">Featured Project</div>
             <h2
@@ -33,16 +34,16 @@
           <div class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary">
             {{ project.description }}
           </div>
-          <div class="flex flex-row justify-end mt-2">
+          <div class="mt-2 flex flex-row flex-wrap justify-end space-x-4">
             <div
-              class="mx-8 text-accent"
+              class="text-accent"
               v-for="(technology, index) of project.technologies"
               :key="index"
             >
               {{ technology }}
             </div>
           </div>
-          <div class="flex flex-row space-x-4 justify-end mt-2">
+          <div class="mt-2 flex flex-row space-x-4 justify-end">
             <a
               v-if="project.links.googlePlay"
               class="rounded p-3"
@@ -52,7 +53,7 @@
               aria-label="Link zum Google Play Store"
             >
               <font-awesome-icon
-                class="fa-lg"
+                class="text-2xl"
                 :icon="['fab', 'google-play']"
                 color="#007fad"
               />
@@ -66,7 +67,7 @@
               aria-label="Link zum Github-Repository"
             >
               <font-awesome-icon
-                class="fa-lg"
+                class="text-2xl"
                 :icon="['fab', 'github']"
                 color="#007fad"
               />
@@ -80,7 +81,7 @@
               aria-label="Externer Link"
             >
               <font-awesome-icon
-                class="fa-lg"
+                class="text-2xl"
                 :icon="['fas', 'external-link-alt']"
                 color="#007fad"
               />
@@ -89,69 +90,77 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="text-5xl text-secondaryLight font-bold mb-8">
+    <div class="mt-16">
+      <div class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
         Andere nennenswerte Projekte
       </div>
-      <div
-        v-for="(project, index) of otherProjects"
-        :key="index"
-        class="shadow-xl rounded-md p-5 bg-primaryLight mb-8"
-      >
-        <div class="flex flex-row items-center space-x-4">
-          <font-awesome-icon
-            class="text-5xl mr-auto"
-            :icon="['far', 'folder']"
-            color="#007fad"
-          />
-          <a
-            v-if="project.links.googlePlay"
-            class="rounded p-3"
-            :href="project.links.googlePlay"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link zum Google Play Store"
-          >
+      <div class="flex flex-col lg:flex-row lg:justify-center lg:space-x-20">
+        <div
+          v-for="(project, index) of otherProjects"
+          :key="index"
+          class="shadow-xl rounded-md p-5 bg-primaryLight mb-8 lg:w-144"
+        >
+          <div class="flex flex-row items-center space-x-4">
             <font-awesome-icon
-              class="fa-lg"
-              :icon="['fab', 'google-play']"
+              class="text-5xl mr-auto"
+              :icon="['far', 'folder']"
               color="#007fad"
             />
-          </a>
-          <a
-            v-if="project.links.github"
-            class="rounded p-3"
-            :href="project.links.github"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link zum Github-Repository"
-          >
-            <font-awesome-icon class="fa-lg" :icon="['fab', 'github']" color="#007fad" />
-          </a>
-          <a
-            v-if="project.links.external"
-            class="rounded p-3"
-            :href="project.links.external"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Externer Link"
-          >
-            <font-awesome-icon
-              class="fa-lg"
-              :icon="['fas', 'external-link-alt']"
-              color="black"
-            />
-          </a>
-        </div>
-        <div class="text-4xl text-secondaryLight">{{ project.title }}</div>
-        <div class="mt-4 text-secondary">{{ project.description }}</div>
-        <div class="flex flex-row space-x-4 mt-4 justify-center">
-          <div
-            class="flex flex-row text-accent"
-            v-for="(technology, index) of project.technologies"
-            :key="index"
-          >
-            {{ technology }}
+            <a
+              v-if="project.links.googlePlay"
+              class="rounded p-3"
+              :href="project.links.googlePlay"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link zum Google Play Store"
+            >
+              <font-awesome-icon
+                class="text-2xl"
+                :icon="['fab', 'google-play']"
+                color="#007fad"
+              />
+            </a>
+            <a
+              v-if="project.links.github"
+              class="rounded p-3"
+              :href="project.links.github"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link zum Github-Repository"
+            >
+              <font-awesome-icon
+                class="text-2xl"
+                :icon="['fab', 'github']"
+                color="#007fad"
+              />
+            </a>
+            <a
+              v-if="project.links.external"
+              class="rounded p-3"
+              :href="project.links.external"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Externer Link"
+            >
+              <font-awesome-icon
+                class="text-2xl"
+                :icon="['fas', 'external-link-alt']"
+                color="black"
+              />
+            </a>
+          </div>
+          <div class="mt-4 text-2xl sm:text-4xl text-secondaryLight">
+            {{ project.title }}
+          </div>
+          <div class="mt-4 sm:mt-8 text-secondary">{{ project.description }}</div>
+          <div class="mt-4 sm:mt-8 flex flex-row space-x-4 justify-center">
+            <div
+              class="flex flex-row text-accent"
+              v-for="(technology, index) of project.technologies"
+              :key="index"
+            >
+              {{ technology }}
+            </div>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@
       class="ml-auto lg:hidden flex items-center"
     >
       <div class="py-2 px-3 bg-primaryDark cursor-pointer rounded-lg navbar-menu-border">
-        <font-awesome-icon class="fa-lg" :icon="['fa', 'bars']" color="#495670" />
+        <font-awesome-icon class="fa-lg" :icon="['fa', 'bars']" color="#c2c2c2" />
       </div>
     </div>
 
