@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primaryLightDark h-12 fixed inset-x-0 bottom-0">
+  <div class="bg-primaryLight h-12 fixed inset-x-0 bottom-0">
     <div class="flex flex-row h-full">
       <div
         class="flex flex-col justify-center items-center w-1/2 sm:w-1/3 text-secondary"

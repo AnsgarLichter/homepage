@@ -24,7 +24,7 @@
           <font-awesome-icon
             class="h-4 justify-self-center"
             :icon="['fas', 'calendar']"
-            color="#88ffff"
+            color="#007fad"
           />
           <div class="text-base text-grey-dark text-secondary col-span-9">
             {{ yearStart }} - {{ yearEnd }}
@@ -32,7 +32,7 @@
           <font-awesome-icon
             class="h-4 justify-self-center"
             :icon="['fas', 'university']"
-            color="#88ffff"
+            color="#007fad"
           />
           <div class="text-grey-darker text-base text-secondary col-span-9">
             {{ organisation }}
@@ -41,7 +41,7 @@
           <font-awesome-icon
             class="h-4 justify-self-center"
             :icon="['fas', 'map-marker-alt']"
-            color="#88ffff"
+            color="#007fad"
           />
           <div class="text-secondary text-base col-span-9">
             {{ location }}

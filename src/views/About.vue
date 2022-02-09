@@ -51,7 +51,7 @@
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fas', 'download']"
-                color="#88ffff"
+                color="#007fad"
               />
               <div class="ml-2 text-accent">Download CV</div>
             </button>

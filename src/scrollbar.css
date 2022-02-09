@@ -1,7 +1,7 @@
 /* Scrollbar styling */
 html {
-  --scrollbarBackground: #00094d;
-  --thumbBackground: #90a4ae;
+  --scrollbarBackground: #232324;
+  --thumbBackground: #007fad;
 }
 
 .a-scroll-container::-webkit-scrollbar {

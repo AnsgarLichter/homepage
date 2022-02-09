@@ -54,7 +54,7 @@
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fab', 'google-play']"
-                color="#88ffff"
+                color="#007fad"
               />
             </a>
             <a
@@ -68,7 +68,7 @@
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fab', 'github']"
-                color="#88ffff"
+                color="#007fad"
               />
             </a>
             <a
@@ -82,7 +82,7 @@
               <font-awesome-icon
                 class="fa-lg"
                 :icon="['fas', 'external-link-alt']"
-                color="#88ffff"
+                color="#007fad"
               />
             </a>
           </div>
@@ -102,7 +102,7 @@
           <font-awesome-icon
             class="text-5xl mr-auto"
             :icon="['far', 'folder']"
-            color="#88ffff"
+            color="#007fad"
           />
           <a
             v-if="project.links.googlePlay"
@@ -115,7 +115,7 @@
             <font-awesome-icon
               class="fa-lg"
               :icon="['fab', 'google-play']"
-              color="#88ffff"
+              color="#007fad"
             />
           </a>
           <a
@@ -126,7 +126,7 @@
             rel="noopener noreferrer"
             aria-label="Link zum Github-Repository"
           >
-            <font-awesome-icon class="fa-lg" :icon="['fab', 'github']" color="#88ffff" />
+            <font-awesome-icon class="fa-lg" :icon="['fab', 'github']" color="#007fad" />
           </a>
           <a
             v-if="project.links.external"
