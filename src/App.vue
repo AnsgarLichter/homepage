@@ -40,12 +40,8 @@ import Expieriences from "@/views/Experiences.vue";
   --secondary-color-light: #ffffff;
   --secondary-color-dark: #b8c8d9;
   --accent-color: #007fad;
-
-  /* --text-and-icons: #ffffff;
-  --primary-text: #ccd6f6;
-  --secondary-text: #a8b2d1;
-  --divider-color: #bdbdbd; */
 }
+
 html {
   overflow: hidden;
 }
