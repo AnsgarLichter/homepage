@@ -13,7 +13,8 @@
         <Expieriences />
       </div>
       <div id="projects">
-        <Projects />
+        <FeaturedProjects />
+        <OtherProjects />
       </div>
     </div>
 
@@ -27,7 +28,8 @@ import Footer from "@/components/Footer";
 
 import Intro from "@/views/Intro.vue";
 import About from "@/views/About.vue";
-import Projects from "@/views/Projects.vue";
+import FeaturedProjects from "@/views/FeaturedProjects.vue";
+import OtherProjects from "@/views/OtherProjects.vue";
 import Expieriences from "@/views/Experiences.vue";
 </script>
 

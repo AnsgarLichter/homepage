@@ -1,7 +1,7 @@
 <template>
   <div class="mt-4 sm:mt-10 lg:flex shadow w-full">
     <div
-      class="flex flex-col bg-primaryLight justify-center items-center space-y-10 p-4 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+      class="flex flex-col bg-primary justify-center items-center space-y-10 p-4 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
     >
       <img
         class="w-44 object-fill"
@@ -14,7 +14,7 @@
       />
     </div>
     <div
-      class="bg-primaryLight rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full"
+      class="bg-primary rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full"
     >
       <div class="mb-8 text-left">
         <div class="text-secondaryLight font-bold text-xl mb-2">

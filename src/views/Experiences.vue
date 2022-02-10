@@ -1,55 +1,56 @@
 <template>
-  <div class="pt-10 sm:pt-24 px-8 sm:px-22 lg:px-4">
-    <div ref="title" class="flex flex-row justify-center">
+  <div class="bg-primaryLight py-8 px-8 sm:px-22 lg:py-16 lg:px-4">
+    <div class="flex flex-row justify-center">
       <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
         <FadeInUp>
-          <div v-visible="isVisible" class="text-5xl text-secondaryLight font-bold">
+          <div
+            v-visible="isVisible"
+            class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl"
+          >
             {{ t("experiences.title") }}
           </div>
         </FadeInUp>
       </UseElementIsVisible>
     </div>
 
-    <div class="mt-10">
-      <Timeline :events="events">
-        <template #marker="markerSlotProps">
-          <font-awesome-icon
-            class="fa-lg"
-            :icon="[markerSlotProps.item.icon.prefix, markerSlotProps.item.icon.name]"
-            :color="markerSlotProps.item.icon.color"
-          />
-        </template>
-        <template #content="contentSlotProps">
-          <UseElementIsVisible v-slot="{ isVisible }">
-            <transition
-              :name="'fade-in-left-out-right' + contentSlotProps.index"
-              :enter-active-class="
-                'animate__animated timeline-fadeIn' +
-                (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
-              "
-              :leave-active-class="
-                'animate__animated timeline-fadeOut' +
-                (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
-              "
-              appear
-            >
-              <div v-visible="isVisible">
-                <Card
-                  :images="contentSlotProps.item.content.images"
-                  :title="contentSlotProps.item.content.title"
-                  :yearStart="contentSlotProps.item.content.yearStart"
-                  :yearEnd="contentSlotProps.item.content.yearEnd"
-                  :organisation="contentSlotProps.item.content.organisation"
-                  :location="contentSlotProps.item.content.location"
-                  :description="contentSlotProps.item.content.description"
-                >
-                </Card>
-              </div>
-            </transition>
-          </UseElementIsVisible>
-        </template>
-      </Timeline>
-    </div>
+    <Timeline :events="events">
+      <template #marker="markerSlotProps">
+        <font-awesome-icon
+          class="fa-lg"
+          :icon="[markerSlotProps.item.icon.prefix, markerSlotProps.item.icon.name]"
+          :color="markerSlotProps.item.icon.color"
+        />
+      </template>
+      <template #content="contentSlotProps">
+        <UseElementIsVisible v-slot="{ isVisible }">
+          <transition
+            :name="'fade-in-left-out-right' + contentSlotProps.index"
+            :enter-active-class="
+              'animate__animated timeline-fadeIn' +
+              (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
+            "
+            :leave-active-class="
+              'animate__animated timeline-fadeOut' +
+              (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
+            "
+            appear
+          >
+            <div v-visible="isVisible">
+              <Card
+                :images="contentSlotProps.item.content.images"
+                :title="contentSlotProps.item.content.title"
+                :yearStart="contentSlotProps.item.content.yearStart"
+                :yearEnd="contentSlotProps.item.content.yearEnd"
+                :organisation="contentSlotProps.item.content.organisation"
+                :location="contentSlotProps.item.content.location"
+                :description="contentSlotProps.item.content.description"
+              >
+              </Card>
+            </div>
+          </transition>
+        </UseElementIsVisible>
+      </template>
+    </Timeline>
   </div>
 </template>
 
