@@ -2,7 +2,7 @@
   <div class="px-8 py-8 sm:pt-24 sm:px-24 lg:px-4 lg:py-16">
     <div class="flex flex-row justify-center">
       <div class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
-        {{ t("projects.title") }}
+        {{ t("featuredProjects.title") }}
       </div>
     </div>
     <div class="flex flex-col lg:mx-20 2xl:mx-44">
@@ -24,7 +24,7 @@
         </div>
         <div class="flex flex-col basis-2/5 xl:justify-center">
           <div class="flex flex-col items-end">
-            <div class="text-sm text-accent">Featured Project</div>
+            <div class="text-sm text-accent">{{ t("featuredProjects.featured") }}</div>
             <h2
               class="text-2xl font-bold leading-7 text-secondaryLight sm:text-3xl sm:truncate"
             >
@@ -106,23 +106,23 @@ const featuredProjects = computed(() => [
     images: [
       {
         source: "catchTheTrain/favorites.png",
-        alt: t("projects.catchTheTrain.favoritesAlt"),
+        alt: t("featuredProjects.catchTheTrain.favoritesAlt"),
       },
       {
         source: "catchTheTrain/stop.png",
-        alt: t("projects.catchTheTrain.stopAlt"),
+        alt: t("featuredProjects.catchTheTrain.stopAlt"),
       },
       {
         source: "catchTheTrain/filter.png",
-        alt: t("projects.catchTheTrain.filterAlt"),
+        alt: t("featuredProjects.catchTheTrain.filterAlt"),
       },
     ],
-    title: t("projects.catchTheTrain.title"),
-    description: t("projects.catchTheTrain.description"),
+    title: t("featuredProjects.catchTheTrain.title"),
+    description: t("featuredProjects.catchTheTrain.description"),
     technologies: [
-      t("projects.catchTheTrain.flutter"),
-      t("projects.catchTheTrain.api"),
-      t("projects.catchTheTrain.dart"),
+      t("featuredProjects.catchTheTrain.flutter"),
+      t("featuredProjects.catchTheTrain.api"),
+      t("featuredProjects.catchTheTrain.dart"),
     ],
     links: {
       github: "https://github.com/AnsgarLichter/CatchTheTrain",
@@ -132,26 +132,26 @@ const featuredProjects = computed(() => [
     images: [
       {
         source: "dhbwApp/overview.png",
-        alt: t("projects.dhbwApp.overviewAlt"),
+        alt: t("featuredProjects.dhbwApp.overviewAlt"),
       },
       {
         source: "dhbwApp/rapla.png",
-        alt: t("projects.dhbwApp.raplaAlt"),
+        alt: t("featuredProjects.dhbwApp.raplaAlt"),
       },
       {
         source: "dhbwApp/mensa.png",
-        alt: t("projects.dhbwApp.mensaAlt"),
+        alt: t("featuredProjects.dhbwApp.mensaAlt"),
       },
     ],
-    title: t("projects.dhbwApp.title"),
-    description: t("projects.dhbwApp.description"),
+    title: t("featuredProjects.dhbwApp.title"),
+    description: t("featuredProjects.dhbwApp.description"),
     technologies: [
-      t("projects.dhbwApp.angular"),
-      t("projects.dhbwApp.ionic"),
-      t("projects.dhbwApp.typeScript"),
-      t("projects.dhbwApp.openMensa"),
-      t("projects.dhbwApp.kvvApi"),
-      t("projects.dhbwApp.rapla"),
+      t("featuredProjects.dhbwApp.angular"),
+      t("featuredProjects.dhbwApp.ionic"),
+      t("featuredProjects.dhbwApp.typeScript"),
+      t("featuredProjects.dhbwApp.openMensa"),
+      t("featuredProjects.dhbwApp.kvvApi"),
+      t("featuredProjects.dhbwApp.rapla"),
     ],
     links: {
       googlePlay: "https://play.google.com/store/apps/details?id=de.dhbw.karlsruhe.app",
@@ -162,23 +162,23 @@ const featuredProjects = computed(() => [
     images: [
       {
         source: "funnyFart/formula.png",
-        alt: t("projects.funnyFart.formulaAlt"),
+        alt: t("featuredProjects.funnyFart.formulaAlt"),
       },
       {
         source: "funnyFart/calculate.png",
-        alt: t("projects.funnyFart.calculateAlt"),
+        alt: t("featuredProjects.funnyFart.calculateAlt"),
       },
       {
         source: "funnyFart/result.png",
-        alt: t("projects.funnyFart.resultAlt"),
+        alt: t("featuredProjects.funnyFart.resultAlt"),
       },
     ],
-    title: t("projects.funnyFart.title"),
-    description: t("projects.funnyFart.description"),
+    title: t("featuredProjects.funnyFart.title"),
+    description: t("featuredProjects.funnyFart.description"),
     technologies: [
-      t("projects.funnyFart.android"),
-      t("projects.funnyFart.java"),
-      t("projects.funnyFart.mobile"),
+      t("featuredProjects.funnyFart.android"),
+      t("featuredProjects.funnyFart.java"),
+      t("featuredProjects.funnyFart.mobile"),
     ],
     links: {
       googlePlay:

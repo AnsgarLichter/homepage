@@ -1,7 +1,7 @@
 <template>
   <div class="bg-primaryLight py-8 px-8 sm:pt-24 sm:px-24 lg:py-16 lg:px-4">
     <div class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
-      Andere nennenswerte Projekte
+      {{ t("otherProjects.title") }}
     </div>
     <div class="flex flex-col lg:flex-row lg:justify-center mb-8 last:mb-0 lg:space-x-20">
       <div
@@ -83,24 +83,24 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 const otherProjects = computed(() => [
   {
-    title: t("projects.justDoIt.title"),
-    description: t("projects.justDoIt.description"),
+    title: t("otherProjects.justDoIt.title"),
+    description: t("otherProjects.justDoIt.description"),
     technologies: [
-      t("projects.justDoIt.java"),
-      t("projects.justDoIt.jee"),
-      t("projects.justDoIt.tomEE"),
-      t("projects.justDoIt.derby"),
+      t("otherProjects.justDoIt.java"),
+      t("otherProjects.justDoIt.jee"),
+      t("otherProjects.justDoIt.tomEE"),
+      t("otherProjects.justDoIt.derby"),
     ],
     links: {
       github: "https://github.com/DerStimmler/JustDoIt",
     },
   },
   {
-    title: t("projects.projectInitializationAutomation.title"),
-    description: t("projects.projectInitializationAutomation.description"),
+    title: t("otherProjects.projectInitializationAutomation.title"),
+    description: t("otherProjects.projectInitializationAutomation.description"),
     technologies: [
-      t("projects.projectInitializationAutomation.python"),
-      t("projects.projectInitializationAutomation.githubAPI"),
+      t("otherProjects.projectInitializationAutomation.python"),
+      t("otherProjects.projectInitializationAutomation.githubAPI"),
     ],
     links: {
       github: "https://github.com/AnsgarLichter/project-initialization-automation",

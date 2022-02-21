@@ -88,7 +88,7 @@
             "sew": "SEW EURODRIVE"
         }
     },
-    "projects": {
+    "featuredProjects": {
         "title": "Meine privaten Projekte",
         "funnyFart": {
             "title": "Funny Fart",
@@ -123,7 +123,10 @@
             "kvvApi": "KVV API",
             "rapla": "Rapla API"
 
-        },
+        }
+    },
+    "otherProjects": {
+        "title": "Andere nennenswerte Projekte",
         "justDoIt": {
             "title": "Just Do It",
             "description": "Eine serverseitige MVC-Webanwendung zum Management von To-DOs in Java, entwickelt während einer Vorlesung in meinem Studium. Die Anwendung setzt dabei ganz auf der Jakarta Enterprise Edition auf.",
