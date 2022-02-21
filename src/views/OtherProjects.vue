@@ -1,8 +1,8 @@
 <template>
   <div class="bg-primaryLight py-8 px-8 sm:pt-24 sm:px-24 lg:py-16 lg:px-4">
-    <div class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
+    <h1 class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
       {{ t("otherProjects.title") }}
-    </div>
+    </h1>
     <div class="flex flex-col lg:flex-row lg:justify-center mb-8 last:mb-0 lg:space-x-20">
       <div
         v-for="(project, index) of otherProjects"

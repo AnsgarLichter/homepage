@@ -90,6 +90,7 @@
     },
     "featuredProjects": {
         "title": "Meine privaten Projekte",
+        "featured": "Featured Projekt",
         "funnyFart": {
             "title": "Funny Fart",
             "description": "Funny Fart ist eine native Android App, dessen Funktionalität das Bewerten und Speichern von eigenen Fürzen ist. Dafür nutzt die App eine Formel von Beano Studies. Die Funktionalitäten der App umfassen das Berechnen von Scores von Fürzen, das Speichern von berechneten Scores, die Aufnahme von Audios der Fürze und das Speichern dieser in einer lokalen Datenbank.",
@@ -115,7 +116,7 @@
             "description": "Die App der DHBW Karlsruhe wird stetig von Studierenden der Wirtschaftsinformatik weiterentwickelt. Hierbei habe ich in einer 2er-Team generell die verwendeten Frameworks gewartet, sowie die Anzeige des Vorlesungsplans, die Anzeige der Live-Abfahrtszeiten, den Speiseplan und die Übersichtsseite nach Aktualisierungen der dahinter liegenden APIs wieder funktionsfähig gestaltet und den Quellcode gewartet.",
             "mensaAlt": "Diese Seite zeigt den aktuellen Speiseplan der Mensa der Hochschule.",
             "raplaAlt": "Diese Seite visualisiert den Vorlesungsplan für den Kurs, den man in den Einstellungen hinterlegt hat.",
-            "overviewAlt": "Diese Seite bietet eine Überischt über die wichtigsten Aktivitäten: den heutigen Speiseplan, die heutigen Vorlesungen und die nächsten Abfahrten der S-Bahnen an der nächsten Haltestelle.",
+            "overviewAlt": "Diese Seite bietet eine Übersicht über die wichtigsten Aktivitäten: den heutigen Speiseplan, die heutigen Vorlesungen und die nächsten Abfahrten der S-Bahnen an der nächsten Haltestelle.",
             "angular": "Angular",
             "ionic": "Ionic",
             "typeScript": "TypeScript",
@@ -138,7 +139,7 @@
         "projectInitializationAutomation": {
             "title": "Project Initialization Automation",
             "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed.",
-            "python": "Pyhton",
+            "python": "Python",
             "githubAPI": "Github API"
         }
     },

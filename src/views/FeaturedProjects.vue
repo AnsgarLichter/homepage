@@ -1,9 +1,9 @@
 <template>
   <div class="px-8 py-8 sm:pt-24 sm:px-24 lg:px-4 lg:py-16">
     <div class="flex flex-row justify-center">
-      <div class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
+      <h1 class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
         {{ t("featuredProjects.title") }}
-      </div>
+      </h1>
     </div>
     <div class="flex flex-col lg:mx-20 2xl:mx-44">
       <div

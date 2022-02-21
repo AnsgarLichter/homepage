@@ -87,22 +87,58 @@
             "sew": "SEW EURODRIVE"
         }
     },
-    "projects": {
-        "title": "My private projects",
+    "featuredProjects": {
+        "title": "Some Things I've Built",
+        "featuerd": "Featured Project",
         "funnyFart": {
-            "title": "Funny Fart"
+            "title": "Funny Fart",
+            "description": "Funny Fart is a native Android App whose functionality is to rate and save your own farts. For this purpose, the app usees a formula from Beano Studies. The functionality of the app icnludes calculating scores of farts, saving calculated scores, recording audios of farts and saviung them to a local database.",
+            "android": "Android",
+            "java": "Java",
+            "mobile": "Native App",
+            "formulaAlt": "This page explaints the formula of the British scientists to determine how funny a fart is.",
+            "calculateAlt": "At this page it's possible to calculate how funny your own fart is.",
+            "resultAlt": "This page shows the result!"
         },
         "catchTheTrain": {
-            "title": "Catch The Train"
+            "title": "Catch The Train",
+            "favoritesAlt": "Favored Stops",
+            "stopAlt": "Live departure times of the trains at a stop",
+            "filterAlt": "Filter the train routes / lines",
+            "description": "A mobile app with the goal of making daily travel by train more pleasant. In combination with the API of the Kalrsuher Verkehrsvertriebe (local train company), the app visualizes live departure times at stops in and around Karlsruhe. Additionally, you can favorite individual stops to access them quickly.",
+            "flutter": "Flutter",
+            "api": "KVV API",
+            "dart": "Dart"
         },
         "dhbwApp": {
-            "title": "DHBW App"
-        },
+            "title": "DHBW App",
+            "description": "The app of the Corporate State University Karlsruhe is constantly being developed further by students of business informatics. In a team of 2, I have generally maintained the frameworks used, as well as the source code. We made the display of the lecture schedule, the display of the live departure times, the dining plan and the overview page functional again after updating the underlying APIs.",
+            "mensaAlt": "This page shows the current menu of the university's cafeteria.",
+            "raplaAlt": "This page shows the lecture schedule for the course that one has stored in the settings.",
+            "overviewAlt": "This page provides an overview of the most important activies: today's menu of the cafeteria, today's lectures and the next departures of the trains at the next stop.",
+            "angular": "Angular",
+            "ionic": "Ionic",
+            "typeScript": "TypeScript",
+            "openMensa": "Open Mensa API",
+            "kvvApi": "KVV API",
+            "rapla": "Rapla API"
+        }
+    },
+    "otherProjects": {
+        "title": "Other Noteworthy Projects",
         "justDoIt": {
-            "title": "Just Do It"
+            "title": "Just Do It",
+            "description": "A server-side MVC web applicationfor managing TODOs in Java, developed during a lecture in my studies. The application is based entirely on the Jakarta Enterprise Edition",
+            "java": "Java",
+            "jee": "JEE", 
+            "tomEE": "TomEE",
+            "derby": "Derby"
         },
         "projectInitializationAutomation": {
-            "title": "Project Initialization Automation"
+            "title": "Project Initialization Automation",
+            "description": "A console application to simplify the process for a new Github repository. After entering the name, a repository is automatically created on Github and a corresponding local folder with initial readme file. After that, the initial changes are committed and pushed.",
+            "python": "Python",
+            "githubAPI": "Github API"
         }
     },
     "footer": {
