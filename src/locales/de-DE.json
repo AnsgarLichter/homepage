@@ -7,7 +7,6 @@
         "about": "Über mich",
         "experiences": "Erfahrungen",
         "projects": "Projekte",
-        "contact": "Kontakt",
         "language": "Ändern der Sprache"
     },
     "socialIcon": {
@@ -46,14 +45,13 @@
     "experiences": {
         "title": "Meine Erfahrungen",
         "education": {
-            "title": "Meine Bildung",
             "studies": {
                 "title": "B. Sc. Wirtschaftsinformatik",
                 "yearStart": "2017",
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
                 "location": "Karlsruhe, Deutschland",
-                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering mit Erfahrungen im Entwicklen mit ABAP, SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
+                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering in Kombination mit Erfahrungen im Entwickeln mit ABAP und SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
             },
             "abroad": {
                 "title": "Auslandsaufenthalt: Einführung von SAP MES",
@@ -65,22 +63,13 @@
             }
         },
         "work": {
-            "title": "Meine Berufserfahrungen",
-            "studies": {
-                "title": "Berufserfahrung während des dualen Studiums",
-                "yearStart": "2017",
-                "yearEnd": "2020",
-                "organisation": "SEW Eurodrive",
-                "location": "Bruchsal, Deutschland",
-                "description": "Erfahrungen im Entwicklen mit ABAP, SAPUI5 in verschiedenen SAP-Bereichen."
-            },
             "itpa": {
                 "title": "Softwareentwickler SAP EWM",
                 "yearStart": "2020",
                 "yearEnd": "Today",
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Deutschland",
-                "description": "Diverse Projekte im Kontext von SAP EWM, besonders ein Template für manuelle Lager in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
+                "description": "In diversen Projekten im Kontext von SAP EWM mitgearbeitet. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
             }
         },
         "images": {

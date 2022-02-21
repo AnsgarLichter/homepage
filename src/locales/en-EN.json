@@ -4,11 +4,10 @@
     },
     "navigation": {
         "intro": "Intro",
-        "about": "About me",
-        "experiences": "Experiences",
+        "about": "About",
+        "experiences": "Experience",
         "projects": "Projects",
-        "contact": "Contact",
-        "language": "Change language"
+        "language": "Change Language"
     },
     "socialIcon": {
         "github": {
@@ -30,7 +29,7 @@
         "studies": "B. Sc. Business Informatics"
     },
     "about": {
-        "title": "About me",
+        "title": "About Me",
         "description-1": "I am a software engineer based in Karlsruhe.",
         "description-2": "After graduating from the Corporate State University in Business Informatics",
         "description-3": "I joned SEW-EURODRIVE GmbH & Co KG where I work on a wide variety of interesting and meaningful projcets on a daily basis.",
@@ -43,43 +42,33 @@
         }
     },
     "experiences": {
-        "title": "Some work experiences",
+        "title": "Where I've Worked and Studied",
         "education": {
-            "title": "Some education information",
             "studies": {
                 "title": "B. Sc. Business Informatics",
                 "yearStart": "2017",
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
                 "location": "Karlsruhe, Germany",
-                "description": "Field of study: Software Engineering"
+                "description": "Dual study of business informatics with a major in software engineering in combination with experience in developing with ABAP, SAPUI5 in various SAP areas during the practical phases."
             },
             "abroad": {
-                "title": "Project abroad: Introduction of SAP MES",
+                "title": "Project Abroad: Introduction of SAP MES",
                 "yearStart": "2019",
                 "yearEnd": "2019",
                 "organisation": "Suzhou Motors Ltd.",
                 "location": "Suzhou, China",
-                "description": "My tasks were to support the local colleagues and to analyze the production processes for later rollout stages."
+                "description": "Going live of selected pilot machines with SAP MES and subsequent support of the employees on site. The next step was analysis of further manufacturing processes to prepare the basis for the subsequent rollout steps."
             }
         },
         "work": {
-            "title": "A few work experiences",
-            "studies": {
-                "title": "Work experiences dual studies B. Sc. Businesss Informatics",
-                "yearStart": "2017",
-                "yearEnd": "2020",
-                "organisation": "SEW Eurodrive",
-                "location": "Bruchsal, Germany",
-                "description": "During the dual studies programm I gained valuable practical expierences."
-            },
             "itpa": {
-                "title": "IT System Developer SAP EWM",
+                "title": "IT Software Developer SAP EWM",
                 "yearStart": "2020",
                 "yearEnd": "Today",
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Germany",
-                "description": "Developing for various projects in context of SAP EWM with SAPUI5."
+                "description": "Participated in various projects in the context of SAP EWM. Especially a template for manual warehouses in the group of companies with SAPUI5 applications in FIORI Launchpad for mobile operation by warehouse employees."
             }
         },
         "images": {
@@ -128,7 +117,7 @@
         "title": "Other Noteworthy Projects",
         "justDoIt": {
             "title": "Just Do It",
-            "description": "A server-side MVC web applicationfor managing TODOs in Java, developed during a lecture in my studies. The application is based entirely on the Jakarta Enterprise Edition",
+            "description": "A server-side MVC web application for managing TODOs in Java, developed during a lecture in my studies. The application is based entirely on the Jakarta Enterprise Edition",
             "java": "Java",
             "jee": "JEE", 
             "tomEE": "TomEE",
