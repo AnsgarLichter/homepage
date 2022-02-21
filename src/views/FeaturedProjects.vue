@@ -31,7 +31,9 @@
               {{ project.title }}
             </h2>
           </div>
-          <div class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary">
+          <div
+            class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary border-2 border-accent"
+          >
             {{ project.description }}
           </div>
           <div class="mt-2 flex flex-row flex-wrap justify-end space-x-4">

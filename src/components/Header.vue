@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="fixed inset-x-0 top-0 bg-primaryLight">
+  <div id="header" class="fixed inset-x-0 top-0 bg-primaryLight border-b-2 border-accent">
     <NavigationBar :items="navigationItems">
       <template #start>
         <img
