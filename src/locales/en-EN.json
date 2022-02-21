@@ -17,7 +17,7 @@
             "linkDescription": "Link to my Xing profile"
         },
         "linkedin": {
-            "linkDescription": "Link to my Linkedin profile"
+            "linkDescription": "Link to my LinkedIn profile"
         },
         "mailTo": {
             "linkDescription": "Link to contact me by mail"
@@ -78,7 +78,7 @@
     },
     "featuredProjects": {
         "title": "Some Things I've Built",
-        "featuerd": "Featured Project",
+        "featured": "Featured Project",
         "funnyFart": {
             "title": "Funny Fart",
             "description": "Funny Fart is a native Android App whose functionality is to rate and save your own farts. For this purpose, the app usees a formula from Beano Studies. The functionality of the app icnludes calculating scores of farts, saving calculated scores, recording audios of farts and saviung them to a local database.",
