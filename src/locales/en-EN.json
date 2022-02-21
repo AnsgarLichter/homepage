@@ -169,7 +169,7 @@
         "close": "Close",
         "title": "Privacy Policy",
         "overview": {
-            "title": "1. Data protection at a glance",
+            "title": "1. Data Protection at a Glance",
             "generalInformation": {
                 "title": "General information",
                 "description": "The following notes provide a simple overview of what happens to your personal data when you visit our website. Personal data is any data with which you can be personally identified. For detailed information on the subject of data protection, please refer to our privacy policy listed below this text."
@@ -195,7 +195,7 @@
             }
         },
         "cdn": {
-            "title": "2. Hosting und Content Delivery Networks (CDN)",
+            "title": "2. Hosting and Content Delivery Network (CDN)",
             "hosting": {
                 "title": "External hosting",
                 "description1": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. <br /> Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).",
@@ -212,7 +212,7 @@
             }
         },
         "general": {
-            "title": "3. general notes and mandatory information",
+            "title": "3. General Notes and Mandatory Information",
             "protection": {
                 "title": "Privacy",
                 "description1": "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.4",
@@ -253,8 +253,8 @@
                 "description": "This site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content, such as orders or requests that you send to us as the site operator. You can recognize an encrypted connection by the fact that the address line of the browser changes from \u0022http://\u0022 to \u0022https://\u0022 and by the lock symbol in your browser line. If SSL or TLS encryption is activated, the data you transmit to us cannot be read by third parties."
             },
             "protectionRights": {
-                "title": "Auskunft, Löschung und Berichtigung",
-                "description": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden."
+                "title": "Information, deletion and correction",
+                "description": "Within the framework of the applicable legal provisions, you have the right at any time to free information about your stored personal data, its origin and recipient and the purpose of data processing and, if necessary, a right to correction or deletion of this data. For this purpose, as well as for further questions on the subject of personal data, you can contact us at any time."
             },
             "restrictionOfProcessing": {
                 "title": "Right to restriction of processing",
@@ -267,7 +267,7 @@
             }
         },
         "dataAquistion": {
-            "title": "4. data collection on this website",
+            "title": "4. Data Collection on this Website",
             "logs": {
                 "title": "Server log files",
                 "description": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:",
@@ -281,7 +281,7 @@
             }
         },
         "plugins": {
-            "title": "5. plugins and tools",
+            "title": "5. Plugins and Tools",
             "fontAwesome": {
                 "title": "Font Awesome (local hosting)",
                 "description": "This site uses Font Awesome for consistent font rendering. Font Awesome is installed locally. A connection to servers of Fonticons, Inc. does not take place. You can find more information about Font Awesome in the",
