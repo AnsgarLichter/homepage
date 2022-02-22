@@ -51,21 +51,21 @@
               :href="project.links.googlePlay.href"
               :linkDescription="project.links.googlePlay.description"
               :icon="icons.googlePlay"
-              icon.color="#007fad"
+              iconColor="#007fad"
             />
             <ProjectIcon
               v-if="project.links.github"
               :href="project.links.github.href"
               :linkDescription="project.links.github.description"
               :icon="icons.github"
-              icon.color="#007fad"
+              iconColor="#007fad"
             />
             <ProjectIcon
               v-if="project.links.external"
               :href="project.links.external.href"
               :linkDescription="project.links.external.description"
               :icon="icons.external"
-              icon.color="#007fad"
+              iconColor="#007fad"
             />
           </div>
         </div>
@@ -78,7 +78,7 @@
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
-import { ProjectIcon } from "@/components/ProjectIcon";
+import ProjectIcon from "@/components/ProjectIcon";
 
 const { t } = useI18n();
 

@@ -1,6 +1,6 @@
 <template>
   <a
-    class="rounded p-3"
+    class="project-icon rounded p-3"
     :href="href"
     :target="target"
     rel="noopener noreferrer"
