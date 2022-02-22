@@ -88,7 +88,11 @@
             "mobile": "Native App",
             "formulaAlt": "Diese Seite erklärt die Formel von britischen Wissenschaftern, um zu bestimmen, wie witzig ein Furz ist.",
             "calculateAlt": "Auf dieser Seite ist es möglich mit der Formel von britischen Wissenschaftlern zu berechnen, wie witzig Ihr eigener Furz ist.",
-            "resultAlt": "Diese Seite visualisiert den Score, der mit Hilfe der Formel berechnet worden ist!"
+            "resultAlt": "Diese Seite visualisiert den Score, der mit Hilfe der Formel berechnet worden ist!",
+            "linkDescription": {
+                "googlePlay": "Link zu der App im Google Play Store",
+                "github": "Link zum Github Repository"
+            }
         },
         "catchTheTrain": {
             "title": "Catch The Train",
@@ -98,7 +102,10 @@
             "description": "Eine mobile App mit dem Ziel die täglichen Reisen mit der Bahn angenehmer zugestalten. In Kombination mit der API der Karlsruher Verkehrsvertriebe visualisiert die App die Live-Abfahrtszeiten an den Haltestellen in und um Karlsruhe. Zusätzlich kann man einzelne Haltstelle favorisieren, um auf diese schnell zugreifen zu können.",
             "flutter": "Flutter",
             "api": "KVV API",
-            "dart": "Dart"
+            "dart": "Dart",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
         },
         "dhbwApp": {
             "title": "DHBW App",
@@ -111,8 +118,11 @@
             "typeScript": "TypeScript",
             "openMensa": "Open Mensa API",
             "kvvApi": "KVV API",
-            "rapla": "Rapla API"
-
+            "rapla": "Rapla API",
+            "linkDescription": {
+                "googlePlay": "Link zu der App im Google Play Store",
+                "external": "Externer Link auf die Homepage der DHBW App"
+            }
         }
     },
     "otherProjects": {
@@ -123,13 +133,19 @@
             "java": "Java",
             "jee": "JEE", 
             "tomEE": "TomEE",
-            "derby": "Derby"
+            "derby": "Derby",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
         },
         "projectInitializationAutomation": {
             "title": "Project Initialization Automation",
             "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed. Der gewünschte lokale Pfad für das Repository und der Token für die GitHub Authentifizierung können über eine Text-Datei konfiguriert werden.",
             "python": "Python",
-            "githubAPI": "Github API"
+            "githubAPI": "Github API",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
         }
     },
     "footer": {

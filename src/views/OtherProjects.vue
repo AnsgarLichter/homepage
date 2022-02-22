@@ -15,48 +15,27 @@
             :icon="['far', 'folder']"
             color="#007fad"
           />
-          <a
+          <ProjectIcon
             v-if="project.links.googlePlay"
-            class="rounded p-3"
-            :href="project.links.googlePlay"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link zum Google Play Store"
-          >
-            <font-awesome-icon
-              class="text-2xl"
-              :icon="['fab', 'google-play']"
-              color="#007fad"
-            />
-          </a>
-          <a
+            :href="project.links.googlePlay.href"
+            :linkDescription="project.links.github.description"
+            :icon="icons.googlePlay"
+            icon.color="#007fad"
+          />
+          <ProjectIcon
             v-if="project.links.github"
-            class="rounded p-3"
-            :href="project.links.github"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link zum Github-Repository"
-          >
-            <font-awesome-icon
-              class="text-2xl"
-              :icon="['fab', 'github']"
-              color="#007fad"
-            />
-          </a>
-          <a
+            :href="project.links.github.href"
+            :linkDescription="project.links.description"
+            :icon="icons.github"
+            icon.color="#007fad"
+          />
+          <ProjectIcon
             v-if="project.links.external"
-            class="rounded p-3"
-            :href="project.links.external"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Externer Link"
-          >
-            <font-awesome-icon
-              class="text-2xl"
-              :icon="['fas', 'external-link-alt']"
-              color="black"
-            />
-          </a>
+            :href="project.links.external.href"
+            :linkDescription="project.links.external.description"
+            :icon="icons.external"
+            icon.color="#007fad"
+          />
         </div>
         <div class="mt-4 text-2xl sm:text-4xl text-secondaryLight">
           {{ project.title }}
@@ -80,6 +59,8 @@
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
+import { ProjectIcon } from "@/components/ProjectIcon";
+
 const { t } = useI18n();
 const otherProjects = computed(() => [
   {
@@ -92,7 +73,10 @@ const otherProjects = computed(() => [
       t("otherProjects.justDoIt.derby"),
     ],
     links: {
-      github: "https://github.com/DerStimmler/JustDoIt",
+      github: {
+        href: "https://github.com/DerStimmler/JustDoIt",
+        description: t("otherProjects.justDoIt.linkDescription.github"),
+      },
     },
   },
   {
@@ -103,10 +87,30 @@ const otherProjects = computed(() => [
       t("otherProjects.projectInitializationAutomation.githubAPI"),
     ],
     links: {
-      github: "https://github.com/AnsgarLichter/project-initialization-automation",
+      github: {
+        href: "https://github.com/AnsgarLichter/project-initialization-automation",
+        description: t(
+          "otherProjects.projectInitializationAutomation.linkDescription.github"
+        ),
+      },
     },
   },
 ]);
+
+const icons = {
+  googlePlay: {
+    prefix: "fab",
+    name: "google-play",
+  },
+  github: {
+    prefix: "fab",
+    name: "github",
+  },
+  external: {
+    prefix: "fas",
+    name: "external-link-alt",
+  },
+};
 </script>
 
 <style scoped></style>

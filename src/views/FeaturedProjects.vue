@@ -46,48 +46,27 @@
             </div>
           </div>
           <div class="mt-2 flex flex-row space-x-4 justify-end">
-            <a
+            <ProjectIcon
               v-if="project.links.googlePlay"
-              class="rounded p-3"
-              :href="project.links.googlePlay"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Link zum Google Play Store"
-            >
-              <font-awesome-icon
-                class="text-2xl"
-                :icon="['fab', 'google-play']"
-                color="#007fad"
-              />
-            </a>
-            <a
+              :href="project.links.googlePlay.href"
+              :linkDescription="project.links.googlePlay.description"
+              :icon="icons.googlePlay"
+              icon.color="#007fad"
+            />
+            <ProjectIcon
               v-if="project.links.github"
-              class="rounded p-3"
-              :href="project.links.github"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Link zum Github-Repository"
-            >
-              <font-awesome-icon
-                class="text-2xl"
-                :icon="['fab', 'github']"
-                color="#007fad"
-              />
-            </a>
-            <a
+              :href="project.links.github.href"
+              :linkDescription="project.links.github.description"
+              :icon="icons.github"
+              icon.color="#007fad"
+            />
+            <ProjectIcon
               v-if="project.links.external"
-              class="rounded p-3"
-              :href="project.links.external"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Externer Link"
-            >
-              <font-awesome-icon
-                class="text-2xl"
-                :icon="['fas', 'external-link-alt']"
-                color="#007fad"
-              />
-            </a>
+              :href="project.links.external.href"
+              :linkDescription="project.links.external.description"
+              :icon="icons.external"
+              icon.color="#007fad"
+            />
           </div>
         </div>
       </div>
@@ -98,6 +77,8 @@
 <script setup>
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
+
+import { ProjectIcon } from "@/components/ProjectIcon";
 
 const { t } = useI18n();
 
@@ -125,7 +106,10 @@ const featuredProjects = computed(() => [
       t("featuredProjects.catchTheTrain.dart"),
     ],
     links: {
-      github: "https://github.com/AnsgarLichter/CatchTheTrain",
+      github: {
+        href: "https://github.com/AnsgarLichter/CatchTheTrain",
+        description: t("featuredProjects.catchTheTrain.linkDescription.github"),
+      },
     },
   },
   {
@@ -154,8 +138,14 @@ const featuredProjects = computed(() => [
       t("featuredProjects.dhbwApp.rapla"),
     ],
     links: {
-      googlePlay: "https://play.google.com/store/apps/details?id=de.dhbw.karlsruhe.app",
-      external: "https://www.karlsruhe.dhbw.de/it-service/software-angebote.html",
+      googlePlay: {
+        href: "https://play.google.com/store/apps/details?id=de.dhbw.karlsruhe.app",
+        description: t("featuredProjects.dhbwApp.linkDescription.googlePlay"),
+      },
+      external: {
+        href: "https://www.karlsruhe.dhbw.de/it-service/software-angebote.html",
+        description: t("featuredProjects.dhbwApp.linkDescription.external"),
+      },
     },
   },
   {
@@ -181,12 +171,33 @@ const featuredProjects = computed(() => [
       t("featuredProjects.funnyFart.mobile"),
     ],
     links: {
-      googlePlay:
-        "https://play.google.com/store/apps/details?id=dhbw.lichter.scheuring.formelapp&gl=DE",
-      github: "https://github.com/AnsgarLichter/funny-fart",
+      googlePlay: {
+        href:
+          "https://play.google.com/store/apps/details?id=dhbw.lichter.scheuring.formelapp&gl=DE",
+        description: t("featuredProjects.funnyFart.linkDescription.googlePlay"),
+      },
+      github: {
+        href: "https://github.com/AnsgarLichter/funny-fart",
+        description: t("featuredProjects.funnyFart.linkDescription.github"),
+      },
     },
   },
 ]);
+
+const icons = {
+  googlePlay: {
+    prefix: "fab",
+    name: "google-play",
+  },
+  github: {
+    prefix: "fab",
+    name: "github",
+  },
+  external: {
+    prefix: "fas",
+    name: "external-link-alt",
+  },
+};
 
 const getImagePath = (imageSrc) => {
   return require(`@/assets/projects/${imageSrc}`);

@@ -87,7 +87,11 @@
             "mobile": "Native App",
             "formulaAlt": "This page explaint the formula of the British scientists to determine how funny a fart is.",
             "calculateAlt": "On this page it is possible to calculate how funny your own fart is with the formula of British scientists.",
-            "resultAlt": "This page visualizes the score calculated using the formula!"
+            "resultAlt": "This page visualizes the score calculated using the formula!",
+            "linkDescription": {
+                "googlePlay": "Link to the app in Google Play Store",
+                "github": "Link to the Github repository"
+            }
         },
         "catchTheTrain": {
             "title": "Catch The Train",
@@ -97,7 +101,10 @@
             "description": "A mobile app with the goal of making daily travel by train more pleasant. In combination with the API of the Kalrsuher Verkehrsvertriebe (local train company), the app visualizes live departure times at stops in and around Karlsruhe. Additionally, you can favorite individual stops to access them quickly.",
             "flutter": "Flutter",
             "api": "KVV API",
-            "dart": "Dart"
+            "dart": "Dart",
+            "linkDescription": {
+                "github": "Link to the Github repository"
+            }
         },
         "dhbwApp": {
             "title": "DHBW App",
@@ -110,7 +117,11 @@
             "typeScript": "TypeScript",
             "openMensa": "Open Mensa API",
             "kvvApi": "KVV API",
-            "rapla": "Rapla API"
+            "rapla": "Rapla API",
+            "linkDescription": {
+                "googlePlay": "Link to the app in Google Play Store",
+                "external": "External link to the homepage of the app of the Corporate State University"
+            }
         }
     },
     "otherProjects": {
@@ -121,13 +132,19 @@
             "java": "Java",
             "jee": "JEE", 
             "tomEE": "TomEE",
-            "derby": "Derby"
+            "derby": "Derby",
+            "linkDescription": {
+                "github": "Link to the Github repository"
+            }
         },
         "projectInitializationAutomation": {
             "title": "Project Initialization Automation",
             "description": "A console application to simplify the process for a new Github repository. After entering the name, a repository is automatically created on Github and a corresponding local folder with initial readme file. After that, the initial changes are committed and pushed. The desired local path for the repository and the token for GitHub authentication can be configured via a text file.",
             "python": "Python",
-            "githubAPI": "Github API"
+            "githubAPI": "Github API",
+            "linkDescription": {
+                "github": "Link to the Github repository"
+            }
         }
     },
     "footer": {
