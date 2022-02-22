@@ -30,7 +30,7 @@
     },
     "about": {
         "title": "Über mich",
-        "akt": "Herzlich Wilkommen auf meiner Webseite!",
+        "alt": "Herzlich Wilkommen auf meiner Webseite!",
         "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
         "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
         "description-3": "habe ich begonnen bei SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten zu arbeiten.",
@@ -69,7 +69,7 @@
                 "yearEnd": "Today",
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Deutschland",
-                "description": "In diversen Projekten im Kontext von SAP EWM mitgearbeitet. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
+                "description": "Mitarbeit in diversen Projekten im Kontext von SAP EWM. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
             }
         },
         "images": {
@@ -78,7 +78,7 @@
         }
     },
     "featuredProjects": {
-        "title": "Meine privaten Projekte",
+        "title": "Einige Dinge, die ich gebaut habe",
         "featured": "Featured Projekt",
         "funnyFart": {
             "title": "Funny Fart",
@@ -87,8 +87,8 @@
             "java": "Java",
             "mobile": "Native App",
             "formulaAlt": "Diese Seite erklärt die Formel von britischen Wissenschaftern, um zu bestimmen, wie witzig ein Furz ist.",
-            "calculateAlt": "Auf dieser Seite ist es möglich zu berechnen, wie witzig Ihr eigener Furz ist.",
-            "resultAlt": "Diese Seite visualisiert das Ergebnis!"
+            "calculateAlt": "Auf dieser Seite ist es möglich mit der Formel von britischen Wissenschaftlern zu berechnen, wie witzig Ihr eigener Furz ist.",
+            "resultAlt": "Diese Seite visualisiert den Score, der mit Hilfe der Formel berechnet worden ist!"
         },
         "catchTheTrain": {
             "title": "Catch The Train",
@@ -119,7 +119,7 @@
         "title": "Andere nennenswerte Projekte",
         "justDoIt": {
             "title": "Just Do It",
-            "description": "Eine serverseitige MVC-Webanwendung zum Management von To-DOs in Java, entwickelt während einer Vorlesung in meinem Studium. Die Anwendung setzt dabei ganz auf der Jakarta Enterprise Edition auf.",
+            "description": "Eine serverseitige MVC-Webanwendung zum Management von To-DOs in Java, entwickelt während einer Vorlesung in meinem Studium. Die Anwendung nutzt hierfür die Jakarta Enterprise Edition.",
             "java": "Java",
             "jee": "JEE", 
             "tomEE": "TomEE",
@@ -127,7 +127,7 @@
         },
         "projectInitializationAutomation": {
             "title": "Project Initialization Automation",
-            "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed.",
+            "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed. Der gewünschte lokale Pfad für das Repository und der Token für die GitHub Authentifizierung können über eine Text-Datei konfiguriert werden.",
             "python": "Python",
             "githubAPI": "Github API"
         }
