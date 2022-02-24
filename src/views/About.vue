@@ -68,6 +68,25 @@
           </UseElementIsVisible>
         </div>
       </div>
+
+      <div ref="downloadCV" class="mt-4 flex justify-center">
+        <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+          <FadeInUp>
+            <button
+              v-visible="isVisible"
+              @click="openCV"
+              class="bg-bg-grey p-4 rounded-full flex flex-row"
+            >
+              <font-awesome-icon
+                class="fa-lg"
+                :icon="['fas', 'download']"
+                color="white"
+              />
+              <div class="ml-2 text-white">Download CV</div>
+            </button>
+          </FadeInUp>
+        </UseElementIsVisible>
+      </div>
     </div>
   </div>
 </template>
