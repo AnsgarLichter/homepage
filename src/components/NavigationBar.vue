@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-bg-grey px-3 py-2 flex flex-wrap justify-between my-navbar">
+  <div class="px-3 py-2 flex flex-wrap justify-between my-navbar">
     <div class="flex flex-row navbar-brand-padding">
       <slot name="start"></slot>
     </div>
@@ -8,19 +8,12 @@
       @click="changeNavigationItemsVisibility"
       class="ml-auto lg:hidden flex items-center"
     >
-      <div class="py-2 px-3 bg-bg-grey cursor-pointer rounded-lg navbar-menu-border">
-        <font-awesome-icon
-          class="fa-lg"
-          :icon="['fa', 'bars']"
-          color="rgba(255, 255, 255, 0.5)"
-        />
+      <div class="py-2 px-3 bg-primaryDark cursor-pointer rounded-lg navbar-menu-border">
+        <font-awesome-icon class="fa-lg" :icon="['fa', 'bars']" color="#c2c2c2" />
       </div>
     </div>
 
-    <div
-      id="navbar-collapse"
-      class="flex-basis-100 flex-shrink flex-grow items-center lg:flex lg:flex-auto"
-    >
+    <div class="flex-basis-100 flex-shrink flex-grow items-center lg:flex lg:flex-auto">
       <ul
         :class="[
           bCollapse ? 'navbar-collapse' : '',
@@ -28,7 +21,11 @@
         ]"
         v-spy
       >
-        <li class="navbar-item" v-for="(item, index) of items" :key="index">
+        <li
+          class="text-secondary hover:text-text navbar-item"
+          v-for="(item, index) of items"
+          :key="index"
+        >
           <slot name="item" :item="item" :index="index">
             <a
               @click="nav"
@@ -69,14 +66,6 @@ const nav = () => {
 </script>
 
 <style scoped>
-.navbar-item {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-item:hover {
-  color: rgba(255, 255, 255, 0.75);
-}
-
 .navbar-collapse {
   visibility: collapse;
   display: none;
@@ -84,7 +73,7 @@ const nav = () => {
 
 .active,
 .active:hover {
-  color: rgba(255, 255, 255, 1);
+  color: var(--accent-color);
 }
 
 @screen lg {

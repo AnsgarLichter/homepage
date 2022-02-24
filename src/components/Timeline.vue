@@ -16,7 +16,7 @@
       >
         <div
           v-if="item.icon"
-          class="timeline-event-marker w-10 h-10 flex items-center justify-center bg-purple-600 rounded-3xl"
+          class="timeline-event-marker w-10 h-10 flex items-center justify-center bg-accent rounded-3xl"
         >
           <slot name="marker" :item="item" :index="index"> </slot>
         </div>
@@ -26,12 +26,12 @@
           class="timeline-event-marker w-10 h-10 flex items-center justify-center"
         >
           <slot name="connector" v-if="index !== events.length - 1">
-            <div class="timeline-event-connector w-1 h-10 bg-black" />
+            <div class="timeline-event-connector w-1 h-10 bg-accent" />
           </slot>
         </div>
 
         <slot name="connector" v-if="index !== events.length - 1">
-          <div class="timeline-event-connector w-1 bg-black flex-grow" />
+          <div class="timeline-event-connector w-1 bg-accent flex-grow" />
         </slot>
       </div>
 

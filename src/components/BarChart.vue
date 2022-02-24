@@ -4,7 +4,7 @@
       <div class="relative pt-1">
         <div class="flex mb-2 items-center justify-between">
           <span
-            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-bg-grey"
+            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-accent bg-primaryLight border-2 border-accent"
           >
             {{ item.label }}
           </span>

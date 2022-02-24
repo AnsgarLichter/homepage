@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-bg-grey h-12 fixed inset-x-0 bottom-0">
+  <div class="bg-primaryLight h-12 fixed inset-x-0 bottom-0 border-t-2 border-accent">
     <div class="flex flex-row h-full">
-      <div class="flex flex-col justify-center items-center w-1/2 sm:w-1/3 text-white">
-        <div class="ml-4 sm:ml-12" bg="dark" variant="dark">
-          &copy; Ansgar Lichter {{ currentYear }}
-        </div>
+      <div
+        class="flex flex-col justify-center items-start md:items-center w-1/2 sm:w-1/3 text-secondary"
+      >
+        <div class="ml-4 sm:ml-12" bg="dark" variant="dark">&copy; {{ currentYear }}</div>
       </div>
 
       <div class="hidden sm:flex flex-col justify-center w-1/3">
@@ -35,7 +35,9 @@
       <div
         class="flex flex-col justify-center items-center sm:items-center w-1/2 sm:w-1/3"
       >
-        <div class="flex flex-row mr-4 sm:mr-12 text-white text-center whitespace-pre">
+        <div
+          class="flex flex-row mr-4 sm:mr-12 text-secondary text-center whitespace-pre"
+        >
           <div class="cursor-pointer" @click="showImprint">
             {{ t("footer.imprint") }}
             <Imprint ref="imprint" />
