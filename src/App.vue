@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-primary">
     <Header />
 
     <div class="content a-scroll-container">
@@ -13,7 +13,8 @@
         <Expieriences />
       </div>
       <div id="projects">
-        <Projects />
+        <FeaturedProjects />
+        <OtherProjects />
       </div>
     </div>
 
@@ -27,11 +28,22 @@ import Footer from "@/components/Footer";
 
 import Intro from "@/views/Intro.vue";
 import About from "@/views/About.vue";
-import Projects from "@/views/Projects.vue";
+import FeaturedProjects from "@/views/FeaturedProjects.vue";
+import OtherProjects from "@/views/OtherProjects.vue";
 import Expieriences from "@/views/Experiences.vue";
 </script>
 
 <style>
+:root {
+  --primary-color: #000000;
+  --primary-color-light: #232324;
+  --primary-color-dark: #434445;
+  --secondary-color: #c2c2c2;
+  --secondary-color-light: #ffffff;
+  --secondary-color-dark: #b8c8d9;
+  --accent-color: #007fad;
+}
+
 html {
   overflow: hidden;
 }
@@ -56,6 +68,7 @@ body,
   bottom: 48px;
   height: calc(100% - 74px - 48px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .social-icon:hover .fa-github {
@@ -94,6 +107,6 @@ body,
 }
 
 .social-icon:hover .fa-envelope {
-  color: #495057;
+  color: hsla(0, 0%, 100%, 0.7);
 }
 </style>

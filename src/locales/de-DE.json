@@ -7,7 +7,6 @@
         "about": "Über mich",
         "experiences": "Erfahrungen",
         "projects": "Projekte",
-        "contact": "Kontakt",
         "language": "Ändern der Sprache"
     },
     "socialIcon": {
@@ -31,7 +30,7 @@
     },
     "about": {
         "title": "Über mich",
-        "akt": "Herzlich Wilkommen auf meiner Webseite!",
+        "alt": "Herzlich Wilkommen auf meiner Webseite!",
         "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
         "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
         "description-3": "habe ich begonnen bei SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten zu arbeiten.",
@@ -46,14 +45,13 @@
     "experiences": {
         "title": "Meine Erfahrungen",
         "education": {
-            "title": "Meine Bildung",
             "studies": {
                 "title": "B. Sc. Wirtschaftsinformatik",
                 "yearStart": "2017",
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
                 "location": "Karlsruhe, Deutschland",
-                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering mit Erfahrungen im Entwicklen mit ABAP, SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
+                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering in Kombination mit Erfahrungen im Entwickeln mit ABAP und SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
             },
             "abroad": {
                 "title": "Auslandsaufenthalt: Einführung von SAP MES",
@@ -65,22 +63,13 @@
             }
         },
         "work": {
-            "title": "Meine Berufserfahrungen",
-            "studies": {
-                "title": "Berufserfahrung während des dualen Studiums",
-                "yearStart": "2017",
-                "yearEnd": "2020",
-                "organisation": "SEW Eurodrive",
-                "location": "Bruchsal, Deutschland",
-                "description": "Erfahrungen im Entwicklen mit ABAP, SAPUI5 in verschiedenen SAP-Bereichen."
-            },
             "itpa": {
                 "title": "Softwareentwickler SAP EWM",
                 "yearStart": "2020",
                 "yearEnd": "Today",
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Deutschland",
-                "description": "Diverse Projekte im Kontext von SAP EWM, besonders ein Template für manuelle Lager in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
+                "description": "Mitarbeit in diversen Projekten im Kontext von SAP EWM. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
             }
         },
         "images": {
@@ -88,22 +77,75 @@
             "sew": "SEW EURODRIVE"
         }
     },
-    "projects": {
-        "title": "Meine privaten Projekte",
+    "featuredProjects": {
+        "title": "Einige Dinge, die ich gebaut habe",
+        "featured": "Featured Projekt",
         "funnyFart": {
-            "title": "Funny Fart"
+            "title": "Funny Fart",
+            "description": "Funny Fart ist eine native Android App, dessen Funktionalität das Bewerten und Speichern von eigenen Fürzen ist. Dafür nutzt die App eine Formel von Beano Studies. Die Funktionalitäten der App umfassen das Berechnen von Scores von Fürzen, das Speichern von berechneten Scores, die Aufnahme von Audios der Fürze und das Speichern dieser in einer lokalen Datenbank.",
+            "android": "Android",
+            "java": "Java",
+            "mobile": "Native App",
+            "formulaAlt": "Diese Seite erklärt die Formel von britischen Wissenschaftern, um zu bestimmen, wie witzig ein Furz ist.",
+            "calculateAlt": "Auf dieser Seite ist es möglich mit der Formel von britischen Wissenschaftlern zu berechnen, wie witzig Ihr eigener Furz ist.",
+            "resultAlt": "Diese Seite visualisiert den Score, der mit Hilfe der Formel berechnet worden ist!",
+            "linkDescription": {
+                "googlePlay": "Link zu der App im Google Play Store",
+                "github": "Link zum Github Repository"
+            }
         },
         "catchTheTrain": {
-            "title": "Catch The Train"
+            "title": "Catch The Train",
+            "favoritesAlt": "Favorisierte Haltestellen",
+            "stopAlt": "Live-Abfahrtszeiten einer Haltestelle",
+            "filterAlt": "Filtern der Linien",
+            "description": "Eine mobile App mit dem Ziel die täglichen Reisen mit der Bahn angenehmer zugestalten. In Kombination mit der API der Karlsruher Verkehrsvertriebe visualisiert die App die Live-Abfahrtszeiten an den Haltestellen in und um Karlsruhe. Zusätzlich kann man einzelne Haltstelle favorisieren, um auf diese schnell zugreifen zu können.",
+            "flutter": "Flutter",
+            "api": "KVV API",
+            "dart": "Dart",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
         },
         "dhbwApp": {
-            "title": "DHBW App"
-        },
+            "title": "DHBW App",
+            "description": "Die App der DHBW Karlsruhe wird stetig von Studierenden der Wirtschaftsinformatik weiterentwickelt. Hierbei habe ich in einer 2er-Team generell die verwendeten Frameworks gewartet, sowie die Anzeige des Vorlesungsplans, die Anzeige der Live-Abfahrtszeiten, den Speiseplan und die Übersichtsseite nach Aktualisierungen der dahinter liegenden APIs wieder funktionsfähig gestaltet und den Quellcode gewartet.",
+            "mensaAlt": "Diese Seite zeigt den aktuellen Speiseplan der Mensa der Hochschule.",
+            "raplaAlt": "Diese Seite visualisiert den Vorlesungsplan für den Kurs, den man in den Einstellungen hinterlegt hat.",
+            "overviewAlt": "Diese Seite bietet eine Übersicht über die wichtigsten Aktivitäten: den heutigen Speiseplan, die heutigen Vorlesungen und die nächsten Abfahrten der S-Bahnen an der nächsten Haltestelle.",
+            "angular": "Angular",
+            "ionic": "Ionic",
+            "typeScript": "TypeScript",
+            "openMensa": "Open Mensa API",
+            "kvvApi": "KVV API",
+            "rapla": "Rapla API",
+            "linkDescription": {
+                "googlePlay": "Link zu der App im Google Play Store",
+                "external": "Externer Link auf die Homepage der DHBW App"
+            }
+        }
+    },
+    "otherProjects": {
+        "title": "Andere nennenswerte Projekte",
         "justDoIt": {
-            "title": "Just Do It"
+            "title": "Just Do It",
+            "description": "Eine serverseitige MVC-Webanwendung zum Management von To-DOs in Java, entwickelt während einer Vorlesung in meinem Studium. Die Anwendung nutzt hierfür die Jakarta Enterprise Edition.",
+            "java": "Java",
+            "jee": "JEE", 
+            "tomEE": "TomEE",
+            "derby": "Derby",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
         },
         "projectInitializationAutomation": {
-            "title": "Project Initialization Automation"
+            "title": "Project Initialization Automation",
+            "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed. Der gewünschte lokale Pfad für das Repository und der Token für die GitHub Authentifizierung können über eine Text-Datei konfiguriert werden.",
+            "python": "Python",
+            "githubAPI": "Github API",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
         }
     },
     "footer": {
@@ -176,10 +218,17 @@
                 "title": "Externes Hosting",
                 "description1": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. <br /> Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).",
                 "description2": "Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen. Wir setzen folgenden Hoster ein:",
-                "partner": {
-                    "name": "STRATO AG",
-                    "street": "Pascalstraße 10",
-                    "city": "10587 Berlin"
+                "githubPages": {
+                    "name": "GitHub Inc.",
+                    "street": "88 Colin P Kelly Jr St",
+                    "city": "San Francisco, CA 94107",
+                    "country": "United States"
+                },
+                "cloudflare": {
+                    "name": "Cloudflare Germany GmbH",
+                    "street": "Rosental 7",
+                    "city": "80331 München",
+                    "country": "Deutschland"
                 }
             },
             "contract": {

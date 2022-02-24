@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="fixed inset-x-0 top-0">
+  <div id="header" class="fixed inset-x-0 top-0 bg-primaryLight border-b-2 border-accent">
     <NavigationBar :items="navigationItems">
       <template #start>
         <img
@@ -8,7 +8,7 @@
           alt="Ansgar Lichter"
           loading="lazy"
         />
-        <div class="pl-4 md:pl-1 flex items-center text-white text-lg">
+        <div class="pl-4 md:pl-1 flex items-center text-secondary text-lg">
           {{ t("general.name") }}
         </div>
       </template>

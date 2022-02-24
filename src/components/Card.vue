@@ -1,7 +1,7 @@
 <template>
   <div class="mt-4 sm:mt-10 lg:flex shadow w-full">
     <div
-      class="flex flex-col justify-center items-center space-y-10 p-4 border-b border-l border-t flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+      class="flex flex-col bg-primary justify-center items-center space-y-10 p-4 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
     >
       <img
         class="w-44 object-fill"
@@ -14,37 +14,40 @@
       />
     </div>
     <div
-      class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full"
+      class="bg-primary rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full"
     >
       <div class="mb-8 text-left">
-        <div class="text-black font-bold text-xl mb-2">
+        <div class="text-secondaryLight font-bold text-xl mb-2">
           {{ title }}
         </div>
         <div class="grid grid-flow-row grid-cols-10 items-center">
           <font-awesome-icon
             class="h-4 justify-self-center"
             :icon="['fas', 'calendar']"
+            color="#007fad"
           />
-          <div class="text-base text-grey-dark col-span-9">
+          <div class="text-base text-grey-dark text-secondary col-span-9">
             {{ yearStart }} - {{ yearEnd }}
           </div>
           <font-awesome-icon
             class="h-4 justify-self-center"
             :icon="['fas', 'university']"
+            color="#007fad"
           />
-          <div class="text-grey-darker text-base col-span-9">
+          <div class="text-grey-darker text-base text-secondary col-span-9">
             {{ organisation }}
           </div>
 
           <font-awesome-icon
             class="h-4 justify-self-center"
             :icon="['fas', 'map-marker-alt']"
+            color="#007fad"
           />
-          <div class="text-grey-darker text-base col-span-9">
+          <div class="text-secondary text-base col-span-9">
             {{ location }}
           </div>
         </div>
-        <div class="mt-3 text-grey-darker text-base">
+        <div class="mt-3 text-grey-darker text-base text-secondary">
           {{ description }}
         </div>
       </div>

@@ -53,9 +53,17 @@
       {{ t("privacyPolicy.cdn.hosting.description1") }}<br />
       {{ t("privacyPolicy.cdn.hosting.description2") }}
       <ul class="text-center">
-        <li>{{ t("privacyPolicy.cdn.hosting.partner.name") }}</li>
-        <li>{{ t("privacyPolicy.cdn.hosting.partner.street") }}</li>
-        <li>{{ t("privacyPolicy.cdn.hosting.partner.city") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.githubPages.name") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.githubPages.street") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.githubPages.city") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.githubPages.country") }}</li>
+      </ul>
+      <br />
+      <ul class="text-center">
+        <li>{{ t("privacyPolicy.cdn.hosting.cloudflare.name") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.cloudflare.street") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.cloudflare.city") }}</li>
+        <li>{{ t("privacyPolicy.cdn.hosting.cloudflare.country") }}</li>
       </ul>
       <br />
       <h3 class="text-lg lg:text-lg font-bold">

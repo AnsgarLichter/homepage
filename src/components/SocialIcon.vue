@@ -1,5 +1,5 @@
 <template>
-  <div class="social-icon flex flex-col">
+  <div class="social-icon flex flex-col hover:bg-primaryDark">
     <a
       class="rounded p-3"
       :href="href"
@@ -34,9 +34,3 @@ defineProps({
   },
 });
 </script>
-
-<style scoped>
-.social-icon > a:hover {
-  background-color: black;
-}
-</style>

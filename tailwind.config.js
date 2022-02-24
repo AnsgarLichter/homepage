@@ -78,7 +78,14 @@ module.exports = {
           red: "#d62828",
           orange: "#f77f00",
           yellow: "#fcbf49"
-        }
+        },
+        primary: "var(--primary-color)",
+        primaryLight: "var(--primary-color-light)",
+        primaryDark: "var(--primary-color-dark)",
+        secondary: "var(--secondary-color)",
+        secondaryLight: "var(--secondary-color-light)",
+        secondaryDark: "var(--secondary-color-dark)",
+        accent: "var(--accent-color)"
       }
     }
   },
