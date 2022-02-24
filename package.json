@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "postinstall": "node ./node_modules/husky/lib/installer/bin install",
-    "deploy": "git push origin `git subtree split --prefix dist master`:gh-pages --force"
+    "deploy": "git push origin `git subtree split --prefix dist main`:releaseToGithubPages --force"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
