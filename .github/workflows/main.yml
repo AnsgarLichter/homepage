@@ -1,4 +1,4 @@
-name: Build and Push to branch for GitHub Pages
+name: build-to-github-pages-branch
 
 on:
   push:
@@ -11,11 +11,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v2
-      - name: Fetch repo
-        uses: actions/checkout@main
+    steps:                
+      - name: Fetch repo - main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
         
       - name: Setup node
         uses: actions/setup-node@v2
@@ -25,16 +25,28 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Build
+      - name: Build Vue Application
         run: npm run build
         
-      - name: Deploy to GitHub Pages
-        run: git subtree -split --prefix dist -b release
+      - name: Set git config
+        run: |
+          git config user.name "Ansgar Lichter"
+          git config user.email "lichteransgar@gmail.com"
+       
+      - name: Init empty git repository
+        run: git init
         
-      - name: Force push to branch for GitHub Pages
-        run: git push -f origin release:ReleaseToGithubPages
+      - name: Add dist folder
+        run: |
+          git add -f dist
+          git commit -m "[ADD] dist folder"
+       
+      - name: Split dist folder
+        run: git subtree split --prefix dist -b build
         
-      - name: Delete release branch
-        run: git branch -D release
+      - name: Push dist folder to GitHub Pages
+        run: |
+          git push --force origin build:releaseToGithubPages
+          git branch -D build
       
 
