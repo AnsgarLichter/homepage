@@ -132,7 +132,7 @@ module.exports = {
     "consistent-this": ["warn", "that"],
     "func-call-spacing": ["error", "never"],
     "keyword-spacing": ["error", { "after": true }],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error"],
     "max-nested-callbacks": ["warn", 3],
     "new-cap": "warn",
     "new-parens": "error",
