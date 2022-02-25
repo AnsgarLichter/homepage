@@ -1,5 +1,4 @@
 module.exports = {
-  publicPath: "/homepage/",
   chainWebpack: (config) => {
     config.module.rule('pdf')
       .test(/\.pdf$/)
