@@ -44,20 +44,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: releaseToGithubPages
-      
-      - name: Cleanup old build
-        run: git rm -r --force *
-
-      - name: Status
-        run: git status
-        
-      - name: Load built repository
-        uses: actions/download-artifact@v2
-        with:
-          name: built-repo
-      
-      - name: Status
-        run: git status
         
       - name: Set config
         run: |
