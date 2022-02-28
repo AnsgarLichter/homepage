@@ -39,17 +39,17 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    steps:
-      - name: Fetch repo - main branch
-        uses: actions/checkout@v2
-        with:
-          ref: releaseToGithubPages
-          
+    steps:          
       - name: Load built repository
         uses: actions/download-artifact@v2
         with:
           name: built-repo
-      
+        
+      - name: Fetch repo - release branch
+        uses: actions/checkout@v2
+        with:
+          ref: releaseToGithubPages
+          
       - name: Status
         run: git status
         
