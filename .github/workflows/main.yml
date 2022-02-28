@@ -50,13 +50,15 @@ jobs:
           git config user.name "Ansgar Lichter"
           git config user.email "lichteransgar@gmail.com"
         
-      - name: Commit build
+      - name: Commit build to temporary build branch
         run: |
+          git branch newBuild
           git add --force --all
           git commit --allow-empty-message --no-verify
         
       - name: Push build to release branch
         run: |
-          git push --force
+          git push --force newBuild:releaseToGithubPages
+          git branch -D newBuild
       
 
