@@ -61,7 +61,7 @@ jobs:
       - name: Commit build
         run: |
           git add --force --all
-          git commit --allow-empty-messagte -m ''
+          git commit --allow-empty-message -m ''
         
       - name: Push build to release branch
         run: |
