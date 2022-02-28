@@ -40,27 +40,31 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch repo - main branch
+        uses: actions/checkout@v2
+        with:
+          ref: releaseToGithubPages
+          
       - name: Load built repository
         uses: actions/download-artifact@v2
         with:
           name: built-repo
       
+      - name: Status
+        run: git status
+        
       - name: Set config
         run: |
           git config user.name "Ansgar Lichter"
           git config user.email "lichteransgar@gmail.com"
         
-      - name: Include dist folder
+      - name: Commit build
         run: |
-          git add -f dist
+          git add --force --all
           git commit --allow-empty-message --no-verify
-       
-      - name: Split dist folder
-        run: git subtree split --prefix dist -b build
         
-      - name: Push dist folder to GitHub Pages
+      - name: Push build to release branch
         run: |
-          git push --force origin build:releaseToGithubPages
-          git branch -D build
+          git push --force
       
 
