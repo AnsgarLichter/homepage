@@ -39,17 +39,23 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    steps:          
-      - name: Load built repository
-        uses: actions/download-artifact@v2
-        with:
-          name: built-repo
-        
+    steps:                  
       - name: Fetch repo - release branch
         uses: actions/checkout@v2
         with:
           ref: releaseToGithubPages
-          
+      
+      - name: Cleanup old build
+        run: git rm -r --force *
+
+      - name: Status
+        run: git status
+        
+      - name: Load built repository
+        uses: actions/download-artifact@v2
+        with:
+          name: built-repo
+      
       - name: Status
         run: git status
         
