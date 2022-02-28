@@ -32,9 +32,6 @@ jobs:
         run: |
           git config user.name "Ansgar Lichter"
           git config user.email "lichteransgar@gmail.com"
-       
-      - name: Init empty git repository
-        run: git init
         
       - name: Add dist folder
         run: |
