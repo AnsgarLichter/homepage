@@ -61,7 +61,7 @@ jobs:
       - name: Commit build
         run: |
           git add --force --all
-          git commit --reuse-message=HEAD
+          git commit --allow-empty-messagte -m ''
         
       - name: Push build to release branch
         run: |
