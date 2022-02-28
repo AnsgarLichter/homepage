@@ -65,6 +65,6 @@ jobs:
         
       - name: Push build to release branch
         run: |
-          git push origin --force releaseToGithubPages
+          git push origin --force build:releaseToGithubPages
       
 
