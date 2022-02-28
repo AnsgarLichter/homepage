@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: built-repo
-          path: ./
+          path: dist
   
   deploy:
     name: Deploy
