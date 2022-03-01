@@ -20,92 +20,100 @@
       </UseElementIsVisible>
     </div>
     <div class="flex flex-col lg:mx-20 2xl:mx-44">
-      <div
-        class="
-          flex flex-col-reverse
-          mb-8
-          last:mb-0
-          items-center
-          xl:flex-row xl:space-x-16
-        "
+      <UseElementIsVisible
+        abortIfVisible="true"
+        v-slot="{ isVisible }"
         v-for="(project, index) of featuredProjects"
         :key="index"
       >
-        <div class="flex flex-row basis-3/5 space-x-8">
-          <div v-for="(image, index) of project.images" :key="index">
-            <img
-              class="w-56 shadow-lg shadow-primaryDark"
-              :src="getImagePath(image.source)"
-              :alt="image.alt"
-              data-holder-rendered="true"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div class="flex flex-col basis-2/5 xl:justify-center">
-          <div class="flex flex-col items-end">
-            <div class="text-sm text-accent">
-              {{ t("featuredProjects.featured") }}
-            </div>
-            <h2
-              class="
-                text-2xl
-                font-bold
-                leading-7
-                text-secondaryLight
-                sm:text-3xl sm:truncate
-              "
-            >
-              {{ project.title }}
-            </h2>
-          </div>
+        <FadeInUp>
           <div
+            v-visible="isVisible"
             class="
-              mt-4
-              shadow-xl
-              rounded-md
-              p-5
-              bg-primaryLight
-              text-secondary
-              border-2 border-accent
+              flex flex-col-reverse
+              mb-8
+              last:mb-0
+              items-center
+              xl:flex-row xl:space-x-16
             "
           >
-            {{ project.description }}
-          </div>
-          <div class="mt-2 flex flex-row flex-wrap justify-end space-x-4">
-            <div
-              class="text-accent"
-              v-for="(technology, index) of project.technologies"
-              :key="index"
-            >
-              {{ technology }}
+            <div class="flex flex-row basis-3/5 space-x-8">
+              <div v-for="(image, index) of project.images" :key="index">
+                <img
+                  class="w-56 shadow-lg shadow-primaryDark"
+                  :src="getImagePath(image.source)"
+                  :alt="image.alt"
+                  data-holder-rendered="true"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col basis-2/5 xl:justify-center">
+              <div class="flex flex-col items-end">
+                <div class="text-sm text-accent">
+                  {{ t("featuredProjects.featured") }}
+                </div>
+                <h2
+                  class="
+                    text-2xl
+                    font-bold
+                    leading-7
+                    text-secondaryLight
+                    sm:text-3xl sm:truncate
+                  "
+                >
+                  {{ project.title }}
+                </h2>
+              </div>
+              <div
+                class="
+                  mt-4
+                  shadow-xl
+                  rounded-md
+                  p-5
+                  bg-primaryLight
+                  text-secondary
+                  border-2 border-accent
+                "
+              >
+                {{ project.description }}
+              </div>
+              <div class="mt-2 flex flex-row flex-wrap justify-end space-x-4">
+                <div
+                  class="text-accent"
+                  v-for="(technology, index) of project.technologies"
+                  :key="index"
+                >
+                  {{ technology }}
+                </div>
+              </div>
+              <div class="mt-2 flex flex-row space-x-4 justify-end">
+                <ProjectIcon
+                  v-if="project.links.googlePlay"
+                  :href="project.links.googlePlay.href"
+                  :linkDescription="project.links.googlePlay.description"
+                  :icon="icons.googlePlay"
+                  iconColor="#007fad"
+                />
+                <ProjectIcon
+                  v-if="project.links.github"
+                  :href="project.links.github.href"
+                  :linkDescription="project.links.github.description"
+                  :icon="icons.github"
+                  iconColor="#007fad"
+                />
+                <ProjectIcon
+                  v-if="project.links.external"
+                  :href="project.links.external.href"
+                  :linkDescription="project.links.external.description"
+                  :icon="icons.external"
+                  iconColor="#007fad"
+                />
+              </div>
             </div>
           </div>
-          <div class="mt-2 flex flex-row space-x-4 justify-end">
-            <ProjectIcon
-              v-if="project.links.googlePlay"
-              :href="project.links.googlePlay.href"
-              :linkDescription="project.links.googlePlay.description"
-              :icon="icons.googlePlay"
-              iconColor="#007fad"
-            />
-            <ProjectIcon
-              v-if="project.links.github"
-              :href="project.links.github.href"
-              :linkDescription="project.links.github.description"
-              :icon="icons.github"
-              iconColor="#007fad"
-            />
-            <ProjectIcon
-              v-if="project.links.external"
-              :href="project.links.external.href"
-              :linkDescription="project.links.external.description"
-              :icon="icons.external"
-              iconColor="#007fad"
-            />
-          </div>
-        </div>
-      </div>
+        </FadeInUp>
+      </UseElementIsVisible>
     </div>
   </div>
 </template>
