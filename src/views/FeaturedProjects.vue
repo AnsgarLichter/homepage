@@ -1,13 +1,33 @@
 <template>
   <div class="px-8 py-8 sm:pt-24 sm:px-24 lg:px-4 lg:py-16">
     <div class="flex flex-row justify-center">
-      <h1 class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl">
-        {{ t("featuredProjects.title") }}
-      </h1>
+      <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+        <FadeInUp>
+          <h1
+            v-visible="isVisible"
+            class="
+              text-2xl
+              sm:text-4xl
+              text-secondaryLight
+              font-bold
+              mb-8
+              lg:text-5xl
+            "
+          >
+            {{ t("featuredProjects.title") }}
+          </h1>
+        </FadeInUp>
+      </UseElementIsVisible>
     </div>
     <div class="flex flex-col lg:mx-20 2xl:mx-44">
       <div
-        class="flex flex-col-reverse mb-8 last:mb-0 items-center xl:flex-row xl:space-x-16"
+        class="
+          flex flex-col-reverse
+          mb-8
+          last:mb-0
+          items-center
+          xl:flex-row xl:space-x-16
+        "
         v-for="(project, index) of featuredProjects"
         :key="index"
       >
@@ -24,15 +44,31 @@
         </div>
         <div class="flex flex-col basis-2/5 xl:justify-center">
           <div class="flex flex-col items-end">
-            <div class="text-sm text-accent">{{ t("featuredProjects.featured") }}</div>
+            <div class="text-sm text-accent">
+              {{ t("featuredProjects.featured") }}
+            </div>
             <h2
-              class="text-2xl font-bold leading-7 text-secondaryLight sm:text-3xl sm:truncate"
+              class="
+                text-2xl
+                font-bold
+                leading-7
+                text-secondaryLight
+                sm:text-3xl sm:truncate
+              "
             >
               {{ project.title }}
             </h2>
           </div>
           <div
-            class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary border-2 border-accent"
+            class="
+              mt-4
+              shadow-xl
+              rounded-md
+              p-5
+              bg-primaryLight
+              text-secondary
+              border-2 border-accent
+            "
           >
             {{ project.description }}
           </div>
@@ -79,6 +115,10 @@ import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
 import ProjectIcon from "@/components/ProjectIcon";
+
+import FadeInUp from "@/transitions/FadeInUp";
+
+import { UseElementIsVisible } from "@/composables";
 
 const { t } = useI18n();
 
