@@ -48,13 +48,13 @@ At the moment the [conventional convetions of commitlint](https://github.com/con
 
 | Color           | Hex                                                                |
 | --------------- | ------------------------------------------------------------------ |
-| Primary         | ![#000000](https://colorpeek.com/#000000) `#000000` |
-| Primary light   | ![#232324](https://colorpeek.com/#232324) `#232324` |
-| Primary dark    | ![#434445](https://colorpeek.com/#434445) `#434445` |
-| Secondary       | ![#c2c2c2](https://colorpeek.com/#c2c2c2) `#c2c2c2` |
-| Secondary light | ![#ffffff](https://colorpeek.com/#ffffff) `#ffffff` |
-| Secondary dark  | ![#b8c8d9](https://colorpeek.com/#b8c8d9) `#b8c8d9` |
-| Accent          | ![#007fad](https://colorpeek.com/#007fad) `#007fad` |
+| Primary         | ![#000000](https://via.placeholder.com/15/f03c15/000000?text=+) `#000000` |
+| Primary light   | ![#232324](https://via.placeholder.com/15/232324/000000?text=+) `#232324` |
+| Primary dark    | ![#434445](https://via.placeholder.com/15/434445/000000?text=+) `#434445` |
+| Secondary       | ![#c2c2c2](https://via.placeholder.com/15/c2c2c2/000000?text=+) `#c2c2c2` |
+| Secondary light | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff` |
+| Secondary dark  | ![#b8c8d9](https://via.placeholder.com/15/b8c8d9/000000?text=+) `#b8c8d9` |
+| Accent          | ![#007fad](https://via.placeholder.com/15/007fad/000000?text=+) `#007fad` |
 
 
 ## 🔍 Configurations
