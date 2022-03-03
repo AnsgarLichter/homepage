@@ -1,7 +1,7 @@
 <template>
   <div class="bg-primaryLight py-8 px-8 sm:px-22 lg:py-16 lg:px-4">
     <div class="flex flex-row justify-center">
-      <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+      <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
         <FadeInUp>
           <div
             v-visible="isVisible"
