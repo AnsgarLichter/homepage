@@ -1,7 +1,7 @@
 <template>
   <div class="px-8 py-8 sm:pt-24 sm:px-24 lg:px-4 lg:py-16">
     <div class="flex flex-row justify-center">
-      <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+      <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
         <FadeInUp>
           <h1
             v-visible="isVisible"
@@ -21,7 +21,8 @@
     </div>
     <div class="flex flex-col lg:mx-20 2xl:mx-44">
       <UseElementIsVisible
-        abortIfVisible="true"
+        class="mb-8 last:mb-0"
+        abortIfVisible
         v-slot="{ isVisible }"
         v-for="(project, index) of featuredProjects"
         :key="index"
@@ -31,20 +32,18 @@
             v-visible="isVisible"
             class="
               flex flex-col-reverse
-              mb-8
-              last:mb-0
               items-center
               xl:flex-row xl:space-x-16
             "
           >
             <div class="flex flex-row basis-3/5 space-x-8">
               <div v-for="(image, index) of project.images" :key="index">
-                <img
-                  class="w-56 shadow-lg shadow-primaryDark"
+                <Image
+                  classes="w-56 shadow-lg shadow-primaryDark"
                   :src="getImagePath(image.source)"
                   :alt="image.alt"
-                  data-holder-rendered="true"
-                  loading="lazy"
+                  preview
+                  :previewIcon="previewIcon"
                 />
               </div>
             </div>
@@ -123,6 +122,7 @@ import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
 import ProjectIcon from "@/components/ProjectIcon";
+import Image from "@/components/Image";
 
 import FadeInUp from "@/transitions/FadeInUp";
 
@@ -249,6 +249,12 @@ const icons = {
 
 const getImagePath = (imageSrc) => {
   return require(`@/assets/projects/${imageSrc}`);
+};
+
+const previewIcon = {
+  prefix: "fas",
+  name: "fa-search",
+  color: "#007fad"
 };
 </script>
 
