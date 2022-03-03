@@ -1,6 +1,6 @@
 <template>
   <div class="py-8 px-8 lg:py-16 lg:px-44">
-    <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+    <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
       <FadeInUp>
         <h1
           v-visible="isVisible"
@@ -12,7 +12,7 @@
     </UseElementIsVisible>
     <div class="flex flex-col items-center lg:flex-row">
       <div class="flex lg:flex-col lg:w-1/2 justify-center">
-        <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+        <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
           <FadeInUp>
             <div class="justify-center" v-visible="isVisible">
               <img
@@ -27,7 +27,7 @@
       </div>
 
       <div class="flex flex-col lg:w-1/2 mt-3 lg:mt-0">
-        <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+        <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
           <FadeInUp>
             <div
               v-visible="isVisible"
@@ -42,7 +42,7 @@
         </UseElementIsVisible>
 
         <div class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
-          <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+          <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
             <FadeInUp>
               <BarChart v-visible="isVisible" :data="skills" />
             </FadeInUp>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="mt-4 flex justify-center">
-          <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+          <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
             <FadeInUp>
               <button
                 v-visible="isVisible"
@@ -70,7 +70,7 @@
       </div>
 
       <div ref="downloadCV" class="mt-4 flex justify-center">
-        <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+        <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
           <FadeInUp>
             <button
               v-visible="isVisible"

@@ -1,7 +1,7 @@
 <template>
   <div class="px-8 py-8 sm:pt-24 sm:px-24 lg:px-4 lg:py-16">
     <div class="flex flex-row justify-center">
-      <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+      <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
         <FadeInUp>
           <h1
             v-visible="isVisible"
@@ -22,7 +22,7 @@
     <div class="flex flex-col lg:mx-20 2xl:mx-44">
       <UseElementIsVisible
         class="mb-8 last:mb-0"
-        abortIfVisible="true"
+        abortIfVisible
         v-slot="{ isVisible }"
         v-for="(project, index) of featuredProjects"
         :key="index"
