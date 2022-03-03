@@ -1,6 +1,6 @@
 <template>
   <div class="bg-primaryLight py-8 px-8 sm:pt-24 sm:px-24 lg:py-16 lg:px-4">
-    <UseElementIsVisible abortIfVisible="true" v-slot="{ isVisible }">
+    <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
       <FadeInUp>
         <h1
           v-visible="isVisible"
@@ -27,7 +27,8 @@
       "
     >
       <UseElementIsVisible
-        abortIfVisible="true"
+        abortIfVisible
+        class="shadow-xl rounded-md p-5 bg-primary mb-8 lg:mb-0 lg:w-144"
         v-slot="{ isVisible }"
         v-for="(project, index) of otherProjects"
         :key="index"
@@ -35,7 +36,6 @@
         <FadeInUp>
           <div
             v-visible="isVisible"
-            class="shadow-xl rounded-md p-5 bg-primary mb-8 lg:mb-0 lg:w-144"
           >
             <div class="flex flex-row items-center space-x-4">
               <font-awesome-icon
