@@ -253,8 +253,9 @@ const getImagePath = (imageSrc) => {
 
 const previewIcon = {
   prefix: "fas",
-  name: "fa-search",
-  color: "#007fad"
+  name: "search",
+  color: "#007fad",
+  styleClasses: "text-3xl"
 };
 </script>
 
