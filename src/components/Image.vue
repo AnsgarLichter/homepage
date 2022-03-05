@@ -24,6 +24,7 @@
   <Teleport to="body">
     <div
       :hidden="!isPreviewVisible"
+      :style="{ 'background-color': properties.previewOuterBackgroundColor }"
       class="a-preview-outer z-[10000] fixed inset-0 w-full h-full"
       @click="closePreview"
     >
@@ -77,6 +78,10 @@ const properties = defineProps({
     },
     type: Object,
   },
+  previewOuterBackgroundColor: {
+    type: String,
+    default: "rgba(0, 0, 0, 0)",
+  },
 });
 
 const isPreviewVisible = ref(false);
@@ -103,7 +108,6 @@ const closePreview = () => {
 
 .a-preview-outer {
   z-index: 50000;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .a-preview {
