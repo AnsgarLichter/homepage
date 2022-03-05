@@ -5,14 +5,7 @@
         <FadeInUp>
           <h1
             v-visible="isVisible"
-            class="
-              text-2xl
-              sm:text-4xl
-              text-secondaryLight
-              font-bold
-              mb-8
-              lg:text-5xl
-            "
+            class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl"
           >
             {{ t("featuredProjects.title") }}
           </h1>
@@ -30,11 +23,7 @@
         <FadeInUp>
           <div
             v-visible="isVisible"
-            class="
-              flex flex-col-reverse
-              items-center
-              xl:flex-row xl:space-x-16
-            "
+            class="flex flex-col-reverse items-center xl:flex-row xl:space-x-16"
           >
             <div class="flex flex-row basis-3/5 space-x-8">
               <div v-for="(image, index) of project.images" :key="index">
@@ -53,27 +42,13 @@
                   {{ t("featuredProjects.featured") }}
                 </div>
                 <h2
-                  class="
-                    text-2xl
-                    font-bold
-                    leading-7
-                    text-secondaryLight
-                    sm:text-3xl sm:truncate
-                  "
+                  class="text-2xl font-bold leading-7 text-secondaryLight sm:text-3xl sm:truncate"
                 >
                   {{ project.title }}
                 </h2>
               </div>
               <div
-                class="
-                  mt-4
-                  shadow-xl
-                  rounded-md
-                  p-5
-                  bg-primaryLight
-                  text-secondary
-                  border-2 border-accent
-                "
+                class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary border-2 border-accent"
               >
                 {{ project.description }}
               </div>
@@ -255,7 +230,7 @@ const previewIcon = {
   prefix: "fas",
   name: "search",
   color: "#007fad",
-  styleClasses: "text-3xl"
+  styleClasses: "text-3xl",
 };
 </script>
 
