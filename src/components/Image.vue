@@ -1,47 +1,45 @@
 <template>
-  <div class="a-image">
-    <div class="a-image-container relative">
-      <img
-        :class="classes"
-        :src="src"
-        :alt="alt"
-        :loading="loading"
-        data-holder-rendered="true"
-      />
+  <div class="a-image-container relative">
+    <img
+      :class="classes"
+      :src="src"
+      :alt="alt"
+      :loading="loading"
+      data-holder-rendered="true"
+    />
+    <div
+      class="a-image-preview-indicator flex absolute left-0 top-0 w-full h-full items-center justify-center opacity-0 transition-opacity ease-in delay-100 bg-primaryLight"
+      v-if="properties.preview"
+      @click="openPreview"
+    >
+      <slot name="indicator">
+        <font-awesome-icon
+          :class="previewIcon.styleClasses"
+          :icon="[previewIcon.prefix, previewIcon.name]"
+          :color="previewIcon.color"
+        />
+      </slot>
+    </div>
+  </div>
+  <Teleport to="body">
+    <div
+      :hidden="!isPreviewVisible"
+      class="a-preview-outer z-[10000] fixed inset-0 w-full h-full"
+      @click="closePreview"
+    >
       <div
-        class="a-image-preview-indicator flex absolute left-0 top-0 w-full h-full items-center justify-center opacity-0 transition-opacity ease-in delay-100 bg-primaryLight"
-        v-if="properties.preview"
-        @click="openPreview"
+        class="a-preview z-[10050] fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex justify-center items-center"
       >
-        <slot name="indicator">
-          <font-awesome-icon
-            :class="previewIcon.styleClasses"
-            :icon="[previewIcon.prefix, previewIcon.name]"
-            :color="previewIcon.color"
-          />
-        </slot>
+        <img
+          class="max-w-full max-h-full"
+          :src="src"
+          :alt="alt"
+          :loading="loading"
+          data-holder-rendered="true"
+        />
       </div>
     </div>
-    <Teleport to="body">
-      <div
-        :hidden="!isPreviewVisible"
-        class="a-preview-outer z-[10000] fixed inset-0 w-full h-full"
-        @click="closePreview"
-      >
-        <div
-          class="a-preview z-[10050] fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex justify-center items-center"
-        >
-          <img
-            class="max-w-full max-h-full"
-            :src="src"
-            :alt="alt"
-            :loading="loading"
-            data-holder-rendered="true"
-          />
-        </div>
-      </div>
-    </Teleport>
-  </div>
+  </Teleport>
 </template>
 
 <script setup>
