@@ -1,7 +1,16 @@
 <template>
-  <Dialog :title="t('imprint.title')" ref="dialog">
-    <div class="p-8">
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">Domaininhaber</h1>
+  <Dialog
+    :title="t('imprint.title')"
+    :backgroundColor="primaryColor"
+    :titleFontColor="secondaryColorLight"
+    :headerBorderColor="accentColor"
+    :iconColor="accentColor"
+    ref="dialog"
+  >
+    <div class="p-8 text-secondary">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
+        Domaininhaber
+      </h1>
       <div class="text-center">
         {{ t("imprint.domain.name") }}<br />
         {{ t("imprint.domain.academicTitle") }}<br />
@@ -10,7 +19,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center text-secondaryLight">
         {{ t("imprint.disputeSettlement.title") }}
       </h1>
       <br />
@@ -19,7 +28,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("imprint.liabilityContent.title") }}
       </h1>
       {{ t("imprint.liabilityContent.description") }}
@@ -27,7 +36,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("imprint.liabilityLinks.title") }}
       </h1>
       {{ t("imprint.liabilityLinks.description") }}
@@ -35,7 +44,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("imprint.copyright.title") }}
       </h1>
       {{ t("imprint.copyright.description") }}
@@ -43,12 +52,12 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center text-secondaryLight">
         {{ t("imprint.source.title") }}
       </h1>
       <div class="text-center">
         <a
-          class="text-blue-500 underline"
+          class="underline"
           href="https://www.e-recht24.de/"
           target="_blank"
           rel="noopener"
@@ -69,6 +78,8 @@ import { useI18n } from "vue-i18n";
 
 import Dialog from "@/components/Dialog";
 
+import { useColorScheme } from "@/composables";
+
 defineProps({
   value: {
     type: Boolean,
@@ -76,6 +87,7 @@ defineProps({
   },
 });
 
+const { primaryColor, secondaryColorLight, accentColor } = useColorScheme();
 const { t } = useI18n();
 
 const dialog = ref();

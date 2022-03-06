@@ -1,7 +1,14 @@
 <template>
-  <Dialog :title="t('privacyPolicy.title')" ref="dialog">
-    <div class="p-8">
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+  <Dialog
+    :title="t('privacyPolicy.title')"
+    :backgroundColor="primaryColor"
+    :titleFontColor="secondaryColorLight"
+    :headerBorderColor="accentColor"
+    :iconColor="accentColor"
+    ref="dialog"
+  >
+    <div class="p-8 text-secondary">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("privacyPolicy.overview.title") }}
       </h1>
       <h2 class="text-2xl lg:text-2xl font-bold">
@@ -44,7 +51,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("privacyPolicy.cdn.title") }}
       </h1>
       <h2 class="text-2xl lg:text-2xl font-bold">
@@ -75,7 +82,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("privacyPolicy.general.title") }}
       </h1>
       <h2 class="text-2xl lg:text-2xl font-bold">
@@ -170,7 +177,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("privacyPolicy.dataAquistion.title") }}
       </h1>
       <h2 class="text-2xl lg:text-2xl font-bold">
@@ -190,7 +197,7 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         {{ t("privacyPolicy.plugins.title") }}
       </h1>
       <h2 class="text-2xl lg:text-2xl font-bold">
@@ -211,12 +218,12 @@
       <br />
       <hr />
       <br />
-      <h1 class="text-3xl lg:text-3xl font-bold text-center">
+      <h1 class="text-3xl lg:text-3xl font-bold text-center text-secondaryLight">
         {{ t("privacyPolicy.source.title") }}
       </h1>
       <div class="text-center">
         <a
-          class="text-blue-500 underline"
+          class="underline"
           href="https://www.e-recht24.de/"
           target="_blank"
           rel="noopener"
@@ -237,6 +244,8 @@ import { useI18n } from "vue-i18n";
 
 import Dialog from "@/components/Dialog";
 
+import { useColorScheme } from "@/composables";
+
 defineProps({
   value: {
     type: Boolean,
@@ -244,6 +253,7 @@ defineProps({
   },
 });
 
+const { primaryColor, secondaryColorLight, accentColor } = useColorScheme();
 const { t } = useI18n();
 
 const dialog = ref();

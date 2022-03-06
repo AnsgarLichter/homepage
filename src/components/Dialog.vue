@@ -2,37 +2,47 @@
   <Teleport to="body">
     <div
       :hidden="!isOpened"
+      :style="{ 'background-color': properties.outerBackgroundColor }"
       class="a-dialog-outer fixed inset-0 w-full h-full"
       @click="close"
     >
       <div
         ref="dialog"
-        class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex flex-col overflow-hidden bg-white"
+        :style="{ 'background-color': properties.backgroundColor }"
+        class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex flex-col overflow-hidden"
         @click.stop=""
       >
-        <div
-          class="a-header flex flex-row flex-shrink-0 flex-basis-auto justify-center items-center border-b-2 border-gray-200 p-4"
-        >
-          <div class="a-header-content flex justify-center grow">
-            <slot name="header">
-              <span class="a-dialog-title text-xl" v-if="title">{{ title }}</span>
-            </slot>
+        <slot name="header">
+          <div
+            :style="{ 'border-color': properties.headerBorderColor }"
+            class="a-header flex flex-row flex-shrink-0 flex-basis-auto justify-center items-center border-b-2 border-gray-200 p-4"
+          >
+            <div class="a-header-content flex justify-center grow">
+              <slot name="headerContent">
+                <span
+                  :style="{ color: titleFontColor }"
+                  class="a-dialog-title text-xl"
+                  v-if="title"
+                  >{{ title }}</span
+                >
+              </slot>
+            </div>
+            <div class="a-header-icons flex space-x-2">
+              <font-awesome-icon
+                class="fa-lg cursor-pointer"
+                :icon="[properties.maximizeIcon.prefix, properties.maximizeIcon.name]"
+                :color="properties.iconColor"
+                @click="maximize"
+              />
+              <font-awesome-icon
+                class="fa-lg cursor-pointer"
+                :icon="[properties.closeIcon.prefix, properties.closeIcon.name]"
+                :color="properties.iconColor"
+                @click="close"
+              />
+            </div>
           </div>
-          <div class="a-header-icons flex space-x-2">
-            <font-awesome-icon
-              class="fa-lg cursor-pointer"
-              :icon="['fas', maximizeIconName]"
-              color="grey"
-              @click="maximize"
-            />
-            <font-awesome-icon
-              class="fa-lg cursor-pointer"
-              :icon="['fas', 'times']"
-              color="grey"
-              @click="close"
-            />
-          </div>
-        </div>
+        </slot>
 
         <div class="a-content overflow-auto a-scroll-container">
           <slot></slot>
@@ -51,12 +61,45 @@ import { defineProps, defineExpose } from "vue";
 
 import { ref } from "@vue/reactivity";
 
-defineProps({
+const properties = defineProps({
   title: {
     type: String,
     default: "",
   },
+  titleFontColor: {
+    type: String,
+    default: "#000000",
+  },
+  outerBackgroundColor: {
+    type: String,
+    default: "rgba(0, 0, 0, 0)",
+  },
+  backgroundColor: {
+    type: String,
+    default: "#ffffff",
+  },
+  headerBorderColor: {
+    type: String,
+    default: "rgb(229 231 235)",
+  },
+  iconColor: {
+    type: String,
+    default: "#808080",
+  },
+  maximizeIcon: {
+    type: Object,
+    default: () => {
+      return { prefix: "fas", name: "expand-arrows-alt" };
+    },
+  },
+  closeIcon: {
+    type: Object,
+    default: () => {
+      return { prefix: "fas", name: "times" };
+    },
+  },
 });
+
 const maximizeIconName = ref("expand-arrows-alt");
 const isOpened = ref(false);
 
@@ -97,7 +140,6 @@ defineExpose({
 <style scoped>
 .a-dialog-outer {
   z-index: 50000;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .a-dialog {

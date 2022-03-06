@@ -5,14 +5,7 @@
         <FadeInUp>
           <h1
             v-visible="isVisible"
-            class="
-              text-2xl
-              sm:text-4xl
-              text-secondaryLight
-              font-bold
-              mb-8
-              lg:text-5xl
-            "
+            class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl"
           >
             {{ t("featuredProjects.title") }}
           </h1>
@@ -30,11 +23,7 @@
         <FadeInUp>
           <div
             v-visible="isVisible"
-            class="
-              flex flex-col-reverse
-              items-center
-              xl:flex-row xl:space-x-16
-            "
+            class="flex flex-col-reverse items-center xl:flex-row xl:space-x-16"
           >
             <div class="flex flex-row basis-3/5 space-x-8">
               <div v-for="(image, index) of project.images" :key="index">
@@ -53,27 +42,13 @@
                   {{ t("featuredProjects.featured") }}
                 </div>
                 <h2
-                  class="
-                    text-2xl
-                    font-bold
-                    leading-7
-                    text-secondaryLight
-                    sm:text-3xl sm:truncate
-                  "
+                  class="text-2xl font-bold leading-7 text-secondaryLight sm:text-3xl sm:truncate"
                 >
                   {{ project.title }}
                 </h2>
               </div>
               <div
-                class="
-                  mt-4
-                  shadow-xl
-                  rounded-md
-                  p-5
-                  bg-primaryLight
-                  text-secondary
-                  border-2 border-accent
-                "
+                class="mt-4 shadow-xl rounded-md p-5 bg-primaryLight text-secondary border-2 border-accent"
               >
                 {{ project.description }}
               </div>
@@ -92,21 +67,21 @@
                   :href="project.links.googlePlay.href"
                   :linkDescription="project.links.googlePlay.description"
                   :icon="icons.googlePlay"
-                  iconColor="#007fad"
+                  :iconColor="accentColor"
                 />
                 <ProjectIcon
                   v-if="project.links.github"
                   :href="project.links.github.href"
                   :linkDescription="project.links.github.description"
                   :icon="icons.github"
-                  iconColor="#007fad"
+                  :iconColor="accentColor"
                 />
                 <ProjectIcon
                   v-if="project.links.external"
                   :href="project.links.external.href"
                   :linkDescription="project.links.external.description"
                   :icon="icons.external"
-                  iconColor="#007fad"
+                  :iconColor="accentColor"
                 />
               </div>
             </div>
@@ -126,9 +101,10 @@ import Image from "@/components/Image";
 
 import FadeInUp from "@/transitions/FadeInUp";
 
-import { UseElementIsVisible } from "@/composables";
+import { UseElementIsVisible, useColorScheme } from "@/composables";
 
 const { t } = useI18n();
+const { accentColor } = useColorScheme();
 
 const featuredProjects = computed(() => [
   {
@@ -253,8 +229,9 @@ const getImagePath = (imageSrc) => {
 
 const previewIcon = {
   prefix: "fas",
-  name: "fa-search",
-  color: "#007fad"
+  name: "search",
+  color: "#007fad",
+  styleClasses: "text-3xl",
 };
 </script>
 
