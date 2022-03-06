@@ -4,28 +4,13 @@
       <FadeInUp>
         <h1
           v-visible="isVisible"
-          class="
-            text-2xl
-            sm:text-4xl
-            text-secondaryLight
-            font-bold
-            mb-8
-            lg:text-5xl
-          "
+          class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl"
         >
           {{ t("otherProjects.title") }}
         </h1>
       </FadeInUp>
     </UseElementIsVisible>
-    <div
-      class="
-        flex flex-col
-        lg:flex-row lg:justify-center
-        mb-8
-        last:mb-0
-        lg:space-x-20
-      "
-    >
+    <div class="flex flex-col lg:flex-row lg:justify-center mb-8 last:mb-0 lg:space-x-20">
       <UseElementIsVisible
         abortIfVisible
         class="shadow-xl rounded-md p-5 bg-primary mb-8 lg:mb-0 lg:w-144"
@@ -34,35 +19,33 @@
         :key="index"
       >
         <FadeInUp>
-          <div
-            v-visible="isVisible"
-          >
+          <div v-visible="isVisible">
             <div class="flex flex-row items-center space-x-4">
               <font-awesome-icon
                 class="text-5xl mr-auto"
                 :icon="['far', 'folder']"
-                color="#007fad"
+                :iconColor="accentColor"
               />
               <ProjectIcon
                 v-if="project.links.googlePlay"
                 :href="project.links.googlePlay.href"
                 :linkDescription="project.links.github.description"
                 :icon="icons.googlePlay"
-                iconColor="#007fad"
+                :iconColor="accentColor"
               />
               <ProjectIcon
                 v-if="project.links.github"
                 :href="project.links.github.href"
                 :linkDescription="project.links.description"
                 :icon="icons.github"
-                iconColor="#007fad"
+                :iconColor="accentColor"
               />
               <ProjectIcon
                 v-if="project.links.external"
                 :href="project.links.external.href"
                 :linkDescription="project.links.external.description"
                 :icon="icons.external"
-                iconColor="#007fad"
+                :iconColor="accentColor"
               />
             </div>
             <div class="mt-4 text-2xl sm:text-4xl text-secondaryLight">
@@ -95,9 +78,11 @@ import ProjectIcon from "@/components/ProjectIcon";
 
 import FadeInUp from "@/transitions/FadeInUp";
 
-import { UseElementIsVisible } from "@/composables";
+import { UseElementIsVisible, useColorScheme } from "@/composables";
 
 const { t } = useI18n();
+const { accentColor } = useColorScheme();
+
 const otherProjects = computed(() => [
   {
     title: t("otherProjects.justDoIt.title"),

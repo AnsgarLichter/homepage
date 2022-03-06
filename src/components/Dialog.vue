@@ -19,7 +19,12 @@
           >
             <div class="a-header-content flex justify-center grow">
               <slot name="headerContent">
-                <span class="a-dialog-title text-xl" v-if="title">{{ title }}</span>
+                <span
+                  :style="{ color: titleFontColor }"
+                  class="a-dialog-title text-xl"
+                  v-if="title"
+                  >{{ title }}</span
+                >
               </slot>
             </div>
             <div class="a-header-icons flex space-x-2">
@@ -60,6 +65,10 @@ const properties = defineProps({
   title: {
     type: String,
     default: "",
+  },
+  titleFontColor: {
+    type: String,
+    default: "#000000",
   },
   outerBackgroundColor: {
     type: String,
