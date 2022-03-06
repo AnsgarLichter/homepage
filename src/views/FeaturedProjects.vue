@@ -67,21 +67,21 @@
                   :href="project.links.googlePlay.href"
                   :linkDescription="project.links.googlePlay.description"
                   :icon="icons.googlePlay"
-                  iconColor="#007fad"
+                  :iconColor="accentColor"
                 />
                 <ProjectIcon
                   v-if="project.links.github"
                   :href="project.links.github.href"
                   :linkDescription="project.links.github.description"
                   :icon="icons.github"
-                  iconColor="#007fad"
+                  :iconColor="accentColor"
                 />
                 <ProjectIcon
                   v-if="project.links.external"
                   :href="project.links.external.href"
                   :linkDescription="project.links.external.description"
                   :icon="icons.external"
-                  iconColor="#007fad"
+                  :iconColor="accentColor"
                 />
               </div>
             </div>
@@ -101,9 +101,10 @@ import Image from "@/components/Image";
 
 import FadeInUp from "@/transitions/FadeInUp";
 
-import { UseElementIsVisible } from "@/composables";
+import { UseElementIsVisible, useColorScheme } from "@/composables";
 
 const { t } = useI18n();
+const { accentColor } = useColorScheme();
 
 const featuredProjects = computed(() => [
   {
