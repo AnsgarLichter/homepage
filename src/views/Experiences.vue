@@ -24,8 +24,8 @@
       <template #content="contentSlotProps">
         <UseElementIsVisible
           v-slot="{ isVisible }"
-          elementGetsVisibleAt="0.70"
-          elementGetsInvisibleAt="0.70"
+          :elementGetsVisibleAt="0.7"
+          :elementGetsInvisibleAt="0.7"
         >
           <transition
             :name="'fade-in-left-out-right' + contentSlotProps.index"
