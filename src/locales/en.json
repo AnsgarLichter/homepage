@@ -30,6 +30,7 @@
     },
     "about": {
         "title": "About Me",
+        "alt": "Welcome to my website!",
         "description-1": "I am a software engineer based in Karlsruhe.",
         "description-2": "After graduating from the Corporate State University in Business Informatics",
         "description-3": "I joined SEW-EURODRIVE GmbH & Co KG where I work on a wide variety of interesting and meaningful projcets on a daily basis.",
@@ -73,7 +74,8 @@
         },
         "images": {
             "dhbw": "Corporate State University Baden-Wuerttemberg",
-            "sew": "SEW EURODRIVE"
+            "sew": "SEW EURODRIVE",
+            "china": "China"
         }
     },
     "featuredProjects": {
@@ -215,7 +217,7 @@
             "title": "2. Hosting and Content Delivery Network (CDN)",
             "hosting": {
                 "title": "External hosting",
-                "description1": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. <br /> Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).",
+                "description1": "Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).",
                 "description2": "Our hoster will only process your data to the extent necessary to fulfill its service obligations and follow our instructions regarding this data. We use the following hoster:",
                 "githubPages": {
                     "name": "GitHub Inc.",

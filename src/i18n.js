@@ -22,7 +22,8 @@ function loadLocaleMessages() {
 
 const i18n = createI18n({
   legacy: false,
-  fallbackLocale: "en-EN",
+  locale: "en",
+  fallbackLocale: "en",
   messages: loadLocaleMessages()
 });
 
