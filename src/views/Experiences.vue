@@ -22,7 +22,11 @@
         />
       </template>
       <template #content="contentSlotProps">
-        <UseElementIsVisible v-slot="{ isVisible }">
+        <UseElementIsVisible
+          v-slot="{ isVisible }"
+          elementGetsVisibleAt="0.70"
+          elementGetsInvisibleAt="0.70"
+        >
           <transition
             :name="'fade-in-left-out-right' + contentSlotProps.index"
             :enter-active-class="
