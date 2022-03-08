@@ -5,6 +5,7 @@ const NavigationItemCollection = class NavigationItemCollection {
    * Initlializes the scroll container.
    * Therefore it searches all html elements which represent the navigation items
    * and assigns it to an instance variable.
+   * As soon as all items are assigned the items will be sorted ascending by offsetTop.
    *
    * The navigation items has to be a elements with a href set.
    *
@@ -20,12 +21,16 @@ const NavigationItemCollection = class NavigationItemCollection {
     navigationItems.forEach((navigationItem) => {
       this.navigationItems.push(new NavigationItem(navigationItem));
     });
+
+    this.navigationItems.sort((a, b) => {
+      return a.getSection().offsetTop > b.getSection().offsetTop;
+    });
   }
 
   /**
    * Returns all navigation items.
    *
-   * @returns {array} naviagation items
+   * @returns {array} navigation items
    */
   getNavigationItems() {
     return this.navigationItems;
@@ -43,7 +48,7 @@ const NavigationItemCollection = class NavigationItemCollection {
   }
 
   /**
-   * Returns the last navigation item.
+   * Returns the last navigation item determined by the 'offsetTop'.
    *
    * @returns {object} last navigation item (navigation item at the bottom)
    */
@@ -52,7 +57,9 @@ const NavigationItemCollection = class NavigationItemCollection {
 
     this.navigationItems.forEach((navigationItem) => {
       const section = navigationItem.getSection();
-      if (section.offsetTop > lastNavigationItem?.getSection().offsetTop) { lastNavigationItem = navigationItem; }
+      if (section.offsetTop > lastNavigationItem?.getSection().offsetTop) {
+        lastNavigationItem = navigationItem;
+      }
     });
 
     return lastNavigationItem;
@@ -68,9 +75,6 @@ const NavigationItemCollection = class NavigationItemCollection {
   getNavigationItemAtPosition(position) {
     let navigationItemAtPosition = null;
 
-    //TODO: Use getBoundingClientRect
-
-    //TODO: Only works if navigation items are sorted ascending - improve
     this.navigationItems.forEach((navigationItem) => {
       if (navigationItem.getSection().offsetTop <= position) {
         navigationItemAtPosition = navigationItem;

@@ -104,22 +104,21 @@ const spyDirective = {
          * Updates the active navigation item when the user executs any scrolling.
          */
         onContainerScrolled() {
-            const scrollPosition = this.scrollContainer.getScrollPosition();
             const activeClass = this.options.activeClass;
 
             const navigationItems =
                 this.navigationItemCollection.getNavigationItems();
             navigationItems.forEach((navigationItem) => {
-                if (navigationItem.hasClass(activeClass)) { navigationItem.removeClass(activeClass); }
+                if (navigationItem.hasClass(activeClass)) {
+                    navigationItem.removeClass(activeClass);
+                }
             });
 
-            let selectedNavigationItem =
-                this.navigationItemCollection.getNavigationItemAtPosition(
-                    scrollPosition
-                );
+            let selectedNavigationItem = this.navigationItemCollection.getNavigationItemAtPosition(
+                this.scrollContainer.getScrollPosition()
+            );
             if (this.scrollContainer.hasReachedEnd()) {
-                selectedNavigationItem =
-                    this.navigationItemCollection.getLastNavigationItem();
+                selectedNavigationItem = this.navigationItemCollection.getLastNavigationItem();
             }
 
             selectedNavigationItem?.addClass(activeClass);
