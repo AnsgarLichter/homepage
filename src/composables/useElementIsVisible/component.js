@@ -12,8 +12,17 @@ const UseElementIsVisible = defineComponent({
     abortIfVisible: {
       type: Boolean,
       default: false
+    },
+    elementGetsVisibleAt: {
+      type: Number,
+      default: 0.50
+    },
+    elementGetsInvisibleAt: {
+      type: Number,
+      default: 0.50
     }
   },
+
   setup(props, { slots }) {
     const scrollContainer = ref(null);
     onMounted(() => {
@@ -23,7 +32,7 @@ const UseElementIsVisible = defineComponent({
 
     const target = ref(null);
     const data = reactive({
-      isVisible: useElementIsVisible(target, props.abortIfVisible, scrollContainer)
+      isVisible: useElementIsVisible(target, props.abortIfVisible, scrollContainer, props.elementGetsVisibleAt, props.elementGetsInvisibleAt)
     });
 
     return () => {

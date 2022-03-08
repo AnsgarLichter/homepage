@@ -36,7 +36,7 @@ import { useI18n } from "vue-i18n";
 
 import NavigationBar from "@/components/NavigationBar.vue";
 
-const { t, locale, availableLocales, fallbackLocale } = useI18n();
+const { t, locale } = useI18n();
 
 const navigationItems = computed(() => [
   {
@@ -63,7 +63,7 @@ const navigationItems = computed(() => [
 
 const imagePath = ref();
 const updateImagePath = (locale) => {
-  if (locale.value === "de-DE") {
+  if (locale.value.startsWith("de")) {
     return require(`@/assets/images/de.webp`);
   }
 
@@ -71,10 +71,10 @@ const updateImagePath = (locale) => {
 };
 
 const switchLocale = () => {
-  if (locale.value === "de-DE") {
-    locale.value = "en-EN";
+  if (locale.value.startsWith("de")) {
+    locale.value = "en";
   } else {
-    locale.value = "de-DE";
+    locale.value = "de";
   }
 
   imagePath.value = updateImagePath(locale);
@@ -82,12 +82,8 @@ const switchLocale = () => {
 
 onMounted(() => {
   const browserLanguage = navigator.language;
-  if (availableLocales.includes(browserLanguage)) {
-    locale.value = browserLanguage;
-  } else {
-    locale.value = fallbackLocale.value;
-  }
 
+  locale.value = browserLanguage;
   imagePath.value = updateImagePath(locale);
 });
 </script>

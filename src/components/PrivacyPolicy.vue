@@ -105,7 +105,7 @@
             {{ t("privacyPolicy.general.responsibility.mailLabel") }}
             <a
               href="mailto:lichteransgar@gmai.com"
-              :aria-label="t('privacyPolicy.responsibility.linkDescription')"
+              :aria-label="t('privacyPolicy.general.responsibility.linkDescription')"
               >{{ t("privacyPolicy.general.responsibility.mail") }}</a
             >
           </li>
