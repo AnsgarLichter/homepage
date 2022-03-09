@@ -41,6 +41,8 @@ const UseElementIsVisible = defineComponent({
       if (slots.default) {
         return h(props.as, { ref: target }, slots.default(data));
       }
+
+      return h(props.as, { ref: target });
     };
   },
 });

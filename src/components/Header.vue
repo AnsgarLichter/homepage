@@ -81,7 +81,7 @@ const switchLocale = () => {
 };
 
 onMounted(() => {
-  const browserLanguage = navigator.language;
+  const browserLanguage = window.navigator.language;
 
   locale.value = browserLanguage;
   imagePath.value = updateImagePath(locale);
