@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from "vue";
+import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
 import Card from "@/components/Card";
@@ -121,11 +121,6 @@ const events = computed(() => [
     },
   },
 ]);
-
-const scrollContainer = ref(null);
-onMounted(() => {
-  scrollContainer.value = document.querySelector(".content");
-});
 </script>
 
 <style scoped>
