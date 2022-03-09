@@ -1,6 +1,7 @@
-import { ref, h, defineComponent, reactive, onMounted } from "vue";
+import { ref, h, defineComponent, reactive, inject } from "vue";
 
 import { useElementIsVisible } from ".";
+import { useOnMounted } from "../useOnMounted";
 
 const UseElementIsVisible = defineComponent({
   name: 'UseElementIsVisible',
@@ -24,10 +25,11 @@ const UseElementIsVisible = defineComponent({
   },
 
   setup(props, { slots }) {
+    const selectorForScrollContainer = inject('selectorForScrollContainer');
+
     const scrollContainer = ref(null);
-    onMounted(() => {
-      //TODO: How to set scroll container globally?
-      scrollContainer.value = document.querySelector(".content");
+    useOnMounted(() => {
+      scrollContainer.value = selectorForScrollContainer ? document.querySelector(selectorForScrollContainer) : document;
     });
 
     const target = ref(null);
@@ -39,6 +41,8 @@ const UseElementIsVisible = defineComponent({
       if (slots.default) {
         return h(props.as, { ref: target }, slots.default(data));
       }
+
+      return h(props.as, { ref: target });
     };
   },
 });
