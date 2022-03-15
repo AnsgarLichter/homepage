@@ -15,7 +15,8 @@
         >
           <div
             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center"
-            :style="{ width: item.width, 'background-color': item.color }"
+            :class="[item.styleClasses]"
+            :style="{ width: item.width }"
           />
         </div>
       </div>
