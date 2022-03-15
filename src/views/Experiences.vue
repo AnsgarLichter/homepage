@@ -16,9 +16,8 @@
     <Timeline :events="events">
       <template #marker="markerSlotProps">
         <font-awesome-icon
-          class="fa-lg"
+          class="fa-lg text-black"
           :icon="[markerSlotProps.item.icon.prefix, markerSlotProps.item.icon.name]"
-          :color="markerSlotProps.item.icon.color"
         />
       </template>
       <template #content="contentSlotProps">
@@ -59,7 +58,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from "vue";
+import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
 import Card from "@/components/Card";
@@ -87,7 +86,6 @@ const events = computed(() => [
     icon: {
       prefix: "fa",
       name: "user-graduate",
-      color: "black",
     },
   },
   {
@@ -117,15 +115,9 @@ const events = computed(() => [
     icon: {
       prefix: "fa",
       name: "industry",
-      color: "black",
     },
   },
 ]);
-
-const scrollContainer = ref(null);
-onMounted(() => {
-  scrollContainer.value = document.querySelector(".content");
-});
 </script>
 
 <style scoped>

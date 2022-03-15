@@ -22,7 +22,8 @@ import {
   faCompressArrowsAlt,
   faDownload,
   faExternalLinkAlt,
-  faSearch
+  faSearch,
+  faMoon
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -48,5 +49,6 @@ library.add(faDownload);
 library.add(faExternalLinkAlt);
 library.add(faFolder);
 library.add(faSearch);
+library.add(faMoon);
 
 export default FontAwesomeIcon;

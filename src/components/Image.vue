@@ -16,7 +16,6 @@
         <font-awesome-icon
           :class="previewIcon.styleClasses"
           :icon="[previewIcon.prefix, previewIcon.name]"
-          :color="previewIcon.color"
         />
       </slot>
     </div>
@@ -72,8 +71,7 @@ const properties = defineProps({
       return {
         prefix: "fas",
         name: "search",
-        color: "#007fad",
-        styleClasses: "text-3xl",
+        styleClasses: "text-3xl text-accent",
       };
     },
     type: Object,

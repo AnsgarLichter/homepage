@@ -22,26 +22,23 @@
         </div>
         <div class="grid grid-flow-row grid-cols-10 items-center">
           <font-awesome-icon
-            class="h-4 justify-self-center"
+            class="h-4 justify-self-center text-accent"
             :icon="['fas', 'calendar']"
-            color="#007fad"
           />
           <div class="text-base text-grey-dark text-secondary col-span-9">
             {{ yearStart }} - {{ yearEnd }}
           </div>
           <font-awesome-icon
-            class="h-4 justify-self-center"
+            class="h-4 justify-self-center text-accent"
             :icon="['fas', 'university']"
-            color="#007fad"
           />
           <div class="text-grey-darker text-base text-secondary col-span-9">
             {{ organisation }}
           </div>
 
           <font-awesome-icon
-            class="h-4 justify-self-center"
+            class="h-4 justify-self-center text-accent"
             :icon="['fas', 'map-marker-alt']"
-            color="#007fad"
           />
           <div class="text-secondary text-base col-span-9">
             {{ location }}

@@ -14,14 +14,31 @@
       </template>
 
       <template #item="itemSlotProps">
-        <div class="flex justify-center" v-if="itemSlotProps.index === 4">
+        <div
+          class="flex justify-center transition duration-300 ease-in-out"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          :title="itemSlotProps.item.label"
+          v-if="itemSlotProps.index === 4"
+        >
           <img
             :src="imagePath"
             @click="switchLocale"
             class="h-6 w-12"
-            :alt="t('navigation.language')"
+            :alt="itemSlotProps.item.label"
             loading="lazy"
           />
+        </div>
+        <div class="flex justify-center" v-else-if="itemSlotProps.index === 5">
+          <div
+            @click="toggleDarkMode"
+            class="mx-2 transition duration-300 ease-in-out"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            :title="itemSlotProps.item.label"
+          >
+            <font-awesome-icon class="fa-lg" :icon="['fas', 'moon']" />
+          </div>
         </div>
       </template>
     </NavigationBar>
@@ -35,6 +52,8 @@ import { onMounted } from "@vue/runtime-core";
 import { useI18n } from "vue-i18n";
 
 import NavigationBar from "@/components/NavigationBar.vue";
+
+import { useToggle, useDarkMode } from "@/composables";
 
 const { t, locale } = useI18n();
 
@@ -56,8 +75,12 @@ const navigationItems = computed(() => [
     href: "#projects",
   },
   {
-    label: t("navigation.language"),
+    label: t("navigation.changeLanguage"),
     href: "#language",
+  },
+  {
+    label: t("navigation.changeColorMode"),
+    href: "#changeColorMode",
   },
 ]);
 
@@ -81,11 +104,14 @@ const switchLocale = () => {
 };
 
 onMounted(() => {
-  const browserLanguage = navigator.language;
+  const browserLanguage = window.navigator.language;
 
   locale.value = browserLanguage;
   imagePath.value = updateImagePath(locale);
 });
+
+const isDarkMode = useDarkMode();
+const toggleDarkMode = useToggle(isDarkMode);
 </script>
 
 <style>

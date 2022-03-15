@@ -26,4 +26,5 @@ initializeScrollSpy(app);
 
 useVisible(app);
 
+app.provide('selectorForScrollContainer', ".content");
 app.mount("#app");

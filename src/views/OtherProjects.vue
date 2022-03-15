@@ -22,30 +22,26 @@
           <div v-visible="isVisible">
             <div class="flex flex-row items-center space-x-4">
               <font-awesome-icon
-                class="text-5xl mr-auto"
+                class="text-5xl mr-auto text-accent"
                 :icon="['far', 'folder']"
-                :iconColor="accentColor"
               />
               <ProjectIcon
                 v-if="project.links.googlePlay"
                 :href="project.links.googlePlay.href"
                 :linkDescription="project.links.github.description"
                 :icon="icons.googlePlay"
-                :iconColor="accentColor"
               />
               <ProjectIcon
                 v-if="project.links.github"
                 :href="project.links.github.href"
                 :linkDescription="project.links.description"
                 :icon="icons.github"
-                :iconColor="accentColor"
               />
               <ProjectIcon
                 v-if="project.links.external"
                 :href="project.links.external.href"
                 :linkDescription="project.links.external.description"
                 :icon="icons.external"
-                :iconColor="accentColor"
               />
             </div>
             <div class="mt-4 text-2xl sm:text-4xl text-secondaryLight">
@@ -78,10 +74,9 @@ import ProjectIcon from "@/components/ProjectIcon";
 
 import FadeInUp from "@/transitions/FadeInUp";
 
-import { UseElementIsVisible, useColorScheme } from "@/composables";
+import { UseElementIsVisible } from "@/composables";
 
 const { t } = useI18n();
-const { accentColor } = useColorScheme();
 
 const otherProjects = computed(() => [
   {
@@ -120,14 +115,17 @@ const otherProjects = computed(() => [
 
 const icons = {
   googlePlay: {
+    styleClasses: "text-2xl text-accent",
     prefix: "fab",
     name: "google-play",
   },
   github: {
+    styleClasses: "text-2xl text-accent",
     prefix: "fab",
     name: "github",
   },
   external: {
+    styleClasses: "text-2xl text-accent",
     prefix: "fas",
     name: "external-link-alt",
   },

@@ -9,9 +9,9 @@ import { useOnMounted } from "@/composables/useOnMounted";
  * @param {boolean} abortIfVisible Deregister event listener as soon as the element is visible?
  * @param {object} scrollContainer  Scroll container on whose scroll event is listened
  * @param {number} elementGetsVisibleAt Percentage value as decimal number at which the element's visibility should be triggered. The bigger the value the later the element is visible.
- * @param {number} elementGetsUnvisibleAt Percentage value as decimal number at which the element's visibility should be triggered. The bigger the value the later the element is invisible.
+ * @param {number} elementGetsInvisibleAt Percentage value as decimal number at which the element's visibility should be triggered. The bigger the value the later the element is invisible.
  *
- * @returns {boolean} whether the element is visible
+ * @returns {boolean} Whether the element is visible
  */
 const useElementIsVisible = (element, abortIfVisible, scrollContainer, elementGetsVisibleAt = 0.50, elementGetsInvisibleAt = 0.50) => {
   if (elementGetsVisibleAt > 1 || elementGetsVisibleAt < 0 || elementGetsInvisibleAt > 1 || elementGetsInvisibleAt < 0) {
