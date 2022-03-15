@@ -67,21 +67,18 @@
                   :href="project.links.googlePlay.href"
                   :linkDescription="project.links.googlePlay.description"
                   :icon="icons.googlePlay"
-                  :iconColor="accentColor"
                 />
                 <ProjectIcon
                   v-if="project.links.github"
                   :href="project.links.github.href"
                   :linkDescription="project.links.github.description"
                   :icon="icons.github"
-                  :iconColor="accentColor"
                 />
                 <ProjectIcon
                   v-if="project.links.external"
                   :href="project.links.external.href"
                   :linkDescription="project.links.external.description"
                   :icon="icons.external"
-                  :iconColor="accentColor"
                 />
               </div>
             </div>
@@ -101,10 +98,9 @@ import Image from "@/components/Image";
 
 import FadeInUp from "@/transitions/FadeInUp";
 
-import { UseElementIsVisible, useColorScheme } from "@/composables";
+import { UseElementIsVisible } from "@/composables";
 
 const { t } = useI18n();
-const { accentColor } = useColorScheme();
 
 const featuredProjects = computed(() => [
   {
@@ -212,14 +208,17 @@ const icons = {
   googlePlay: {
     prefix: "fab",
     name: "google-play",
+    styleClasses: "text-3xl text-accent",
   },
   github: {
     prefix: "fab",
     name: "github",
+    styleClasses: "text-3xl text-accent",
   },
   external: {
     prefix: "fas",
     name: "external-link-alt",
+    styleClasses: "text-3xl text-accent",
   },
 };
 
@@ -230,8 +229,7 @@ const getImagePath = (imageSrc) => {
 const previewIcon = {
   prefix: "fas",
   name: "search",
-  color: "#007fad",
-  styleClasses: "text-3xl",
+  styleClasses: "text-3xl text-accent",
 };
 </script>
 

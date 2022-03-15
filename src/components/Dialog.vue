@@ -2,26 +2,26 @@
   <Teleport to="body">
     <div
       :hidden="!isOpened"
-      :style="{ 'background-color': properties.outerBackgroundColor }"
       class="a-dialog-outer fixed inset-0 w-full h-full"
+      :class="[outerStyleClasses]"
       @click="close"
     >
       <div
         ref="dialog"
-        :style="{ 'background-color': properties.backgroundColor }"
         class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex flex-col overflow-hidden"
+        :class="[styleClasses]"
         @click.stop=""
       >
         <slot name="header">
           <div
-            :style="{ 'border-color': properties.headerBorderColor }"
-            class="a-header flex flex-row flex-shrink-0 flex-basis-auto justify-center items-center border-b-2 border-gray-200 p-4"
+            class="a-header flex flex-row flex-shrink-0 flex-basis-auto justify-center items-center border-b-2 p-4"
+            :class="[headerStyleClasses]"
           >
             <div class="a-header-content flex justify-center grow">
               <slot name="headerContent">
                 <span
-                  :style="{ color: titleFontColor }"
                   class="a-dialog-title text-xl"
+                  :class="[titleStyleClasses]"
                   v-if="title"
                   >{{ title }}</span
                 >
@@ -29,15 +29,13 @@
             </div>
             <div class="a-header-icons flex space-x-2">
               <font-awesome-icon
-                class="fa-lg cursor-pointer"
+                :class="properties.maximizeIcon.styleClasses"
                 :icon="[properties.maximizeIcon.prefix, properties.maximizeIcon.name]"
-                :color="properties.iconColor"
                 @click="maximize"
               />
               <font-awesome-icon
-                class="fa-lg cursor-pointer"
+                :class="properties.closeIcon.styleClasses"
                 :icon="[properties.closeIcon.prefix, properties.closeIcon.name]"
-                :color="properties.iconColor"
                 @click="close"
               />
             </div>
@@ -66,36 +64,40 @@ const properties = defineProps({
     type: String,
     default: "",
   },
-  titleFontColor: {
+  titleStyleClasses: {
     type: String,
-    default: "#000000",
+    default: "text-secondaryLight",
   },
-  outerBackgroundColor: {
+  outerStyleClasses: {
     type: String,
-    default: "rgba(0, 0, 0, 0)",
+    default: "bg-black bg-opacity-0",
   },
-  backgroundColor: {
+  styleClasses: {
     type: String,
-    default: "#ffffff",
+    default: "bg-primaryLight",
   },
-  headerBorderColor: {
+  headerStyleClasses: {
     type: String,
-    default: "rgb(229 231 235)",
-  },
-  iconColor: {
-    type: String,
-    default: "#808080",
+    default: "border-accent",
   },
   maximizeIcon: {
     type: Object,
     default: () => {
-      return { prefix: "fas", name: "expand-arrows-alt" };
+      return {
+        prefix: "fas",
+        name: "expand-arrows-alt",
+        styleClasses: "fa-lg cursor-pointer text-accent",
+      };
     },
   },
   closeIcon: {
     type: Object,
     default: () => {
-      return { prefix: "fas", name: "times" };
+      return {
+        prefix: "fas",
+        name: "times",
+        styleClasses: "fa-lg cursor-pointer text-accent",
+      };
     },
   },
 });

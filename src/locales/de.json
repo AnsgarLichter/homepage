@@ -7,7 +7,8 @@
         "about": "Über mich",
         "experiences": "Erfahrungen",
         "projects": "Projekte",
-        "language": "Ändern der Sprache"
+        "changeLanguage": "Ändern Sie die Sprache",
+        "changeColorMode": "Wechseln Sie zwischen Dark und Light Mode"
     },
     "socialIcon": {
         "github": {

@@ -6,11 +6,7 @@
     rel="noopener noreferrer"
     :aria-label="linkDescription"
   >
-    <font-awesome-icon
-      :class="iconStyleClasses"
-      :icon="[icon.prefix, icon.name]"
-      :color="iconColor"
-    />
+    <font-awesome-icon :class="icon.styleClasses" :icon="[icon.prefix, icon.name]" />
   </a>
 </template>
 
@@ -33,14 +29,6 @@ defineProps({
   icon: {
     default: () => {},
     type: Object,
-  },
-  iconColor: {
-    default: "white",
-    type: String,
-  },
-  iconStyleClasses: {
-    default: "text-2xl",
-    type: String,
   },
 });
 </script>

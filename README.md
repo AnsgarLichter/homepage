@@ -46,6 +46,20 @@ At the moment the [conventional convetions of commitlint](https://github.com/con
 
 ## 🎨 Color Reference
 
+### Light Mode
+
+| Color           | Hex                                                                |
+| --------------- | ------------------------------------------------------------------ |
+| Primary         | ![#f2f2f2](https://via.placeholder.com/15/f2f2f2/000000?text=+) `#f2f2f2` |
+| Primary light   | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff` |
+| Primary dark    | ![#b9baba](https://via.placeholder.com/15/b9baba/000000?text=+) `#b9baba` |
+| Secondary       | ![#4d4d4d](https://via.placeholder.com/15/4d4d4d/000000?text=+) `#4d4d4d` |
+| Secondary light | ![#17191a](https://via.placeholder.com/15/17191a/000000?text=+) `#17191a` |
+| Secondary dark  | ![#707a80](https://via.placeholder.com/15/707a80/000000?text=+) `#707a80` |
+| Accent          | ![#007fad](https://via.placeholder.com/15/007fad/000000?text=+) `#007fad` |
+
+### Dark Mode
+
 | Color           | Hex                                                                |
 | --------------- | ------------------------------------------------------------------ |
 | Primary         | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000` |

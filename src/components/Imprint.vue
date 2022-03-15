@@ -1,12 +1,5 @@
 <template>
-  <Dialog
-    :title="t('imprint.title')"
-    :backgroundColor="primaryColor"
-    :titleFontColor="secondaryColorLight"
-    :headerBorderColor="accentColor"
-    :iconColor="accentColor"
-    ref="dialog"
-  >
+  <Dialog :title="t('imprint.title')" ref="dialog">
     <div class="p-8 text-secondary">
       <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
         Domaininhaber
@@ -78,8 +71,6 @@ import { useI18n } from "vue-i18n";
 
 import Dialog from "@/components/Dialog";
 
-import { useColorScheme } from "@/composables";
-
 defineProps({
   value: {
     type: Boolean,
@@ -87,7 +78,6 @@ defineProps({
   },
 });
 
-const { primaryColor, secondaryColorLight, accentColor } = useColorScheme();
 const { t } = useI18n();
 
 const dialog = ref();

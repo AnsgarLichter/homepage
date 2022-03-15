@@ -16,9 +16,8 @@
     <Timeline :events="events">
       <template #marker="markerSlotProps">
         <font-awesome-icon
-          class="fa-lg"
+          class="fa-lg text-black"
           :icon="[markerSlotProps.item.icon.prefix, markerSlotProps.item.icon.name]"
-          :color="markerSlotProps.item.icon.color"
         />
       </template>
       <template #content="contentSlotProps">
@@ -87,7 +86,6 @@ const events = computed(() => [
     icon: {
       prefix: "fa",
       name: "user-graduate",
-      color: "black",
     },
   },
   {
@@ -117,7 +115,6 @@ const events = computed(() => [
     icon: {
       prefix: "fa",
       name: "industry",
-      color: "black",
     },
   },
 ]);

@@ -4,14 +4,7 @@
       <FadeInUp>
         <h1
           v-visible="isVisible"
-          class="
-            text-2xl
-            sm:text-4xl
-            text-secondaryLight
-            font-bold
-            mb-8
-            lg:text-5xl
-          "
+          class="text-2xl sm:text-4xl text-secondaryLight font-bold mb-8 lg:text-5xl"
         >
           {{ t("about.title") }}
         </h1>
@@ -62,18 +55,11 @@
               <button
                 v-visible="isVisible"
                 @click="openCV"
-                class="
-                  bg-primary
-                  border-2 border-accent
-                  p-4
-                  rounded-full
-                  flex flex-row
-                "
+                class="bg-primary border-2 border-accent p-4 rounded-full flex flex-row"
               >
                 <font-awesome-icon
-                  class="fa-lg"
+                  class="fa-lg text-accent"
                   :icon="['fas', 'download']"
-                  color="#007fad"
                 />
                 <div class="ml-2 text-accent">Download CV</div>
               </button>
@@ -104,22 +90,22 @@ const openCV = () => {
 const skills = reactive([
   {
     label: t("about.technologies.ewm"),
-    color: "#d62828",
+    styleClasses: "bg-[#d62828]",
     width: "60%",
   },
   {
     label: t("about.technologies.ui5"),
-    color: "#003049",
+    styleClasses: "bg-[#003049] dark:bg-[#0071AD]",
     width: "80%",
   },
   {
     label: t("about.technologies.abap"),
-    color: "#f77f00",
+    styleClasses: "bg-[#f77f00]",
     width: "80%",
   },
   {
     label: t("about.technologies.js"),
-    color: "#fcbf49",
+    styleClasses: "bg-[#fcbf49]",
     width: "70%",
   },
 ]);

@@ -12,22 +12,22 @@
           <SocialIcon
             href="https://github.com/AnsgarLichter"
             :linkDescription="t('socialIcon.github.linkDescription')"
-            :icon="{ prefix: 'fab', name: 'github' }"
+            :icon="{ prefix: 'fab', name: 'github', styleClasses: 'text-secondary' }"
           />
           <SocialIcon
             href="https://www.xing.com/profile/Ansgar_Lichter"
             :linkDescription="t('socialIcon.xing.linkDescription')"
-            :icon="{ prefix: 'fab', name: 'xing' }"
+            :icon="{ prefix: 'fab', name: 'xing', styleClasses: 'text-secondary' }"
           />
           <SocialIcon
             href="https://www.linkedin.com/in/ansgar-lichter-8532661b1"
             :linkDescription="t('socialIcon.linkedin.linkDescription')"
-            :icon="{ prefix: 'fab', name: 'linkedin' }"
+            :icon="{ prefix: 'fab', name: 'linkedin', styleClasses: 'text-secondary' }"
           />
           <SocialIcon
             href="mailto:lichteransgar@gmail.com"
             :linkDescription="t('socialIcon.mailTo.linkDescription')"
-            :icon="{ prefix: 'fas', name: 'envelope' }"
+            :icon="{ prefix: 'fas', name: 'envelope', styleClasses: 'text-secondary' }"
           />
         </div>
       </div>

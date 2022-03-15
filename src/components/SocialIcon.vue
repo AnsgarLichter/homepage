@@ -7,7 +7,11 @@
       rel="noopener noreferrer"
       :aria-label="linkDescription"
     >
-      <font-awesome-icon class="fa-lg" :icon="[icon.prefix, icon.name]" color="white" />
+      <font-awesome-icon
+        class="fa-lg"
+        :class="[icon.styleClasses]"
+        :icon="[icon.prefix, icon.name]"
+      />
     </a>
   </div>
 </template>

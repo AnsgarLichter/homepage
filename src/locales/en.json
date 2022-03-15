@@ -7,7 +7,8 @@
         "about": "About",
         "experiences": "Experience",
         "projects": "Projects",
-        "language": "Change Language"
+        "changeLanguage": "Change the Language fo the Website!",
+        "changeColorMode": "Switch between dark and light mode!"
     },
     "socialIcon": {
         "github": {
