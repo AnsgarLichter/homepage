@@ -2,7 +2,7 @@
   <Dialog :title="t('imprint.title')" ref="dialog">
     <div class="p-8 text-secondary">
       <h1 class="text-3xl lg:text-3xl font-bold text-center mb-4 text-secondaryLight">
-        Domaininhaber
+        {{ t("imprint.domain.title") }}
       </h1>
       <div class="text-center">
         {{ t("imprint.domain.name") }}<br />
@@ -62,21 +62,14 @@
   </Dialog>
 </template>
 
-<script setup>
-import { defineProps, defineExpose } from "vue";
+<script setup lang="ts">
+import { defineExpose } from "vue";
 
 import { ref } from "@vue/reactivity";
 
 import { useI18n } from "vue-i18n";
 
-import Dialog from "@/components/Dialog";
-
-defineProps({
-  value: {
-    type: Boolean,
-    default: false,
-  },
-});
+import Dialog from "@/components/Dialog.vue";
 
 const { t } = useI18n();
 

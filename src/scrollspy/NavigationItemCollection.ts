@@ -1,6 +1,8 @@
 import { NavigationItem } from "./NavigationItem";
 
 const NavigationItemCollection = class NavigationItemCollection {
+  navigationItems: NavigationItem[];
+
   /**
    * Initlializes the scroll container.
    * Therefore it searches all html elements which represent the navigation items
@@ -11,19 +13,26 @@ const NavigationItemCollection = class NavigationItemCollection {
    *
    * @param {string} selectorForNavigationItems CSS selector for navigation items
    */
-  constructor(selectorForNavigationItems) {
+  constructor(selectorForNavigationItems: string) {
     this.navigationItems = [];
 
-    const navigationItems = document.querySelectorAll(
+    const navigationElements = document.querySelectorAll(
       selectorForNavigationItems
     );
 
-    navigationItems.forEach((navigationItem) => {
-      this.navigationItems.push(new NavigationItem(navigationItem));
-    });
+    navigationElements.forEach((navigationItem) => this.navigationItems.push(new NavigationItem(navigationItem)));
 
-    this.navigationItems.sort((a, b) => {
-      return a.getSection().offsetTop > b.getSection().offsetTop;
+    this.navigationItems.sort((a: NavigationItem, b: NavigationItem) => {
+      const aOffsetTop = a.getSection()?.offsetTop;
+      const bOffsetTop = b.getSection()?.offsetTop;
+
+      if (aOffsetTop > bOffsetTop) {
+        return 1;
+      } else if (aOffsetTop < bOffsetTop) {
+        return -1;
+      }
+
+      return 0;
     });
   }
 
@@ -41,7 +50,7 @@ const NavigationItemCollection = class NavigationItemCollection {
    *
    * @param {object} clickEventListener event handler for click event
    */
-  addClickListener(clickEventListener) {
+  addClickListener(clickEventListener: EventListenerOrEventListenerObject) {
     this.navigationItems.forEach((navigationItem) =>
       navigationItem.addClickListener(clickEventListener)
     );
@@ -72,7 +81,7 @@ const NavigationItemCollection = class NavigationItemCollection {
    *
    * @returns {object} corresponding navigation item
    */
-  getNavigationItemAtPosition(position) {
+  getNavigationItemAtPosition(position: number) {
     let navigationItemAtPosition = null;
 
     this.navigationItems.forEach((navigationItem) => {
@@ -91,7 +100,7 @@ const NavigationItemCollection = class NavigationItemCollection {
    *
    * @returns {object} navigation item's instance
    */
-  get(htmlNavigationItem) {
+  get(htmlNavigationItem: HTMLElement) {
     return this.navigationItems.find(
       (navigationItem) => navigationItem.getNavigationItem() === htmlNavigationItem
     );

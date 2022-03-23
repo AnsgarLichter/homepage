@@ -2,6 +2,7 @@ import { ref, h, defineComponent, reactive, inject } from "vue";
 
 import { useElementIsVisible } from ".";
 import { useOnMounted } from "../useOnMounted";
+import { UseElementIsVisibleOptions } from "./function";
 
 const UseElementIsVisible = defineComponent({
   name: 'UseElementIsVisible',
@@ -25,16 +26,24 @@ const UseElementIsVisible = defineComponent({
   },
 
   setup(props, { slots }) {
-    const selectorForScrollContainer = inject('selectorForScrollContainer');
+    const selectorForScrollContainer: string | undefined = inject('selectorForScrollContainer');
 
-    const scrollContainer = ref(null);
-    useOnMounted(() => {
-      scrollContainer.value = selectorForScrollContainer ? document.querySelector(selectorForScrollContainer) : document;
-    });
+    const scrollContainer = ref();
+    useOnMounted(
+      () => {
+        scrollContainer.value = selectorForScrollContainer ? document.querySelector(selectorForScrollContainer) : document;
+      },
+      false
+    );
 
     const target = ref(null);
+    const options: UseElementIsVisibleOptions = {
+      abortIfVisible: props.abortIfVisible,
+      elementGetsVisibleAt: props.elementGetsVisibleAt,
+      elementGetsInvisibleAt: props.elementGetsInvisibleAt
+    };
     const data = reactive({
-      isVisible: useElementIsVisible(target, props.abortIfVisible, scrollContainer, props.elementGetsVisibleAt, props.elementGetsInvisibleAt)
+      isVisible: useElementIsVisible(target, scrollContainer, options)
     });
 
     return () => {

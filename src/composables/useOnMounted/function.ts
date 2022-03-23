@@ -1,6 +1,6 @@
 import { getCurrentInstance, nextTick, onMounted } from "vue";
 
-const useOnMounted = (fn, useNextTick) => {
+const useOnMounted = (fn: () => void, useNextTick = false) => {
     if (getCurrentInstance()) {
         onMounted(fn);
     } else if (useNextTick) {

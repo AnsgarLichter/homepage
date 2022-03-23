@@ -3,14 +3,12 @@
     <div
       class="flex flex-col bg-primary justify-center items-center space-y-10 p-4 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
     >
-      <img
-        class="w-44 object-fill"
+      <Image
+        :styleClasses="['w-44', 'object-fill']"
         v-for="image in images"
         :key="image.alt"
-        :src="getImagePath(image.src)"
+        :src="image.src"
         :alt="image.alt"
-        data-holder-rendered="true"
-        loading="lazy"
       />
     </div>
     <div
@@ -52,41 +50,25 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineProps } from "vue";
 
-defineProps({
-  images: {
-    type: Array,
-    default: () => [],
-  },
-  title: {
-    type: String,
-    default: "",
-  },
-  yearStart: {
-    type: String,
-    default: "",
-  },
-  yearEnd: {
-    type: String,
-    default: "",
-  },
-  organisation: {
-    type: String,
-    default: "",
-  },
-  location: {
-    type: String,
-    default: "",
-  },
-  description: {
-    type: String,
-    default: "",
-  },
-});
+import Image from "@/components/Image.vue";
 
-const getImagePath = (imageSrc) => {
-  return require(`@/assets/images/${imageSrc}`);
-};
+export interface CardImage {
+  src: string;
+  alt: string;
+}
+
+export interface CardProperties {
+  images: CardImage[];
+  title: string;
+  yearStart: number;
+  yearEnd: number;
+  organisation: string;
+  location: string;
+  description: string;
+}
+
+defineProps<CardProperties>();
 </script>

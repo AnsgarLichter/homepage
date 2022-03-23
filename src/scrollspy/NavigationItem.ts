@@ -1,10 +1,13 @@
-const NavigationItem = class NavigationItem {
+export class NavigationItem {
+  htmlElement: Element;
+  clickEventListener!: EventListenerOrEventListenerObject | null;
+
   /**
    * Initializes the naviagtion item.
    *
    * @param {object} navigationItemHtmlElement html element navigation item
    */
-  constructor(navigationItemHtmlElement) {
+  constructor(navigationItemHtmlElement: Element) {
     this.htmlElement = navigationItemHtmlElement;
   }
 
@@ -13,19 +16,19 @@ const NavigationItem = class NavigationItem {
    *
    * @param {object} clickEventListener event handler for click event
    */
-  addClickListener(clickEventListener) {
-    this.clickEventListener = clickEventListener;
-
+  addClickListener(clickEventListener: EventListenerOrEventListenerObject) {
     this.htmlElement.addEventListener("click", clickEventListener);
+    this.clickEventListener = clickEventListener;
   }
 
   /**
    * Removes the click event listener which has been added previously.
    */
   removeClickListener() {
-    this.htmlElement.removeEventListener("click", this.clickEventListener);
-
-    this.clickEventListener = null;
+    if (this.clickEventListener) {
+      this.htmlElement.removeEventListener("click", this.clickEventListener);
+      this.clickEventListener = null;
+    }
   }
 
   /**
@@ -43,9 +46,9 @@ const NavigationItem = class NavigationItem {
    * @returns {object} matching section of the navigation item
    */
   getSection() {
-    const href = this.htmlElement.getAttribute("href");
+    const href = this.htmlElement.getAttribute("href") as string;
 
-    return document.querySelector(href);
+    return document.querySelector(href) as HTMLElement;
   }
 
   /**
@@ -62,7 +65,7 @@ const NavigationItem = class NavigationItem {
    *
    * @param {string} className CSS class name
    */
-  addClass(className) {
+  addClass(className: string) {
     const classList = this.getClassList();
 
     classList.add(className);
@@ -73,7 +76,7 @@ const NavigationItem = class NavigationItem {
    *
    * @param {string} className CSS class name
    */
-  removeClass(className) {
+  removeClass(className: string) {
     const classList = this.getClassList();
 
     classList.remove(className);
@@ -86,11 +89,9 @@ const NavigationItem = class NavigationItem {
    *
    * @returns {boolean} Whether class is set or not
    */
-  hasClass(className) {
+  hasClass(className: string) {
     const classList = this.getClassList();
 
     return classList.contains(className);
   }
-};
-
-export { NavigationItem };
+}

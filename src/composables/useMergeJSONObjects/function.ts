@@ -10,12 +10,12 @@
  *
  * @returns  {object} merged options
  */
-const useMergeJsonObjects = (baseObject, objectToBeMerged) => {
+const useMergeJsonObjects = (baseObject: object, objectToBeMerged: object) => {
   const mergedOptions = baseObject;
 
   for (const propertyName in mergedOptions) {
     if (objectToBeMerged && Object.prototype.hasOwnProperty.call(objectToBeMerged, propertyName)) {
-      mergedOptions[propertyName] = objectToBeMerged[propertyName];
+      mergedOptions[propertyName as keyof object] = objectToBeMerged[propertyName as keyof object];
     }
   }
 

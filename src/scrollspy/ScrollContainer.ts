@@ -1,7 +1,10 @@
 /**
  * Scroll Container
  */
-const ScrollContainer = class ScrollContainer {
+export class ScrollContainer {
+    htmlElement: Element;
+    scrollEventListener!: EventListenerOrEventListenerObject | null;
+    loadEventListener!: EventListenerOrEventListenerObject | null;
 
     /**
      * Initlializes the scroll container.
@@ -10,9 +13,11 @@ const ScrollContainer = class ScrollContainer {
      *
      * @param {string} selectorForScrollContainer CSS selector for scroll container
      */
-    constructor(selectorForScrollContainer) {
+    constructor(selectorForScrollContainer: string) {
         this.htmlElement =
-            document.querySelector(selectorForScrollContainer) || window;
+            document.querySelector(selectorForScrollContainer) as Element;
+
+        if (!this.htmlElement) { throw Error("The scroll container must be defined as a HTML element"); }
     }
 
     /**
@@ -21,12 +26,8 @@ const ScrollContainer = class ScrollContainer {
      * @param {object} scrollEventListener event listener function to be bound
      * @param {object} options options for event listener binding
      */
-    addScrollListener(scrollEventListener, options) {
-        this.htmlElement.addEventListener(
-            "scroll",
-            scrollEventListener,
-            options
-        );
+    addScrollListener(scrollEventListener: EventListenerOrEventListenerObject, options?: AddEventListenerOptions) {
+        this.htmlElement.addEventListener("scroll", scrollEventListener, options);
 
         if (!options?.once) { this.scrollEventListener = scrollEventListener; }
     }
@@ -35,11 +36,10 @@ const ScrollContainer = class ScrollContainer {
      * Removes the function as listener for the event "scroll" which has been bound previously.
      */
     removeScrollListener() {
-        this.htmlElement.removeEventListener(
-            "scroll",
-            this.scrollEventListener
-        );
-        this.scrollEventListener = null;
+        if (this.scrollEventListener) {
+            this.htmlElement.removeEventListener("scroll", this.scrollEventListener);
+            this.scrollEventListener = null;
+        }
     }
 
     /**
@@ -48,19 +48,22 @@ const ScrollContainer = class ScrollContainer {
      * @param {object} loadEventListener event listener function to be bound
      * @param {object} options options for event listener binding
      */
-    addLoadListener(loadEventListener, options) {
+    addLoadListener(loadEventListener: EventListenerOrEventListenerObject, options?: AddEventListenerOptions) {
         this.htmlElement.addEventListener("load", loadEventListener, options);
 
-        if (!options?.once) { this.loadEventListener = loadEventListener; }
+        if (!options?.once) {
+            this.loadEventListener = loadEventListener;
+        }
     }
 
     /**
      * Removes the function as listener for the event "load" which has been bound previously.
      */
     removeLoadListener() {
-        this.htmlElement.removeEventListener("load", this.loadEventListener);
-
-        this.loadEventListener = null;
+        if (this.loadEventListener) {
+            this.htmlElement.removeEventListener("load", this.loadEventListener);
+            this.loadEventListener = null;
+        }
     }
 
     /**
@@ -110,6 +113,4 @@ const ScrollContainer = class ScrollContainer {
             this.getClientHeight()
         );
     }
-};
-
-export { ScrollContainer };
+}

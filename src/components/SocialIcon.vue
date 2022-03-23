@@ -16,25 +16,19 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps } from "vue";
+<script setup lang="ts">
+import { withDefaults, defineProps } from "vue";
 
-defineProps({
-  href: {
-    default: "",
-    type: String,
-  },
-  linkDescription: {
-    default: "",
-    type: String,
-  },
-  target: {
-    default: "_blank",
-    type: String,
-  },
-  icon: {
-    type: Object,
-    default: () => {},
-  },
+import { Icon } from "@/fontAwesomeIcons";
+
+export interface SocialIconProperties {
+  href: string;
+  linkDescription: string;
+  icon: Icon;
+  target?: string;
+}
+
+withDefaults(defineProps<SocialIconProperties>(), {
+  target: "_blank",
 });
 </script>

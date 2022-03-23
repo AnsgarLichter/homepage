@@ -7,3 +7,4 @@ export * from './useColorMode';
 export * from './useIsDarkModePreferred';
 export * from './useMediaQuery';
 export * from './useStorage';
+export * from './useImage';

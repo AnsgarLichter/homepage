@@ -228,21 +228,14 @@
   </Dialog>
 </template>
 
-<script setup>
-import { defineProps, defineExpose } from "vue";
+<script setup lang="ts">
+import { defineExpose } from "vue";
 
 import { ref } from "@vue/reactivity";
 
 import { useI18n } from "vue-i18n";
 
-import Dialog from "@/components/Dialog";
-
-defineProps({
-  value: {
-    type: Boolean,
-    default: false,
-  },
-});
+import Dialog from "@/components/Dialog.vue";
 
 const { t } = useI18n();
 

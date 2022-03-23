@@ -1,15 +1,17 @@
+import { App, ObjectDirective } from "vue";
+
 /**
  * Updates visibility of htmlElement
  *
- * @param {object} element htmlElement
- * @param {boolean} value value to be applied to visibility of the element
+ * @param element
+ * @param value
  */
-const setVisibility = (element, value) =>  {
+function setVisibility(element: HTMLElement, value: boolean) {
     element.style.visibility = value ? 'visible' : 'hidden';
-};
+}
 
-const visibleDirective = {
-    beforeMount(element, { value }, { transition }) {
+const visibleDirective: ObjectDirective<HTMLElement> = {
+    beforeMount(element: HTMLElement, { value }, { transition }) {
         if (transition && value) {
             transition.beforeEnter(element);
         } else {
@@ -17,14 +19,14 @@ const visibleDirective = {
         }
     },
 
-    mounted(element, { value }, { transition }) {
+    mounted(element: HTMLElement, { value }, { transition }) {
         if (transition && value) {
-           transition.enter(element);
+            transition.enter(element);
         }
     },
 
-    updated(element, { value, oldValue }, { transition }) {
-        if (value === oldValue) {
+    updated(element: HTMLElement, { value, oldValue }, { transition }) {
+        if (!value === !oldValue) {
             return;
         }
 
@@ -43,7 +45,7 @@ const visibleDirective = {
         }
     },
 
-    beforeUnmount(element, { value }) {
+    beforeUnmount(element: HTMLElement, { value }) {
         setVisibility(element, value);
     }
 };
@@ -52,10 +54,8 @@ const visibleDirective = {
 /**
  * Binds the visible directive to the app.
  *
- * @param {object} app vue app instance
+ * @param app
  */
- const useVisible = (app) => {
+export function useVisible(app: App<Element>) {
     app.directive("visible", visibleDirective);
-};
-
-export { useVisible };
+}
