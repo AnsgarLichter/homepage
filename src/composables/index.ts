@@ -1,6 +1,5 @@
 export * from './useElementIsVisible';
 export * from './useOnMounted';
-export * from './useMergeJSONObjects';
 export * from './useToggle';
 export * from './useDarkMode';
 export * from './useColorMode';
@@ -8,3 +7,4 @@ export * from './useIsDarkModePreferred';
 export * from './useMediaQuery';
 export * from './useStorage';
 export * from './useImage';
+export * from './useEventListener';

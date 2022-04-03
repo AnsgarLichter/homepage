@@ -10,6 +10,13 @@ function setVisibility(element: HTMLElement, value: boolean) {
     element.style.visibility = value ? 'visible' : 'hidden';
 }
 
+/**
+ * Visible directive which does the same as the official v-if directive.
+ * The one difference is that this directive uses the CSS property visible 
+ * instead of the CSS property display to trigger the element's visibility.
+ * 
+ * The advantage is that the space for the HTML element is reserved in the rendered DOM.
+ */
 const visibleDirective: ObjectDirective<HTMLElement> = {
     beforeMount(element: HTMLElement, { value }, { transition }) {
         if (transition && value) {

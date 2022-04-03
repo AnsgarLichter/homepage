@@ -27,7 +27,7 @@ export interface UseElementIsVisibleOptions {
 /**
  * Returns if the HTML element is visible in the current viewport.
  */
-const useElementIsVisible = (element: Ref<HTMLElement | null | undefined>, scrollContainer: Ref<HTMLElement>, options: UseElementIsVisibleOptions = {}) => {
+export function useElementIsVisible (element: Ref<HTMLElement | null | undefined>, scrollContainer: Ref<HTMLElement>, options: UseElementIsVisibleOptions = {}) {
   const {
     abortIfVisible = false,
     elementGetsVisibleAt = 0.50,
@@ -69,6 +69,4 @@ const useElementIsVisible = (element: Ref<HTMLElement | null | undefined>, scrol
   useOnMounted(addScrollListener);
 
   return isVisible;
-};
-
-export { useElementIsVisible };
+}
