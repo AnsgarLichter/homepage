@@ -63,8 +63,8 @@ export interface CardImage {
 export interface CardProperties {
   images: CardImage[];
   title: string;
-  yearStart: number;
-  yearEnd: number;
+  yearStart: string;
+  yearEnd: string;
   organisation: string;
   location: string;
   description: string;
