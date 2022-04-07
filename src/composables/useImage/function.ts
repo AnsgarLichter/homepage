@@ -4,5 +4,6 @@
  * @param path path to the image which extends the base path
  */
 export function useImage(path: string) {
-  return require("@/assets/" + path);
+  return new URL('../../assets/' + path, import.meta.url).href;
+  //return import.meta.glob('../assets/' + path);
 }

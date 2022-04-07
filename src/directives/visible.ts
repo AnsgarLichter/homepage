@@ -1,4 +1,4 @@
-import { App, ObjectDirective } from "vue";
+import type { App, ObjectDirective } from "vue";
 
 /**
  * Updates visibility of htmlElement

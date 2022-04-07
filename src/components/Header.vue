@@ -44,12 +44,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, Ref } from "@vue/reactivity";
+import type { Ref } from "vue";
+import { computed, ref } from "@vue/reactivity";
 
 import { useI18n } from "vue-i18n";
 
 import NavigationBar from "@/components/NavigationBar.vue";
-import { NavigationItem } from "@/components/NavigationBar.vue";
+import type { NavigationItem } from "@/components/NavigationBar.vue";
 
 import { useToggle, useDarkMode, useOnMounted } from "@/composables";
 import { Locales } from "@/i18n";

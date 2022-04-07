@@ -1,4 +1,5 @@
-import { isRef, onScopeDispose, Ref, watch } from "vue";
+import { isRef, onScopeDispose, watch } from "vue";
+import type { Ref } from "vue";
 
 function noop() { return; }
 /**

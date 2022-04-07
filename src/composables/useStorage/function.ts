@@ -1,4 +1,5 @@
-import { ref, unref, watch, Ref } from "vue";
+import { ref, unref, watch } from "vue";
+import type { Ref } from "vue";
 
 export interface Serializer<T> {
   read(raw: string): T

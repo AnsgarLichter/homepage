@@ -2,7 +2,7 @@ import { ref, h, defineComponent, reactive, inject } from "vue";
 
 import { useElementIsVisible } from ".";
 import { useOnMounted } from "../useOnMounted";
-import { UseElementIsVisibleOptions } from "./function";
+import type { UseElementIsVisibleOptions } from "./function";
 
 const UseElementIsVisible = defineComponent({
   name: 'UseElementIsVisible',
