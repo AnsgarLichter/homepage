@@ -1,5 +1,5 @@
 import { useEventListener } from '@/composables';
-import { App, DirectiveBinding, ObjectDirective } from 'vue';
+import type { App, DirectiveBinding, ObjectDirective } from 'vue';
 
 
 export interface ScrollSpyOptions {
@@ -73,7 +73,7 @@ const cssClassSelector = '.'
  * of the items (a elements). This means that there have to be sections with a matching id to
  * the href of the link.
  */
-const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
+export const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
     /**
      * Executed as soon as the scroll spy is mounted.
      *
@@ -81,6 +81,7 @@ const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
      * @param {object} binding binding
      */
     mounted(element: HTMLElement, binding: DirectiveBinding) {
+        const test = 'test';
         const {
             navigationItemSelector = ".navbar-item > a",
             scrollContainerSelector = ".content",
@@ -91,21 +92,27 @@ const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
             scrollBehavior = "smooth"
         } = binding.value || {};
 
-        const scrollContainer: HTMLElement = window.document.querySelector(scrollContainerSelector);
+        const scrollContainer: HTMLElement = scrollContainerSelector ? window.document.querySelector(scrollContainerSelector) : document.documentElement;
         const navigationItems: HTMLAnchorElement[] = Array.from(window.document.querySelectorAll(navigationItemSelector));
-        if(!scrollContainer || !navigationItems?.length) throw Error("The scroll container and navigation items have to be defined!");
+        if (!scrollContainer || !navigationItems?.length) {
+            console.warn("The scroll container and navigation items have to be defined!");
+            return;
+        }
 
         const sectionsSelectors = navigationItems.map(item => item.hash).join(', ');
         const navigationSections: HTMLElement[] = Array.from(window.document.querySelectorAll(sectionsSelectors));
-        if(!navigationSections?.length) throw Error("There were no corresponding sections found for the navigation items!");
+        if (!navigationSections?.length) {
+            console.warn("There were no corresponding sections found for the navigation items!");
+            return;
+        }
 
-        navigationSections.sort((a , b) => b.offsetTop - a.offsetTop);
+        navigationSections.sort((a, b) => b.offsetTop - a.offsetTop);
 
         function onContainerScrolled() {
             document.querySelectorAll(cssClassSelector + activeClass).forEach(item => item.classList.remove(activeClass));
-            
+
             const sectionInView = navigationSections.find(section => section.offsetTop <= scrollContainer.scrollTop);
-            const navigationItemInView = navigationItems.find(item => item.hash.replace('#','') === sectionInView?.id);
+            const navigationItemInView = navigationItems.find(item => item.hash.replace('#', '') === sectionInView?.id);
             navigationItemInView?.classList.add(activeClass);
         }
 
@@ -113,7 +120,7 @@ const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
 
         function onNavigationItemClicked(event: Event) {
             const target = event.target as HTMLAnchorElement;
-            const targetSection = navigationSections.find(section => section.id === target.hash.replace('#',''));
+            const targetSection = navigationSections.find(section => section.id === target.hash.replace('#', ''));
             targetSection?.scrollIntoView({ behavior: scrollBehavior });
         }
 
@@ -134,7 +141,7 @@ const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
         if (scrollOnStart)
             scrollToHashElement();
     }
-};
+}
 
 /**
  * Binds the scroll spy directive to the app.
