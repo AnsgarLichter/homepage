@@ -46,18 +46,13 @@
 <script setup lang="ts">
 import type { Ref } from "vue";
 import { computed, ref } from "@vue/reactivity";
-
 import { useI18n } from "vue-i18n";
-
 import NavigationBar from "@/components/NavigationBar.vue";
 import type { NavigationItem } from "@/components/NavigationBar.vue";
-
 import { useToggle, useDarkMode, useOnMounted } from "@/composables";
 import { Locales } from "@/i18n";
 import Image from "./Image.vue";
-
 const { t, locale } = useI18n();
-
 const navigationItems = computed<NavigationItem[]>(() => [
   {
     label: t("navigation.intro"),
@@ -84,31 +79,25 @@ const navigationItems = computed<NavigationItem[]>(() => [
     href: "#changeColorMode",
   },
 ]);
-
 const imagePath = ref<string>("images/gb.webp");
 function updateImagePath(locale: Ref<string>) {
   if (locale.value.startsWith(Locales.DE)) {
     return "images/de.webp";
   }
-
   return "images/gb.webp";
 }
-
 function switchLocale() {
   if (locale.value.startsWith(Locales.DE)) {
     locale.value = Locales.EN;
   } else {
     locale.value = Locales.DE;
   }
-
   imagePath.value = updateImagePath(locale);
 }
-
 useOnMounted(() => {
   locale.value = window.navigator.language;
   imagePath.value = updateImagePath(locale);
 });
-
 const isDarkMode = useDarkMode();
 const toggleDarkMode = useToggle(isDarkMode);
 </script>
@@ -119,20 +108,16 @@ const toggleDarkMode = useToggle(isDarkMode);
   z-index: 300;
   position: fixed;
 }
-
 .navbar-brand {
   display: flex !important;
 }
-
 .navbar-brand-padding {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
-
 .navbar-menu-border {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-
 .flex-basis-100 {
   flex-basis: 100%;
 }

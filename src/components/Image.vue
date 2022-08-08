@@ -43,11 +43,8 @@
 
 <script setup lang="ts">
 import { withDefaults, defineProps, defineEmits, ref, watch } from "vue";
-
 import { useImage } from "@/composables";
-
-import { Icon } from "@/fontAwesomeIcons";
-
+import type { Icon } from "@/fontAwesomeIcons";
 export interface ImageProperties {
   src: string;
   alt: string;
@@ -57,11 +54,9 @@ export interface ImageProperties {
   previewIcon?: Icon;
   previewOuterBackgroundColor?: string;
 }
-
 export interface ImageEventEmits {
   (eventName: "click", event: MouseEvent): void;
 }
-
 const properties = withDefaults(defineProps<ImageProperties>(), {
   styleClasses: () => [],
   loading: "lazy",
@@ -75,25 +70,19 @@ const properties = withDefaults(defineProps<ImageProperties>(), {
   },
   previewOuterBackgroundColor: "rgba(0, 0, 0, 0.7)",
 });
-
 const emit = defineEmits<ImageEventEmits>();
-
 const loadedSource = ref(useImage(properties.src));
 function onSourceChanged() {
   loadedSource.value = useImage(properties.src);
 }
 watch(() => properties.src, onSourceChanged);
-
 const isPreviewVisible = ref(false);
-
 function changePreviewVisibility() {
   isPreviewVisible.value = !isPreviewVisible.value;
 }
-
 function openPreview() {
   changePreviewVisibility();
 }
-
 function closePreview() {
   if (isPreviewVisible.value) {
     changePreviewVisibility();
@@ -105,11 +94,9 @@ function closePreview() {
 .a-image-container:hover .a-image-preview-indicator {
   opacity: 1;
 }
-
 .a-preview-outer {
   z-index: 50000;
 }
-
 .a-preview {
   z-index: 50050;
 }

@@ -64,7 +64,7 @@
                 class="bg-primary border-2 border-accent p-4 rounded-full flex flex-row"
               >
                 <font-awesome-icon
-                  class="fa-lg text-accent"
+                  class="fa-lg text-accent text-accent"
                   :icon="['fas', 'download']"
                 />
                 <div class="ml-2 text-accent">Download CV</div>

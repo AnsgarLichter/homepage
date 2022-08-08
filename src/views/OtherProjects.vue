@@ -22,7 +22,7 @@
           <div v-visible="isVisible">
             <div class="flex flex-row items-center space-x-4">
               <font-awesome-icon
-                class="text-5xl mr-auto text-accent"
+                class="text-5xl mr-auto text-accent text-accent"
                 :icon="['far', 'folder']"
               />
               <ProjectIcon
@@ -117,16 +117,19 @@ const otherProjects = computed<Project[]>(() => [
 
 const icons: Record<"googlePlay" | "github" | "external", Icon> = {
   googlePlay: {
+    styleClasses: "text-2xl text-accent",
     prefix: "fab",
     name: "google-play",
     styleClasses: ["text-2xl", "text-accent"],
   },
   github: {
+    styleClasses: "text-2xl text-accent",
     prefix: "fab",
     name: "github",
     styleClasses: ["text-2xl", "text-accent"],
   },
   external: {
+    styleClasses: "text-2xl text-accent",
     prefix: "fas",
     name: "external-link-alt",
     styleClasses: ["text-2xl", "text-accent"],

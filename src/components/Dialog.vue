@@ -56,11 +56,8 @@
 
 <script setup lang="ts">
 import { withDefaults, defineProps, defineExpose } from "vue";
-
 import { ref } from "@vue/reactivity";
-
-import { Icon } from "@/fontAwesomeIcons";
-
+import type { Icon } from "@/fontAwesomeIcons";
 export interface DialogProperties {
   title: string;
   titleStyleClasses?: string[];
@@ -71,7 +68,6 @@ export interface DialogProperties {
   compressIcon?: Icon;
   closeIcon?: Icon;
 }
-
 const properties = withDefaults(defineProps<DialogProperties>(), {
   title: "",
   titleStyleClasses: () => ["text-secondaryLight"],
@@ -100,29 +96,22 @@ const properties = withDefaults(defineProps<DialogProperties>(), {
     };
   },
 });
-
 const isOpened = ref(false);
-
 const dialog = ref<HTMLElement>();
-
 const changeVisibility = () => {
   isOpened.value = !isOpened.value;
 };
-
 function open() {
   changeVisibility();
 }
-
 function close() {
   changeVisibility();
 }
-
 const changeSizeIcon = ref<Icon>(properties.maximizeIcon);
 function maximize() {
   if (!dialog.value) {
     return;
   }
-
   const classList = dialog.value.classList;
   if (changeSizeIcon.value === properties.maximizeIcon) {
     changeSizeIcon.value = properties.compressIcon;
@@ -132,7 +121,6 @@ function maximize() {
     classList.remove("maximized");
   }
 }
-
 defineExpose({
   open,
   close,
@@ -143,11 +131,9 @@ defineExpose({
 .a-dialog-outer {
   z-index: 50000;
 }
-
 .a-dialog {
   z-index: 50050;
 }
-
 .maximized {
   width: 100% !important;
   height: 100% !important;
