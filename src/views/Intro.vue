@@ -56,12 +56,21 @@
           </div>
         </div>
         <div class="flex flex-col py-8 sm:py-16">
-          <img
-            class="rounded-full h-36 w-36 object-cover md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-128 xl:w-128"
-            src="@/assets/images/me.webp"
-            alt="Ansgar Lichter"
-            data-holder-rendered="true"
-            loading="lazy"
+          <Image
+            :styleClasses="[
+              'rounded-full',
+              'h-36',
+              'w-36',
+              'object-cover',
+              'md:h-72',
+              'md:w-72',
+              'lg:h-96',
+              'lg:w-96',
+              'xl:h-128',
+              'xl:w-128',
+            ]"
+            src="images/me.webp"
+            :alt="t('general.name')"
           />
         </div>
       </div>
@@ -69,19 +78,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useI18n } from "vue-i18n";
 
-import SocialIcon from "@/components/SocialIcon";
+import SocialIcon from "@/components/SocialIcon.vue";
+import Image from "@/components/Image.vue";
 
-import BounceInDown from "@/transitions/BounceInDownWith3sDelay";
+import BounceInDown from "@/transitions/BounceInDownWith3sDelay.vue";
 
 const { t } = useI18n();
 </script>
 
 <style scoped>
 .background {
-  background-image: url("~@/assets/images/code.webp");
+  background-image: url("src/assets/images/code.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -113,7 +123,6 @@ const { t } = useI18n();
   animation-delay: 2s;
 }
 
-/* The typing effect */
 @keyframes typing {
   from {
     width: 0;

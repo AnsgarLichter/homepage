@@ -2,11 +2,10 @@
   <div id="header" class="fixed inset-x-0 top-0 bg-primaryLight border-b-2 border-accent">
     <NavigationBar :items="navigationItems">
       <template #start>
-        <img
-          src="@/assets/images/brand.webp"
-          class="h-12 w-12 sm:mr-6 sm:ml-8"
+        <Image
+          src="images/brand.webp"
           alt="Ansgar Lichter"
-          loading="lazy"
+          :styleClasses="['h-12', 'w-12', 'sm:mr-6', 'sm:ml-8']"
         />
         <div class="pl-4 md:pl-1 flex items-center text-secondary text-lg">
           {{ t("general.name") }}
@@ -21,12 +20,11 @@
           :title="itemSlotProps.item.label"
           v-if="itemSlotProps.index === 4"
         >
-          <img
+          <Image
             :src="imagePath"
-            @click="switchLocale"
-            class="h-6 w-12"
             :alt="itemSlotProps.item.label"
-            loading="lazy"
+            :styleClasses="['h-6', 'w-12']"
+            @click="switchLocale"
           />
         </div>
         <div class="flex justify-center" v-else-if="itemSlotProps.index === 5">
@@ -45,19 +43,17 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { Ref } from "vue";
 import { computed, ref } from "@vue/reactivity";
-import { onMounted } from "@vue/runtime-core";
-
 import { useI18n } from "vue-i18n";
-
 import NavigationBar from "@/components/NavigationBar.vue";
-
-import { useToggle, useDarkMode } from "@/composables";
-
+import type { NavigationItem } from "@/components/NavigationBar.vue";
+import { useToggle, useDarkMode, useOnMounted } from "@/composables";
+import { Locales } from "@/i18n";
+import Image from "./Image.vue";
 const { t, locale } = useI18n();
-
-const navigationItems = computed(() => [
+const navigationItems = computed<NavigationItem[]>(() => [
   {
     label: t("navigation.intro"),
     href: "#intro",
@@ -83,33 +79,25 @@ const navigationItems = computed(() => [
     href: "#changeColorMode",
   },
 ]);
-
-const imagePath = ref();
-const updateImagePath = (locale) => {
-  if (locale.value.startsWith("de")) {
-    return require(`@/assets/images/de.webp`);
+const imagePath = ref<string>("images/gb.webp");
+function updateImagePath(locale: Ref<string>) {
+  if (locale.value.startsWith(Locales.DE)) {
+    return "images/de.webp";
   }
-
-  return require(`@/assets/images/gb.webp`);
-};
-
-const switchLocale = () => {
-  if (locale.value.startsWith("de")) {
-    locale.value = "en";
+  return "images/gb.webp";
+}
+function switchLocale() {
+  if (locale.value.startsWith(Locales.DE)) {
+    locale.value = Locales.EN;
   } else {
-    locale.value = "de";
+    locale.value = Locales.DE;
   }
-
   imagePath.value = updateImagePath(locale);
-};
-
-onMounted(() => {
-  const browserLanguage = window.navigator.language;
-
-  locale.value = browserLanguage;
+}
+useOnMounted(() => {
+  locale.value = window.navigator.language;
   imagePath.value = updateImagePath(locale);
 });
-
 const isDarkMode = useDarkMode();
 const toggleDarkMode = useToggle(isDarkMode);
 </script>
@@ -120,20 +108,16 @@ const toggleDarkMode = useToggle(isDarkMode);
   z-index: 300;
   position: fixed;
 }
-
 .navbar-brand {
   display: flex !important;
 }
-
 .navbar-brand-padding {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
-
 .navbar-menu-border {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-
 .flex-basis-100 {
   flex-basis: 100%;
 }

@@ -53,14 +53,14 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "@vue/reactivity";
 
 import { useI18n } from "vue-i18n";
 
-import Imprint from "@/components/Imprint";
-import PrivacyPolicy from "@/components/PrivacyPolicy";
-import SocialIcon from "@/components/SocialIcon";
+import Imprint from "@/components/Imprint.vue";
+import PrivacyPolicy from "@/components/PrivacyPolicy.vue";
+import SocialIcon from "@/components/SocialIcon.vue";
 
 const { t } = useI18n();
 

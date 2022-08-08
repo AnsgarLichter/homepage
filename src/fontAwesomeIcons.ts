@@ -51,4 +51,10 @@ library.add(faFolder);
 library.add(faSearch);
 library.add(faMoon);
 
+export interface Icon {
+  prefix: string;
+  name: string;
+  styleClasses?: string[];
+}
+
 export default FontAwesomeIcon;

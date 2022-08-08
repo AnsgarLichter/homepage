@@ -3,19 +3,19 @@
     <div
       :hidden="!isOpened"
       class="a-dialog-outer fixed inset-0 w-full h-full"
-      :class="[outerStyleClasses]"
+      :class="outerStyleClasses"
       @click="close"
     >
       <div
         ref="dialog"
         class="a-dialog fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-9/10 h-8/10 md:w-8/10 xl:w-6/10 flex flex-col overflow-hidden"
-        :class="[styleClasses]"
+        :class="styleClasses"
         @click.stop=""
       >
         <slot name="header">
           <div
             class="a-header flex flex-row flex-shrink-0 flex-basis-auto justify-center items-center border-b-2 p-4"
-            :class="[headerStyleClasses]"
+            :class="headerStyleClasses"
           >
             <div class="a-header-content flex justify-center grow">
               <slot name="headerContent">
@@ -29,13 +29,13 @@
             </div>
             <div class="a-header-icons flex space-x-2">
               <font-awesome-icon
-                :class="properties.maximizeIcon.styleClasses"
-                :icon="[properties.maximizeIcon.prefix, properties.maximizeIcon.name]"
+                :class="changeSizeIcon.styleClasses"
+                :icon="[changeSizeIcon.prefix, changeSizeIcon.name]"
                 @click="maximize"
               />
               <font-awesome-icon
-                :class="properties.closeIcon.styleClasses"
-                :icon="[properties.closeIcon.prefix, properties.closeIcon.name]"
+                :class="closeIcon.styleClasses"
+                :icon="[closeIcon.prefix, closeIcon.name]"
                 @click="close"
               />
             </div>
@@ -54,85 +54,73 @@
   </Teleport>
 </template>
 
-<script setup>
-import { defineProps, defineExpose } from "vue";
-
+<script setup lang="ts">
+import { withDefaults, defineProps, defineExpose } from "vue";
 import { ref } from "@vue/reactivity";
-
-const properties = defineProps({
-  title: {
-    type: String,
-    default: "",
+import type { Icon } from "@/fontAwesomeIcons";
+export interface DialogProperties {
+  title: string;
+  titleStyleClasses?: string[];
+  outerStyleClasses?: string[];
+  styleClasses?: string[];
+  headerStyleClasses?: string[];
+  maximizeIcon?: Icon;
+  compressIcon?: Icon;
+  closeIcon?: Icon;
+}
+const properties = withDefaults(defineProps<DialogProperties>(), {
+  title: "",
+  titleStyleClasses: () => ["text-secondaryLight"],
+  outerStyleClasses: () => ["bg-black bg-opacity-[0.7]"],
+  styleClasses: () => ["bg-primaryLight"],
+  headerStyleClasses: () => ["border-accent"],
+  maximizeIcon: () => {
+    return {
+      prefix: "fas",
+      name: "expand-arrows-alt",
+      styleClasses: ["fa-lg", "cursor-pointer", "text-accent"],
+    };
   },
-  titleStyleClasses: {
-    type: String,
-    default: "text-secondaryLight",
+  compressIcon: () => {
+    return {
+      prefix: "fas",
+      name: "compress-arrows-alt",
+      styleClasses: ["fa-lg", "cursor-pointer", "text-accent"],
+    };
   },
-  outerStyleClasses: {
-    type: String,
-    default: "bg-black bg-opacity-0",
-  },
-  styleClasses: {
-    type: String,
-    default: "bg-primaryLight",
-  },
-  headerStyleClasses: {
-    type: String,
-    default: "border-accent",
-  },
-  maximizeIcon: {
-    type: Object,
-    default: () => {
-      return {
-        prefix: "fas",
-        name: "expand-arrows-alt",
-        styleClasses: "fa-lg cursor-pointer text-accent",
-      };
-    },
-  },
-  closeIcon: {
-    type: Object,
-    default: () => {
-      return {
-        prefix: "fas",
-        name: "times",
-        styleClasses: "fa-lg cursor-pointer text-accent",
-      };
-    },
+  closeIcon: () => {
+    return {
+      prefix: "fas",
+      name: "times",
+      styleClasses: ["fa-lg", "cursor-pointer", "text-accent"],
+    };
   },
 });
-
-const maximizeIconName = ref("expand-arrows-alt");
 const isOpened = ref(false);
-
-const dialog = ref();
-
+const dialog = ref<HTMLElement>();
 const changeVisibility = () => {
   isOpened.value = !isOpened.value;
 };
-
-const open = () => {
+function open() {
   changeVisibility();
-};
-
-const close = () => {
+}
+function close() {
   changeVisibility();
-};
-
-const maximize = () => {
+}
+const changeSizeIcon = ref<Icon>(properties.maximizeIcon);
+function maximize() {
+  if (!dialog.value) {
+    return;
+  }
   const classList = dialog.value.classList;
-
-  if (maximizeIconName.value === "expand-arrows-alt") {
-    maximizeIconName.value = "compress-arrows-alt";
-
+  if (changeSizeIcon.value === properties.maximizeIcon) {
+    changeSizeIcon.value = properties.compressIcon;
     classList.add("maximized");
   } else {
-    maximizeIconName.value = "expand-arrows-alt";
-
+    changeSizeIcon.value = properties.maximizeIcon;
     classList.remove("maximized");
   }
-};
-
+}
 defineExpose({
   open,
   close,
@@ -143,11 +131,9 @@ defineExpose({
 .a-dialog-outer {
   z-index: 50000;
 }
-
 .a-dialog {
   z-index: 50050;
 }
-
 .maximized {
   width: 100% !important;
   height: 100% !important;

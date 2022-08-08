@@ -42,14 +42,21 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps } from "vue";
+<script setup lang="ts">
+import { withDefaults, defineProps } from "vue";
 
-defineProps({
-  events: {
-    type: Array,
-    default: () => [],
-  },
+import { Icon } from "@/fontAwesomeIcons";
+
+export interface TimelineEvent<T> {
+  icon?: Icon;
+  content: T;
+}
+export interface TimelineProperties<T> {
+  events: TimelineEvent<T>[];
+}
+
+withDefaults(defineProps<TimelineProperties<any>>(), {
+  events: () => [],
 });
 </script>
 

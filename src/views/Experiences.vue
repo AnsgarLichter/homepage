@@ -14,39 +14,39 @@
     </div>
 
     <Timeline :events="events">
-      <template #marker="markerSlotProps">
+      <template #marker="{ item }">
         <font-awesome-icon
+          v-if="item.icon"
           class="fa-lg text-black"
-          :icon="[markerSlotProps.item.icon.prefix, markerSlotProps.item.icon.name]"
+          :icon="[item.icon.prefix, item.icon.name]"
         />
       </template>
-      <template #content="contentSlotProps">
+      <template #content="{ item, index }">
         <UseElementIsVisible
           v-slot="{ isVisible }"
           :elementGetsVisibleAt="0.7"
           :elementGetsInvisibleAt="0.7"
         >
           <transition
-            :name="'fade-in-left-out-right' + contentSlotProps.index"
+            :name="'fade-in-left-out-right' + index"
             :enter-active-class="
-              'animate__animated timeline-fadeIn' +
-              (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
+              'animate__animated timeline-fadeIn' + (!!(index % 2) ? ' timeline-odd' : '')
             "
             :leave-active-class="
               'animate__animated timeline-fadeOut' +
-              (!!(contentSlotProps.index % 2) ? ' timeline-odd' : '')
+              (!!(index % 2) ? ' timeline-odd' : '')
             "
             appear
           >
             <div v-visible="isVisible">
               <Card
-                :images="contentSlotProps.item.content.images"
-                :title="contentSlotProps.item.content.title"
-                :yearStart="contentSlotProps.item.content.yearStart"
-                :yearEnd="contentSlotProps.item.content.yearEnd"
-                :organisation="contentSlotProps.item.content.organisation"
-                :location="contentSlotProps.item.content.location"
-                :description="contentSlotProps.item.content.description"
+                :images="item.content.images"
+                :title="item.content.title"
+                :yearStart="item.content.yearStart"
+                :yearEnd="item.content.yearEnd"
+                :organisation="item.content.organisation"
+                :location="item.content.location"
+                :description="item.content.description"
               >
               </Card>
             </div>
@@ -57,24 +57,40 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-import Card from "@/components/Card";
-import Timeline from "@/components/Timeline";
+import Card from "@/components/Card.vue";
+import Timeline from "@/components/Timeline.vue";
+import type { TimelineEvent } from "@/components/Timeline.vue";
+
+import FadeInUp from "@/transitions/FadeInUp.vue";
+
 import { UseElementIsVisible } from "@/composables";
 
-import FadeInUp from "@/transitions/FadeInUp";
+export interface Image {
+  src: string;
+  alt: string;
+}
+
+export interface Experience {
+  images: Image[];
+  title: string;
+  yearStart: string;
+  yearEnd: string;
+  organisation: string;
+  location: string;
+  description: string;
+}
 
 const { t } = useI18n();
-
-const events = computed(() => [
+const events = computed<TimelineEvent<Experience>[]>(() => [
   {
     content: {
       images: [
-        { src: "dhbw.svg", alt: t("experiences.images.dhbw") },
-        { src: "sew.svg", alt: t("experiences.images.sew") },
+        { src: "images/dhbw.svg", alt: t("experiences.images.dhbw") },
+        { src: "images/sew.svg", alt: t("experiences.images.sew") },
       ],
       title: t("experiences.education.studies.title"),
       yearStart: t("experiences.education.studies.yearStart"),
@@ -91,8 +107,8 @@ const events = computed(() => [
   {
     content: {
       images: [
-        { src: "china.webp", alt: t("experiences.images.china") },
-        { src: "sew.svg", alt: t("experiences.images.sew") },
+        { src: "images/china.webp", alt: t("experiences.images.china") },
+        { src: "images/sew.svg", alt: t("experiences.images.sew") },
       ],
       title: t("experiences.education.abroad.title"),
       yearStart: t("experiences.education.abroad.yearStart"),
@@ -104,7 +120,7 @@ const events = computed(() => [
   },
   {
     content: {
-      images: [{ src: "sew.svg", alt: t("experiences.images.sew") }],
+      images: [{ src: "images/sew.svg", alt: t("experiences.images.sew") }],
       title: t("experiences.work.itpa.title"),
       yearStart: t("experiences.work.itpa.yearStart"),
       yearEnd: t("experiences.work.itpa.yearEnd"),

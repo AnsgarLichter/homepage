@@ -22,9 +22,9 @@
   </div>
 </template>
 
-<script setup>
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+<script setup lang="ts">
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 import Intro from "@/views/Intro.vue";
 import About from "@/views/About.vue";

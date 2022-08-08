@@ -1,6 +1,6 @@
 <template>
   <div class="barchart">
-    <div v-for="(item, index) of data" :key="index" class="barchart-container">
+    <div v-for="(item, index) of items" :key="index" class="barchart-container">
       <div class="relative pt-1">
         <div class="flex mb-2 items-center justify-between">
           <span
@@ -24,18 +24,23 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps } from "vue";
+<script setup lang="ts">
+import { defineProps, withDefaults } from "vue";
 
-defineProps({
-  data: {
-    type: Array,
-    default: () => [],
-  },
-  backgroundColor: {
-    type: String,
-    default: "rgba(229, 231, 235, 1)",
-  },
+export interface BarChartItem {
+  label: string;
+  width: string;
+  styleClasses?: string[];
+}
+
+export interface BarChartProperties {
+  items: BarChartItem[];
+  backgroundColor?: string;
+}
+
+withDefaults(defineProps<BarChartProperties>(), {
+  items: () => [],
+  backgroundColor: "rgba(229, 231, 235, 1)",
 });
 </script>
 

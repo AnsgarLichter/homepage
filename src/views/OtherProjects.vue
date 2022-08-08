@@ -22,19 +22,19 @@
           <div v-visible="isVisible">
             <div class="flex flex-row items-center space-x-4">
               <font-awesome-icon
-                class="text-5xl mr-auto text-accent"
+                class="text-5xl mr-auto text-accent text-accent"
                 :icon="['far', 'folder']"
               />
               <ProjectIcon
                 v-if="project.links.googlePlay"
                 :href="project.links.googlePlay.href"
-                :linkDescription="project.links.github.description"
+                :linkDescription="project.links.googlePlay.description"
                 :icon="icons.googlePlay"
               />
               <ProjectIcon
                 v-if="project.links.github"
                 :href="project.links.github.href"
-                :linkDescription="project.links.description"
+                :linkDescription="project.links.github.description"
                 :icon="icons.github"
               />
               <ProjectIcon
@@ -66,19 +66,21 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
-import ProjectIcon from "@/components/ProjectIcon";
+import ProjectIcon from "@/components/ProjectIcon.vue";
 
-import FadeInUp from "@/transitions/FadeInUp";
+import FadeInUp from "@/transitions/FadeInUp.vue";
 
 import { UseElementIsVisible } from "@/composables";
+import type { Project } from "./FeaturedProjects.vue";
+import type { Icon } from "@/fontAwesomeIcons";
 
 const { t } = useI18n();
 
-const otherProjects = computed(() => [
+const otherProjects = computed<Project[]>(() => [
   {
     title: t("otherProjects.justDoIt.title"),
     description: t("otherProjects.justDoIt.description"),
@@ -113,21 +115,24 @@ const otherProjects = computed(() => [
   },
 ]);
 
-const icons = {
+const icons: Record<"googlePlay" | "github" | "external", Icon> = {
   googlePlay: {
     styleClasses: "text-2xl text-accent",
     prefix: "fab",
     name: "google-play",
+    styleClasses: ["text-2xl", "text-accent"],
   },
   github: {
     styleClasses: "text-2xl text-accent",
     prefix: "fab",
     name: "github",
+    styleClasses: ["text-2xl", "text-accent"],
   },
   external: {
     styleClasses: "text-2xl text-accent",
     prefix: "fas",
     name: "external-link-alt",
+    styleClasses: ["text-2xl", "text-accent"],
   },
 };
 </script>
