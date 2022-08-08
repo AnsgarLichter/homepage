@@ -1,4 +1,4 @@
-import { isRef, onScopeDispose, watch } from "vue";
+import { getCurrentScope, isRef, onScopeDispose, watch } from "vue";
 import type { Ref } from "vue";
 
 function noop() { return; }
@@ -29,7 +29,9 @@ export function useEventListener(event: string, target: HTMLElement | Ref<HTMLEl
     removeListener();
   }
 
-  onScopeDispose(stopListening);
+  if(getCurrentScope()) {
+    onScopeDispose(stopListening);
+  }
 
   return stopListening;
 }

@@ -81,7 +81,6 @@ export const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
      * @param {object} binding binding
      */
     mounted(element: HTMLElement, binding: DirectiveBinding) {
-        const test = 'test';
         const {
             navigationItemSelector = ".navbar-item > a",
             scrollContainerSelector = ".content",
@@ -116,7 +115,7 @@ export const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
             navigationItemInView?.classList.add(activeClass);
         }
 
-        useEventListener('scroll', scrollContainer, onContainerScrolled, { passive: true });
+        useEventListener("scroll", scrollContainer, onContainerScrolled, { passive: true });
 
         function onNavigationItemClicked(event: Event) {
             const target = event.target as HTMLAnchorElement;
@@ -125,7 +124,7 @@ export const spyDirective: ObjectDirective<HTMLElement, ScrollSpyOptions> = {
         }
 
         if (clickNavigationItemToScrollIntoSection)
-            navigationItems.forEach(item => useEventListener('click', item, onNavigationItemClicked, { passive: true }));
+            navigationItems.forEach(item => useEventListener("click", item, onNavigationItemClicked, { passive: true }));
 
         if (defaultActive)
             binding.instance?.$nextTick(onContainerScrolled);

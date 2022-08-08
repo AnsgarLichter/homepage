@@ -94,13 +94,13 @@ import { useI18n } from "vue-i18n";
 
 import ProjectIcon from "@/components/ProjectIcon.vue";
 import Image from "@/components/Image.vue";
-import { ImageProperties } from "@/components/Image.vue";
+import type { ImageProperties } from "@/components/Image.vue";
 
 import FadeInUp from "@/transitions/FadeInUp.vue";
 
 import { UseElementIsVisible } from "@/composables";
 
-import { Icon } from "@/fontAwesomeIcons";
+import type { Icon } from "@/fontAwesomeIcons";
 
 export interface Link {
   href: string;

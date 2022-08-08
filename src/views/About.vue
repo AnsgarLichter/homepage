@@ -82,7 +82,7 @@ import { computed, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 
 import BarChart from "@/components/BarChart.vue";
-import { BarChartItem } from "@/components/BarChart.vue";
+import type { BarChartItem } from "@/components/BarChart.vue";
 import FadeInUp from "@/transitions/FadeInUp.vue";
 import Image from "@/components/Image.vue";
 

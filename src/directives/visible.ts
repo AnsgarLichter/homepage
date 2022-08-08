@@ -17,7 +17,7 @@ function setVisibility(element: HTMLElement, value: boolean) {
  * 
  * The advantage is that the space for the HTML element is reserved in the rendered DOM.
  */
-const visibleDirective: ObjectDirective<HTMLElement> = {
+export const visibleDirective: ObjectDirective<HTMLElement> = {
     beforeMount(element: HTMLElement, { value }, { transition }) {
         if (transition && value) {
             transition.beforeEnter(element);

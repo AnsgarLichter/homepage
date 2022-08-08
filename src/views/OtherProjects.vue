@@ -75,8 +75,8 @@ import ProjectIcon from "@/components/ProjectIcon.vue";
 import FadeInUp from "@/transitions/FadeInUp.vue";
 
 import { UseElementIsVisible } from "@/composables";
-import { Project } from "./FeaturedProjects.vue"; //TODO: Where to save the general types? Create component?
-import { Icon } from "@/fontAwesomeIcons";
+import type { Project } from "./FeaturedProjects.vue";
+import type { Icon } from "@/fontAwesomeIcons";
 
 const { t } = useI18n();
 

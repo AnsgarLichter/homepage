@@ -63,7 +63,7 @@ import { useI18n } from "vue-i18n";
 
 import Card from "@/components/Card.vue";
 import Timeline from "@/components/Timeline.vue";
-import { TimelineEvent } from "@/components/Timeline.vue";
+import type { TimelineEvent } from "@/components/Timeline.vue";
 
 import FadeInUp from "@/transitions/FadeInUp.vue";
 
