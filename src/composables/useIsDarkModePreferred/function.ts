@@ -1,9 +1,7 @@
 import { useMediaQuery } from "@/composables";
 
-const useIsDarkModePreferred = () => {
+export function useIsDarkModePreferred() {
   const query = '(prefers-color-scheme: dark)';
 
   return useMediaQuery(query);
-};
-
-export { useIsDarkModePreferred };
+}

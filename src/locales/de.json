@@ -159,6 +159,7 @@
         "close": "Schließen",
         "title": "Impressum",
         "domain": {
+            "title": "Domaininhaber",
             "name": "Ansgar Lichter",
             "academicTitle": "Wirtschaftsinformatik (B. Sc.)",
             "mail": "E-Mail: lichteransgar{'@'}gmail.com"

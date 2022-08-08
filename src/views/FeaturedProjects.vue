@@ -28,11 +28,10 @@
             <div class="flex flex-row basis-3/5 space-x-8">
               <div v-for="(image, index) of project.images" :key="index">
                 <Image
-                  classes="w-56 shadow-lg shadow-primaryDark"
-                  :src="getImagePath(image.source)"
+                  :styleClasses="['w-56', 'shadow-lg', 'shadow-primaryDark']"
+                  :src="image.src"
                   :alt="image.alt"
                   preview
-                  :previewIcon="previewIcon"
                 />
               </div>
             </div>
@@ -89,32 +88,52 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
-import ProjectIcon from "@/components/ProjectIcon";
-import Image from "@/components/Image";
+import ProjectIcon from "@/components/ProjectIcon.vue";
+import Image from "@/components/Image.vue";
+import type { ImageProperties } from "@/components/Image.vue";
 
-import FadeInUp from "@/transitions/FadeInUp";
+import FadeInUp from "@/transitions/FadeInUp.vue";
 
 import { UseElementIsVisible } from "@/composables";
 
+import type { Icon } from "@/fontAwesomeIcons";
+
+export interface Link {
+  href: string;
+  description: string;
+}
+
+export interface Project {
+  images?: ImageProperties[];
+  title?: string;
+  description?: string;
+  technologies?: string[];
+  links: {
+    github?: Link;
+    googlePlay?: Link;
+    external?: Link;
+  };
+}
+
 const { t } = useI18n();
 
-const featuredProjects = computed(() => [
+const featuredProjects = computed<Project[]>(() => [
   {
     images: [
       {
-        source: "catchTheTrain/favorites.png",
+        src: "projects/catchTheTrain/favorites.png",
         alt: t("featuredProjects.catchTheTrain.favoritesAlt"),
       },
       {
-        source: "catchTheTrain/stop.png",
+        src: "projects/catchTheTrain/stop.png",
         alt: t("featuredProjects.catchTheTrain.stopAlt"),
       },
       {
-        source: "catchTheTrain/filter.png",
+        src: "projects/catchTheTrain/filter.png",
         alt: t("featuredProjects.catchTheTrain.filterAlt"),
       },
     ],
@@ -135,15 +154,15 @@ const featuredProjects = computed(() => [
   {
     images: [
       {
-        source: "dhbwApp/overview.png",
+        src: "projects/dhbwApp/overview.png",
         alt: t("featuredProjects.dhbwApp.overviewAlt"),
       },
       {
-        source: "dhbwApp/rapla.png",
+        src: "projects/dhbwApp/rapla.png",
         alt: t("featuredProjects.dhbwApp.raplaAlt"),
       },
       {
-        source: "dhbwApp/mensa.png",
+        src: "projects/dhbwApp/mensa.png",
         alt: t("featuredProjects.dhbwApp.mensaAlt"),
       },
     ],
@@ -171,15 +190,15 @@ const featuredProjects = computed(() => [
   {
     images: [
       {
-        source: "funnyFart/formula.png",
+        src: "projects/funnyFart/formula.png",
         alt: t("featuredProjects.funnyFart.formulaAlt"),
       },
       {
-        source: "funnyFart/calculate.png",
+        src: "projects/funnyFart/calculate.png",
         alt: t("featuredProjects.funnyFart.calculateAlt"),
       },
       {
-        source: "funnyFart/result.png",
+        src: "projects/funnyFart/result.png",
         alt: t("featuredProjects.funnyFart.resultAlt"),
       },
     ],
@@ -204,32 +223,22 @@ const featuredProjects = computed(() => [
   },
 ]);
 
-const icons = {
+const icons: Record<string, Icon> = {
   googlePlay: {
     prefix: "fab",
     name: "google-play",
-    styleClasses: "text-3xl text-accent",
+    styleClasses: ["text-3xl", "text-accent"],
   },
   github: {
     prefix: "fab",
     name: "github",
-    styleClasses: "text-3xl text-accent",
+    styleClasses: ["text-3xl", "text-accent"],
   },
   external: {
     prefix: "fas",
     name: "external-link-alt",
-    styleClasses: "text-3xl text-accent",
+    styleClasses: ["text-3xl", "text-accent"],
   },
-};
-
-const getImagePath = (imageSrc) => {
-  return require(`@/assets/projects/${imageSrc}`);
-};
-
-const previewIcon = {
-  prefix: "fas",
-  name: "search",
-  styleClasses: "text-3xl text-accent",
 };
 </script>
 

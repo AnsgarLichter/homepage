@@ -1,14 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const fontFamily = defaultTheme.fontFamily;
-fontFamily["sans"] = [
-  "Calibre",
-  "San Francisco",
-  "SF Pro Text",
-  "-apple-system",
-  "system-ui",
-  "sans-serif"
-];
-
+/* eslint-env node */
 module.exports = {
   darkMode: 'class',
   content: [
@@ -16,7 +6,6 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: fontFamily,
     extend: {
       spacing: {
         128: "32rem",

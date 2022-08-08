@@ -15,11 +15,17 @@
         <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
           <FadeInUp>
             <div class="justify-center" v-visible="isVisible">
-              <img
-                class="h-60 w-60 lg:h-72 lg:w-72 xl:h-96 xl:w-96"
-                src="@/assets/images/aboutme.webp"
+              <Image
+                :styleClasses="[
+                  'h-60',
+                  'w-60',
+                  'lg:h-72',
+                  'lg:w-72',
+                  'xl:h-96',
+                  'xl:w-96',
+                ]"
+                src="images/aboutme.webp"
                 :alt="t('about.alt')"
-                loading="lazy"
               />
             </div>
           </FadeInUp>
@@ -44,7 +50,7 @@
         <div class="mt-10 lg:mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-0">
           <UseElementIsVisible abortIfVisible v-slot="{ isVisible }">
             <FadeInUp>
-              <BarChart v-visible="isVisible" :data="skills" />
+              <BarChart v-visible="isVisible" :items="skills" />
             </FadeInUp>
           </UseElementIsVisible>
         </div>
@@ -71,13 +77,14 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 
-import BarChart from "@/components/BarChart";
-
-import FadeInUp from "@/transitions/FadeInUp";
+import BarChart from "@/components/BarChart.vue";
+import type { BarChartItem } from "@/components/BarChart.vue";
+import FadeInUp from "@/transitions/FadeInUp.vue";
+import Image from "@/components/Image.vue";
 
 import { UseElementIsVisible } from "@/composables";
 
@@ -87,25 +94,25 @@ const openCV = () => {
   window.open(pathToCV.value, "_blank", "noopener");
 };
 
-const skills = reactive([
+const skills = reactive<BarChartItem[]>([
   {
     label: t("about.technologies.ewm"),
-    styleClasses: "bg-[#d62828]",
+    styleClasses: ["bg-[#d62828]"],
     width: "60%",
   },
   {
     label: t("about.technologies.ui5"),
-    styleClasses: "bg-[#003049] dark:bg-[#0071AD]",
+    styleClasses: ["bg-[#003049] dark:bg-[#0071AD]"],
     width: "80%",
   },
   {
     label: t("about.technologies.abap"),
-    styleClasses: "bg-[#f77f00]",
+    styleClasses: ["bg-[#f77f00]"],
     width: "80%",
   },
   {
     label: t("about.technologies.js"),
-    styleClasses: "bg-[#fcbf49]",
+    styleClasses: ["bg-[#fcbf49]"],
     width: "70%",
   },
 ]);

@@ -16,10 +16,10 @@
     <div class="flex-basis-100 flex-shrink flex-grow items-center lg:flex lg:flex-auto">
       <ul
         :class="[
-          bCollapse ? 'navbar-collapse' : '',
+          collapse ? 'navbar-collapse' : '',
           'flex flex-col list-none px-0 space-x-0 space-y-2 lg:flex-row lg:space-x-5 lg:space-y-0 lg:my-auto ml-auto lg:justify-end',
         ]"
-        v-spy
+        v-scroll-spy
       >
         <li
           class="text-secondary hover:text-text navbar-item"
@@ -42,26 +42,31 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps } from "vue";
+<script setup lang="ts">
+import { withDefaults, defineProps } from "vue";
 
 import { ref } from "@vue/reactivity";
 
-defineProps({
-  items: {
-    type: Array,
-    default: () => {},
-  },
+export interface NavigationItem {
+  label: string;
+  href: string;
+}
+
+export interface NavigationBarProperties {
+  items: NavigationItem[];
+}
+
+withDefaults(defineProps<NavigationBarProperties>(), {
+  items: () => [],
 });
 
-const bCollapse = ref(true);
-
+const collapse = ref(true);
 const changeNavigationItemsVisibility = () => {
-  bCollapse.value = !bCollapse.value;
+  collapse.value = !collapse.value;
 };
 
 const nav = () => {
-  bCollapse.value = true;
+  collapse.value = true;
 };
 </script>
 

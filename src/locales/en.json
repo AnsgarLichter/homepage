@@ -159,6 +159,7 @@
         "close": "Close",
         "title": "Imprint",
         "domain": {
+            "title": "Domain owner",
             "name": "Ansgar Lichter",
             "academicTitle": "B. Sc. Business Informatics",
             "mail": "Email: lichteransgar{'@'}gmail.com"
