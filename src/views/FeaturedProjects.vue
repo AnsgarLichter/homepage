@@ -101,19 +101,17 @@ import FadeInUp from "@/transitions/FadeInUp.vue";
 import { UseElementIsVisible } from "@/composables";
 
 import type { Icon } from "@/fontAwesomeIcons";
-
+//TODO: Transform images to webp for better speed
 import CatchTheTrainFavoritesUrl from "@/assets/projects/catchTheTrain/favorites.png";
 import CatchTheTrainFilterUrl from "@/assets/projects/catchTheTrain/filter.png";
 import CatchTheTrainStopUrl from "@/assets/projects/catchTheTrain/stop.png";
 
-import DhbwAppEventsUrl from "@/assets/projects/dhbwApp/events.png"; //TODO: Delete image
 import DhbwAppMensaUrl from "@/assets/projects/dhbwApp/mensa.png";
 import DhbwAppOverviewUrl from "@/assets/projects/dhbwApp/overview.png";
 import DhbwAppRaplaUrl from "@/assets/projects/dhbwApp/rapla.png";
 
 import FunnyFartCalculateUrl from "@/assets/projects/funnyFart/calculate.png";
 import FunnyFartFormulaUrl from "@/assets/projects/funnyFart/formula.png";
-import FunnyFartOverviewUrl from "@/assets/projects/funnyFart/overview.png"; //TODO: Delete image
 import FunnyFartResultUrl from "@/assets/projects/funnyFart/result.png";
 
 
