@@ -24,7 +24,7 @@
                   'xl:h-96',
                   'xl:w-96',
                 ]"
-                src="images/aboutme.webp"
+                :src=AboutMeUrl
                 :alt="t('about.alt')"
               />
             </div>
@@ -83,10 +83,13 @@ import { useI18n } from "vue-i18n";
 
 import BarChart from "@/components/BarChart.vue";
 import type { BarChartItem } from "@/components/BarChart.vue";
-import FadeInUp from "@/transitions/FadeInUp.vue";
 import Image from "@/components/Image.vue";
 
+import FadeInUp from "@/transitions/FadeInUp.vue";
+
 import { UseElementIsVisible } from "@/composables";
+
+import AboutMeUrl from "@/assets/images/aboutme.webp";
 
 const { t, locale } = useI18n();
 const pathToCV = computed(() => "/" + locale.value + "/CurriculumVitaeAnsgarLichter.pdf");

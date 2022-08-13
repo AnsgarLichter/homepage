@@ -69,6 +69,11 @@ import FadeInUp from "@/transitions/FadeInUp.vue";
 
 import { UseElementIsVisible } from "@/composables";
 
+import DhbwUrl from "@/assets/images/dhbw.webp";
+import ChinaUrl from "@/assets/images/china.webp";
+import SewUrl from "@/assets/images/sew.svg";
+
+
 export interface Image {
   src: string;
   alt: string;
@@ -89,8 +94,8 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
   {
     content: {
       images: [
-        { src: "images/dhbw.svg", alt: t("experiences.images.dhbw") },
-        { src: "images/sew.svg", alt: t("experiences.images.sew") },
+        { src: DhbwUrl, alt: t("experiences.images.dhbw") },
+        { src: SewUrl, alt: t("experiences.images.sew") },
       ],
       title: t("experiences.education.studies.title"),
       yearStart: t("experiences.education.studies.yearStart"),
@@ -107,8 +112,8 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
   {
     content: {
       images: [
-        { src: "images/china.webp", alt: t("experiences.images.china") },
-        { src: "images/sew.svg", alt: t("experiences.images.sew") },
+        { src: ChinaUrl, alt: t("experiences.images.china") },
+        { src: SewUrl, alt: t("experiences.images.sew") },
       ],
       title: t("experiences.education.abroad.title"),
       yearStart: t("experiences.education.abroad.yearStart"),
@@ -120,7 +125,7 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
   },
   {
     content: {
-      images: [{ src: "images/sew.svg", alt: t("experiences.images.sew") }],
+      images: [{ src: SewUrl, alt: t("experiences.images.sew") }],
       title: t("experiences.work.itpa.title"),
       yearStart: t("experiences.work.itpa.yearStart"),
       yearEnd: t("experiences.work.itpa.yearEnd"),
