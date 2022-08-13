@@ -78,7 +78,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" lang="ts">
 import { useI18n } from "vue-i18n";
 
 import SocialIcon from "@/components/SocialIcon.vue";

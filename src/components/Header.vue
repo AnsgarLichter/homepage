@@ -47,7 +47,6 @@
 import type { Ref } from "vue";
 import { computed, ref } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
-
 import NavigationBar from "@/components/NavigationBar.vue";
 import Image from "@/components/Image.vue";
 
@@ -113,7 +112,6 @@ useOnMounted(() => {
   locale.value = window.navigator.language;
   imagePath.value = updateImagePath(locale);
 });
-
 const isDarkMode = useDarkMode();
 const toggleDarkMode = useToggle(isDarkMode);
 </script>

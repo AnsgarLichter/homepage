@@ -16,8 +16,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { withDefaults, defineProps } from "vue";
+<script setup lang="ts" lang="ts">
+import { withDefaults, withDefaults, defineProps } from "vue";
 
 import type { Icon } from "@/fontAwesomeIcons";
 

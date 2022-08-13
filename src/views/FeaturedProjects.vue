@@ -88,15 +88,16 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" lang="ts">
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
-import ProjectIcon from "@/components/ProjectIcon.vue";
+import ProjectIcon from "@/components/ProjectIcon.vue.vue";
 import Image from "@/components/Image.vue";
+import type { ImageProperties } from "@/components/Image.vue.vue";
 import type { ImageProperties } from "@/components/Image.vue";
 
-import FadeInUp from "@/transitions/FadeInUp.vue";
+import FadeInUp from "@/transitions/FadeInUp.vue.vue";
 
 import { UseElementIsVisible } from "@/composables";
 
@@ -134,7 +135,7 @@ export interface Project {
 
 const { t } = useI18n();
 
-const featuredProjects = computed<Project[]>(() => [
+const featuredProjects = computed<Project[]><Project[]>(() => [
   {
     images: [
       {
@@ -236,7 +237,7 @@ const featuredProjects = computed<Project[]>(() => [
   },
 ]);
 
-const icons: Record<string, Icon> = {
+const icons: Record<string, Icon>: Record<string, Icon> = {
   googlePlay: {
     prefix: "fab",
     name: "google-play",

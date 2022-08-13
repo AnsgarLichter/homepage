@@ -17,6 +17,7 @@
       <template #marker="{ item }">
         <font-awesome-icon
           v-if="item.icon"
+          v-if="item.icon"
           class="fa-lg text-black"
           :icon="[item.icon.prefix, item.icon.name]"
         />
@@ -57,7 +58,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -77,6 +78,16 @@ import SewUrl from "@/assets/images/sew.svg";
 export interface Image {
   src: string;
   alt: string;
+}
+
+export interface Experience {
+  images: Image[];
+  title: string;
+  yearStart: string;
+  yearEnd: string;
+  organisation: string;
+  location: string;
+  description: string;
 }
 
 export interface Experience {
