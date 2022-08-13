@@ -24,7 +24,7 @@
                   'xl:h-96',
                   'xl:w-96',
                 ]"
-                src="images/aboutme.webp"
+                :src=AboutMeUrl
                 :alt="t('about.alt')"
               />
             </div>
@@ -64,7 +64,7 @@
                 class="bg-primary border-2 border-accent p-4 rounded-full flex flex-row"
               >
                 <font-awesome-icon
-                  class="fa-lg text-accent text-accent"
+                  class="fa-lg text-accent text-accent text-accent"
                   :icon="['fas', 'download']"
                 />
                 <div class="ml-2 text-accent">Download CV</div>
@@ -77,16 +77,19 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" lang="ts">
 import { computed, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 
 import BarChart from "@/components/BarChart.vue";
 import type { BarChartItem } from "@/components/BarChart.vue";
-import FadeInUp from "@/transitions/FadeInUp.vue";
 import Image from "@/components/Image.vue";
 
+import FadeInUp from "@/transitions/FadeInUp.vue";
+
 import { UseElementIsVisible } from "@/composables";
+
+import AboutMeUrl from "@/assets/images/aboutme.webp";
 
 const { t, locale } = useI18n();
 const pathToCV = computed(() => "/" + locale.value + "/CurriculumVitaeAnsgarLichter.pdf");
@@ -94,25 +97,25 @@ const openCV = () => {
   window.open(pathToCV.value, "_blank", "noopener");
 };
 
-const skills = reactive<BarChartItem[]>([
+const skills = reactive<BarChartItem[]><BarChartItem[]>([
   {
     label: t("about.technologies.ewm"),
-    styleClasses: ["bg-[#d62828]"],
+    styleClasses: [["bg-[#d62828]"]],
     width: "60%",
   },
   {
     label: t("about.technologies.ui5"),
-    styleClasses: ["bg-[#003049] dark:bg-[#0071AD]"],
+    styleClasses: [["bg-[#003049] dark:bg-[#0071AD]"]],
     width: "80%",
   },
   {
     label: t("about.technologies.abap"),
-    styleClasses: ["bg-[#f77f00]"],
+    styleClasses: [["bg-[#f77f00]"]],
     width: "80%",
   },
   {
     label: t("about.technologies.js"),
-    styleClasses: ["bg-[#fcbf49]"],
+    styleClasses: [["bg-[#fcbf49]"]],
     width: "70%",
   },
 ]);

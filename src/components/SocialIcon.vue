@@ -16,10 +16,10 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { withDefaults, defineProps } from "vue";
+<script setup lang="ts" lang="ts">
+import { withDefaults, withDefaults, defineProps } from "vue";
 
-import { Icon } from "@/fontAwesomeIcons";
+import type { Icon } from "@/fontAwesomeIcons";
 
 export interface SocialIconProperties {
   href: string;

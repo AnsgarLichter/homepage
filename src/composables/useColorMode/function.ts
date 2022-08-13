@@ -75,7 +75,7 @@ export function useColorMode<T extends string = BasicColorModes>(options: UseCol
 
     const htmlClassList = element.classList;
     const classesToBeApplied = value.split(/\s/g);
-    Object.values(modes).filter(Boolean).forEach((value) => {
+    Object.values(modes).filter(Boolean).forEach((value: string) => {
       classesToBeApplied.includes(value) ? htmlClassList.add(value) : htmlClassList.remove(value);
     });
   }

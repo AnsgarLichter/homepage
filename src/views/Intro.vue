@@ -69,7 +69,7 @@
               'xl:h-128',
               'xl:w-128',
             ]"
-            src="images/me.webp"
+            :src=MeUrl
             :alt="t('general.name')"
           />
         </div>
@@ -78,13 +78,15 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" lang="ts">
 import { useI18n } from "vue-i18n";
 
 import SocialIcon from "@/components/SocialIcon.vue";
 import Image from "@/components/Image.vue";
 
 import BounceInDown from "@/transitions/BounceInDownWith3sDelay.vue";
+
+import MeUrl from "@/assets/images/me.webp";
 
 const { t } = useI18n();
 </script>

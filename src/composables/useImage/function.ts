@@ -1,9 +1,10 @@
 /**
- * Returns image loaded by webpack.
+ * Returns image loaded by vite.
+ * To be able to use the images with this function you need to import 
+ * the static asset and set the imported URL as path. 
  *
- * @param path path to the image which extends the base path
+ * @param path path to the image
  */
 export function useImage(path: string) {
-  return new URL('../../assets/' + path, import.meta.url).href;
-  //return import.meta.glob('../assets/' + path);
+  return new URL(path, import.meta.url).href;
 }
