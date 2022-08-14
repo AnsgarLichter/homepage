@@ -84,7 +84,9 @@
         "images": {
             "dhbw": "Corporate State University Baden-Wuerttemberg",
             "sew": "SEW EURODRIVE",
-            "china": "China"
+            "china": "China",
+            "hka": "Karlsruhe University of Applied Sciences",
+            "sap": "SAP SE"
         }
     },
     "featuredProjects": {

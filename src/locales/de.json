@@ -84,7 +84,9 @@
         "images": {
             "dhbw": "Duale Hochschule Baden-Württemberg",
             "sew": "SEW EURODRIVE",
-            "china": "China"
+            "china": "China",
+            "hka": "Hochschule Karlsruhe",
+            "sap": "SAP SE"
         }
     },
     "featuredProjects": {
