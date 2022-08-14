@@ -17,7 +17,6 @@
       <template #marker="{ item }">
         <font-awesome-icon
           v-if="item.icon"
-          v-if="item.icon"
           class="fa-lg text-black"
           :icon="[item.icon.prefix, item.icon.name]"
         />
@@ -58,7 +57,7 @@
   </div>
 </template>
 
-<script setup lang="ts" lang="ts">
+<script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -72,7 +71,7 @@ import { UseElementIsVisible } from "@/composables";
 
 import DhbwUrl from "@/assets/images/dhbw.webp";
 import ChinaUrl from "@/assets/images/china.webp";
-import SewUrl from "@/assets/images/sew.svg";
+import SewUrl from "@/assets/images/sew.webp";
 
 
 export interface Image {
