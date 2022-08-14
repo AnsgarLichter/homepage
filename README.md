@@ -50,25 +50,25 @@ At the moment the [conventional convetions of commitlint](https://github.com/con
 
 | Color           | Hex                                                                |
 | --------------- | ------------------------------------------------------------------ |
-| Primary         | ![#f2f2f2](https://via.placeholder.com/15/f2f2f2/000000?text=+) `#f2f2f2` |
-| Primary light   | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff` |
-| Primary dark    | ![#b9baba](https://via.placeholder.com/15/b9baba/000000?text=+) `#b9baba` |
-| Secondary       | ![#4d4d4d](https://via.placeholder.com/15/4d4d4d/000000?text=+) `#4d4d4d` |
-| Secondary light | ![#17191a](https://via.placeholder.com/15/17191a/000000?text=+) `#17191a` |
-| Secondary dark  | ![#707a80](https://via.placeholder.com/15/707a80/000000?text=+) `#707a80` |
-| Accent          | ![#007fad](https://via.placeholder.com/15/007fad/000000?text=+) `#007fad` |
+| Primary         | ![#f2f2f2](https://via.placeholder.com/15/f2f2f2/f2f2f2.png) `#f2f2f2` |
+| Primary light   | ![#ffffff](https://via.placeholder.com/15/ffffff/ffffff.png) `#ffffff` |
+| Primary dark    | ![#b9baba](https://via.placeholder.com/15/b9baba/b9baba.pmg) `#b9baba` |
+| Secondary       | ![#4d4d4d](https://via.placeholder.com/15/4d4d4d/4d4d4d.png) `#4d4d4d` |
+| Secondary light | ![#17191a](https://via.placeholder.com/15/17191a/17191a.png) `#17191a` |
+| Secondary dark  | ![#707a80](https://via.placeholder.com/15/707a80/707a80.png) `#707a80` |
+| Accent          | ![#007fad](https://via.placeholder.com/15/007fad/007fad.png) `#007fad` |
 
 ### Dark Mode
 
 | Color           | Hex                                                                |
 | --------------- | ------------------------------------------------------------------ |
-| Primary         | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000` |
-| Primary light   | ![#232324](https://via.placeholder.com/15/232324/000000?text=+) `#232324` |
-| Primary dark    | ![#434445](https://via.placeholder.com/15/434445/000000?text=+) `#434445` |
-| Secondary       | ![#c2c2c2](https://via.placeholder.com/15/c2c2c2/000000?text=+) `#c2c2c2` |
-| Secondary light | ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff` |
-| Secondary dark  | ![#b8c8d9](https://via.placeholder.com/15/b8c8d9/000000?text=+) `#b8c8d9` |
-| Accent          | ![#007fad](https://via.placeholder.com/15/007fad/000000?text=+) `#007fad` |
+| Primary         | ![#000000](https://via.placeholder.com/15/000000/000000.png) `#000000` |
+| Primary light   | ![#232324](https://via.placeholder.com/15/232324/232324.png) `#232324` |
+| Primary dark    | ![#434445](https://via.placeholder.com/15/434445/434445.png) `#434445` |
+| Secondary       | ![#c2c2c2](https://via.placeholder.com/15/c2c2c2/c2c2c2.png) `#c2c2c2` |
+| Secondary light | ![#ffffff](https://via.placeholder.com/15/ffffff/ffffff.png) `#ffffff` |
+| Secondary dark  | ![#b8c8d9](https://via.placeholder.com/15/b8c8d9/b8c8d9.png) `#b8c8d9` |
+| Accent          | ![#007fad](https://via.placeholder.com/15/007fad/007fad.png) `#007fad` |
 
 
 ## 🔍 Configurations
