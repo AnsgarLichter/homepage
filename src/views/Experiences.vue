@@ -99,6 +99,16 @@ export interface Experience {
   description: string;
 }
 
+export interface Experience {
+  images: Image[];
+  title: string;
+  yearStart: string;
+  yearEnd: string;
+  organisation: string;
+  location: string;
+  description: string;
+}
+
 const { t } = useI18n();
 const events = computed<TimelineEvent<Experience>[]>(() => [
   {
