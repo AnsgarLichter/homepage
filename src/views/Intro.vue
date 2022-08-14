@@ -93,7 +93,7 @@ const { t } = useI18n();
 
 <style scoped>
 .background {
-  background-image: url("src/assets/images/code.webp");
+  background-image: url("@/assets/images/code.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
