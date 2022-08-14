@@ -52,7 +52,7 @@ At the moment the [conventional convetions of commitlint](https://github.com/con
 | --------------- | ------------------------------------------------------------------ |
 | Primary         | ![#f2f2f2](https://via.placeholder.com/15/f2f2f2/f2f2f2.png) `#f2f2f2` |
 | Primary light   | ![#ffffff](https://via.placeholder.com/15/ffffff/ffffff.png) `#ffffff` |
-| Primary dark    | ![#b9baba](https://via.placeholder.com/15/b9baba/b9baba.pmg) `#b9baba` |
+| Primary dark    | ![#b9baba](https://via.placeholder.com/15/b9baba/b9baba.png) `#b9baba` |
 | Secondary       | ![#4d4d4d](https://via.placeholder.com/15/4d4d4d/4d4d4d.png) `#4d4d4d` |
 | Secondary light | ![#17191a](https://via.placeholder.com/15/17191a/17191a.png) `#17191a` |
 | Secondary dark  | ![#707a80](https://via.placeholder.com/15/707a80/707a80.png) `#707a80` |
