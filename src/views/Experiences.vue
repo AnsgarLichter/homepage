@@ -70,8 +70,10 @@ import FadeInUp from "@/transitions/FadeInUp.vue";
 import { UseElementIsVisible } from "@/composables";
 
 import DhbwUrl from "@/assets/images/dhbw.webp";
+import HkaUrl from "@/assets/images/hka.webp";
 import ChinaUrl from "@/assets/images/china.webp";
 import SewUrl from "@/assets/images/sew.webp";
+import SapUrl from "@/assets/images/sap.webp"; //TODO: Create image
 
 
 export interface Image {
@@ -117,12 +119,12 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
         { src: DhbwUrl, alt: t("experiences.images.dhbw") },
         { src: SewUrl, alt: t("experiences.images.sew") },
       ],
-      title: t("experiences.education.studies.title"),
-      yearStart: t("experiences.education.studies.yearStart"),
-      yearEnd: t("experiences.education.studies.yearEnd"),
-      organisation: t("experiences.education.studies.organisation"),
-      location: t("experiences.education.studies.location"),
-      description: t("experiences.education.studies.description"),
+      title: t("experiences.education.bachelor.title"),
+      yearStart: t("experiences.education.bachelor.yearStart"),
+      yearEnd: t("experiences.education.bachelor.yearEnd"),
+      organisation: t("experiences.education.bachelor.organisation"),
+      location: t("experiences.education.bachelor.location"),
+      description: t("experiences.education.bachelor.description"),
     },
     icon: {
       prefix: "fa",
@@ -156,6 +158,24 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
     icon: {
       prefix: "fa",
       name: "industry",
+    },
+  },
+  {
+    content: {
+      images: [
+        { src: HkaUrl, alt: t("experiences.images.hka") },
+        { src: SapUrl, alt: t("experiences.images.sap") },
+      ],
+      title: t("experiences.education.master.title"),
+      yearStart: t("experiences.education.master.yearStart"),
+      yearEnd: t("experiences.education.master.yearEnd"),
+      organisation: t("experiences.education.master.organisation"),
+      location: t("experiences.education.master.location"),
+      description: t("experiences.education.master.description"),
+    },
+    icon: {
+      prefix: "fa",
+      name: "user-graduate",
     },
   },
 ]);
