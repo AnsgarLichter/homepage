@@ -77,7 +77,7 @@
   </div>
 </template>
 
-<script setup lang="ts" lang="ts">
+<script setup lang="ts">
 import { computed, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -97,25 +97,25 @@ const openCV = () => {
   window.open(pathToCV.value, "_blank", "noopener");
 };
 
-const skills = reactive<BarChartItem[]><BarChartItem[]>([
+const skills = reactive<BarChartItem[]>([
   {
     label: t("about.technologies.ewm"),
-    styleClasses: [["bg-[#d62828]"]],
+    styleClasses: ["bg-[#d62828]"],
     width: "60%",
   },
   {
     label: t("about.technologies.ui5"),
-    styleClasses: [["bg-[#003049] dark:bg-[#0071AD]"]],
+    styleClasses: ["bg-[#003049] dark:bg-[#0071AD]"],
     width: "80%",
   },
   {
     label: t("about.technologies.abap"),
-    styleClasses: [["bg-[#f77f00]"]],
+    styleClasses: ["bg-[#f77f00]"],
     width: "80%",
   },
   {
     label: t("about.technologies.js"),
-    styleClasses: [["bg-[#fcbf49]"]],
+    styleClasses: ["bg-[#fcbf49]"],
     width: "70%",
   },
 ]);

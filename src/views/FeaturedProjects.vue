@@ -88,32 +88,30 @@
   </div>
 </template>
 
-<script setup lang="ts" lang="ts">
+<script setup lang="ts">
 import { computed } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 
-import ProjectIcon from "@/components/ProjectIcon.vue.vue";
+import ProjectIcon from "@/components/ProjectIcon.vue";
 import Image from "@/components/Image.vue";
-import type { ImageProperties } from "@/components/Image.vue.vue";
 import type { ImageProperties } from "@/components/Image.vue";
 
-import FadeInUp from "@/transitions/FadeInUp.vue.vue";
+import FadeInUp from "@/transitions/FadeInUp.vue";
 
 import { UseElementIsVisible } from "@/composables";
 
 import type { Icon } from "@/fontAwesomeIcons";
-//TODO: Transform images to webp for better speed
-import CatchTheTrainFavoritesUrl from "@/assets/projects/catchTheTrain/favorites.png";
-import CatchTheTrainFilterUrl from "@/assets/projects/catchTheTrain/filter.png";
-import CatchTheTrainStopUrl from "@/assets/projects/catchTheTrain/stop.png";
+import CatchTheTrainFavoritesUrl from "@/assets/projects/catchTheTrain/favorites.webp";
+import CatchTheTrainFilterUrl from "@/assets/projects/catchTheTrain/filter.webp";
+import CatchTheTrainStopUrl from "@/assets/projects/catchTheTrain/stop.webp";
 
-import DhbwAppMensaUrl from "@/assets/projects/dhbwApp/mensa.png";
-import DhbwAppOverviewUrl from "@/assets/projects/dhbwApp/overview.png";
-import DhbwAppRaplaUrl from "@/assets/projects/dhbwApp/rapla.png";
+import DhbwAppMensaUrl from "@/assets/projects/dhbwApp/mensa.webp";
+import DhbwAppOverviewUrl from "@/assets/projects/dhbwApp/overview.webp";
+import DhbwAppRaplaUrl from "@/assets/projects/dhbwApp/rapla.webp";
 
-import FunnyFartCalculateUrl from "@/assets/projects/funnyFart/calculate.png";
-import FunnyFartFormulaUrl from "@/assets/projects/funnyFart/formula.png";
-import FunnyFartResultUrl from "@/assets/projects/funnyFart/result.png";
+import FunnyFartCalculateUrl from "@/assets/projects/funnyFart/calculate.webp";
+import FunnyFartFormulaUrl from "@/assets/projects/funnyFart/formula.webp";
+import FunnyFartResultUrl from "@/assets/projects/funnyFart/result.webp";
 
 
 export interface Link {
@@ -135,7 +133,7 @@ export interface Project {
 
 const { t } = useI18n();
 
-const featuredProjects = computed<Project[]><Project[]>(() => [
+const featuredProjects = computed<Project[]>(() => [
   {
     images: [
       {
@@ -237,7 +235,7 @@ const featuredProjects = computed<Project[]><Project[]>(() => [
   },
 ]);
 
-const icons: Record<string, Icon>: Record<string, Icon> = {
+const icons: Record<string, Icon> = {
   googlePlay: {
     prefix: "fab",
     name: "google-play",

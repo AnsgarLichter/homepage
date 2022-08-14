@@ -51,8 +51,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-
 import Image from "@/components/Image.vue";
 
 export interface CardImage {

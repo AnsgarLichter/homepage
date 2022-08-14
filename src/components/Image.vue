@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults, defineProps, defineEmits, ref, watch } from "vue";
+import { withDefaults, ref, watch } from "vue";
 import { useImage } from "@/composables";
 
 import type { Icon } from "@/fontAwesomeIcons";
