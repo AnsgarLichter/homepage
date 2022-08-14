@@ -43,9 +43,9 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults, defineProps } from "vue";
+import { withDefaults } from "vue";
 
-import { Icon } from "@/fontAwesomeIcons";
+import type { Icon } from "@/fontAwesomeIcons";
 
 export interface TimelineEvent<T> {
   icon?: Icon;

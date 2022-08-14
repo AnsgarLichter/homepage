@@ -3,7 +3,7 @@
     <NavigationBar :items="navigationItems">
       <template #start>
         <Image
-          src="images/brand.webp"
+          :src="BrandUrl"
           alt="Ansgar Lichter"
           :styleClasses="['h-12', 'w-12', 'sm:mr-6', 'sm:ml-8']"
         />
@@ -48,10 +48,21 @@ import type { Ref } from "vue";
 import { computed, ref } from "@vue/reactivity";
 import { useI18n } from "vue-i18n";
 import NavigationBar from "@/components/NavigationBar.vue";
-import type { NavigationItem } from "@/components/NavigationBar.vue";
+import Image from "@/components/Image.vue";
+
 import { useToggle, useDarkMode, useOnMounted } from "@/composables";
+
 import { Locales } from "@/i18n";
-import Image from "./Image.vue";
+
+import BrandUrl from "@/assets/images/brand.webp";
+import DeUrl from "../assets/images/de.webp";
+import GbUrl from "../assets/images/gb.webp";
+
+import type { NavigationItem } from "@/components/NavigationBar.vue";
+
+console.log(BrandUrl);
+console.log(DeUrl);
+
 const { t, locale } = useI18n();
 const navigationItems = computed<NavigationItem[]>(() => [
   {
@@ -79,13 +90,15 @@ const navigationItems = computed<NavigationItem[]>(() => [
     href: "#changeColorMode",
   },
 ]);
-const imagePath = ref<string>("images/gb.webp");
+const imagePath = ref<string>(GbUrl);
+
 function updateImagePath(locale: Ref<string>) {
   if (locale.value.startsWith(Locales.DE)) {
-    return "images/de.webp";
+    return DeUrl;
   }
-  return "images/gb.webp";
+  return GbUrl;
 }
+
 function switchLocale() {
   if (locale.value.startsWith(Locales.DE)) {
     locale.value = Locales.EN;
@@ -94,6 +107,7 @@ function switchLocale() {
   }
   imagePath.value = updateImagePath(locale);
 }
+
 useOnMounted(() => {
   locale.value = window.navigator.language;
   imagePath.value = updateImagePath(locale);

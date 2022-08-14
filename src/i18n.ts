@@ -1,7 +1,7 @@
 import { createI18n } from "vue-i18n";
 
-import * as en from './locales/en.json';
-import * as de from './locales/de.json';
+import * as en from '@/locales/en.json';
+import * as de from '@/locales/de.json';
 
 export enum Locales {
   EN = 'en',

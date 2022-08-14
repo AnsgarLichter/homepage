@@ -229,8 +229,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineExpose } from "vue";
-
 import { ref } from "@vue/reactivity";
 
 import { useI18n } from "vue-i18n";

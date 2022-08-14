@@ -1,48 +1,49 @@
 # Homepage
-This is the latest version of [ansgarlichter.online](https://ansgarlichter.online) hosted with [GitHub Pages](https://pages.github.com/) and [Cloudflare](https://www.cloudflare.com/).
+
+This is the repository of my personal portfolio homepage [ansgarlichter.online](https://ansgarlichter.online) hosted with [GitHub Pages](https://pages.github.com/) and [Cloudflare](https://www.cloudflare.com/).
+
+## 📜 Dependency Overview
+
+* [Vite](https://vitejs.dev/) as build tool
+* [Vue.js](https://vuejs.org/) as framework for web development
+* [Tailwind.css](https://tailwindcss.com/) to handle CSS easier
+* [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to ensure consistent commit messages
 
 ## 🛠 Installation & Set Up
 
-1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+1. Install and use the correct version of Node using [Node Version Manager](https://github.com/nvm-sh/nvm)
 
-   ```
-   nvm install
-   ```
 2. Install dependencies
 
-   ```
+   ```bash
    npm install
    ```
 
-3. Start the development server (hot-reload is supported)
+3. Start vite's development server (hot module reload is supported)
 
-   ```
-   vue serve
+   ```bash
+   npm run dev
    ```
 
 ## 🚀 Building and Running for Production
 
 1. Generate a full static production build
 
-   ```
-   vue build
-   ```
-
-2. Install a Node.js static file server
-   
-   ```
-   npm install -g serve
-   ```
-  
-3. Preview the site as it will appear once deployed
-
-   ```
-   serve -s dist
+   ```bash
+   npm run build
    ```
 
-## 📜Committing Changes
-This project uses [husky](https://typicode.github.io/husky/#/) and [commitlint](https://commitlint.js.org/#/) to validate commit messages.
-At the moment the [conventional convetions of commitlint](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) are used. These conventions are based on [Conventional Commits](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional).
+2. Run the preview of the production build
+
+   ```bash
+   npm run preview
+   ```
+
+## 📜 Committing Changes
+
+This projects uses the [Conventional Commits](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) convetion to ensure the quality
+of the commit messages.
+The messages are checked while committing using [husky](https://typicode.github.io/husky/#/) and [commitlint](https://commitlint.js.org/#/).
 
 ## 🎨 Color Reference
 
@@ -70,13 +71,20 @@ At the moment the [conventional convetions of commitlint](https://github.com/con
 | Secondary dark  | ![#b8c8d9](https://via.placeholder.com/15/b8c8d9/b8c8d9.png) `#b8c8d9` |
 | Accent          | ![#007fad](https://via.placeholder.com/15/007fad/007fad.png) `#007fad` |
 
-
 ## 🔍 Configurations
+
+### Vite configuration
+
+See [Configuration Reference](https://vitejs.dev/config/).
+
 ### Vue configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Tailwind configuration
+
 See [Configuration Reference](https://tailwindcss.com/docs/configuration).
 
 ### Commitlint configuration
+
 See [Commitlint rules](https://commitlint.js.org/#/reference-rules).

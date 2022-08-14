@@ -101,6 +101,18 @@ import FadeInUp from "@/transitions/FadeInUp.vue";
 import { UseElementIsVisible } from "@/composables";
 
 import type { Icon } from "@/fontAwesomeIcons";
+import CatchTheTrainFavoritesUrl from "@/assets/projects/catchTheTrain/favorites.webp";
+import CatchTheTrainFilterUrl from "@/assets/projects/catchTheTrain/filter.webp";
+import CatchTheTrainStopUrl from "@/assets/projects/catchTheTrain/stop.webp";
+
+import DhbwAppMensaUrl from "@/assets/projects/dhbwApp/mensa.webp";
+import DhbwAppOverviewUrl from "@/assets/projects/dhbwApp/overview.webp";
+import DhbwAppRaplaUrl from "@/assets/projects/dhbwApp/rapla.webp";
+
+import FunnyFartCalculateUrl from "@/assets/projects/funnyFart/calculate.webp";
+import FunnyFartFormulaUrl from "@/assets/projects/funnyFart/formula.webp";
+import FunnyFartResultUrl from "@/assets/projects/funnyFart/result.webp";
+
 
 export interface Link {
   href: string;
@@ -125,15 +137,15 @@ const featuredProjects = computed<Project[]>(() => [
   {
     images: [
       {
-        src: "projects/catchTheTrain/favorites.png",
+        src: CatchTheTrainFavoritesUrl,
         alt: t("featuredProjects.catchTheTrain.favoritesAlt"),
       },
       {
-        src: "projects/catchTheTrain/stop.png",
+        src: CatchTheTrainStopUrl,
         alt: t("featuredProjects.catchTheTrain.stopAlt"),
       },
       {
-        src: "projects/catchTheTrain/filter.png",
+        src: CatchTheTrainFilterUrl,
         alt: t("featuredProjects.catchTheTrain.filterAlt"),
       },
     ],
@@ -154,15 +166,15 @@ const featuredProjects = computed<Project[]>(() => [
   {
     images: [
       {
-        src: "projects/dhbwApp/overview.png",
+        src: DhbwAppOverviewUrl,
         alt: t("featuredProjects.dhbwApp.overviewAlt"),
       },
       {
-        src: "projects/dhbwApp/rapla.png",
+        src: DhbwAppRaplaUrl,
         alt: t("featuredProjects.dhbwApp.raplaAlt"),
       },
       {
-        src: "projects/dhbwApp/mensa.png",
+        src: DhbwAppMensaUrl,
         alt: t("featuredProjects.dhbwApp.mensaAlt"),
       },
     ],
@@ -190,15 +202,15 @@ const featuredProjects = computed<Project[]>(() => [
   {
     images: [
       {
-        src: "projects/funnyFart/formula.png",
+        src: FunnyFartFormulaUrl,
         alt: t("featuredProjects.funnyFart.formulaAlt"),
       },
       {
-        src: "projects/funnyFart/calculate.png",
+        src: FunnyFartCalculateUrl,
         alt: t("featuredProjects.funnyFart.calculateAlt"),
       },
       {
-        src: "projects/funnyFart/result.png",
+        src: FunnyFartResultUrl,
         alt: t("featuredProjects.funnyFart.resultAlt"),
       },
     ],

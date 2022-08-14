@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults, defineProps, defineExpose } from "vue";
+import { withDefaults } from "vue";
 import { ref } from "@vue/reactivity";
 import type { Icon } from "@/fontAwesomeIcons";
 export interface DialogProperties {
