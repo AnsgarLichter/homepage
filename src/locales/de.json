@@ -18,7 +18,7 @@
             "linkDescription": "Link zu meinem Xing-Profil"
         },
         "linkedin": {
-            "linkDescription": "Link zu meinem Linkedin-Profil"
+            "linkDescription": "Link zu meinem LinkedIn-Profil"
         },
         "mailTo": {
             "linkDescription": "Link, um mich per Mail zu kontakieren"
@@ -26,7 +26,7 @@
     },
     "intro": {
         "hello": "Hallo, ich bin",
-        "jobTitle": "Softwareentwickler SAP EWM",
+        "jobTitle": "Softwareentwickler",
         "studies": "B. Sc. Wirtschaftsinformatik"
     },
     "about": {
@@ -34,8 +34,9 @@
         "alt": "Herzlich Wilkommen auf meiner Webseite!",
         "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
         "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
-        "description-3": "habe ich begonnen bei SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten zu arbeiten.",
-        "description-4": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
+        "description-3": "habe ich bei der SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten gearbeitet.",
+        "description-4": "Aktuell studiere ich als dualer Masterand bei der SAP Informatik.",
+        "description-5": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
         "technologies": {
             "ewm": "SAP EWM",
             "ui5": "SAPUI5",

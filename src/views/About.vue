@@ -31,8 +31,9 @@
             <div v-visible="isVisible" class="text-left text-base text-secondary mx-10 lg:mx-0">
               {{ t("about.description-1") }}<br class="hidden lg:block" />
               {{ t("about.description-2") }}
-              {{ t("about.description-3") }}<br />
-              {{ t("about.description-4") }}
+              {{ t("about.description-3") }}
+              {{ t("about.description-4") }}<br />
+              {{ t("about.description-5") }}
             </div>
           </FadeInUp>
         </UseElementIsVisible>
