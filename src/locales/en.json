@@ -46,7 +46,7 @@
     "experiences": {
         "title": "Where I've Worked and Studied",
         "education": {
-            "studies": {
+            "bachelor": {
                 "title": "B. Sc. Business Informatics",
                 "yearStart": "2017",
                 "yearEnd": "2020",
@@ -61,13 +61,21 @@
                 "organisation": "Suzhou Motors Ltd.",
                 "location": "Suzhou, China",
                 "description": "Going live of selected pilot machines with SAP MES and subsequent support of the employees on site. The next step was the analysis of further manufacturing processes to prepare the basis for the subsequent rollout steps."
+            },
+            "master": {
+                "title": "M. Sc. Informatics",
+                "yearStart": "2022",
+                "yearEnd": "exp. 2024",
+                "organisation": "Hochschule Karlsruhe",
+                "location": "Karlsruhe, Germany",
+                "description": "Study of informatics with a major in software engineering in combination with practical experience in various departments of SAP."
             }
         },
         "work": {
             "itpa": {
                 "title": "IT Software Developer SAP EWM",
                 "yearStart": "2020",
-                "yearEnd": "Today",
+                "yearEnd": "2022",
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Germany",
                 "description": "Participated in various projects in the context of SAP EWM. Especially a template for manual warehouses in the group of companies with SAPUI5 applications in the SAP FIORI Launchpad for mobile operation by warehouse employees."
@@ -76,7 +84,9 @@
         "images": {
             "dhbw": "Corporate State University Baden-Wuerttemberg",
             "sew": "SEW EURODRIVE",
-            "china": "China"
+            "china": "China",
+            "hka": "Karlsruhe University of Applied Sciences",
+            "sap": "SAP SE"
         }
     },
     "featuredProjects": {

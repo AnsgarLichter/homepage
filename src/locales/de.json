@@ -46,13 +46,13 @@
     "experiences": {
         "title": "Meine Erfahrungen",
         "education": {
-            "studies": {
+            "bachelor": {
                 "title": "B. Sc. Wirtschaftsinformatik",
                 "yearStart": "2017",
                 "yearEnd": "2020",
                 "organisation": "Duale Hochschule",
                 "location": "Karlsruhe, Deutschland",
-                "description": "Duales Studium Wirtschaftsinformatik mit der Studienrichtung Software Engineering in Kombination mit Erfahrungen im Entwickeln mit ABAP und SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
+                "description": "Duales Studium der Wirtschaftsinformatik mit der Studienrichtung Software Engineering in Kombination mit Erfahrungen im Entwickeln mit ABAP und SAPUI5 in diversen SAP-Bereichen in den Praxisphasen."
             },
             "abroad": {
                 "title": "Auslandsaufenthalt: Einführung von SAP MES",
@@ -61,13 +61,21 @@
                 "organisation": "Suzhou Motors Ltd.",
                 "location": "Suzhou, China",
                 "description": "Produktivnahme von ausgewählten Pilotmaschinen mit SAP MES und anschließendem Support der Mitarbeiter vor Ort. Der nächste Schritt war Analyse der weiteren Fertigungsprozesse, um die Grundlage für die darauffolgenden Rollout-Schritte vorzubereiten."
+            },
+            "master": {
+                "title": "M. Sc. Informatik",
+                "yearStart": "2022",
+                "yearEnd": "voraussichtl. 2024",
+                "organisation": "Hochschule Karlsruhe",
+                "location": "Karlsruhe, Deutschland",
+                "description": "Studium der Informatik mit der Studienrichtung Software Engineering in Kombination mit praktischer Erfahrung in verschiedenen Abteilungen der SAP."
             }
         },
         "work": {
             "itpa": {
                 "title": "Softwareentwickler SAP EWM",
                 "yearStart": "2020",
-                "yearEnd": "Today",
+                "yearEnd": "2022",
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Deutschland",
                 "description": "Mitarbeit in diversen Projekten im Kontext von SAP EWM. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
@@ -76,7 +84,9 @@
         "images": {
             "dhbw": "Duale Hochschule Baden-Württemberg",
             "sew": "SEW EURODRIVE",
-            "china": "China"
+            "china": "China",
+            "hka": "Hochschule Karlsruhe",
+            "sap": "SAP SE"
         }
     },
     "featuredProjects": {
