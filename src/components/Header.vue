@@ -109,7 +109,6 @@ function switchLocale() {
 }
 
 useOnMounted(() => {
-  locale.value = window.navigator.language;
   imagePath.value = updateImagePath(locale);
 });
 const isDarkMode = useDarkMode();
