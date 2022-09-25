@@ -122,7 +122,7 @@
         },
         "dhbwApp": {
             "title": "DHBW App",
-            "description": "Die App der DHBW Karlsruhe wird stetig von Studierenden der Wirtschaftsinformatik weiterentwickelt. Hierbei habe ich in einer 2er-Team generell die verwendeten Frameworks gewartet, sowie die Anzeige des Vorlesungsplans, die Anzeige der Live-Abfahrtszeiten, den Speiseplan und die Übersichtsseite nach Aktualisierungen der dahinter liegenden APIs wieder funktionsfähig gestaltet und den Quellcode gewartet.",
+            "description": "Die App der DHBW Karlsruhe wird stetig von Studierenden der Wirtschaftsinformatik weiterentwickelt. Hierbei habe ich in einem 2er-Team generell die verwendeten Frameworks gewartet, sowie die Anzeige des Vorlesungsplans, die Anzeige der Live-Abfahrtszeiten, den Speiseplan und die Übersichtsseite nach Aktualisierungen der dahinter liegenden APIs wieder funktionsfähig gestaltet und den Quellcode gewartet.",
             "mensaAlt": "Diese Seite zeigt den aktuellen Speiseplan der Mensa der Hochschule.",
             "raplaAlt": "Diese Seite visualisiert den Vorlesungsplan für den Kurs, den man in den Einstellungen hinterlegt hat.",
             "overviewAlt": "Diese Seite bietet eine Übersicht über die wichtigsten Aktivitäten: den heutigen Speiseplan, die heutigen Vorlesungen und die nächsten Abfahrten der S-Bahnen an der nächsten Haltestelle.",
