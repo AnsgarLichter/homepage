@@ -8,7 +8,7 @@
       @click="emit('click', $event)"
     />
     <div
-      class="a-image-preview-indicator flex absolute left-0 top-0 w-full h-full items-center justify-center ease-in delay-100 cursor-pointer"
+      class="a-image-preview-indicator flex absolute left-0 top-0 w-full h-full items-center justify-center ease-in delay-100 cursor-pointer opacity-0 transition-opacity"
       v-if="properties.preview"
       @click="openPreview"
     >
@@ -107,7 +107,11 @@ function closePreview() {
 
 <style scoped>
 .a-image-container-preview:hover {
-  filter: brightness(40%);
+  filter: brightness(30%);
+}
+
+.a-image-container:hover .a-image-preview-indicator {
+  opacity: 1;
 }
 
 .a-preview-outer {
