@@ -73,7 +73,7 @@ import DhbwUrl from "@/assets/images/dhbw.webp";
 import HkaUrl from "@/assets/images/hka.webp";
 import ChinaUrl from "@/assets/images/china.webp";
 import SewUrl from "@/assets/images/sew.webp";
-import SapUrl from "@/assets/images/sap.webp"; //TODO: Create image
+import SapUrl from "@/assets/images/sap.webp";
 
 
 export interface Image {
