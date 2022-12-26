@@ -2,12 +2,12 @@
   <div class="bg-primaryLight h-12 fixed inset-x-0 bottom-0 border-t-2 border-accent">
     <div class="flex flex-row h-full">
       <div
-        class="flex flex-col justify-center items-start md:items-center w-1/2 sm:w-1/3 text-secondary"
+        class="flex flex-col justify-center items-start md:items-center w-1/2 sm:w-1/4 md:w-1/3 text-secondary"
       >
-        <div class="ml-4 sm:ml-12" bg="dark" variant="dark">&copy; {{ currentYear }}</div>
+        <div class="ml-4 sm:ml-12">&copy; {{ currentYear }}</div>
       </div>
 
-      <div class="hidden sm:flex flex-col justify-center w-1/3">
+      <div class="hidden sm:flex sm:w-1/2 flex-col justify-center md:w-1/3">
         <div class="flex flex-row justify-center space-x-3">
           <SocialIcon
             href="https://github.com/AnsgarLichter"
@@ -33,10 +33,10 @@
       </div>
 
       <div
-        class="flex flex-col justify-center items-center sm:items-center w-1/2 sm:w-1/3"
+        class="flex flex-col justify-center items-center sm:items-center w-1/2 md:w-1/3"
       >
         <div
-          class="flex flex-row mr-4 sm:mr-12 text-secondary text-center whitespace-pre"
+          class="flex flex-row mr-24 sm:mr-4 text-secondary text-center whitespace-pre"
         >
           <div class="cursor-pointer" @click="showImprint">
             {{ t("footer.imprint") }}
@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "@vue/reactivity";
+import { ref } from "vue";
 
 import { useI18n } from "vue-i18n";
 

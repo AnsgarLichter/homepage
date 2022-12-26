@@ -73,7 +73,7 @@ import DhbwUrl from "@/assets/images/dhbw.webp";
 import HkaUrl from "@/assets/images/hka.webp";
 import ChinaUrl from "@/assets/images/china.webp";
 import SewUrl from "@/assets/images/sew.webp";
-import SapUrl from "@/assets/images/sap.webp"; //TODO: Create image
+import SapUrl from "@/assets/images/sap.webp";
 
 
 export interface Image {
@@ -91,58 +91,24 @@ export interface Experience {
   description: string;
 }
 
-export interface Experience {
-  images: Image[];
-  title: string;
-  yearStart: string;
-  yearEnd: string;
-  organisation: string;
-  location: string;
-  description: string;
-}
-
-export interface Experience {
-  images: Image[];
-  title: string;
-  yearStart: string;
-  yearEnd: string;
-  organisation: string;
-  location: string;
-  description: string;
-}
-
 const { t } = useI18n();
 const events = computed<TimelineEvent<Experience>[]>(() => [
   {
     content: {
       images: [
-        { src: DhbwUrl, alt: t("experiences.images.dhbw") },
-        { src: SewUrl, alt: t("experiences.images.sew") },
+        { src: HkaUrl, alt: t("experiences.images.hka") },
+        { src: SapUrl, alt: t("experiences.images.sap") },
       ],
-      title: t("experiences.education.bachelor.title"),
-      yearStart: t("experiences.education.bachelor.yearStart"),
-      yearEnd: t("experiences.education.bachelor.yearEnd"),
-      organisation: t("experiences.education.bachelor.organisation"),
-      location: t("experiences.education.bachelor.location"),
-      description: t("experiences.education.bachelor.description"),
+      title: t("experiences.education.master.title"),
+      yearStart: t("experiences.education.master.yearStart"),
+      yearEnd: t("experiences.education.master.yearEnd"),
+      organisation: t("experiences.education.master.organisation"),
+      location: t("experiences.education.master.location"),
+      description: t("experiences.education.master.description"),
     },
     icon: {
       prefix: "fa",
       name: "user-graduate",
-    },
-  },
-  {
-    content: {
-      images: [
-        { src: ChinaUrl, alt: t("experiences.images.china") },
-        { src: SewUrl, alt: t("experiences.images.sew") },
-      ],
-      title: t("experiences.education.abroad.title"),
-      yearStart: t("experiences.education.abroad.yearStart"),
-      yearEnd: t("experiences.education.abroad.yearEnd"),
-      organisation: t("experiences.education.abroad.organisation"),
-      location: t("experiences.education.abroad.location"),
-      description: t("experiences.education.abroad.description"),
     },
   },
   {
@@ -163,21 +129,35 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
   {
     content: {
       images: [
-        { src: HkaUrl, alt: t("experiences.images.hka") },
-        { src: SapUrl, alt: t("experiences.images.sap") },
+        { src: ChinaUrl, alt: t("experiences.images.china") },
+        { src: SewUrl, alt: t("experiences.images.sew") },
       ],
-      title: t("experiences.education.master.title"),
-      yearStart: t("experiences.education.master.yearStart"),
-      yearEnd: t("experiences.education.master.yearEnd"),
-      organisation: t("experiences.education.master.organisation"),
-      location: t("experiences.education.master.location"),
-      description: t("experiences.education.master.description"),
+      title: t("experiences.education.abroad.title"),
+      yearStart: t("experiences.education.abroad.yearStart"),
+      yearEnd: t("experiences.education.abroad.yearEnd"),
+      organisation: t("experiences.education.abroad.organisation"),
+      location: t("experiences.education.abroad.location"),
+      description: t("experiences.education.abroad.description"),
+    },
+  },
+  {
+    content: {
+      images: [
+        { src: DhbwUrl, alt: t("experiences.images.dhbw") },
+        { src: SewUrl, alt: t("experiences.images.sew") },
+      ],
+      title: t("experiences.education.bachelor.title"),
+      yearStart: t("experiences.education.bachelor.yearStart"),
+      yearEnd: t("experiences.education.bachelor.yearEnd"),
+      organisation: t("experiences.education.bachelor.organisation"),
+      location: t("experiences.education.bachelor.location"),
+      description: t("experiences.education.bachelor.description"),
     },
     icon: {
       prefix: "fa",
       name: "user-graduate",
     },
-  },
+  }
 ]);
 </script>
 

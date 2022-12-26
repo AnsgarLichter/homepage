@@ -1,5 +1,5 @@
 <template>
-  <div class="a-image-container relative">
+  <div class="a-image-container relative" :class="{'a-image-container-preview': properties.preview}">
     <img
       :class="styleClasses"
       :src="loadedSource"
@@ -8,7 +8,7 @@
       @click="emit('click', $event)"
     />
     <div
-      class="a-image-preview-indicator flex absolute left-0 top-0 w-full h-full items-center justify-center opacity-0 transition-opacity ease-in delay-100 bg-primaryLight"
+      class="a-image-preview-indicator flex absolute left-0 top-0 w-full h-full items-center justify-center ease-in delay-100 cursor-pointer"
       v-if="properties.preview"
       @click="openPreview"
     >
@@ -71,15 +71,16 @@ const properties = withDefaults(defineProps<ImageProperties>(), {
     return {
       prefix: "fas",
       name: "search",
-      styleClasses: ["text-3xl", "text-accent"],
+      styleClasses: ["text-3xl", "text-accent"]
     };
   },
-  previewOuterBackgroundColor: "rgba(0, 0, 0, 0.7)",
+  previewOuterBackgroundColor: "rgba(0, 0, 0, 0.7)"
 });
 
 const emit = defineEmits<ImageEventEmits>();
 
 const loadedSource = ref(useImage(properties.src));
+
 function onSourceChanged() {
   loadedSource.value = useImage(properties.src);
 }
@@ -87,6 +88,7 @@ function onSourceChanged() {
 watch(() => properties.src, onSourceChanged);
 
 const isPreviewVisible = ref(false);
+
 function changePreviewVisibility() {
   isPreviewVisible.value = !isPreviewVisible.value;
 }
@@ -104,12 +106,14 @@ function closePreview() {
 </script>
 
 <style scoped>
-.a-image-container:hover .a-image-preview-indicator {
-  opacity: 1;
+.a-image-container-preview:hover {
+  filter: brightness(40%);
 }
+
 .a-preview-outer {
   z-index: 50000;
 }
+
 .a-preview {
   z-index: 50050;
 }
