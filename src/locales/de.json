@@ -35,13 +35,15 @@
         "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
         "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
         "description-3": "habe ich bei der SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten gearbeitet.",
-        "description-4": "Aktuell studiere ich als dualer Masterand bei der SAP Informatik.",
+        "description-4": "Aktuell studiere ich als dualer Masterand bei der SAP Informatik an der Hochschule Karlsruhe.",
         "description-5": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
         "technologies": {
             "ewm": "SAP EWM",
             "ui5": "SAPUI5",
             "abap": "ABAP",
-            "js": "JAVA SCRIPT"
+            "js": "JavaScript",
+            "ts": "TypeScript",
+            "cap": "CAP"
         }
     },
     "experiences": {
@@ -70,6 +72,14 @@
                 "organisation": "Hochschule Karlsruhe",
                 "location": "Karlsruhe, Deutschland",
                 "description": "Studium der Informatik mit der Studienrichtung Software Engineering in Kombination mit praktischer Erfahrung in verschiedenen Abteilungen der SAP."
+            },
+            "scholarship": {
+                "title": "Deutschlandstipendium",
+                "yearStart": "2023",
+                "yearEnd": "2024",
+                "organisation": "Hochschule Karlsruhe",
+                "location": "Karlsruhe, Germany",
+                "description": "Dieses Stipendium wird an Studierende vergeben, die sich durch außergewöhnliche akademische Leistungen, soziales Engagement und persönliche Erfolge auszeichnen. Das Stipendium wird kofinanziert, wobei die Hälfte der Mittel großzügig von der Bundesregierung und die andere Hälfte von Partnern aus der Wirtschaft zur Verfügung gestellt wird."
             }
         },
         "work": {
@@ -87,23 +97,24 @@
             "sew": "SEW EURODRIVE",
             "china": "China",
             "hka": "Hochschule Karlsruhe",
-            "sap": "SAP SE"
+            "sap": "SAP SE",
+            "scholarhsip": "Germany Scholarship (Deutschlandstipendium)"
         }
     },
     "featuredProjects": {
         "title": "Einige Dinge, die ich gebaut habe",
         "featured": "Featured Projekt",
-        "funnyFart": {
-            "title": "Funny Fart",
-            "description": "Funny Fart ist eine native Android App, dessen Funktionalität das Bewerten und Speichern von eigenen Fürzen ist. Dafür nutzt die App eine Formel von Beano Studies. Die Funktionalitäten der App umfassen das Berechnen von Scores von Fürzen, das Speichern von berechneten Scores, die Aufnahme von Audios der Fürze und das Speichern dieser in einer lokalen Datenbank.",
-            "android": "Android",
-            "java": "Java",
-            "mobile": "Native App",
-            "formulaAlt": "Diese Seite erklärt die Formel von britischen Wissenschaftern, um zu bestimmen, wie witzig ein Furz ist.",
-            "calculateAlt": "Auf dieser Seite ist es möglich mit der Formel von britischen Wissenschaftlern zu berechnen, wie witzig Ihr eigener Furz ist.",
-            "resultAlt": "Diese Seite visualisiert den Score, der mit Hilfe der Formel berechnet worden ist!",
+        "ExportKindleClippingsToNotion": {
+            "title": "Export Kindle Clippings To Notion",
+            "description": "Einfache und schnelle Synchronisation Ihrer Kindle-Clippings. Schließen Sie Ihren Kindle an Ihren PC an und führen Sie das Konsolenanwendung aus.",
+            "dotnet": "C#",
+            "notionAPI": "Notion API",
+            "cli": "CLI",
+            "file": "Diese Seite zeigt das Ausgangsformat, wenn Sie die Clippings-Datei Ihres Kindles öffnen",
+            "list": "Die Übersicht in Notion über alle synchronisierten Bücher.",
+            "detail": "Die Detail-Ansicht eines Buches, in der Sie die Clippings des Buches sehen",
             "linkDescription": {
-                "googlePlay": "Link zu der App im Google Play Store",
+                "nuget": "Link zu der App auf Nuget",
                 "github": "Link zum Github Repository"
             }
         },
@@ -139,7 +150,7 @@
         }
     },
     "otherProjects": {
-        "title": "Andere nennenswerte Projekte",
+        "title": "Weitere nennenswerte Projekte",
         "justDoIt": {
             "title": "Just Do It",
             "description": "Eine serverseitige MVC-Webanwendung zum Management von To-DOs in Java, entwickelt während einer Vorlesung in meinem Studium. Die Anwendung nutzt hierfür die Jakarta Enterprise Edition.",

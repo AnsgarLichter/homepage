@@ -85,14 +85,24 @@ const openCV = () => {
 const skills = reactive<BarChartItem[]>
   ([
     {
-      label: t("about.technologies.ewm"),
-      styleClasses: ["bg-[#d62828]"],
-      width: "60%",
-    },
-    {
       label: t("about.technologies.ui5"),
       styleClasses: ["bg-[#003049] dark:bg-[#0071AD]"],
       width: "80%",
+    },
+    {
+      label: t("about.technologies.cap"),
+      styleClasses: ["bg-[#5a7a94] dark:bg-[#5a7a94]"],
+      width: "70%",
+    },
+    {
+      label: t("about.technologies.js"),
+      styleClasses: ["bg-[#fcbf49]"],
+      width: "80%",
+    },
+    {
+      label: t("about.technologies.ts"),
+      styleClasses: ["bg-[#3178c6]"],
+      width: "70%",
     },
     {
       label: t("about.technologies.abap"),
@@ -100,9 +110,9 @@ const skills = reactive<BarChartItem[]>
       width: "80%",
     },
     {
-      label: t("about.technologies.js"),
-      styleClasses: ["bg-[#fcbf49]"],
-      width: "70%",
+      label: t("about.technologies.ewm"),
+      styleClasses: ["bg-[#d62828]"],
+      width: "60%",
     },
   ]);
 </script>

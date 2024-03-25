@@ -6,6 +6,7 @@ import {
   faXing,
   faLinkedin,
   faGooglePlay,
+  faMicrosoft
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -50,6 +51,7 @@ library.add(faExternalLinkAlt);
 library.add(faFolder);
 library.add(faSearch);
 library.add(faMoon);
+library.add(faMicrosoft);
 
 export interface Icon {
   prefix: string;
