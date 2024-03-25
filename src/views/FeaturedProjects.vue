@@ -68,6 +68,12 @@
                   :icon="icons.googlePlay"
                 />
                 <ProjectIcon
+                  v-if="project.links.nuget"
+                  :href="project.links.nuget.href"
+                  :linkDescription="project.links.nuget.description"
+                  :icon="icons.nuget"
+                />
+                <ProjectIcon
                   v-if="project.links.github"
                   :href="project.links.github.href"
                   :linkDescription="project.links.github.description"
@@ -109,9 +115,9 @@ import DhbwAppMensaUrl from "@/assets/projects/dhbwApp/mensa.webp";
 import DhbwAppOverviewUrl from "@/assets/projects/dhbwApp/overview.webp";
 import DhbwAppRaplaUrl from "@/assets/projects/dhbwApp/rapla.webp";
 
-import FunnyFartCalculateUrl from "@/assets/projects/funnyFart/calculate.webp";
-import FunnyFartFormulaUrl from "@/assets/projects/funnyFart/formula.webp";
-import FunnyFartResultUrl from "@/assets/projects/funnyFart/result.webp";
+import ExportKindleClippingsToNotionDetailUrl from "@/assets/projects/exportKindleClippingsToNotion/detail.webp";
+import ExportKindleClippingsToNotionFileUrl from "@/assets/projects/exportKindleClippingsToNotion/file.webp";
+import ExportKindleClippingsToNotionListUrl from "@/assets/projects/exportKindleClippingsToNotion/list.webp";
 
 
 export interface Link {
@@ -126,6 +132,7 @@ export interface Project {
   technologies?: string[];
   links: {
     github?: Link;
+    nuget?: Link;
     googlePlay?: Link;
     external?: Link;
   };
@@ -134,6 +141,40 @@ export interface Project {
 const { t } = useI18n();
 
 const featuredProjects = computed<Project[]>(() => [
+  {
+    images: [
+      {
+        src: ExportKindleClippingsToNotionFileUrl,
+        alt: t("featuredProjects.ExportKindleClippingsToNotion.file"),
+      },
+      {
+        src: ExportKindleClippingsToNotionListUrl,
+        alt: t("featuredProjects.ExportKindleClippingsToNotion.list"),
+      },
+      {
+        src: ExportKindleClippingsToNotionDetailUrl,
+        alt: t("featuredProjects.ExportKindleClippingsToNotion.detail"),
+      },
+    ],
+    title: t("featuredProjects.ExportKindleClippingsToNotion.title"),
+    description: t("featuredProjects.ExportKindleClippingsToNotion.description"),
+    technologies: [
+      t("featuredProjects.ExportKindleClippingsToNotion.dotnet"),
+      t("featuredProjects.ExportKindleClippingsToNotion.notionAPI"),
+      t("featuredProjects.ExportKindleClippingsToNotion.cli"),
+    ],
+    links: {
+      nuget: {
+        href:
+          "https://www.nuget.org/packages/ExportKindleClippingsToNotion",
+        description: t("featuredProjects.funnyFart.linkDescription.nuget"),
+      },
+      github: {
+        href: "https://github.com/AnsgarLichter/funny-fart",
+        description: t("featuredProjects.funnyFart.linkDescription.github"),
+      },
+    },
+  },
   {
     images: [
       {
@@ -199,40 +240,6 @@ const featuredProjects = computed<Project[]>(() => [
       },
     },
   },
-  {
-    images: [
-      {
-        src: FunnyFartFormulaUrl,
-        alt: t("featuredProjects.funnyFart.formulaAlt"),
-      },
-      {
-        src: FunnyFartCalculateUrl,
-        alt: t("featuredProjects.funnyFart.calculateAlt"),
-      },
-      {
-        src: FunnyFartResultUrl,
-        alt: t("featuredProjects.funnyFart.resultAlt"),
-      },
-    ],
-    title: t("featuredProjects.funnyFart.title"),
-    description: t("featuredProjects.funnyFart.description"),
-    technologies: [
-      t("featuredProjects.funnyFart.android"),
-      t("featuredProjects.funnyFart.java"),
-      t("featuredProjects.funnyFart.mobile"),
-    ],
-    links: {
-      googlePlay: {
-        href:
-          "https://play.google.com/store/apps/details?id=dhbw.lichter.scheuring.formelapp&gl=DE",
-        description: t("featuredProjects.funnyFart.linkDescription.googlePlay"),
-      },
-      github: {
-        href: "https://github.com/AnsgarLichter/funny-fart",
-        description: t("featuredProjects.funnyFart.linkDescription.github"),
-      },
-    },
-  },
 ]);
 
 const icons: Record<string, Icon> = {
@@ -246,11 +253,16 @@ const icons: Record<string, Icon> = {
     name: "github",
     styleClasses: ["text-3xl", "text-accent"],
   },
+  nuget: {
+    prefix: "fab",
+    name: "microsoft",
+    styleClasses: ["text-3xl", "text-accent"],
+  },
   external: {
     prefix: "fas",
     name: "external-link-alt",
     styleClasses: ["text-3xl", "text-accent"],
-  },
+  }
 };
 </script>
 

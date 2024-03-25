@@ -69,6 +69,7 @@ import { UseElementIsVisible } from "@/composables";
 
 import DhbwUrl from "@/assets/images/dhbw.webp";
 import HkaUrl from "@/assets/images/hka.webp";
+import ScholarshipUrl from "@/assets/images/scholarship.webp";
 import ChinaUrl from "@/assets/images/china.webp";
 import SewUrl from "@/assets/images/sew.webp";
 import SapUrl from "@/assets/images/sap.webp";
@@ -103,6 +104,24 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
       organisation: t("experiences.education.master.organisation"),
       location: t("experiences.education.master.location"),
       description: t("experiences.education.master.description"),
+    },
+    icon: {
+      prefix: "fa",
+      name: "user-graduate",
+    },
+  },
+  {
+    content: {
+      images: [
+        { src: ScholarshipUrl, alt: t("experiences.images.scholarship") },
+        { src: HkaUrl, alt: t("experiences.images.hka") },
+      ],
+      title: t("experiences.education.scholarship.title"),
+      yearStart: t("experiences.education.scholarship.yearStart"),
+      yearEnd: t("experiences.education.scholarship.yearEnd"),
+      organisation: t("experiences.education.scholarship.organisation"),
+      location: t("experiences.education.scholarship.location"),
+      description: t("experiences.education.scholarship.description"),
     },
     icon: {
       prefix: "fa",
