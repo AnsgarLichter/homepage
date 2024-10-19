@@ -31,9 +31,8 @@
             <div v-visible="isVisible" class="text-left text-base text-secondary mx-10 lg:mx-0">
               {{ t("about.description-1") }}<br class="hidden lg:block" />
               {{ t("about.description-2") }}
-              {{ t("about.description-3") }}
-              {{ t("about.description-4") }}<br />
-              {{ t("about.description-5") }}
+              {{ t("about.description-3") }}<br />
+              {{ t("about.description-4") }}
             </div>
           </FadeInUp>
         </UseElementIsVisible>
@@ -92,7 +91,7 @@ const skills = reactive<BarChartItem[]>
     {
       label: t("about.technologies.cap"),
       styleClasses: ["bg-[#5a7a94] dark:bg-[#5a7a94]"],
-      width: "70%",
+      width: "80%",
     },
     {
       label: t("about.technologies.js"),
@@ -102,12 +101,12 @@ const skills = reactive<BarChartItem[]>
     {
       label: t("about.technologies.ts"),
       styleClasses: ["bg-[#3178c6]"],
-      width: "70%",
+      width: "80%",
     },
     {
       label: t("about.technologies.abap"),
       styleClasses: ["bg-[#f77f00]"],
-      width: "80%",
+      width: "60%",
     },
     {
       label: t("about.technologies.ewm"),

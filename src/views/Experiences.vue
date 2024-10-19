@@ -95,6 +95,23 @@ const events = computed<TimelineEvent<Experience>[]>(() => [
   {
     content: {
       images: [
+        { src: SapUrl, alt: t("experiences.images.sap") },
+      ],
+      title: t("experiences.work.dtsp.title"),
+      yearStart: t("experiences.work.dtsp.yearStart"),
+      yearEnd: t("experiences.work.dtsp.yearEnd"),
+      organisation: t("experiences.work.dtsp.organisation"),
+      location: t("experiences.work.dtsp.location"),
+      description: t("experiences.work.dtsp.description"),
+    },
+    icon: {
+      prefix: "fa",
+      name: "user-graduate",
+    },
+  },
+  {
+    content: {
+      images: [
         { src: HkaUrl, alt: t("experiences.images.hka") },
         { src: SapUrl, alt: t("experiences.images.sap") },
       ],

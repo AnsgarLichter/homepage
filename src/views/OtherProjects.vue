@@ -113,6 +113,22 @@ const otherProjects = computed<Project[]>(() => [
       },
     },
   },
+  {
+    title: t("otherProjects.sortfilter.title"),
+    description: t("otherProjects.sortfilter.description"),
+    technologies: [
+      t("otherProjects.sortfilter.sapui5"),
+      t("otherProjects.sortfilter.typescript"),
+    ],
+    links: {
+      github: {
+        href: "https://github.com/AnsgarLichter/SortFilterTable",
+        description: t(
+          "otherProjects.sortfilter.linkDescription.github"
+        ),
+      },
+    },
+  },
 ]);
 
 const icons: Record<"googlePlay" | "github" | "external", Icon> = {
