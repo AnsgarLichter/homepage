@@ -27,19 +27,18 @@
     "intro": {
         "hello": "Hallo, ich bin",
         "jobTitle": "Softwareentwickler",
-        "studies": "B. Sc. Wirtschaftsinformatik"
+        "studies": "M. Sc. Informatik"
     },
     "about": {
         "title": "Über mich",
         "alt": "Herzlich Wilkommen auf meiner Webseite!",
         "description-1": "Ich bin Ansgar, ein Software Engineer aus Karlsruhe.",
-        "description-2": "Nach meinem Abschluss an der Dualen Hochschule Karlsruhe in Wirtschaftsinformatik",
-        "description-3": "habe ich bei der SEW-EURODRIVE GmbH & Co KG an vielen interessanten Projekten gearbeitet.",
-        "description-4": "Aktuell studiere ich als dualer Masterand bei der SAP Informatik an der Hochschule Karlsruhe.",
-        "description-5": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
+        "description-2": "Nach meinem Abschluss an der Hochschule Karlsruhe in Inforamtik",
+        "description-3": "arbeite ich aktuell an vielen interessanten Projekten bei der SAP.",
+        "description-4": "Hier sind einige Technologien, mit denen ich in letzter Zeit gearbeitet habe:",
         "technologies": {
             "ewm": "SAP EWM",
-            "ui5": "SAPUI5",
+            "ui5": "SAPUI5 / SAP Fiori Elements",
             "abap": "ABAP",
             "js": "JavaScript",
             "ts": "TypeScript",
@@ -68,7 +67,7 @@
             "master": {
                 "title": "M. Sc. Informatik",
                 "yearStart": "2022",
-                "yearEnd": "voraussichtl. 2024",
+                "yearEnd": "2024",
                 "organisation": "Hochschule Karlsruhe",
                 "location": "Karlsruhe, Deutschland",
                 "description": "Studium der Informatik mit der Studienrichtung Software Engineering in Kombination mit praktischer Erfahrung in verschiedenen Abteilungen der SAP."
@@ -90,6 +89,14 @@
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Deutschland",
                 "description": "Mitarbeit in diversen Projekten im Kontext von SAP EWM. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
+            },
+            "dtsp": {
+                "title": "Development Consutlant",
+                "yearStart": "2024",
+                "yearEnd": "heute",
+                "organisation": "SAP Deutschland SE & Co. KG",
+                "location": "Walldorf, Deutschland",
+                "description": "Als Development Consultant fokussiere ich mich auf die Entwicklung von Lösungen auf der SAP Business Technology Platform mit CAP und SAPUI5."
             }
         },
         "images": {
@@ -167,6 +174,15 @@
             "description": "Eine Konsolen-Anwendung, um den Prozess für ein neues Github-Repository zu vereinfachen. Nach Eingabe des Namens wird automatisch ein Repository auf Github und ein entsprechender lokaler Ordner mit initialer Readme-Datei erstellt. Danach werden die initalen Änderungen committet und gepushed. Der gewünschte lokale Pfad für das Repository und der Token für die GitHub Authentifizierung können über eine Text-Datei konfiguriert werden.",
             "python": "Python",
             "githubAPI": "Github API",
+            "linkDescription": {
+                "github": "Link zum Github Repository"
+            }
+        },
+        "sortfilter": {
+            "title": "UI5 TypeScript Library & App",
+            "description": "Testen der Entwicklung von Custom Controls in SAPUI5 mit TypeScript. Die Bibliothek enthält ein Custom Control, das auf einer sap.m.Table basiert und den ViewSettingsDialog zum Sortieren und Filtern automatisch generiert.",
+            "sapui5": "SAPUI5",
+            "typescript": "TypeScript",
             "linkDescription": {
                 "github": "Link zum Github Repository"
             }

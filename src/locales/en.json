@@ -27,19 +27,18 @@
     "intro": {
         "hello": "Hello I'm",
         "jobTitle": "Software Developer",
-        "studies": "B. Sc. Business Informatics"
+        "studies": "M. Sc. Computer Science"
     },
     "about": {
         "title": "About Me",
         "alt": "Welcome to my website!",
         "description-1": "I am a software engineer based in Karlsruhe.",
-        "description-2": "After graduating from the Corporate State University in Business Informatics",
-        "description-3": "I joined SEW-EURODRIVE GmbH & Co KG where I work on a wide variety of interesting and meaningful projects on a daily basis.",
-        "description-4": "I am currently studying computer science as a dual master's student at SAP and the University of Applied Sciences Karlsruhe.",
-        "description-5": "Here are a few technologies I've been working with recently:",
+        "description-2": "After graduating from the Univrsity of Applied Sciences Karlsruhe in Computer Science",
+        "description-3": "I joined SAP where I work on a wide variety of interesting and meaningful projects on a daily basis.",
+        "description-4": "Here are a few technologies I've been working with recently:",
         "technologies": {
             "ewm": "SAP EWM",
-            "ui5": "SAPUI5",
+            "ui5": "SAPUI5 / SAP Fiori Elements",
             "abap": "ABAP",
             "js": "JavaScript",
             "ts": "TypeScript",
@@ -90,6 +89,14 @@
                 "organisation": "SEW Eurodrive",
                 "location": "Graben-Neudorf, Germany",
                 "description": "Participated in various projects in the context of SAP EWM. Especially a template for manual warehouses in the group of companies with SAPUI5 applications in the SAP FIORI Launchpad for mobile operation by warehouse employees."
+            },
+            "dtsp": {
+                "title": "Development Consutlant",
+                "yearStart": "2024",
+                "yearEnd": "today",
+                "organisation": "SAP Deutschland SE & Co. KG",
+                "location": "Walldorf, Germnany",
+                "description": "As a Development Consultant, I focus on the development of solutions on the SAP Business Technology Platform with CAP and SAPUI5."
             }
         },
         "images": {
@@ -168,6 +175,15 @@
             "githubAPI": "Github API",
             "linkDescription": {
                 "github": "Link to the Github repository"
+            }
+        },
+        "sortfilter": {
+            "title": "UI5 TypeScript Library & App",
+            "description": "Testing the development of custom controls in SAPUI5 with TypeScript. The library contains a custom sort and filter table, which generates the view settings dialog to sort and filter for a sap.m.Table automatically.",
+            "sapui5": "SAPUI5",
+            "typescript": "TypeScript",
+            "linkDescription": {
+                "github": "Link to the Github Repository"
             }
         }
     },
