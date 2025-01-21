@@ -94,9 +94,9 @@ const imagePath = ref<string>(GbUrl);
 
 function updateImagePath(locale: Ref<string>) {
   if (locale.value.startsWith(Locales.DE)) {
-    return DeUrl;
+    return GbUrl;
   }
-  return GbUrl;
+  return DeUrl;
 }
 
 function switchLocale() {

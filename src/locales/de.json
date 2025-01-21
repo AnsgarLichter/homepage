@@ -26,7 +26,7 @@
     },
     "intro": {
         "hello": "Hallo, ich bin",
-        "jobTitle": "Softwareentwickler",
+        "jobTitle": "Development Consultant",
         "studies": "M. Sc. Informatik"
     },
     "about": {
@@ -91,7 +91,7 @@
                 "description": "Mitarbeit in diversen Projekten im Kontext von SAP EWM. Besonders ein Template für manuelle Läger in der Unternehmensgruppe mit SAPUI5-Applikationen im FIORI-Launchpad für die mobile Bedienung durch die Lagermitarbeiter."
             },
             "dtsp": {
-                "title": "Development Consutlant",
+                "title": "Development Consultant",
                 "yearStart": "2024",
                 "yearEnd": "heute",
                 "organisation": "SAP Deutschland SE & Co. KG",
