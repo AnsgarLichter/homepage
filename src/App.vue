@@ -42,6 +42,7 @@ import Expieriences from "@/views/Experiences.vue";
   --secondary-color-light: #17191a;
   --secondary-color-dark: #707a80;
   --accent-color: #007fad;
+  --background-color: rgba(255, 255, 255, 0.4);
 }
 
 :root.dark {
@@ -52,6 +53,7 @@ import Expieriences from "@/views/Experiences.vue";
   --secondary-color-light: #ffffff;
   --secondary-color-dark: #b8c8d9;
   --accent-color: #007fad;
+  --background-color: rgba(20, 20, 20, 0.6);
 }
 
 html {
