@@ -99,7 +99,11 @@ const { t } = useI18n();
 }
 
 .background > div {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--background-color);
+}
+
+.background1 {
+  background-color: var(--background-color);
 }
 
 .typewriter > p {
